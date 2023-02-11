@@ -18,10 +18,12 @@
   </button>
 </template>
 <script setup lang="ts">
-interface Props {
-  title: string;
-  description?: string;
-  position?: string;
-}
-const props = withDefaults(defineProps<Props>(), { position: "top" });
+const props = withDefaults(
+  defineProps<{
+    title: string;
+    description?: string;
+    position?: string;
+  }>(),
+  { position: "top" }
+);
 </script>

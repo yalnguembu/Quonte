@@ -1,9 +1,3 @@
 <template>
-  <div class="w-full">
-    <TheNavbar />
-    <RouterView class="mt-[4.5em]" />
-  </div>
+  <RouterView />
 </template>
-<script setup lang="ts">
-import TheNavbar from "./components/TheNavbar.vue";
-</script>

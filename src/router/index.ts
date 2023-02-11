@@ -1,105 +1,81 @@
 import { createRouter, createWebHistory } from "vue-router";
-import HomeView from "../views/HomeView.vue";
+import MainWrapper from "@/components/MainWrapper.vue";
+import HomeView from "@/views/HomeView.vue";
+
 export const routes = [
   {
     path: "/",
-    name: "main",
-    component: HomeView,
-  },
-  {
-    path: "/organisation",
+    component: MainWrapper,
     children: [
       {
+        name: "home",
         path: "",
+        component: HomeView,
+      },
+      {
         name: "organisation",
-        component: () => import("../views/OrganisationsView.vue"),
-      },
-      {
-        path: "/organisation/new",
-        name: "projectNew",
-        component: () => import("../views/ProjectCreationView.vue"),
-      },
-    ],
-  },
-  {
-    path: "/:organisationId",
-    children: [
-      {
-        path: "",
-        name: "organisationDetail",
-        component: () => import("../views/OrganisationDetailsView.vue"),
-      },
-      {
-        path: "project",
+        path: "organisations/:organisationId",
+        component: () => import("@/views/organisations/OrganisationView.vue"),
         children: [
           {
+            name: "projects",
             path: "",
+            component: () =>
+              import("@/views/organisations/projects/ProjectsView.vue"),
+          },
+          {
             name: "project",
-            component: () => import("../views/ProjectView.vue"),
+            path: "projects/:projectId",
+            component: () =>
+              import("@/views/organisations/projects/ProjectView.vue"),
           },
           {
-            path: "new",
-            name: "newProject",
-            component: () => import("../views/ProjectCreationView.vue"),
+            name: "users",
+            path: "users",
+            component: () =>
+              import("@/views/organisations/users/UsersView.vue"),
           },
           {
-            path: ":id",
-            name: "projectDetails",
-            component: () => import("../views/ProjectDetailsView.vue"),
-            children: [
-              {
-                path: "",
-                name: "tabOverview",
-                component: () => import("../components/ProjectTabOverview.vue"),
-              },
-              {
-                path: "labels",
-                name: "tabLabels",
-                component: () => import("../components/ProjectTabLabels.vue"),
-              },
-              {
-                path: "tasks",
-                name: "tabTasks",
-                component: () => import("../components/ProjectTabTasks.vue"),
-              },
-              {
-                path: "statistics",
-                name: "tabStatistics",
-                component: () =>
-                  import("../components/ProjectTabStatistics.vue"),
-              },
-              {
-                path: "members",
-                name: "tabMembers",
-                component: () => import("../components/ProjectTabMembers.vue"),
-              },
-            ],
+            name: "teams",
+            path: "teams",
+            component: () =>
+              import("@/views/organisations/teams/TeamsView.vue"),
+          },
+          {
+            name: "team",
+            path: "teams/:teamId",
+            component: () => import("@/views/organisations/teams/TeamView.vue"),
+          },
+          {
+            name: "setting",
+            path: "setting",
+            component: () =>
+              import("@/views/organisations/teams/TeamsView.vue"),
           },
         ],
       },
       {
-        path: "group",
-        children: [
-          {
-            path: "",
-            name: "groups",
-            component: () => import("../views/GroupsView.vue"),
-          },
-          {
-            path: "new",
-            name: "groupNew",
-            component: () => import("../views/ProjectCreationView.vue"),
-          },
-          {
-            path: ":id",
-            name: "groupDetails",
-            component: () => import("../views/GroupDetailsView.vue"),
-          },
-        ],
+        name: "user-setting",
+        path: "setting",
+        component: HomeView,
+      },
+      {
+        name: "profile",
+        path: "profile",
+        component: HomeView,
+      },
+      {
+        path: "organisations",
+        component: () => import("@/views/organisations/OrganisationsView.vue"),
+      },
+      {
+        path: "logout",
+        component: () => import("@/views/organisations/OrganisationsView.vue"),
       },
     ],
   },
 ];
+
 const router = createRouter({
   history: createWebHistory(),
   routes: routes,
