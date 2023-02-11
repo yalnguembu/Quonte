@@ -72,6 +72,11 @@ export const routes = [
         path: "logout",
         component: () => import("@/views/organisations/OrganisationsView.vue"),
       },
+      {
+        path: "/:pathMatch(.*)*",
+        name: "NotFound",
+        component: () => import("@/views/NotFound.vue"),
+      },
     ],
   },
 ];
