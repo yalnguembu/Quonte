@@ -7,7 +7,7 @@
       name="search"
       :value="props.modelValue"
       :placeholder="props.placeholder"
-      @input="emit('update:modelValue', $event.target?.value)"
+      @input="(event :Event)=>emit('update:modelValue', (event.target as HTMLInputElement).value)"
     />
   </div>
 </template>

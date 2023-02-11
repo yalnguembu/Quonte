@@ -2,13 +2,13 @@
   <div>
     <ul
       ref="menu"
-      class="absolute z-10 rounded-lg shadow-lg bg-white text-gray-500 top-12 right-5 pt-2"
+      class="absolute z-10 rounded-lg shadow-2xl bg-white text-gray-500 top-12 right-5 pt-2"
     >
       <TaskMenuItem
         v-for="item in tasks"
         :key="item.label"
         :item="item"
-        @click="emit(`${item.emit}`)"
+        @click="emit('call', item.emit)"
       />
     </ul>
   </div>
@@ -39,14 +39,7 @@ const tasks = [
   },
 ];
 
-const emit = defineEmits([
-  "close",
-  "showDetails",
-  "edit",
-  "assign",
-  "addSubTask",
-  "delete",
-]);
+const emit = defineEmits(["call"]);
 const menu = ref<HTMLElement>();
 const shouldEmit = ref<boolean>(false);
 

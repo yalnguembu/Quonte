@@ -39,7 +39,14 @@ interface Task {
   priority: TASK_PRIORITY;
   reporter: string;
   assignee: string;
-  subTasks: object;
+  subTasks: Array<{
+    id: number;
+    title: string;
+    summary: string;
+    status: TASK_STATUS;
+    reporter: string;
+    assignee: string;
+  }>;
 }
 
 const taskStore = useTaskStore();

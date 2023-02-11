@@ -62,7 +62,7 @@ const organisation = reactive({
 const emit = defineEmits(["close"]);
 
 const create = (): void => {
-  organisationStore.create(organisation);
+  organisationStore.create({ id: "0", ...organisation });
   emit("close");
   router.push({ name: "organisations" });
 };

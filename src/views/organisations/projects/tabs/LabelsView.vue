@@ -55,14 +55,14 @@
         v-if="isCreationFormVisible"
         @close="toggleFormModalVisibility"
       />
-      <TaskDetails v-if="false" />
+      <!-- <TaskDetails v-if="false" /> -->
     </div>
   </div>
 </template>
 <script setup lang="ts">
 import { ref, watch } from "vue";
-import type { Task } from "@/utils/type";
 import { useLabelStore } from "@/stores/label";
+import type { TASK_STATUS, TASK_CATEGORIES, TASK_PRIORITY } from "@/utils/enum";
 import ArrowLeftIcon from "@/components/icons/ArrowLeftIcon.vue";
 import BaseButton from "@/components/BaseButton.vue";
 import SearchInput from "@/components/form/SearchInput.vue";
@@ -72,16 +72,34 @@ import LabelCreationForm from "@/components/projects/labels/LabelCreationForm.vu
 import LabelItem from "@/components/projects/labels/LabelItem.vue";
 import PlusIcon from "@/components/icons/PlusIcon.vue";
 
+interface Task {
+  id: number;
+  title: string;
+  summary: string;
+  status: TASK_STATUS;
+  category: TASK_CATEGORIES;
+  priority: TASK_PRIORITY;
+  reporter: string;
+  assignee: string;
+  subTasks: Array<{
+    id: number;
+    title: string;
+    summary: string;
+    status: TASK_STATUS;
+    reporter: string;
+    assignee: string;
+  }>;
+}
 const labelStore = useLabelStore();
 const search = ref<string>("");
-const activeLabel = ref<Task>(null);
+const activeLabel = ref();
 
 const isCreationFormVisible = ref(false);
-const labels = ref<Task[]>(labelStore.labels);
+const labels = ref(labelStore.labels);
 // const tasks = labelStore.getTaskByLabel(activeLabel.value.id) ?? [];
-const filteredTaskByTitle = (title: string): Task[] =>
+const filteredTaskByTitle = (title: string) =>
   labels.value.filter(
-    (label: Task) => label.title.toLowerCase().search(title) !== -1
+    (label) => label.title.toLowerCase().search(title) !== -1
   );
 const toggleFormModalVisibility = () =>
   (isCreationFormVisible.value = !isCreationFormVisible.value);

@@ -43,4 +43,6 @@
 import PlusIcon from "@/components/icons/PlusIcon.vue";
 import UserAvatar from "@/components/UserAvatar.vue";
 import SearchInput from "@/components/form/SearchInput.vue";
+import { ref } from "vue";
+const search = ref<string>("");
 </script>

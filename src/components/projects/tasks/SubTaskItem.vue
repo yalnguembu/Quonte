@@ -3,11 +3,8 @@
     <div class="relative w-full bg-gray-100 mb-4 p-3 rounded-lg border-b-4">
       <SubTaskMenu
         v-if="isMenuVisible"
+        @call="call"
         @closeTaskMenu="toogleMenuVisibility"
-        @showDetails="toogleDetailsModalVisibility"
-        @edit="toogleEditModalVisibility"
-        @delete="toogleDeleteModalVisibility"
-        @addSubTask="toggleSubTaskCreationModalVisibility"
         @click="toogleMenuVisibility"
       />
       <div>
@@ -20,9 +17,6 @@
                 :value="props.task.title"
               />
             </div>
-            <span :class="['text-sm font-500', catColor]">{{
-              props.task.category
-            }}</span>
           </div>
 
           <button @click="toogleMenuVisibility">
@@ -44,7 +38,7 @@
         </div>
       </div>
     </div>
-    <TaskDetails
+    <SubTaskDetails
       v-if="isDetailsModalVisible"
       :task="props.task"
       @close="toogleDetailsModalVisibility"
@@ -65,11 +59,11 @@
 import UserIcon from "../../icons/UserIcon.vue";
 import EllipsisVerticalIcon from "../../icons/EllipsisVerticalIcon.vue";
 import SubTaskMenu from "./SubTaskMenu.vue";
-import TaskDetails from "./TaskDetails.vue";
+import SubTaskDetails from "./SubTaskDetails.vue";
 import TaskEditForm from "./TaskEditForm.vue";
 import TaskDeleteModal from "./TaskDeleteModal.vue";
-import { TASK_STATUS, TASK_CATEGORIES, TASK_PRIORITY } from "@/utils/enum";
-import { computed, ref } from "vue";
+import type { TASK_STATUS } from "@/utils/enum";
+import { ref } from "vue";
 
 const props = defineProps<{
   task: {
@@ -86,22 +80,6 @@ const isMenuVisible = ref<boolean>(false);
 const isDetailsModalVisible = ref<boolean>(false);
 const isEditModalVisible = ref<boolean>(false);
 const isDeleteModalVisible = ref<boolean>(false);
-const isSubTaskCreationModalVisible = ref<boolean>(false);
-
-const catColor = computed<string>(() => {
-  switch (props.task.category) {
-    case TASK_CATEGORIES.STORY:
-      return "text-pink-700";
-    case TASK_CATEGORIES.ENHANCEMENT:
-      return "text-emerald-400";
-    case TASK_CATEGORIES.BUG:
-      return "text-red-600";
-    case TASK_CATEGORIES.EPIC:
-      return "text-blue-600";
-    default:
-      return "text-gray-500";
-  }
-});
 
 const toogleMenuVisibility = () => (isMenuVisible.value = !isMenuVisible.value);
 const toogleDetailsModalVisibility = () =>
@@ -110,6 +88,17 @@ const toogleEditModalVisibility = () =>
   (isEditModalVisible.value = !isEditModalVisible.value);
 const toogleDeleteModalVisibility = () =>
   (isDeleteModalVisible.value = !isDeleteModalVisible.value);
-const toggleSubTaskCreationModalVisibility = () =>
-  (isSubTaskCreationModalVisible.value = !isSubTaskCreationModalVisible.value);
+const call = (event: string) => {
+  switch (event) {
+    case "showDetails":
+      toogleDetailsModalVisibility();
+      break;
+    case "edit":
+      toogleEditModalVisibility();
+      break;
+    case "delete":
+      toogleDeleteModalVisibility();
+      break;
+  }
+};
 </script>

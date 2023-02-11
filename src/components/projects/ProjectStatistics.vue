@@ -69,11 +69,11 @@ const tasks = {
   dones: 2,
 };
 
-const todos = ref<HTMLElement>();
-const inProgress = ref<HTMLElement>();
-const dones = ref<HTMLElement>();
+const todos = ref<SVGCircleElement | null>(null);
+const inProgress = ref<SVGCircleElement | null>(null);
+const dones = ref<SVGCircleElement | null>(null);
 const total = ref<number>();
-const percentage = ref<number>();
+const percentage = ref<string>();
 
 function calculate() {
   total.value = tasks.todos + tasks.inProgress + tasks.dones;
@@ -86,25 +86,34 @@ function calculate() {
     .toString()
     .substring(0, 4);
 
-  todos.value.style.transition =
-    "stroke-dasharray 0.5s ease-in-out, stroke-dashoffset 0.5s ease-in-out";
-  todos.value.style.strokeDasharray = todosPercent + " " + (100 - todosPercent);
-  todos.value.style.strokeDashoffset = offset;
+  todos.value
+    ? ((todos.value.style.transition =
+        "stroke-dasharray 0.5s ease-in-out, stroke-dashoffset 0.5s ease-in-out"),
+      (todos.value.style.strokeDasharray =
+        todosPercent + " " + (100 - todosPercent)),
+      (todos.value.style.strokeDashoffset = `${offset}`))
+    : "";
 
-  inProgress.value.style.transition =
-    "stroke-dasharray 0.5s ease-in-out, stroke-dashoffset 0.5s ease-in-out";
-  inProgress.value.style.strokeDasharray =
-    inProgressPercent + " " + (100 - inProgressPercent);
-  inProgress.value.style.strokeDashoffset = 100 - todosPercent + offset;
+  inProgress.value
+    ? ((inProgress.value.style.transition =
+        "stroke-dasharray 0.5s ease-in-out, stroke-dashoffset 0.5s ease-in-out"),
+      (inProgress.value.style.strokeDasharray =
+        inProgressPercent + " " + (100 - inProgressPercent)),
+      (inProgress.value.style.strokeDashoffset = `${
+        100 - todosPercent + offset
+      }`))
+    : "";
 
-  dones.value.style.transition =
-    "stroke-dasharray 0.5s ease-in-out, stroke-dashoffset 0.5s ease-in-out";
-  dones.value.style.strokeDasharray = (donesPercent +
-    " " +
-    (100 - donesPercent)) as string;
-  dones.value.style.strokeDashoffset = `${
-    100 - (todosPercent + inProgressPercent) + offset
-  }`;
+  dones.value
+    ? ((dones.value.style.transition =
+        "stroke-dasharray 0.5s ease-in-out, stroke-dashoffset 0.5s ease-in-out"),
+      (dones.value.style.strokeDasharray = (donesPercent +
+        " " +
+        (100 - donesPercent)) as string),
+      (dones.value.style.strokeDashoffset = `${
+        100 - (todosPercent + inProgressPercent) + offset
+      }`))
+    : "";
 }
 
 onMounted(calculate);

@@ -6,7 +6,7 @@
       type="text"
       :placeholder="props.placeholder"
       :value="props.modelValue"
-      @input="emit('update:modelValue', $event.target.value)"
+      @input="(event :Event)=>emit('update:modelValue', (event.target as HTMLInputElement).value)"
     />
     <p v-if="props.error">{{ props.error }}</p>
   </div>

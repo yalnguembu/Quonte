@@ -5,19 +5,19 @@
       <div class="grid gap-4">
         <TextInput
           label="Title"
-          v-model="title"
+          v-model="label.title"
           placeholder="Enter the name of the project"
           error=""
         />
         <ColorPicker
           class="my-2"
           label="color"
-          v-model="color"
+          v-model="label.color"
           placeholder="Enter the name of the project"
           error=""
         />
         <TextAreaInput
-          v-model="summary"
+          v-model="label.description"
           label="Description"
           placeholder="Enter the description of the project"
           error=""
@@ -37,7 +37,7 @@
   </ModalWrapper>
 </template>
 <script setup lang="ts">
-import { ref } from "vue";
+import { reactive } from "vue";
 import ColorPicker from "@/components/form/ColorPicker.vue";
 import TextInput from "@/components/form/TextInput.vue";
 import ModalWrapper from "@/components/ModalWrapper.vue";
@@ -45,20 +45,19 @@ import TextAreaInput from "@/components/form/TextAreaInput.vue";
 import BaseButton from "@/components/BaseButton.vue";
 import { useLabelStore } from "@/stores/label";
 import { COLORS } from "@/utils/enum";
-
 const labelStore = useLabelStore();
-const title = ref<string>("");
-const summary = ref<string>("");
-const color = ref<string>("");
+const label = reactive({
+  title: "",
+  description: "",
+  color: COLORS.GREEN,
+});
 
 const emit = defineEmits(["close"]);
 
 const create = (): void => {
   labelStore.create({
     id: Math.random() * 10,
-    title: title.value,
-    summary: summary.value,
-    color: COLORS.GREEN,
+    ...label,
     tasks: [0],
   });
   emit("close");

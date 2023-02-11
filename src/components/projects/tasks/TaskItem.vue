@@ -10,10 +10,7 @@
       <TaskMenu
         v-if="isMenuVisible"
         @closeTaskMenu="toogleMenuVisibility"
-        @showDetails="toogleDetailsModalVisibility"
-        @edit="toogleEditModalVisibility"
-        @delete="toogleDeleteModalVisibility"
-        @addSubTask="toggleSubTaskCreationModalVisibility"
+        @call="call"
         @click="toogleMenuVisibility"
       />
       <div>
@@ -171,4 +168,21 @@ const toggleSubTaskCreationModalVisibility = () =>
   (isSubTaskCreationModalVisible.value = !isSubTaskCreationModalVisible.value);
 const toggleSubTaskListVisibility = () =>
   (isSubTaskListVisible.value = !isSubTaskListVisible.value);
+const call = (event: string) => {
+  console.log(event);
+  switch (event) {
+    case "showDetails":
+      toogleDetailsModalVisibility();
+      break;
+    case "edit":
+      toogleEditModalVisibility();
+      break;
+    case "delete":
+      toogleDeleteModalVisibility();
+      break;
+    case "addSubTask":
+      toggleSubTaskCreationModalVisibility();
+      break;
+  }
+};
 </script>

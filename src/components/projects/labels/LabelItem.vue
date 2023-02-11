@@ -10,11 +10,9 @@
   </button>
 </template>
 <script setup lang="ts">
-interface Props {
+const props = defineProps<{
   title: string;
   description: string;
   color: string;
-}
-
-const props = defineProps<Props>();
+}>();
 </script>

@@ -5,7 +5,7 @@
       :rows="props.rows"
       class="rounded border px-4 py-3 w-full mt-2"
       :value="props.modelValue"
-      @input="emit('update:modelValue', $event.target?.value)"
+      @input="(event :Event)=>emit('update:modelValue', (event.target as HTMLInputElement).value)"
     />
     <p v-if="props.error">{{ props.error }}</p>
   </div>
