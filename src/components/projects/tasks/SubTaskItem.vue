@@ -4,7 +4,7 @@
       <SubTaskMenu
         v-if="isMenuVisible"
         @call="call"
-        @closeTaskMenu="toogleMenuVisibility"
+        @closeMenu="toogleMenuVisibility"
         @click="toogleMenuVisibility"
       />
       <div>
@@ -19,7 +19,7 @@
             </div>
           </div>
 
-          <button @click="toogleMenuVisibility">
+          <button @click.stop="toogleMenuVisibility">
             <EllipsisVerticalIcon />
           </button>
         </div>
@@ -43,16 +43,6 @@
       :task="props.task"
       @close="toogleDetailsModalVisibility"
     />
-    <!-- <TaskEditForm
-      v-if="isEditModalVisible"
-      :task="props.task"
-      @close="toogleEditModalVisibility"
-    />
-    <TaskDeleteModal
-      v-if="isDeleteModalVisible"
-      :task="props.task"
-      @close="toogleDeleteModalVisibility"
-    /> -->
   </div>
 </template>
 <script setup lang="ts">
@@ -60,8 +50,6 @@ import UserIcon from "../../icons/UserIcon.vue";
 import EllipsisVerticalIcon from "../../icons/EllipsisVerticalIcon.vue";
 import SubTaskMenu from "./SubTaskMenu.vue";
 import SubTaskDetails from "./SubTaskDetails.vue";
-import TaskEditForm from "./TaskEditForm.vue";
-import TaskDeleteModal from "./TaskDeleteModal.vue";
 import type { TASK_STATUS } from "@/utils/enum";
 import { ref } from "vue";
 

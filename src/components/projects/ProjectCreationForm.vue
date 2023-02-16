@@ -1,10 +1,6 @@
 <template>
-  <main
-    class="z-30 fixed top-0 left-0 w-full h-full flex flex-row items-center justify-center bg-gray-500/25 backdrop-blur-[2px]"
-  >
-    <div
-      class="shadow-lg bg-white rounded-lg p-4 md:p-8 md:2/3 lg:w-1/2 xl:w-2/5"
-    >
+  <ModalWrapper @close="emit('close')">
+    <div class="shadow-lg bg-white rounded-lg m-0 p-4 md:p-8 md:2/3">
       <h1 class="font-bold text-2xl">New project</h1>
       <form class="mt-6" @submit.prevent="create">
         <div class="my-4">
@@ -38,14 +34,14 @@
         </div>
       </form>
     </div>
-  </main>
+  </ModalWrapper>
 </template>
 <script setup lang="ts">
 import TextInput from "../form/TextInput.vue";
 import TextAreaInput from "../form/TextAreaInput.vue";
 import ImageInput from "../form/ImageInput.vue";
 import BaseButton from "../BaseButton.vue";
-import type { Ref } from "vue";
+import ModalWrapper from "../ModalWrapper.vue";
 import { ref } from "vue";
 
 const name = ref<string>("");

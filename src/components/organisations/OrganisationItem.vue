@@ -1,6 +1,6 @@
 <template>
   <div
-    class="rounded-lg border-2 p-4 bg-white flex flex-row items-center hover:shadow-xl"
+    class="rounded-lg shadow-md p-4 bg-white flex flex-row items-center hover:shadow-xl"
   >
     <slot name="icon">
       <FolderIcon class="w-8 h-8" />

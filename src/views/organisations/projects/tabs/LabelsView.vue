@@ -36,7 +36,7 @@
           class="inline mr-4 align-middle bg-white"
         />
         <BaseButton
-          @click="toggleFormModalVisibility"
+          @click.stop="toggleFormModalVisibility"
           class="inline"
           title="New Label"
         />
@@ -94,7 +94,7 @@ const labelStore = useLabelStore();
 const search = ref<string>("");
 const activeLabel = ref();
 
-const isCreationFormVisible = ref(false);
+const isCreationFormVisible = ref<boolean>(false);
 const labels = ref(labelStore.labels);
 // const tasks = labelStore.getTaskByLabel(activeLabel.value.id) ?? [];
 const filteredTaskByTitle = (title: string) =>

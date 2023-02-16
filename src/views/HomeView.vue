@@ -1,10 +1,12 @@
 <template>
   <main
-    class="w-full h-full flex flex-col justify-center items-center mx-auto max-w-screen-xl xl:pt-6"
+    class="w-full h-full bg-gray-100 flex flex-col justify-center items-center mx-auto xl:pt-6"
   >
-    <div class="text-center p-4">
-      <h1 class="text-3xl font-bold mt-4">Welcome to Bespace</h1>
-      <p class="text-gray-600 mt-2">Select a project for begin working</p>
+    <div class="py-4 w-full lg:w-2/5">
+      <h1 class="text-3xl font-bold mt-4">You are welcome</h1>
+      <p class="text-gray-600 mt-2">
+        Select an organisation to start working with
+      </p>
     </div>
     <div v-if="organisations" class="w-full lg:w-2/5 mt-4">
       <RouterLink
@@ -27,7 +29,7 @@
       <p class="text-gray-500 text-xl text-center">
         It seems that you are not part of any organization
       </p>
-      <!-- <RouterLink to="organisation/new" class="block my-4">
+      <RouterLink to="organisation/new" class="block my-4">
         <BorderButton title="Create organisation" position="left">
           <template #iconLeft>
             <img
@@ -37,7 +39,7 @@
             />
           </template>
         </BorderButton>
-      </RouterLink> -->
+      </RouterLink>
     </div>
   </main>
 </template>

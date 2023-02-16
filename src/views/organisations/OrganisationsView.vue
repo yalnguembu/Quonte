@@ -2,7 +2,7 @@
   <div class="p-4 h-full bg-gray-100 md:p-8 mt-14">
     <h1 class="text-gray-700 text-lg">Organisations</h1>
 
-    <div class="mt-4 grid gap-4 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5">
+    <div class="mt-4 grid gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
       <OrganisationItem
         @click="toggleCreationFormVisibility"
         class="w-full mt-4"

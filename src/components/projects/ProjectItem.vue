@@ -1,6 +1,6 @@
 <template>
   <div
-    class="w-full border border-gray-300 bg-white hover:border-emerald-300 hover:shadow-lg rounded-xl p-4 flex flex-row flex-wrap items-center"
+    class="w-full shadow bg-white rounded-xl p-4 flex flex-row flex-wrap hover:border-emerald-300 hover:shadow-lg"
   >
     <div class="w-full text-center lg:w-full lg:text-center p-4">
       <slot name="icon">

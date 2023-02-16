@@ -10,9 +10,7 @@
   </div>
 </template>
 <script setup lang="ts">
-interface Props {
+const props = defineProps<{
   title: string;
-}
-
-const props = defineProps<Props>();
+}>();
 </script>

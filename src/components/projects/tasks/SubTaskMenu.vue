@@ -15,7 +15,7 @@
 </template>
 <script setup lang="ts">
 import { ref } from "vue";
-import { useOutClickDetect } from "@/utils/useOutClickDetect";
+import { useOnClickOutSide } from "@/utils/useOnClickOutside";
 import PencilIcon from "@/components/icons/PencilIcon.vue";
 import TrashIcon from "@/components/icons/TrashIcon.vue";
 import InformationIcon from "@/components/icons/InformationIcon.vue";
@@ -39,15 +39,10 @@ const tasks = [
   },
 ];
 
-const emit = defineEmits(["call"]);
+const emit = defineEmits(["call", "closeMenu"]);
 const menu = ref<HTMLElement>();
-const shouldEmit = ref<boolean>(false);
 
-// watch(shouldEmit, (value) => {
-// if (value === true) emit("close");
-// });
-
-useOutClickDetect(menu, () => {
-  shouldEmit.value = true;
+useOnClickOutSide(menu, () => {
+  emit("closeMenu");
 });
 </script>

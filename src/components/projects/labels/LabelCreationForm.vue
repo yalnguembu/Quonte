@@ -1,39 +1,41 @@
 <template>
   <ModalWrapper @close="emit('close')">
-    <h1 class="font-bold text-2xl">New Label</h1>
-    <form class="mt-6" @submit.prevent="create">
-      <div class="grid gap-4">
-        <TextInput
-          label="Title"
-          v-model="label.title"
-          placeholder="Enter the name of the project"
-          error=""
-        />
-        <ColorPicker
-          class="my-2"
-          label="color"
-          v-model="label.color"
-          placeholder="Enter the name of the project"
-          error=""
-        />
-        <TextAreaInput
-          v-model="label.description"
-          label="Description"
-          placeholder="Enter the description of the project"
-          error=""
-        />
-      </div>
-      <div class="flex justify-end mt-4">
-        <button
-          class="px-4 py-2 bg-gray-200 rounded-lg"
-          type="reset"
-          @click="emit('close')"
-        >
-          Cancel
-        </button>
-        <BaseButton class="ml-2" title="Create" type="submit" />
-      </div>
-    </form>
+    <div class="shadow-lg bg-white rounded-lg m-0 p-4 md:p-8 md:2/3">
+      <h1 class="font-bold text-2xl">New Label</h1>
+      <form class="mt-6" @submit.prevent="create">
+        <div class="grid gap-4">
+          <TextInput
+            label="Title"
+            v-model="label.title"
+            placeholder="Enter the name of the project"
+            error=""
+          />
+          <ColorPicker
+            class="my-2"
+            label="color"
+            v-model="label.color"
+            placeholder="Enter the name of the project"
+            error=""
+          />
+          <TextAreaInput
+            v-model="label.description"
+            label="Description"
+            placeholder="Enter the description of the project"
+            error=""
+          />
+        </div>
+        <div class="flex justify-end mt-4">
+          <button
+            class="px-4 py-2 bg-gray-200 rounded-lg"
+            type="reset"
+            @click="emit('close')"
+          >
+            Cancel
+          </button>
+          <BaseButton class="ml-2" title="Create" type="submit" />
+        </div>
+      </form>
+    </div>
   </ModalWrapper>
 </template>
 <script setup lang="ts">

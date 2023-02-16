@@ -1,6 +1,6 @@
 <template>
   <section
-    class="fixed top-0 w-full border-b flex flex-row align-center z-20 justify-between bg-white px-2 py-3 xl:px-4"
+    class="fixed shadow top-0 w-full flex flex-row align-center z-20 justify-between bg-white px-2 py-3 xl:px-4"
   >
     <div class="flex p-0">
       <MenuButton />
@@ -11,16 +11,16 @@
       <TheBreadcrumbs class="hidden lg:flex" />
     </div>
     <div class="flex">
-      <button class="px-2 text-gray-500 hover:bg-gray-100 mr-3">
-        <Notification />
+      <button
+        class="p-2 rounded mr-2 border border-transparent hover:border-gray-200"
+      >
+        <Notification class="stroke-gray-500" />
       </button>
       <NavabarAccount />
     </div>
   </section>
 </template>
 <script setup lang="ts">
-import { useRoute } from "vue-router";
-import { ref } from "vue";
 import Notification from "./icons/NotificationIcon.vue";
 import MenuButton from "./menus/MenuButton.vue";
 import NavabarAccount from "./NavabarAccount.vue";

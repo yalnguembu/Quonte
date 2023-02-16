@@ -2,10 +2,10 @@
   <div class="w-full">
     <label for="" class="font-500">{{ props.label }}</label>
     <div class="rounded border px-3 py-3 w-full mt-2">
-      <MailIcon class="stroke-gray-500" />
+      <LockIcon class="stroke-gray-500" />
       <input
         class="bg-transparent px-3 outline-none"
-        type="email"
+        type="password"
         :placeholder="props.placeholder"
         :value="props.modelValue"
         @input="(event :Event)=>emit('update:modelValue', (event.target as HTMLInputElement).value)"
@@ -15,7 +15,7 @@
   </div>
 </template>
 <script setup lang="ts">
-import MailIcon from "../icons/MailIcon.vue";
+import LockIcon from "../icons/LockIcon.vue";
 
 const emit = defineEmits(["update:modelValue"]);
 const props = withDefaults(

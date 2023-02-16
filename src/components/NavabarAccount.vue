@@ -2,16 +2,18 @@
   <div class="flex flex-row jusitfy-between align-center relative">
     <button
       class="flex flex-row justify-between items-center"
-      @click="toggleMenuVisibility"
+      @click.stop="toggleMenuVisibility"
     >
       <UserAvatar name="Yal nguembu" :path="Image" />
       <p class="px-3 text-bold text-gray-500 hidden lg:block">
-        <span class="mr-1">Mazeking</span>
+        <span class="mr-1">{{ sessionStore.session?.email }}</span>
         <ChevronDown class="h-3 w-3 inline" />
       </p>
     </button>
     <div
-      v-if="isMenuvisible"
+      @click="toggleMenuVisibility"
+      ref="accountButton"
+      v-if="isMenuVisible"
       class="rounded border bg-white absolute top-12 right-0 w-52 text-gray-500 shadow-lg"
     >
       <ul>
@@ -47,7 +49,17 @@ import UserIcon from "./icons/UserIcon.vue";
 import LogoutIcon from "./icons/LogoutIcon.vue";
 import InformationIcon from "./icons/InformationIcon.vue";
 import UserAvatar from "./UserAvatar.vue";
+import { useSessionStore } from "@/stores/session";
 import { ref } from "vue";
-const isMenuvisible = ref(false);
-const toggleMenuVisibility = () => (isMenuvisible.value = !isMenuvisible.value);
+import { useOnClickOutSide } from "@/utils/useOnClickOutside";
+
+const accountButton = ref<HTMLButtonElement | undefined>();
+const isMenuVisible = ref<boolean>(false);
+const sessionStore = useSessionStore();
+
+const toggleMenuVisibility = () => (isMenuVisible.value = !isMenuVisible.value);
+
+useOnClickOutSide(accountButton, () => {
+  if (isMenuVisible.value) toggleMenuVisibility();
+});
 </script>

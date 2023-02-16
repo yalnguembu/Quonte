@@ -15,8 +15,8 @@ export const useOrganisationStore = defineStore("organisation", () => {
       image: "Les it au jourd'hui les etoiles de demain",
     },
     {
-      id: "young-it",
-      name: "Nova for Software",
+      id: "young-tech",
+      name: "Young Tech",
       description: "Collect user informations",
       image: "Les it au jourd'hui les etoiles de demain",
     },

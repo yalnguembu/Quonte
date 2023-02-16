@@ -1,5 +1,5 @@
 <template>
-  <div class="overflow-y-auto min-h-screen z-0">
+  <div class="min-h-screen z-0 relative p-0 pt-4">
     <div class="right-0 absolute -top-16 flex">
       <SearchInput
         v-model.trim="search"
@@ -7,7 +7,7 @@
         class="inline mr-4 align-middle bg-white"
       />
       <BaseButton
-        @click="toggleFormModalVisibility"
+        @click.stop="toggleFormModalVisibility"
         class="inline"
         title="New task"
       />

@@ -11,6 +11,7 @@ export const routes = [
         name: "home",
         path: "",
         component: HomeView,
+        meta: { isPublic: false },
       },
       {
         name: "organisation",
@@ -67,6 +68,25 @@ export const routes = [
       {
         path: "organisations",
         component: () => import("@/views/organisations/OrganisationsView.vue"),
+      },
+      {
+        name: "authentication",
+        path: "auth",
+        meta: {
+          isPublic: true,
+        },
+        children: [
+          {
+            name: "signin",
+            path: "signin",
+            component: () => import("@/views/auth/SignIn.vue"),
+          },
+          {
+            name: "signup",
+            path: "signup",
+            component: () => import("@/views/auth/SignUp.vue"),
+          },
+        ],
       },
       {
         path: "logout",

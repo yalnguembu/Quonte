@@ -30,7 +30,7 @@
               props.task.category
             }}</span>
           </div>
-          <button @click="toogleMenuVisibility">
+          <button @click.stop="toogleMenuVisibility">
             <EllipsisVerticalIcon />
           </button>
         </div>

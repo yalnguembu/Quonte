@@ -1,6 +1,6 @@
 <template>
-  <Transition class="">
-    <ModalWrapper @close="emit('close')">
+  <ModalWrapper @close="handelClose">
+    <div class="shadow-lg bg-white rounded-lg m-0 p-4 md:p-8 md:2/3">
       <h1 class="font-bold text-2xl">New Task</h1>
       <form class="mt-6" @submit.prevent="create">
         <div class="grid grid-cols-1 gap-0 lg:gap-4 lg:grid-cols-2">
@@ -33,15 +33,15 @@
           <button
             class="px-4 py-2 bg-gray-200 rounded-lg"
             type="reset"
-            @click="emit('close')"
+            @click="handelClose"
           >
             Cancel
           </button>
           <BaseButton class="ml-2" title="Create" type="submit" />
         </div>
       </form>
-    </ModalWrapper>
-  </Transition>
+    </div>
+  </ModalWrapper>
 </template>
 <script setup lang="ts">
 import { reactive } from "vue";
@@ -65,13 +65,16 @@ const task = reactive({
 });
 
 const emit = defineEmits(["close"]);
-
+const handelClose = () => {
+  console.log("yeah");
+  emit("close");
+};
 const create = (): void => {
   taskStore.create({
     id: 0,
     ...task,
     subTasks: [],
   });
-  emit("close");
+  handelClose();
 };
 </script>
