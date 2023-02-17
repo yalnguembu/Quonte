@@ -1,7 +1,12 @@
 <template>
   <div class="w-full">
     <label for="" class="font-500">{{ props.label }}</label>
-    <div class="rounded border px-3 py-3 w-full mt-2">
+    <div
+      :class="[
+        'rounded border px-3 py-3 w-full mt-2',
+        { 'border-red-500': props.error },
+      ]"
+    >
       <LockIcon class="stroke-gray-500" />
       <input
         class="bg-transparent px-3 outline-none"
@@ -11,7 +16,7 @@
         @input="(event :Event)=>emit('update:modelValue', (event.target as HTMLInputElement).value)"
       />
     </div>
-    <p v-if="props.error">{{ props.error }}</p>
+    <p v-if="props.error" class="text-red-500">{{ props.error }}</p>
   </div>
 </template>
 <script setup lang="ts">
