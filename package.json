@@ -6,6 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "run-p type-check build-only",
+    "openapi-generate:bespace": "openapi --useOptions --client axios --input ./specs/bespace.yaml --output ./src/services/bespace",
+    "openapi-generate": "npm run openapi-generate:bespace",
     "preview": "vite preview",
     "test:unit": "vitest --environment jsdom --root src/",
     "test:e2e": "start-server-and-test preview :4173 'cypress run --e2e'",
@@ -37,6 +39,7 @@
     "eslint-plugin-vue": "^9.3.0",
     "jsdom": "^20.0.3",
     "npm-run-all": "^4.1.5",
+    "openapi-typescript-codegen": "^0.23.0",
     "postcss": "^8.4.21",
     "prettier": "^2.7.1",
     "start-server-and-test": "^1.15.2",
