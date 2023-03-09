@@ -6,7 +6,7 @@ import App from "./App.vue";
 import router from "./router";
 
 import "./assets/main.css";
-import { useSessionStore } from "./stores/session";
+import { useSessionStore } from "./stores/auth";
 
 const app = createApp(App);
 

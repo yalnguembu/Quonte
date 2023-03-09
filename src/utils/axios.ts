@@ -1,7 +1,6 @@
 import axios from "axios";
 
-axios.defaults.baseURL = "http://localhost:3333/api";
-// axios.defaults.baseURL = "/api";
+axios.defaults.baseURL = import.meta.env.BASE_URL;
 
 let refresh = false;
 axios.interceptors.response.use(
@@ -27,3 +26,7 @@ axios.interceptors.response.use(
     throw error;
   }
 );
+
+export const setRequestHeaderToken = (token: string): void => {
+  axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
+};

@@ -11,7 +11,7 @@
 </template>
 <script setup lang="ts">
 import TheNavbar from "@/components/TheNavbar.vue";
-import { useSessionStore } from "@/stores/session";
+import { useSessionStore } from "@/stores/auth
 
 const sessionStore = useSessionStore();
 </script>

@@ -60,7 +60,7 @@
   </section>
 </template>
 <script setup lang="ts">
-import { useSessionStore } from "@/stores/session";
+import { useSessionStore } from "@/stores/auth
 import { reactive, ref, watch, toRef } from "vue";
 import { useRouter } from "vue-router";
 import BaseButton from "@/components/BaseButton.vue";

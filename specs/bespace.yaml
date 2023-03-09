@@ -38,9 +38,7 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
-                  $ref: "#/components/schemas/AuthResponseDTO"
+                $ref: "#/components/schemas/AuthResponseDTO"
         403:
           description: wrong crudentials
   /auth/signup:
@@ -56,16 +54,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/AuthResponseDTO"
+              $ref: "#/components/schemas/AuthDTO"
       responses:
         200:
           description: successfull sigin
           content:
             application/json:
               schema:
-                type: array
-                items:
-                  $ref: "#/components/schemas/AuthDTO"
+                $ref: "#/components/schemas/AuthResponseDTO"
         403:
           description: wrong crudentials
   /auth/refresh-token:
@@ -121,7 +117,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/NewOrganisationDTO"
+              $ref: "#/components/schemas/OrganisationDTO"
       responses:
         200:
           description: successfull sigin
@@ -135,6 +131,9 @@ components:
   schemas:
     AuthDTO:
       type: object
+      required:
+        - email
+        - password
       properties:
         email:
           type: string
@@ -142,9 +141,13 @@ components:
           type: string
     AuthResponseDTO:
       type: object
+      required:
+        - id
+        - access_token
+        - refresh_token
       properties:
-        email:
-          type: string
+        id:
+          type: integer
           description: user's email
         access_token:
           type: string
@@ -154,6 +157,8 @@ components:
           description: user's refreshToken
     RefreshTokenDTO:
       type: object
+      required:
+        - refresh_token
       properties:
         refresh_token:
           type: string
@@ -187,6 +192,10 @@ components:
           description: user's lastname
     OrganisationDTO:
       type: object
+      required:
+        - id
+        - name
+        - logo
       properties:
         id:
           type: string
@@ -199,15 +208,3 @@ components:
           description: city's logo
         owner:
           $ref: "#/components/schemas/UserDTO"
-    NewOrganisationDTO:
-      type: object
-      properties:
-        name:
-          type: string
-          description: city's name
-        logo:
-          type: string
-          description: city's logo
-        owner:
-          type: number
-          description: owner's id

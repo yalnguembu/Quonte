@@ -49,7 +49,7 @@ import UserIcon from "./icons/UserIcon.vue";
 import LogoutIcon from "./icons/LogoutIcon.vue";
 import InformationIcon from "./icons/InformationIcon.vue";
 import UserAvatar from "./UserAvatar.vue";
-import { useSessionStore } from "@/stores/session";
+import { useSessionStore } from "@/stores/auth
 import { ref } from "vue";
 import { useOnClickOutSide } from "@/utils/useOnClickOutside";
 
