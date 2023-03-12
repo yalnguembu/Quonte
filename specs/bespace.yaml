@@ -4,7 +4,6 @@ info:
   description: REST API endpoints for managing the bespace's related resources
   version: 1.7.x
 servers:
-  - url: "https"
   - url: "http"
 tags:
   - name: Organisation
@@ -87,6 +86,30 @@ paths:
                 $ref: "#/components/schemas/AccessTokenDTO"
         403:
           description: invalid refresh token
+  /auth/verify-token:
+    post:
+      tags:
+        - Auth
+      summary: verify the user token
+      description: verify the user token
+      operationId: verifyToken
+      requestBody:
+        required: true
+        description: verify token that we need to verify the token
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/AccessTokenDTO"
+      responses:
+        200:
+          description: token verifyhed successfully
+          # content:
+          #   application/json:
+          #     schema:
+          #       $ref: "#/components/schemas/AccessTokenDTO"
+        403:
+          description: invalid refresh token
+
   /organisations/:
     get:
       tags:
@@ -171,9 +194,16 @@ components:
           description: new access token
     UserDTO:
       type: object
+      required:
+        - id
+        - createdAt
+        - updateAt
+        - email
+        - firstName
+        - lastName
       properties:
         id:
-          type: string
+          type: integer
           description: identifier
         createdAt:
           type: string
