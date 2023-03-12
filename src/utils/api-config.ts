@@ -1,6 +1,6 @@
 import axios from "axios";
 
-axios.defaults.baseURL = import.meta.env.BASE_URL;
+// axios.defaults.baseURL = import.meta.env.BASE_URL;
 
 let refresh = false;
 axios.interceptors.response.use(
@@ -29,4 +29,16 @@ axios.interceptors.response.use(
 
 export const setRequestHeaderToken = (token: string): void => {
   axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
+};
+
+import { OpenAPI } from "@/services/bespace";
+
+export const prepareApis = () => {
+  OpenAPI.BASE = import.meta.env.VITE_BASE_URL;
+  OpenAPI.TOKEN = getAccessToken;
+};
+
+const getAccessToken = async (): Promise<string> => {
+  const accessToken = localStorage.getItem("apiAccessToken");
+  return accessToken == null ? "" : accessToken;
 };

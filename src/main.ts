@@ -1,12 +1,12 @@
 import { createApp } from "vue";
 import { createPinia } from "pinia";
-import "@/utils/axios";
-
+import { prepareApis } from "@/utils/api-config";
 import App from "./App.vue";
 import router from "./router";
-
 import "./assets/main.css";
-import { useSessionStore } from "./stores/auth";
+import { useSessionStore } from "./stores/session";
+
+prepareApis();
 
 const app = createApp(App);
 
@@ -14,10 +14,10 @@ app.use(createPinia()).use(router);
 
 router.beforeEach(async (to, from, next) => {
   const authRequired = !to.meta.isPublic;
-  const sessionStore = useSessionStore();
+  const userSession = useSessionStore().isSigned()
 
   if (authRequired) {
-    if (!sessionStore.isSigned()) {
+    if (!userSession) {
       await router.push("/auth/signin");
     }
   }

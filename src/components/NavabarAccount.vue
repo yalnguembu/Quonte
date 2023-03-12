@@ -6,7 +6,7 @@
     >
       <UserAvatar name="Yal nguembu" :path="Image" />
       <p class="px-3 text-bold text-gray-500 hidden lg:block">
-        <span class="mr-1">{{ sessionStore.session?.email }}</span>
+        <span class="mr-1">{{ props.email }}</span>
         <ChevronDown class="h-3 w-3 inline" />
       </p>
     </button>
@@ -49,17 +49,23 @@ import UserIcon from "./icons/UserIcon.vue";
 import LogoutIcon from "./icons/LogoutIcon.vue";
 import InformationIcon from "./icons/InformationIcon.vue";
 import UserAvatar from "./UserAvatar.vue";
-import { useSessionStore } from "@/stores/auth
 import { ref } from "vue";
 import { useOnClickOutSide } from "@/utils/useOnClickOutside";
 
 const accountButton = ref<HTMLButtonElement | undefined>();
 const isMenuVisible = ref<boolean>(false);
-const sessionStore = useSessionStore();
 
 const toggleMenuVisibility = () => (isMenuVisible.value = !isMenuVisible.value);
 
 useOnClickOutSide(accountButton, () => {
   if (isMenuVisible.value) toggleMenuVisibility();
 });
+
+const props = withDefaults(
+  defineProps<{
+    email: string;
+    picture?: string;
+  }>(),
+  { picture: "default-picture.jpg" }
+);
 </script>
