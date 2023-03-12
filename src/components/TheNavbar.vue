@@ -16,7 +16,7 @@
       >
         <Notification class="stroke-gray-500" />
       </button>
-      <NavabarAccount />
+      <NavabarAccount email="email" />
     </div>
   </section>
 </template>
@@ -25,4 +25,14 @@ import Notification from "./icons/NotificationIcon.vue";
 import MenuButton from "./menus/MenuButton.vue";
 import NavabarAccount from "./NavabarAccount.vue";
 import TheBreadcrumbs from "./TheBreadcrumbs.vue";
+import { useUserStore } from "@/stores/user";
+import { useSessionStore } from "@/stores/session";
+
+const sessionStore = useSessionStore();
+const userStore = useUserStore();
+
+// const email =
+//   sessionStore.session !== null
+//     ? await userStore.getAllInformations(sessionStore.session?.id)
+//     : "";
 </script>

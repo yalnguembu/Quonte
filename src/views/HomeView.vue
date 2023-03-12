@@ -47,6 +47,7 @@
 import { ref } from "vue";
 import { useOrganisationStore } from "@/stores/organisation";
 import OrganisationItem from "@/components/organisations/OrganisationItem.vue";
+import BorderButton from "@/components/BorderButton.vue";
 
 const organisations = ref(useOrganisationStore().organisations);
 </script>
