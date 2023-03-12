@@ -47,6 +47,7 @@ export const useSessionStore = defineStore("session", () => {
       });
       session.value = data;
       saveApiToken(data);
+      
       setRequestHeaderToken(data.access_token);
     } catch (error: AxiosError | any) {
       const status: number = error.response?.status;
