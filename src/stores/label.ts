@@ -61,4 +61,3 @@ export const useLabelStore = defineStore("label", () => {
 
   return { labels, create, findById, getTaskByLabel };
 });
-

@@ -132,7 +132,7 @@ export const useTaskStore = defineStore("task", () => {
     }
   ) => {
     tasks.value[parentId].subTasks.push(task);
-    tasks.value[0].subTasks
+    tasks.value[0].subTasks;
   };
   const update = (id: number, playload: object) => {
     tasks.value[id] = { ...tasks.value[id], ...playload };
