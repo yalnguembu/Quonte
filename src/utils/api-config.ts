@@ -38,7 +38,16 @@ export const prepareApis = () => {
   OpenAPI.TOKEN = getAccessToken;
 };
 
-const getAccessToken = async (): Promise<string> => {
+export const getAccessToken = async (): Promise<string> => {
   const accessToken = localStorage.getItem("apiAccessToken");
   return accessToken == null ? "" : accessToken;
+};
+
+export const getRefreshToken = async (): Promise<string> => {
+  const refreshToken = localStorage.getItem("apiRefreshToken");
+  return refreshToken == null ? "" : refreshToken;
+};
+
+export const saveAccessToken = async (accessToken: string) => {
+  localStorage.setItem("apiAccessToken", accessToken);
 };

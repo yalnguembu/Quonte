@@ -1,101 +1,59 @@
 import { createRouter, createWebHistory } from "vue-router";
-import MainWrapper from "@/components/MainWrapper.vue";
-import HomeView from "@/views/HomeView.vue";
+import LandingPageVue from "@/views/LandingPage.vue";
+import MainWrapperVue from "@/components/MainWrapper.vue";
 
 export const routes = [
   {
     path: "/",
-    component: MainWrapper,
+    component: MainWrapperVue,
     children: [
       {
-        name: "home",
+        name: "landing_page",
         path: "",
-        component: HomeView,
-        meta: { isPublic: false },
-      },
-      {
-        name: "organisation",
-        path: "organisations/:organisationId",
-        component: () => import("@/views/organisations/OrganisationView.vue"),
-        children: [
-          {
-            name: "projects",
-            path: "",
-            component: () =>
-              import("@/views/organisations/projects/ProjectsView.vue"),
-          },
-          {
-            name: "project",
-            path: "projects/:projectId",
-            component: () =>
-              import("@/views/organisations/projects/ProjectView.vue"),
-          },
-          {
-            name: "users",
-            path: "users",
-            component: () =>
-              import("@/views/organisations/users/UsersView.vue"),
-          },
-          {
-            name: "teams",
-            path: "teams",
-            component: () =>
-              import("@/views/organisations/teams/TeamsView.vue"),
-          },
-          {
-            name: "team",
-            path: "teams/:teamId",
-            component: () => import("@/views/organisations/teams/TeamView.vue"),
-          },
-          {
-            name: "setting",
-            path: "setting",
-            component: () =>
-              import("@/views/organisations/teams/TeamsView.vue"),
-          },
-        ],
-      },
-      {
-        name: "user-setting",
-        path: "setting",
-        component: HomeView,
-      },
-      {
-        name: "profile",
-        path: "profile",
-        component: HomeView,
-      },
-      {
-        path: "organisations",
-        component: () => import("@/views/organisations/OrganisationsView.vue"),
+        component: LandingPageVue,
       },
       {
         name: "authentication",
-        path: "auth",
+        path: "/auth",
         meta: {
           isPublic: true,
         },
         children: [
           {
             name: "signin",
-            path: "signin",
+            path: "sign-in",
             component: () => import("@/views/auth/SignIn.vue"),
           },
           {
             name: "signup",
-            path: "signup",
+            path: "sign-up",
             component: () => import("@/views/auth/SignUp.vue"),
           },
         ],
       },
       {
-        path: "logout",
-        component: () => import("@/views/organisations/OrganisationsView.vue"),
-      },
-      {
         path: "/:pathMatch(.*)*",
         name: "NotFound",
         component: () => import("@/views/NotFound.vue"),
+      },
+    ],
+  },
+  {
+    name: "app",
+    path: "/app",
+    meta: {
+      isPublic: false,
+    },
+    children: [
+      {
+        name: "notes",
+        path: "notes",
+        component: () => import("@/views/auth/SignIn.vue"),
+      },
+      {
+        name: "todos",
+        path: "todos",
+        component: () => import("@/views/auth/SignUp.vue"),
       },
     ],
   },

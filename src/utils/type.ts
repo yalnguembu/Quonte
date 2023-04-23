@@ -1,12 +1,19 @@
-import type { TASK_STATUS, TASK_CATEGORIES, TASK_PRIORITY } from "@/utils/enum";
-export interface Task {
-  id: number;
-  title: string;
-  summary: string;
-  status: TASK_STATUS;
-  category: TASK_CATEGORIES;
-  priority: TASK_PRIORITY;
-  reporter: string;
-  assignee: string;
-  subTasks: object;
+import type { VueElement } from "vue";
+
+export enum ButtonType {
+  button = "button",
+  submit = "submit",
+  reset = "reset",
 }
+
+export type MenuItems = {
+  title?: string;
+  label?: string;
+  path: string;
+  icon?: VueElement;
+  theme: {
+    icon: "string";
+    label: "string";
+    item: "block text-md font-bold text-green-900 px-4 py-2 rounded-md border border-transparent hover:border-gray-200";
+  };
+};

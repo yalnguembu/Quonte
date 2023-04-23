@@ -83,7 +83,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/AccessTokenDTO"
+                $ref: "#/components/schemas/RefreshTokenResponseDTO"
         403:
           description: invalid refresh token
   /auth/verify-token:
@@ -171,6 +171,9 @@ components:
       properties:
         id:
           type: integer
+          description: user's id
+        email:
+          type: string
           description: user's email
         access_token:
           type: string
@@ -186,8 +189,26 @@ components:
         refresh_token:
           type: string
           description: refresh token
+    RefreshTokenResponseDTO:
+      type: object
+      required:
+        - access_token
+        - id
+        - email
+      properties:
+        id:
+          type: integer
+          description: user's id
+        email:
+          type: string
+          description: user's email
+        access_token:
+          type: string
+          description: user's accessToken
     AccessTokenDTO:
       type: object
+      required:
+        - access_token
       properties:
         access_token:
           type: string

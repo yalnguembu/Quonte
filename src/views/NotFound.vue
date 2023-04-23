@@ -1,6 +1,6 @@
 <template>
   <div
-    class="min-h-screen min-w-screen max-h-conten bg-blue-100 flex flex-col justify-center items-center"
+    class="h-full min-w-screen max-h-conten bg-green-100 flex flex-col justify-center items-center p-11"
   >
     <div class="w-1/3">
       <img src="@/assets/images/not-found.jpg" alt="" />

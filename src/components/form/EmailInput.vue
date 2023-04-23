@@ -1,9 +1,9 @@
 <template>
   <div class="w-full">
-    <label for="" class="font-500">{{ props.label }}</label>
+    <label for="" class="font-500 dark:text-gray-100">{{ props.label }}</label>
     <div
       :class="[
-        'rounded border px-3 py-3 w-full mt-2',
+        'rounded border px-3 py-3 w-full mt-2 dark:border-gray-500',
         { 'border-red-500': props.error },
       ]"
     >
