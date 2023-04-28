@@ -1,9 +1,9 @@
 <template>
   <div class="inline-block">
     <button :class="theme" :type="type">
-      <slot name="icon-left" />
-      {{ title }}
-      <slot name="icon-rigth" />
+      <slot name="icon-left" data-test="base-button-icon-left" />
+      <span data-test="base-button-title">{{ title }}</span>
+      <slot name="icon-rigth" data-test="base-button-icon-rigth" />
     </button>
   </div>
 </template>

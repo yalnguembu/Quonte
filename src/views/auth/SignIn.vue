@@ -3,7 +3,7 @@
     className="w-full h-full bg-yellow-200 dark:bg-gray-900 flex items-center justify-center p-7"
   >
     <div
-      className="card bg-white dark:bg-gray-900 dark:border border-gray-700 p-8 rounded-lg shadow w-4/5 lg:w-2/5 xl:w-1/3"
+      className="card bg-white dark:bg-gray-900 dark:border border-gray-700 p-9 rounded-lg shadow w-4/5 lg:w-2/5 xl:w-1/3"
     >
       <div className="text-center">
         <h1 className="font-bold text-xl dark:text-gray-100">Sign In</h1>

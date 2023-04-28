@@ -2,7 +2,7 @@
   <div class="w-full">
     <label for="" class="font-500">{{ props.label }}</label>
     <input
-      class="rounded border px-4 py-3 w-full mt-2"
+      class="rounded border px-4 py-1 w-full mt-2 bg-transparent dark:border-gray-700 outline-none dark:focus:outline-green-800"
       type="text"
       :placeholder="props.placeholder"
       :value="props.modelValue"

@@ -4,7 +4,7 @@
       <header class="h-full w-full p-4 grid gap-4 grid-cols-1 lg:grid-cols-2">
         <div class="h-ful p-4 py-6 lg:p-12 lg:py-16">
           <h1
-            class="text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-300 to-yellow-500"
+            class="text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-500 dark:from-green-300 to-yellow-500 dark:to-yellow-500"
           >
             Quonte
           </h1>
@@ -68,7 +68,7 @@
           <BaseButton title="Create note" />
         </div>
       </div>
-      <div class="block my-8">
+      <div class="block py-8">
         <h3
           class="font-bold text-3xl text-green-800 dark:text-green-100 text-center my-24"
         >
@@ -106,11 +106,9 @@
         </div>
       </div>
     </main>
-    <TheFooterVue />
   </div>
 </template>
 <script lang="ts" setup>
 import BaseButton from "@/components/BaseButton.vue";
-import TheFooterVue from "@/components/TheFooter.vue";
 import TwitterIconVue from "@/components/icons/TwitterIcon.vue";
 </script>

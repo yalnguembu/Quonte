@@ -1,7 +1,12 @@
 <template>
-  <li>
+  <li data-test="menu-item">
     <RouterLink :to="path" :title="title" :class="theme.item">
-      <component :is="icon" v-if="icon" :class="theme.icon" />
+      <component
+        data-test="menu-item-icon"
+        :is="icon"
+        v-if="icon"
+        :class="theme.icon"
+      />
       <span :class="theme.label">{{ label }}</span>
     </RouterLink>
   </li>
@@ -29,7 +34,7 @@ defineProps({
   theme: {
     type: Object as PropType<{ icon?: string; label?: string; item?: string }>,
     default: () => ({
-      icon: "",
+      icon: "align-middle",
       label: "",
       item: "block text-md font-bold text-green-900 dark:text-gray-300 dark:hover:border-gray-700 px-4 py-2 rounded-md border border-transparent hover:border-gray-200",
     }),

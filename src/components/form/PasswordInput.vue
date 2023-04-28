@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full">
+  <div class="w-full" data-test="password-input">
     <label for="" class="font-500 dark:text-gray-100">{{ props.label }}</label>
     <div
       :class="[
