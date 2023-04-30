@@ -71,7 +71,7 @@
 import { useSessionStore } from "@/stores/session";
 import { reactive, ref, watch, toRef } from "vue";
 import { useRouter } from "vue-router";
-import BaseButton from "@/components/BaseButton.vue";
+import BaseButton from "@/components/button/BaseButton.vue";
 import EmailInput from "@/components/form/EmailInput.vue";
 import PasswordInput from "@/components/form/PasswordInput.vue";
 import InformationIcon from "@/components/icons/InformationIcon.vue";

@@ -1,17 +1,16 @@
 <template>
   <RouterLink
-    :to="id"
-    :class="[
-      'bg-white w-full rounded-lg border dark:border-gray-700 hover:bg-gray-100 dark:bg-gray-900 dark:hover:bg-gray-800 flex flex-col justify-between',
-    ]"
+    :to="`/app/notes/${id}`"
+    class="'bg-white w-full hover:shadow-lg rounded-lg border dark:border-gray-700 hover:bg-gray-100/50 dark:bg-gray-900/50 dark:hover:bg-gray-800 flex flex-col justify-between',"
   >
     <div
       :class="[
         'p-4 flex-col justify-center overflow-hidden flex flex-col',
         { 'border-b dark:border-b-gray-700': noteItemType === NOTE_ITEM.CARD },
         {
-          'h-40':
-            noteItemType === NOTE_ITEM.CARD || noteItemType === NOTE_ITEM.SUMMARY,
+          'max-h-40':
+            noteItemType === NOTE_ITEM.CARD ||
+            noteItemType === NOTE_ITEM.SUMMARY,
         },
       ]"
     >
@@ -28,23 +27,25 @@
           noteItemType === NOTE_ITEM.CARD || noteItemType === NOTE_ITEM.SUMMARY
         "
       >
-        <TagItem
+        <RouterLink
           v-for="tagItem in tags"
           :key="tagItem.id"
-          :id="tagItem.id"
-          :title="tagItem.title"
-        />
+          :to="tagItem.id"
+          class="max-w-full"
+        >
+          <TagItem :title="tagItem.title" />
+        </RouterLink>
       </div>
     </div>
     <div v-if="noteItemType === NOTE_ITEM.CARD">
-      <div class="p-4 max-h-40 w-full overflow-hidden">
+      <div class="p-4 mb-3 max-h-40 w-full overflow-hidden" v-if="description">
         <p
-          class="font-sm text-gray-300 whitespace-pre-all break-word text-ellipsis"
+          class="font-sm dark:text-gray-300 text-gray-500 whitespace-pre-all break-word text-ellipsis"
         >
           {{ description }}
         </p>
       </div>
-      <p class="font-sm text-gray-500 p-4 mt-3">
+      <p class="font-sm text-gray-400 dark:text-gray-500 p-4">
         {{ date().getPassedTime(creationDate) }}
       </p>
     </div>

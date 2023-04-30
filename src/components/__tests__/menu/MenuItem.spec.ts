@@ -1,7 +1,7 @@
 import { RouterLinkStub, VueWrapper, mount } from "@vue/test-utils";
 import { beforeEach, describe, expect, it } from "vitest";
-import MenuItem from "../MenuItem.vue";
-import ListIcon from "../icons/ListIcon.vue";
+import MenuItem from "../../menu/MenuItem.vue";
+import ListIcon from "../../icons/ListIcon.vue";
 
 describe("BaseButtonVue", () => {
   let wrapper: VueWrapper;

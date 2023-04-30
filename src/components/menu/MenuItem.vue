@@ -5,7 +5,7 @@
         data-test="menu-item-icon"
         :is="icon"
         v-if="icon"
-        :class="theme.icon"
+        :class="[theme.icon, { 'font-bold': actived }]"
       />
       <span :class="theme.label">{{ label }}</span>
     </RouterLink>
@@ -36,7 +36,7 @@ defineProps({
     default: () => ({
       icon: "align-middle",
       label: "",
-      item: "block text-md font-bold text-green-900 dark:text-gray-300 dark:hover:border-gray-700 px-4 py-2 rounded-md border border-transparent hover:border-gray-200",
+      item: "block text-md text-green-900 dark:text-gray-300 dark:hover:border-gray-700 px-4 py-2 rounded-md border border-transparent hover:border-gray-200",
     }),
   },
 });

@@ -2,7 +2,7 @@ import { mount, RouterLinkStub, type VueWrapper } from "@vue/test-utils";
 import { describe, expect, it, beforeEach, vi } from "vitest";
 import TheNavbar from "../TheNavbar.vue";
 import { navBarItems } from "@/utils/data";
-import MenuItem from "../MenuItem.vue";
+import MenuItem from "../menu/MenuItem.vue";
 import type { MenuItem as MenuItemType } from "@/utils/type";
 import type { VueElement } from "vue";
 import ThemeButton from "../ThemeButton.vue";
@@ -105,7 +105,7 @@ describe("TheNavbar", () => {
           RouterLink: RouterLinkStub,
         },
       },
-    //   shallow: true,
+      //   shallow: true,
       props: { navBarItems },
     });
 

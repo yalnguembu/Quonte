@@ -109,6 +109,6 @@
   </div>
 </template>
 <script lang="ts" setup>
-import BaseButton from "@/components/BaseButton.vue";
+import BaseButton from "@/components/button/BaseButton.vue";
 import TwitterIconVue from "@/components/icons/TwitterIcon.vue";
 </script>

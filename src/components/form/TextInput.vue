@@ -1,8 +1,8 @@
 <template>
   <div class="w-full">
-    <label for="" class="font-500">{{ props.label }}</label>
+    <label class="font-500 dark:text-gray-100">{{ props.label }}</label>
     <input
-      class="rounded border px-4 py-1 w-full mt-2 bg-transparent dark:border-gray-700 outline-none dark:focus:outline-green-800"
+      class="rounded border px-4 py-1 w-full mt-2 bg-transparent dark:text-gray-100 dark:border-gray-700 outline-none dark:focus:outline-green-800"
       type="text"
       :placeholder="props.placeholder"
       :value="props.modelValue"
@@ -16,7 +16,7 @@ const emit = defineEmits(["update:modelValue"]);
 const props = withDefaults(
   defineProps<{
     modelValue: string;
-    label: string;
+    label?: string;
     placeholder?: string;
     error?: string;
   }>(),

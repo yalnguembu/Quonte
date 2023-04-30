@@ -3,3 +3,8 @@ export enum NOTE_ITEM {
   LIST = "LIST",
   SUMMARY = "SUMMARY",
 }
+
+export enum SORT_TYPE {
+  ASC = "ASC",
+  DESC = "DESC",
+}

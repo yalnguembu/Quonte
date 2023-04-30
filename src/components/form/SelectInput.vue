@@ -1,13 +1,13 @@
 <template>
   <div class="block">
-    <label for="select">{{ props.label }}</label>
+    <label for="select dark:text-gray-100">{{ props.label }}</label>
     <div
       data-test="select-input"
       class="w-full relative bg-white rounded border px-4 py-3 w-full mt-2"
     >
       <input
         type="text"
-        class="w-full bg-transparent"
+        class="w-full bg-transparent dark:text-gray-100"
         :placeholder="props.placeholder"
         v-model.trim="text"
         @focus="toggleIsFocused"
@@ -38,7 +38,7 @@
 import { ref, watch } from "vue";
 
 interface Props {
-  label: string;
+  label?: string;
   placeholder?: string;
   defaultValue?: string;
   modelValue: string;
@@ -46,21 +46,11 @@ interface Props {
   error?: string;
 }
 
-const props = withDefaults(
-  defineProps<{
-    label: string;
-    placeholder?: string;
-    defaultValue?: string;
-    modelValue: string;
-    options: string[];
-    error?: string;
-  }>(),
-  {
-    error: "",
-    placeholder: "",
-    defaultValue: "",
-  }
-);
+const props = withDefaults(defineProps<Props>(), {
+  error: "",
+  placeholder: "",
+  defaultValue: "",
+});
 const emit = defineEmits(["update:modelValue"]);
 const text = ref<string>(props.modelValue);
 const select = ref<string>(props.defaultValue);

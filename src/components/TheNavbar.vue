@@ -1,6 +1,6 @@
 <template>
   <nav
-    class="w-full border-b dark:border-b-gray-700 flex justify-between px-4 py-1 bg-white dark:bg-gray-900"
+    class="w-full border-b dark:border-b-gray-700 flex justify-between px-4 py-1 bg-white dark:bg-gray-900 z-20"
   >
     <ul class="flex items-center">
       <li data-test="app-logo-link">
@@ -14,7 +14,7 @@
 
       <div class="hidden lg:flex" data-test="navbar-left-content">
         <template v-if="isUserConnected">
-          <MenuItemVue
+          <MenuItem
             v-for="(navBarItem, index) in navBarItems.private"
             :actived="true"
             :key="index"
@@ -26,7 +26,7 @@
           />
         </template>
         <template v-else>
-          <MenuItemVue
+          <MenuItem
             v-for="(navBarItem, index) in navBarItems.left"
             :key="index"
             :path="navBarItem.path"
@@ -48,7 +48,7 @@
         </button>
       </template>
       <template v-else>
-        <MenuItemVue
+        <MenuItem
           v-for="(navBarItem, index) in navBarItems.center"
           :key="index"
           :path="navBarItem.path"
@@ -68,7 +68,7 @@
         class="border-r h-1/3 border-r-gray-200 dark:border-r-gray-700 mx-6"
       />
       <div data-test="navbar-right-content" class="flex">
-        <MenuItemVue
+        <MenuItem
           class="mx-1"
           v-for="(navBarItem, index) in navBarItems.right"
           :key="index"
@@ -82,29 +82,29 @@
   </nav>
 </template>
 <script lang="ts" setup>
-import ThemeButton from "./ThemeButton.vue";
+import ThemeButton from "./button/ThemeButton.vue";
 import UserAvatar from "./UserAvatar.vue";
-import MenuItemVue from "./MenuItem.vue";
+import MenuItem from "./menu/MenuItem.vue";
 import { VueElement, onMounted, ref } from "vue";
-import type { MenuItem } from "@/utils/type";
+import type { MenuItem as MenuItemType } from "@/utils/type";
 
 defineProps({
   navBarItems: {
     type: Object,
     left: {
-      type: Array<MenuItem>,
+      type: Array<MenuItemType>,
       required: true,
     },
     center: {
-      type: Array<MenuItem>,
+      type: Array<MenuItemType>,
       required: true,
     },
     right: {
-      type: Array<MenuItem>,
+      type: Array<MenuItemType>,
       required: true,
     },
     private: {
-      type: Array<MenuItem>,
+      type: Array<MenuItemType>,
       required: true,
     },
     required: true,

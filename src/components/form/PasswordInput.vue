@@ -9,7 +9,7 @@
     >
       <LockIcon class="stroke-gray-500" />
       <input
-        class="bg-transparent px-3 outline-none"
+        class="bg-transparent px-3 outline-none dark:text-gray-100"
         type="password"
         :placeholder="props.placeholder"
         :value="props.modelValue"
@@ -26,7 +26,7 @@ const emit = defineEmits(["update:modelValue"]);
 const props = withDefaults(
   defineProps<{
     modelValue: string;
-    label: string;
+    label?: string;
     placeholder?: string;
     error?: string;
   }>(),

@@ -42,7 +42,15 @@ export const routes = [
             name: "notes",
             path: "notes",
             component: () => import("@/views/notes/NotesList.vue"),
+            children: [
+              {
+                name: "note",
+                path: ":id",
+                component: () => import("@/views/notes/NoteDetails.vue"),
+              },
+            ],
           },
+
           {
             name: "todos",
             path: "todos",

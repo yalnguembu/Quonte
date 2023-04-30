@@ -23,3 +23,11 @@ export type Tag = {
   title: string;
   description?: string;
 };
+
+export type Note = {
+  id: string;
+  title: string;
+  creationDate: string;
+  description: string;
+  tags: Tag[];
+};
