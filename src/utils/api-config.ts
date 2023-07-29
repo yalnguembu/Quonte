@@ -1,7 +1,5 @@
 import axios from "axios";
 
-// axios.defaults.baseURL = import.meta.env.BASE_URL;
-
 let refresh = false;
 axios.interceptors.response.use(
   (resp) => resp,
@@ -31,23 +29,21 @@ export const setRequestHeaderToken = (token: string): void => {
   axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
 };
 
-import { OpenAPI } from "@/services/bespace";
+import { OpenAPI } from "@/services";
 
-export const prepareApis = () => {
+export const prepareApis = (): void => {
   OpenAPI.BASE = import.meta.env.VITE_BASE_URL;
   OpenAPI.TOKEN = getAccessToken;
 };
 
-export const getAccessToken = async (): Promise<string> => {
-  const accessToken = localStorage.getItem("apiAccessToken");
-  return accessToken == null ? "" : accessToken;
-};
+export const getAccessToken = async (): Promise<string> =>
+  localStorage.getItem("apiAccessToken") ?? "";
 
-export const getRefreshToken = async (): Promise<string> => {
-  const refreshToken = localStorage.getItem("apiRefreshToken");
-  return refreshToken == null ? "" : refreshToken;
-};
+export const getRefreshToken = async (): Promise<string> =>
+  localStorage.getItem("apiRefreshToken") ?? "";
 
-export const saveAccessToken = async (accessToken: string) => {
+export const saveAccessToken = async (accessToken: string): Promise<void> =>
   localStorage.setItem("apiAccessToken", accessToken);
-};
+
+export const saveRefreshToken = async (accessToken: string): Promise<void> =>
+  localStorage.setItem("apiAccessToken", accessToken);

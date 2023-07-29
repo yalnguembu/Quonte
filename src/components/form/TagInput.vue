@@ -1,9 +1,18 @@
 <template>
   <div>
     <label v-if="label" class="font-500 dark:text-gray-100">{{ label }}</label>
-    <div class="flex w-full">
+    <div class="flex w-full overflow-hidden">
       <div
-        class="border dark:border-gray-600 mt-2 rounded py-1 w-full relative"
+        :class="[
+          'rounded border px-3 py-1 w-full flex mt-2 bg-transparent outline-none dark:text-gray-100 dark:border-gray-700 relative',
+          errors?.length
+            ? 'outline-red-500'
+            : isValid
+            ? 'outline-green-500 dark:outline-green-600'
+            : isOptionsListVisible
+            ? 'focus:outline-blue-500 dark:focus:outline-blue-600'
+            : '',
+        ]"
       >
         <div v-if="withPreview">
           <TagItem
@@ -32,7 +41,7 @@
             <li
               v-for="(tag, index) in tagsList"
               :key="index"
-              @click="() => select(tag)"
+              @click="() => select(tag.id)"
               class="px-2 py-1 rounded dark:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-700"
             >
               {{ tag.title }}
@@ -42,55 +51,58 @@
       </div>
       <BaseButton title="Add" v-if="withPreview" @click="addTags" />
     </div>
+    <p
+      :data-test="error.$property"
+      v-show="props.errors?.length"
+      v-for="error in props.errors"
+      :key="error.$uid"
+      class="pt-1 text-red-500 transition delay-500 text-sm"
+    >
+      {{ error.$message }}
+    </p>
     <div class="flex flex-wrap">
       <button
-        @click="() => removeTag(tag.id)"
-        v-for="(tag, index) in modelValue"
-        :key="index"
+        v-for="tagId in modelValue"
+        :key="tagId as string"
+        @click="() => removeTag(tagId as string)"
       >
-        <TagItem :title="tag.title" />
+        <TagItem :title="tags.find((tag) => tagId === tag.id)?.title" />
       </button>
     </div>
   </div>
 </template>
 <script lang="ts" setup>
-import { ref, type PropType, watch } from "vue";
+import { ref, watch } from "vue";
 import type { Tag as TagType } from "@/utils/type";
 import { useDetectOutsideClick } from "@/utils/outsideClick";
 import BaseButton from "../button/BaseButton.vue";
 import TagItem from "../TagItem.vue";
+import type { ErrorObject } from "@vuelidate/core";
 
-const props = defineProps({
-  modelValue: {
-    type: Array as PropType<TagType[]>,
-    required: true,
-    default: () => [],
-  },
-  withPreview: {
-    type: Boolean,
-    default: false,
-  },
-  label: {
-    type: String,
-  },
-  placeholder: {
-    type: String,
-  },
-  tags: {
-    type: Array as PropType<TagType[]>,
-    required: true,
-    default: () => [],
-  },
-});
+const props = withDefaults(
+  defineProps<{
+    modelValue: string[];
+    withPreview?: boolean;
+    label?: string;
+    placeholder?: string;
+    tags: TagType[];
+    errors?: ErrorObject[];
+    isValid?: boolean;
+  }>(),
+  {
+    errors: () => [],
+    isValid: false,
+    withPreview: false,
+    tags: () => [],
+  }
+);
 
 const emit = defineEmits(["update:modelValue", "addTags"]);
 
 const preview = ref<string>("");
 const tagsPreview = ref<TagType[]>([]);
 const tagsList = ref<TagType[]>(
-  props.tags.filter(
-    (el) => !props.modelValue.map((tag) => tag.title).includes(el.title)
-  )
+  props.tags.filter((tag) => !props.modelValue.includes(tag.id))
 );
 const isOptionsListVisible = ref<boolean>(false);
 const optionsList = ref<HTMLUListElement | undefined>();
@@ -101,7 +113,7 @@ watch(preview, (value) => {
 
 watch(props, (value) => {
   tagsList.value = value.tags.filter(
-    (el) => !value.modelValue.map((tag) => tag.title).includes(el.title)
+    (tag) => !props.modelValue.includes(tag.id)
   );
 });
 
@@ -110,12 +122,12 @@ const addTags = () => {};
 const removeTag = (id: string) => {
   emit(
     "update:modelValue",
-    props.modelValue.filter((tag) => tag.id !== id)
+    props.modelValue.filter((tag) => tag !== id)
   );
 };
 
-const select = (tag: TagType) => {
-  emit("update:modelValue", [...props.modelValue, tag]);
+const select = (id: string) => {
+  emit("update:modelValue", [...props.modelValue, id]);
 };
 const toggleIsOptionsListVisibility = () =>
   (isOptionsListVisible.value = !isOptionsListVisible.value);

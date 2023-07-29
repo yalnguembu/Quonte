@@ -1,6 +1,7 @@
 <template>
   <ModalWrapper @close="() => $emit('close')">
     <div
+      @click.self="() => {}"
       class="p-4 h-full justify-self-endw-full lg:w-1/3 p-8 bg-white dark:bg-gray-900 h-screen dark:text-gray-100"
     >
       <NoteDetailsSkeleton v-if="isNoteInformationsLoading" />
@@ -23,7 +24,6 @@
               </template>
             </BaseButton>
           </div>
-
           <button @click.stop="emit('close')">
             <PlusIcon class="rotate-45" />
           </button>

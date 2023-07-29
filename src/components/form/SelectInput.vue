@@ -1,17 +1,33 @@
 <template>
   <div class="block">
-    <label for="select dark:text-gray-100">{{ props.label }}</label>
+    <label class="select dark:text-gray-100">{{ props.label }}</label>
     <div
       data-test="select-input"
       class="w-full relative bg-white rounded border px-4 py-3 w-full mt-2"
     >
       <input
         type="text"
-        class="w-full bg-transparent dark:text-gray-100"
+        :class="[
+          'rounded border px-3 py-1 w-full mt-2 bg-transparent outline-none dark:text-gray-100 dark:border-gray-700',
+          errors.length
+            ? 'outline-red-500'
+            : isValid
+            ? 'outline-green-500 dark:outline-green-600'
+            : 'focus:outline-blue-500 dark:focus:outline-blue-600',
+        ]"
         :placeholder="props.placeholder"
         v-model.trim="text"
         @focus="toggleIsFocused"
       />
+      <p
+        :data-test="error.$property"
+        v-show="props.errors?.length"
+        v-for="error in props.errors"
+        :key="error.$uid"
+        class="pt-1 text-red-500 transition delay-500 text-sm"
+      >
+        {{ error.$message }}
+      </p>
       <ul
         :class="[
           'w-full absolute top-14 left-0  bg-white rounded shadow',
@@ -36,21 +52,26 @@
 
 <script setup lang="ts">
 import { ref, watch } from "vue";
+import type { ErrorObject } from "@vuelidate/core";
 
-interface Props {
-  label?: string;
-  placeholder?: string;
-  defaultValue?: string;
-  modelValue: string;
-  options: string[];
-  error?: string;
-}
+const props = withDefaults(
+  defineProps<{
+    label?: string;
+    placeholder?: string;
+    defaultValue?: string;
+    modelValue: string;
+    options: string[];
+    errors?: ErrorObject[];
+    isValid?: boolean;
+  }>(),
+  {
+    errors: () => [],
+    placeholder: "",
+    defaultValue: "",
+    isValid: false,
+  }
+);
 
-const props = withDefaults(defineProps<Props>(), {
-  error: "",
-  placeholder: "",
-  defaultValue: "",
-});
 const emit = defineEmits(["update:modelValue"]);
 const text = ref<string>(props.modelValue);
 const select = ref<string>(props.defaultValue);

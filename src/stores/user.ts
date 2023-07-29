@@ -9,7 +9,7 @@ export const useUserStore = defineStore("user", () => {
   const getAllInformations = async (id: number) => {
     user.value = {
       id: id,
-      createdAt: "",
+      creationDate: "",
       updateAt: "",
       email: "admin@bespace.com",
       firstName: "admin",

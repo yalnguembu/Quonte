@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="note-list">
     <NoteDetails
       v-if="id"
       @close="
@@ -13,9 +13,17 @@
       v-if="istNoteCreationMoalVisible"
       @close="toggleIstNoteCreationMoalVisible"
     />
+    <header class="w-full mb-4">
+      <h1
+        class="font-bold text-3xl text-left dark:text-gray-200 px-4 py-4 lg:mb-0 lg:hidden"
+      >
+        My notes
+      </h1>
+      <hr class="w-full b-gray-700 shadow mb-4" />
+    </header>
     <div class="min-h-screen flex justify-center bg-white dark:bg-gray-900">
       <div class="w-full max-w-screen-xl p-4 h-full block xl:px-12">
-        <div v-if="istNotesListLoading">
+        <div v-if="istNotesListLoading" class="min-h-[90vh]">
           <div class="flex justify-between animate-pulse my-4">
             <div class="h-7 rounded-lg w-80 bg-gray-100 dark:bg-gray-700" />
             <div class="h-7 rounded-lg w-96 bg-gray-100 dark:bg-gray-700" />
@@ -43,12 +51,14 @@
           <div
             class="grid grid-cols-1 gap-x-4 lg:gap-x-8 lg:grid-cols-7 items-center mt-4"
           >
-            <div class="col-span-4">
-              <h1 class="font-bold text-3xl text-left dark:text-gray-200">
-                Saved notes
+            <div class="col-span-3">
+              <h1
+                class="font-bold text-3xl text-left dark:text-gray-200 mb-4 hidden lg:block lg:mb-0"
+              >
+                Notes
               </h1>
             </div>
-            <div class="flex justify-center col-span-2">
+            <div class="flex justify-center col-span-3">
               <SearchInput
                 v-model="state.search"
                 placeholder="Search in notes..."
@@ -68,7 +78,7 @@
                 class="overflow-hidden"
                 :id="note.id"
                 :title="note.title"
-                :description="note.description"
+                :content="note.content"
                 :creationDate="note.creationDate"
                 :tags="note.tags"
                 :noteItemType="listView"
@@ -78,7 +88,7 @@
         </div>
         <div
           v-else
-          class="w-full min-h-[32rem] flex flex-col items-center justify-center p-12"
+          class="w-full min-h-[90vh] flex flex-col items-center justify-center p-12"
         >
           <img
             src="@/assets/images/notes.svg"
@@ -110,14 +120,18 @@
 }
 
 .note-container {
-  column-count: 3;
+  column-count: 1;
+}
+
+@media screen and (min-width: 700px) {
+  .note-container {
+    column-count: 3;
+  }
 }
 </style>
 <script setup lang="ts">
 import { onBeforeMount, ref, shallowRef, watch } from "vue";
-import { notes } from "@/utils/data";
 import { NOTE_ITEM, SORT_TYPE } from "@/utils/enum";
-import type { Note as NoteType } from "@/utils/type";
 import SearchInput from "@/components/form/SearchInput.vue";
 import FilterButtonVue from "@/components/button/FilterButton.vue";
 import ViewButton from "@/components/button/ViewButton.vue";
@@ -128,13 +142,16 @@ import { useRoute, useRouter } from "vue-router";
 import NoteItemskeleton from "@/components/NoteItemskeleton.vue";
 import NoteCreationButton from "@/components/button/NoteCreationButton.vue";
 import NoteCreationModal from "./NoteCreationModal.vue.vue";
+import { useNoteStore } from "@/stores/note";
+import type { Note } from "@/domain/Note";
 
+const noteStore = useNoteStore();
 const router = useRouter();
 const route = useRoute();
 const id = ref<string | undefined>();
 watch(route, (value) => (id.value = (value.params.id as string) ?? ""));
 
-const notesList = ref<NoteType[]>([]);
+const notesList = ref<Note[]>([]);
 const state = shallowRef({ search: "" });
 const listView = ref<NOTE_ITEM>(NOTE_ITEM.CARD);
 const dateSort = ref<SORT_TYPE>(SORT_TYPE.DESC);
@@ -144,10 +161,11 @@ const istNoteCreationMoalVisible = ref<boolean>(false);
 const changleListView = (view: NOTE_ITEM): void => {
   listView.value = view;
 };
+
 const fetchNotes = async () => {
   try {
     istNotesListLoading.value = true;
-    notesList.value = notes;
+    notesList.value = await noteStore.getAllNotes();
   } catch (error) {
     console.log(error);
   } finally {

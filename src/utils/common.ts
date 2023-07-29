@@ -12,27 +12,27 @@ export const date = () => {
     if (passedTime > 4) return new Date(isoDate).toDateString();
     if (passedTime >= 1)
       return `${Math.round(passedTime)} week${
-        time * passedTime > 1 ? "s ago" : ""
+        Math.round(time * passedTime) > 1 ? "s ago" : ""
       }`;
     passedTime = time / oneDayTime;
     if (passedTime >= 1)
       return `${Math.round(passedTime)} day${
-        time * passedTime > 1 ? "s ago" : ""
+        Math.round(time * passedTime) > 1 ? "s ago" : ""
       }`;
     passedTime = time / oneHourTime;
     if (passedTime >= 1)
       return `${Math.round(passedTime)} hour${
-        time * passedTime > 1 ? "s ago" : ""
+        Math.round(time * passedTime) > 1 ? "s ago" : ""
       }`;
     passedTime = time / oneMinutesTime;
     if (passedTime >= 1)
-      return `${Math.round(passedTime)} minutes${
-        time * passedTime > 1 ? "s ago" : ""
+      return `${Math.round(passedTime)} minute${
+        Math.round(time * passedTime) > 1 ? "s ago" : ""
       }`;
     passedTime = time / oneSecondsTime;
     if (passedTime > 1)
       return `${Math.round(passedTime)} second${
-        time * passedTime > 1 ? "s ago" : ""
+        Math.round(time * passedTime) > 1 ? "s ago" : ""
       }`;
     return `just now`;
   };
@@ -40,4 +40,10 @@ export const date = () => {
   return {
     getPassedTime,
   };
+};
+
+export const string = () => {
+  const replaceSpaceBySlashToLowercase = (text: string) =>
+    text.toLowerCase().replace(" ", "-");
+  return { replaceSpaceBySlashToLowercase };
 };

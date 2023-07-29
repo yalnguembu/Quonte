@@ -7,7 +7,6 @@ describe("EmailInput", () => {
     props: {
       label: "Email adress",
       placeholder: "Enter your email adress",
-      error: "",
       modelValue: "",
     },
   });
@@ -27,26 +26,58 @@ describe("EmailInput", () => {
   });
 
   it("should have the awaited error message and the awaited design", async () => {
-    expect(wrapper.find('[data-test="email-input-text-error"]').exists()).toBe(
-      false
-    );
-    expect(
-      wrapper.find('[data-test="email-input"] input').classes("border-red-500")
-    ).toBe(false);
+    expect(wrapper.find("p").exists()).toBe(false);
+    expect(wrapper.find("div input").classes("outline-red-500")).toBe(false);
 
     await wrapper.setProps({
-      error: "This field is required",
+      errors,
     });
 
     expect(
-      wrapper.find('[data-test="email-input-error-message"]').exists()
+      wrapper
+        .find(
+          '[data-test="email-input-error-5f35ce06-37c2-497c-9b3a-5669cb24035b"]'
+        )
+        .exists()
     ).toBe(true);
-    expect(wrapper.find('[data-test="email-input-error-message"]').text()).toBe(
-      "This field is required"
-    );
+
     expect(
-      wrapper.find('[data-test="email-input"] div').classes("border-red-500")
+      wrapper
+        .find(
+          '[data-test="email-input-error-5f35ce06-37c2-497c-9b3a-5669cb24035b"]'
+        )
+        .text()
+    ).toBe("This field is required");
+    expect(
+      wrapper
+        .find(
+          '[data-test="email-input-error-1d14dfb7-7d30-41e6-8230-3010ca90f43c"]'
+        )
+        .exists()
     ).toBe(true);
+    expect(
+      wrapper
+        .find(
+          '[data-test="email-input-error-1d14dfb7-7d30-41e6-8230-3010ca90f43c"]'
+        )
+        .text()
+    ).toBe("This is not a valid email");
+    expect(wrapper.find("div input").classes("outline-red-500")).toBe(true);
+  });
+
+  it("should have the awaited outline when the email is valid", async () => {
+    expect(
+      wrapper
+        .find("div input")
+        .classes("outline-green-500 dark:outline-green-600")
+    ).toBe(false);
+
+    await wrapper.setProps({
+      isValid: true,
+    });
+    expect(wrapper.find("div input").attributes("class")).toContain(
+      "outline-green-500 dark:outline-green-600"
+    );
   });
 
   it("should emit the awaited value after input", async () => {
@@ -57,3 +88,14 @@ describe("EmailInput", () => {
     expect(wrapper.emitted("update:modelValue")[0][0]).toBe("Hello");
   });
 });
+
+const errors = [
+  {
+    $message: "This field is required",
+    $uid: "5f35ce06-37c2-497c-9b3a-5669cb24035b",
+  },
+  {
+    $message: "This is not a valid email",
+    $uid: "1d14dfb7-7d30-41e6-8230-3010ca90f43c",
+  },
+];

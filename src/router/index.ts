@@ -1,16 +1,19 @@
 import { createRouter, createWebHistory } from "vue-router";
-import LandingPageVue from "@/views/LandingPage.vue";
-import MainWrapperVue from "@/components/MainWrapper.vue";
+import MainWrapper from "@/components/MainWrapper.vue";
+import PageLayout from "@/components/PageLayout.vue";
 
 export const routes = [
   {
     path: "/",
-    component: MainWrapperVue,
+    component: MainWrapper,
     children: [
       {
-        name: "landing_page",
+        name: "home",
         path: "",
-        component: LandingPageVue,
+        component: PageLayout,
+        meta: {
+          isPublic: true,
+        },
       },
       {
         name: "authentication",
@@ -32,36 +35,36 @@ export const routes = [
         ],
       },
       {
-        name: "app",
-        path: "/app",
+        name: "noteDetails",
+        path: "note/:id",
+        component: () => import("@/views/notes/NoteDetails.vue"),
         meta: {
-          isPublic: false,
+          isPublic: true,
         },
-        children: [
-          {
-            name: "notes",
-            path: "notes",
-            component: () => import("@/views/notes/NotesList.vue"),
-            children: [
-              {
-                name: "note",
-                path: ":id",
-                component: () => import("@/views/notes/NoteDetails.vue"),
-              },
-            ],
-          },
-
-          {
-            name: "todos",
-            path: "todos",
-            component: () => import("@/views/auth/SignUp.vue"),
-          },
-        ],
+      },
+      {
+        name: "notes",
+        path: "notes",
+        component: () => import("@/views/notes/NotesList.vue"),
+        meta: {
+          isPublic: true,
+        },
+      },
+      {
+        name: "tags",
+        path: "tags",
+        component: () => import("@/views/TagsList.vue"),
+        meta: {
+          isPublic: true,
+        },
       },
       {
         path: "/:pathMatch(.*)*",
         name: "NotFound",
         component: () => import("@/views/NotFound.vue"),
+        meta: {
+          isPublic: true,
+        },
       },
     ],
   },

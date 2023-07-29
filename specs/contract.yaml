@@ -1,0 +1,456 @@
+openapi: 3.0.3
+info:
+  title: Quanote Rest API
+  description: REST API endpoints for managing the quonte's related resources
+  version: 0.1bespace.x
+servers:
+  - url: "http"
+tags:
+  - name: Tag
+    description: Everything about the tag
+  - name: Note
+    description: Everything about the note
+  - name: User
+    description: Everything about the users
+  - name: Auth
+    description: Everything about the authentication
+paths:
+  /auth/signin:
+    post:
+      tags:
+        - Auth
+      summary: Singin the user
+      description: Signin the user
+      operationId: signin
+      requestBody:
+        required: true
+        description: Auth object that we need to signin
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/AuthDTO"
+      responses:
+        200:
+          description: successfull sigin
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AuthResponseDTO"
+        403:
+          description: wrong crudentials
+  /auth/signup:
+    post:
+      tags:
+        - Auth
+      summary: Signup the user
+      description: Signup the user
+      operationId: signup
+      requestBody:
+        required: true
+        description: Auth object that we need to signup
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/SignUpDTO"
+      responses:
+        200:
+          description: successfull sigin
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AuthResponseDTO"
+        403:
+          description: wrong crudentials
+  /auth/refresh-token:
+    post:
+      tags:
+        - Auth
+      summary: refresh the user token
+      description: refresh the user token
+      operationId: refreshToken
+      requestBody:
+        required: true
+        description: refresh token that we need to refresh the token
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/RefreshTokenDTO"
+      responses:
+        200:
+          description: token refreshed successfully
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/RefreshTokenResponseDTO"
+        403:
+          description: invalid refresh token
+  /auth/verify-token:
+    post:
+      tags:
+        - Auth
+      summary: verify the user token
+      description: verify the user token
+      operationId: verifyToken
+      requestBody:
+        required: true
+        description: verify token that we need to verify the token
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/AccessTokenDTO"
+      responses:
+        200:
+          description: token verifyhed successfully
+        403:
+          description: invalid refresh token
+  /notes/:
+    get:
+      tags:
+        - Note
+      summary: fetch all notes
+      description: fetch all note
+      operationId: getAllNotes
+      responses:
+        200:
+          description: notes successfull fecthed
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/NoteDTO"
+        403:
+          description: access forbidden
+    post:
+      tags:
+        - Note
+      summary: create new note
+      description: create new note
+      operationId: createNote
+      requestBody:
+        required: true
+        description: note informations needed to create new note
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/NoteDTO"
+      responses:
+        200:
+          description: note created successfully
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/NoteDTO"
+        403:
+          description: access forbidden
+  /notes/{id}:
+    get:
+      tags:
+        - Note
+      summary: fetch all notes
+      description: fetch all by id
+      operationId: getNoteById
+      responses:
+        200:
+          description: notes successfull fecthed
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/NoteDTO"
+        403:
+          description: access forbidden
+      parameters:
+        - name: id
+          description: the note's id to get
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+  /tags/:
+    get:
+      tags:
+        - Tag
+      summary: fetch all tags
+      description: fetch all tags
+      operationId: getAllTags
+      responses:
+        200:
+          description: tags successfull fecthed
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/TagDTO"
+        403:
+          description: access forbidden
+    post:
+      tags:
+        - Tag
+      summary: create new tag
+      description: create new tag
+      operationId: createTag
+      requestBody:
+        required: true
+        description: tag informations needed to create new tag
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/TagDTO"
+      responses:
+        200:
+          description: tag created successfully
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/TagDTO"
+        403:
+          description: access forbidden
+  /tags/{id}:
+    get:
+      tags:
+        - Tag
+      summary: fetch all tags
+      description: fetch all by id
+      operationId: getTagById
+      responses:
+        200:
+          description: notes successfull fecthed
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/TagDTO"
+        403:
+          description: access forbidden
+      parameters:
+        - name: id
+          description: the tag's id to get
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+  /users/{id}/notes:
+    get:
+      tags:
+        - Note
+      summary: fetch note by ownerId
+      description: etch note by ownerId
+      operationId: getNoteByOwnerId
+      responses:
+        200:
+          description: notes successfull fecthed
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/NoteDTO"
+        403:
+          description: access forbidden
+      parameters:
+        - name: id
+          description: the note's owner id
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+  /users/{id}/tags:
+    get:
+      tags:
+        - Tag
+      summary: fetch tags by ownerId
+      description: fetch tags by ownerId
+      operationId: getTagsByOwnerId
+      responses:
+        200:
+          description: tags successfull fecthed
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/TagDTO"
+        403:
+          description: access forbidden
+      parameters:
+        - name: id
+          description: the tag's owner id
+          in: path
+          required: true
+          schema:
+            type: string
+            format: uuid
+
+components:
+  schemas:
+    SignUpDTO:
+      type: object
+      required:
+        - email
+        - password
+        - username
+      properties:
+        username:
+          type: string
+          description: user's username
+        email:
+          type: string
+        password:
+          type: string
+    AuthDTO:
+      type: object
+      required:
+        - email
+        - password
+      properties:
+        username:
+          type: string
+          description: user's username
+        email:
+          type: string
+        password:
+          type: string
+    AuthResponseDTO:
+      type: object
+      required:
+        - id
+        - access_token
+        - refresh_token
+      properties:
+        id:
+          type: string
+          format: uuid
+          description: user's id
+        email:
+          type: string
+          description: user's email
+        username:
+          type: string
+          description: user's username
+        picture:
+          type: string
+          description: user's picture
+        access_token:
+          type: string
+          description: user's accessToken
+        refresh_token:
+          type: string
+          description: user's refreshToken
+    RefreshTokenDTO:
+      type: object
+      required:
+        - refresh_token
+      properties:
+        refresh_token:
+          type: string
+          description: refresh token
+    RefreshTokenResponseDTO:
+      type: object
+      required:
+        - access_token
+        - id
+        - email
+      properties:
+        id:
+          type: string
+          format: uuid
+          description: user's id
+        email:
+          type: string
+          description: user's email
+        username:
+          type: string
+          description: user's email
+        picture:
+          type: string
+          description: user's email
+        access_token:
+          type: string
+          description: user's accessToken
+    AccessTokenDTO:
+      type: object
+      required:
+        - access_token
+      properties:
+        access_token:
+          type: string
+          description: new access token
+    UserDTO:
+      type: object
+      required:
+        - id
+        - creationDate
+        - email
+        - username
+      properties:
+        id:
+          type: string
+          format: uuid
+          description: identifier
+        creationDate:
+          type: string
+          description: user's creation date
+        updateAt:
+          type: string
+          description: user's updated date
+        email:
+          type: string
+          description: user's email
+        firstName:
+          type: string
+          description: user's firstname
+        lastName:
+          type: string
+          description: user's lastname
+    TagDTO:
+      type: object
+      required:
+        - id
+        - title
+      properties:
+        id:
+          type: string
+          format: uuid
+          description: identifier
+        title:
+          type: string
+          description: tag's creation date
+        description:
+          type: string
+          description: user's updated date
+        ownerId:
+          type: string
+          description: note's owner id
+        owner:
+          $ref: "#components/schemas/UserDTO"
+    NoteDTO:
+      type: object
+      required:
+        - id
+        - title
+      properties:
+        id:
+          type: string
+          format: uuid
+          description: identifier
+        title:
+          type: string
+          description: note's title
+        content:
+          type: string
+          description: note's content
+        creationDate:
+          type: string
+          description: note's creation date
+        tags:
+          type: array
+          items:
+            $ref: "#/components/schemas/TagDTO"
+        ownerId:
+          type: string
+          description: note's owner id
+        owner:
+          $ref: "#components/schemas/UserDTO"

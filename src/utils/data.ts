@@ -1,42 +1,10 @@
 import TwitterIcon from "@/components/icons/TwitterIcon.vue";
 import GithubIcon from "@/components/icons/GithubIcon.vue";
 import NoteIcon from "@/components/icons/NoteIcon.vue";
-import CheckCircleIcon from "@/components/icons/CheckCircleIcon.vue";
+import HomeIcon from "@/components/icons/HomeIcon.vue";
 import TagIcon from "@/components/icons/TagIcon.vue";
 
 export const navBarItems = {
-  private: [
-    {
-      title: "notes",
-      label: "Notes",
-      path: "/notes",
-      icon: NoteIcon,
-      theme: {
-        icon: "w-5 h-5 mr-3 align-middle dark:stroke-gray-300",
-        item: "block text-md font-bold text-green-900 dark:text-gray-300 dark:hover:border-gray-700 px-4 py-2 rounded-md border border-transparent hover:border-gray-200",
-      },
-    },
-    {
-      title: "todos",
-      label: "Todos",
-      path: "/todos",
-      icon: CheckCircleIcon,
-      theme: {
-        icon: "w-5 h-5 mr-3 align-middle dark:stroke-gray-300",
-        item: "block text-md font-bold text-green-900 dark:text-gray-300 dark:hover:border-gray-700 px-4 py-2 rounded-md border border-transparent hover:border-gray-200",
-      },
-    },
-    {
-      title: "tags",
-      label: "Tags",
-      path: "/tags",
-      icon: TagIcon,
-      theme: {
-        icon: "w-5 h-5 mr-3 align-middle dark:stroke-gray-300",
-        item: "block text-md font-bold text-green-900 dark:text-gray-300 dark:hover:border-gray-700 px-4 py-2 rounded-md border border-transparent hover:border-gray-200",
-      },
-    },
-  ],
   left: [
     {
       title: "About us",
@@ -60,7 +28,7 @@ export const navBarItems = {
       label: "Sign In",
       path: "/auth/sign-in",
       theme: {
-        item: "block text-md font-bold text-green-900 dark:text-gray-300 dark:hover:border-gray-700 px-4 py-2 rounded-md border border-transparent hover:border-gray-200",
+        item: "block text-md text-green-900 dark:text-gray-300 dark:hover:border-gray-700 px-4 py-2 rounded-md border border-transparent hover:border-gray-200",
       },
     },
     {
@@ -68,32 +36,45 @@ export const navBarItems = {
       label: "Sign Up",
       path: "/auth/sign-up",
       theme: {
-        item: "ml-4 block bg-green-900 text-white dark:bg-green-100 dark:text-gray-800 text-md rounded font-bold px-4 py-2 rounded-md border border-transparent hover:border-gray-200",
+        item: "ml-4 block bg-green-800 text-white dark:bg-green-100 dark:text-gray-800 text-md rounded px-4 py-2 rounded-md border border-transparent hover:border-gray-200",
       },
     },
   ],
   right: [
     {
+      label: "",
       title: "go to git hub",
       path: "https://github.com/yalnguembu/quonte",
       icon: GithubIcon,
-      theme: {
-        icon: "w-5 h-5 dark:fill-gray-100",
-        item: "block rounded p-2 rounded-md border border-transparent hover:border-gray-300 dark:hover:border-gray-700",
-      },
     },
     {
+      label: "",
       title: "go to twitter",
       path: "https://twitter.com/yalnguembu",
       icon: TwitterIcon,
-      theme: {
-        icon: "w-5 h-5 dark:fill-gray-100",
-        item: "block rounded p-2 rounded-md border border-transparent hover:border-gray-300 dark:hover:border-gray-700",
-      },
     },
   ],
 };
-
+export const sideBarItems = [
+  {
+    title: "home",
+    label: "Home",
+    path: "/",
+    icon: HomeIcon,
+  },
+  {
+    title: "notes",
+    label: "Notes",
+    path: "/notes",
+    icon: NoteIcon,
+  },
+  {
+    title: "tags",
+    label: "Tags",
+    path: "/tags",
+    icon: TagIcon,
+  },
+];
 export const footerItems = [
   [
     {
@@ -131,11 +112,13 @@ export const footerItems = [
   ],
   [
     {
+      label: "",
       title: "Github",
       path: "https://github.com/yalnguembu/quonte",
       icon: GithubIcon,
     },
     {
+      label: "",
       title: "Twitter",
       path: "https://twitter.com/yalnguembu",
       icon: TwitterIcon,

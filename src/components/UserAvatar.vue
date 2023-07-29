@@ -19,17 +19,14 @@
       </p>
     </div>
     <p
-      class="text-gray-500 text-lg ml-2 hidden lg:inline"
+      class="text-gray-500 text-lg ml-6 hidden lg:inline"
       data-test="user-avatar-name"
     >
       {{ name }}
     </p>
-    <ChevronDownIconVue class="w-4 h-4 stroke-2 stroke-gray-500" />
   </div>
 </template>
 <script setup lang="ts">
-import ChevronDownIconVue from "./icons/ChevronDownIcon.vue";
-
 defineProps({
   name: {
     type: String,

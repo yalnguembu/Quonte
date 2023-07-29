@@ -1,8 +1,8 @@
 import { VueWrapper, mount } from "@vue/test-utils";
 import { beforeEach, describe, expect, it } from "vitest";
-import ThemeButton from "../ThemeButton.vue";
-import SunIcon from "../icons/SunIcon.vue";
-import LunaIcon from "../icons/LunaIcon.vue";
+import ThemeButton from "../../button/ThemeButton.vue";
+import SunIcon from "../../icons/SunIcon.vue";
+import LunaIcon from "../../icons/LunaIcon.vue";
 
 describe("ThemeButtonVue", () => {
   let wrapper: VueWrapper;

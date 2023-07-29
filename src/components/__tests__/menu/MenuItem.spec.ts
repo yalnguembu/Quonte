@@ -44,12 +44,12 @@ describe("BaseButtonVue", () => {
 
   it("should have the default menu item theme", async () => {
     expect(wrapper.findComponent(RouterLinkStub).attributes().class).toBe(
-      "block text-md font-bold text-green-900 dark:text-gray-300 dark:hover:border-gray-700 px-4 py-2 rounded-md border border-transparent hover:border-gray-200"
+      "block text-md text-green-900 dark:text-gray-300 dark:hover:border-gray-700 px-4 py-2 rounded-md border border-transparent hover:border-gray-200"
     );
     expect(wrapper.find("span").attributes().class).toBe("");
     expect(
       wrapper.find('[data-test="menu-item-icon"]').attributes().class
-    ).toBe("w-6 h-6 inline align-middle");
+    ).toBe("w-6 h-6 inline align-middle h-3 w-3");
 
     await wrapper.setProps({
       theme: {
@@ -70,7 +70,7 @@ describe("BaseButtonVue", () => {
 
   it("should have the awaitted theme", async () => {
     expect(wrapper.findComponent(RouterLinkStub).attributes().class).toBe(
-      "block text-md font-bold text-green-900 dark:text-gray-300 dark:hover:border-gray-700 px-4 py-2 rounded-md border border-transparent hover:border-gray-200"
+      "block text-md text-green-900 dark:text-gray-300 dark:hover:border-gray-700 px-4 py-2 rounded-md border border-transparent hover:border-gray-200"
     );
 
     await wrapper.setProps({ theme: { item: "test theme" } });

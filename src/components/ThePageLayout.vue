@@ -1,7 +1,5 @@
 <template>
-  <div
-    class="w-full h-full bg-white dark:bg-gray-900 grid grid-cols-1 lg:grid-cols-3 gap-4"
-  >
+  <div class="w-full h-full grid grid-cols-1 lg:grid-cols-3 gap-4">
     <main
       :class="[
         'overflow-y-auto',

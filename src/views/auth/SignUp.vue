@@ -1,65 +1,80 @@
 <template>
   <div
-    className="w-full h-full bg-yellow-200 dark:bg-gray-900 flex items-center justify-center p-7"
+    class="w-full h-[92vh] dark:bg-gray-900 flex items-start justify-center lg:items-center"
   >
     <div
-      className="card bg-white dark:bg-gray-900 dark:border border-gray-700 p-8 rounded-lg shadow w-4/5 lg:w-2/5 xl:w-1/3"
+      class="card bg-white dark:bg-gray-900 p-8 rounded-lg w-full dark:border-gray-700 lg:shadow-xl lg:border lg:p-9 lg:p-9 lg:w-1/2"
     >
-      <div className="text-center">
-        <h1 className="font-bold text-xl dark:text-gray-100">Sign Up</h1>
-        <p className="text-gray-500 font-bold p-6 dark:text-gray-400">
+      <div class="lg:text-center">
+        <h1 class="font-bold text-xl text-green-700 dark:text-gray-100">
+          Sign Up
+        </h1>
+        <p class="text-gray-500 dark:text-gray-400 py-6 lg:p-6">
           We need some informations for configure your personal space
         </p>
       </div>
-      <div
-        v-if="requestError"
-        class="W-full border-l-4 border border-red-400 px-2 rounded w-full mb-4 bg-red-100"
-      >
-        <p class="text-gray-900 text-left" data-test="error-message">
-          <InformationIcon class="mr-2" /> <span>{{ requestError }}</span>
-        </p>
+      <div v-if="requestError" class="mb-4">
+        <AlertBox :summary="requestError" :alert-type="ALERT_BOX_TYPE.ERROR" />
       </div>
-      <div className="mb-2">
-        <EmailInput
-          data-test="name-input"
-          label="Name"
-          placeholder="Enter your name"
-          v-model="user.email"
-          :error="error.email"
-        />
-      </div>
-      <div className="mb-2">
-        <EmailInput
-          data-test="email-input"
-          label="Email"
-          placeholder="Enter your email adress"
-          v-model="user.email"
-          :error="error.email"
-        />
-      </div>
-      <div className="mb-2">
-        <PasswordInput
-          data-test="password-input"
-          label="Password"
-          placeholder="Enter your password"
-          v-model="user.password"
-          :error="error.password"
-        />
-      </div>
-      <div className="w-full mb-6 mt-6">
-        <BaseButton
-          data-test="submit-button"
-          :type="ButtonType.button"
-          :title="loading ? 'loading...' : 'Sign Up'"
-          class="w-full"
-          theme="w-full px-8 py-2 text-white dark:text-green-900 bg-green-900 hover:bg-green-800 dark:bg-green-100 dark:hover:bg-green-200 rounded text-lg"
-        />
-      </div>
-      <h2 className="text-gray-500 text-sm text-center">
+      <form @submit.prevent="signIn">
+        <div class="grid grid-cols-1 gap-4 mb-4 lg:grid-cols-2">
+          <TextInput
+            data-test="username-input"
+            label="username"
+            placeholder="Enter your username"
+            v-model="user.username"
+            :errors="v$.username.$errors"
+            :isValid="!v$.username.$silentErrors.length"
+          />
+          <EmailInput
+            data-test="email-input"
+            label="Email"
+            placeholder="Enter your email adress"
+            v-model="user.email"
+            :errors="v$.email.$errors"
+            :isValid="!v$.email.$silentErrors.length"
+          />
+        </div>
+        <div class="mb-4">
+          <PasswordInput
+            data-test="password-input"
+            label="Password"
+            placeholder="Enter your password"
+            v-model="user.password"
+            :errors="v$.password.$errors"
+            :isValid="!v$.password.$silentErrors.length"
+          />
+        </div>
+        <div class="mb-4">
+          <PasswordInput
+            data-test="password-input"
+            label="Confirm password"
+            placeholder="Confirm your password"
+            v-model="user.confirmationPassword"
+            :errors="v$.confirmationPassword.$errors"
+            :isValid="!v$.confirmationPassword.$silentErrors.length"
+          />
+        </div>
+        <div class="w-full mb-6 mt-6">
+          <BaseButton
+            data-test="submit-button"
+            :type="ButtonType.submit"
+            :disable="v$.$silentErrors.length"
+            :title="signing ? 'Signing...' : 'Sign Up'"
+            class="w-full"
+            :theme="`w-full px-8 py-1 ${
+              v$.$silentErrors.length || signing
+                ? 'bg-green-600/30 cursor-not-allowed dark:bg-green-300/20 dark:text-green-400'
+                : 'bg-green-900 hover:bg-green-800 dark:bg-green-100 dark:hover:bg-green-200'
+            } text-white dark:text-green-900 rounded text-lg transition delay-200`"
+          />
+        </div>
+      </form>
+      <h2 class="text-gray-500 text-sm text-center">
         Already member of us?
         <RouterLink
-          to="sign-up"
-          className="text-black dark:text-gray-100 hover:underline"
+          to="sign-in"
+          class="text-black dark:text-gray-100 hover:underline"
         >
           Go within!
         </RouterLink>
@@ -69,59 +84,93 @@
 </template>
 <script setup lang="ts">
 import { useSessionStore } from "@/stores/session";
-import { reactive, ref, watch, toRef } from "vue";
+import { computed, reactive, shallowRef } from "vue";
 import { useRouter } from "vue-router";
-import BaseButton from "@/components/BaseButton.vue";
+import { ButtonType } from "@/utils/type";
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+import type { AuthenticationError } from "@/utils/error";
+import { ALERT_BOX_TYPE } from "@/utils/enum";
+import { useVuelidate } from "@vuelidate/core";
+import { required, email, sameAs, helpers } from "@vuelidate/validators";
+import BaseButton from "@/components/button/BaseButton.vue";
 import EmailInput from "@/components/form/EmailInput.vue";
 import PasswordInput from "@/components/form/PasswordInput.vue";
-import InformationIcon from "@/components/icons/InformationIcon.vue";
-import { ButtonType } from "@/utils/type";
+import TextInput from "@/components/form/TextInput.vue";
+import AlertBox from "@/components/AlertBox.vue";
 
-const router = useRouter();
+type User = {
+  username: string;
+  email: string;
+  password: string;
+  confirmationPassword: string;
+};
+
 const sessionStore = useSessionStore();
-const user = reactive<{ email: string; password: string }>({
+
+const user = reactive<User>({
+  username: "",
   email: "",
   password: "",
-});
-const loading = ref<boolean>(false);
-const requestError = ref<string>("");
-const error = reactive({
-  email: "",
-  password: "",
+  confirmationPassword: "",
 });
 
-const isEmailValid = (): boolean => error.email.length <= 0;
-const isPasswordValid = (): boolean => error.password.length <= 0;
-const checkEmail = () => {
-  if (user.email) error.email = "";
-  else error.email = "This field is required";
-};
-const checkPassord = () => {
-  if (user.password) error.password = "";
-  else error.password = "This field is required";
-};
-const checkForm = (): void => {
-  checkEmail();
-  checkPassord();
-};
+const signing = shallowRef<boolean>(false);
+const requestError = shallowRef<string>("");
+
+const rules = computed(() => ({
+  username: {
+    required: helpers.withMessage(
+      "You may forgot to field this input",
+      required
+    ),
+  },
+  email: {
+    email: helpers.withMessage("This email does't repesct the format", email),
+    required: helpers.withMessage(
+      "You may forgot to field this input",
+      required
+    ),
+  },
+  password: {
+    required: helpers.withMessage(
+      "You may forgot to field this input",
+      required
+    ),
+    mustBeValidPassword: helpers.withMessage(
+      "This filed does't repect the awaited format",
+      helpers.regex(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/gm)
+    ),
+  },
+  confirmationPassword: {
+    required: helpers.withMessage(
+      "You may forgot to field this input",
+      required
+    ),
+    sameAsPassword: helpers.withMessage("No matching", sameAs(user.password)),
+  },
+}));
+
+const v$ = useVuelidate(rules, user);
+
 const signIn = async () => {
-  checkForm();
-  if (isEmailValid() && isPasswordValid()) {
-    loading.value = true;
-    const request = await sessionStore.signIn(user);
-    setTimeout(() => {}, 1000);
-    loading.value = false;
-    user.password = "";
-    if (request?.success) window.location.href = "/";
-    else
-      request ? (requestError.value = request?.message) : "Please retry later";
+  v$.value.$touch();
+
+  if (!v$.value.$invalid) {
+    try {
+      signing.value = true;
+      await sessionStore.signUp({
+        username: user.username,
+        email: user.email,
+        password: user.password,
+      });
+      useRouter().push("/");
+    } catch (error: AuthenticationError | any) {
+      requestError.value = error.message;
+    } finally {
+      setTimeout(() => (signing.value = false), 1000);
+      user.password = "";
+      user.confirmationPassword = "";
+    }
   }
 };
-
-watch(toRef(user, "email"), () => {
-  checkEmail();
-});
-watch(toRef(user, "password"), () => {
-  checkPassord();
-});
 </script>
