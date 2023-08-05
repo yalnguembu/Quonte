@@ -4,11 +4,6 @@ import { NOTE_ITEM } from "../../src/utils/enum";
 
 export const useCypressCommands = () => {
   const login = (email: string, password: string): void => {
-    cy.viewport(1024, 600);
-    const date = new Date("2023-07-29T10:50:12.896Z");
-    cy.clock(date);
-
-    cy.visit("/");
     cy.get('[data-test="menu-item-sign-in"] >').click();
     cy.get('[data-test="email-input"]')
       .type(email)
@@ -16,7 +11,10 @@ export const useCypressCommands = () => {
       .type(password);
 
     stubLogin();
+    stubVerifyAccesToken();
     cy.get('[data-test="submit-button"]').click();
+    cy.wait("@login");
+    cy.wait("@verify-access-token");
   };
 
   interface User {
@@ -76,9 +74,30 @@ export const useCypressCommands = () => {
     ).as("sign-up");
   };
 
+  const stubVerifyAccesToken = () => {
+    cy.intercept(
+      {
+        method: "POST",
+        url: "/auth/verify-access-token",
+      },
+      {
+        statusCode: 200,
+        body: {
+          id: "f9ad088c-746f-4f25-893b-fd74e9ca4b46",
+          email: "admin@quonte.io",
+          username: "mazeking",
+          accessToken:
+            "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImY5YWQwODhjLTc0NmYtNGYyNS04OTNiLWZkNzRlOWNhNGI0NiIsImVtYWlsIjoiYWRtaW5AcXVvbnRlLmlvIiwicm9sZSI6ImNsaWVudCIsImlhdCI6MTY5MDYyODMzMCwiZXhwIjoxNjkxODM3OTMwfQ.GRhxwruKFGNS2WqxdjQ3SEI94vbds0JTLaIDC1J6S_M",
+          role: "client",
+        },
+      }
+    ).as("verify-access-token");
+  };
+
   interface Tag {
     id: string;
     title: string;
+    description?: string;
   }
 
   const stubTagsList = (ownerId: string, tags: Tag[]) => {
@@ -112,13 +131,16 @@ export const useCypressCommands = () => {
   };
 
   const assertTagHas = (tag: Tag): void => {
-    cy.get(`[data-test="tag-item-${tag.id}"] span`).should(
+    cy.get(`[data-test="tag-item-${tag.id}"] [data-test="tag-title"]`).should(
       "have.text",
       tag.title
     );
+    cy.get(
+      `[data-test="tag-item-${tag.id}"] [data-test="tag-description"]`
+    ).should("have.text", tag.description);
   };
 
-  const stubTagsCreation = (data: Tag) => {
+  const stubTagCreation = (data: Tag) => {
     cy.intercept(
       {
         method: "POST",
@@ -128,7 +150,7 @@ export const useCypressCommands = () => {
         statusCode: 201,
         body: data,
       }
-    ).as("tags-creation");
+    ).as("tag-creation");
   };
 
   interface Note {
@@ -152,13 +174,24 @@ export const useCypressCommands = () => {
     ).as("notes-list");
   };
 
+  const stubNoteDetails = (note: Note) => {
+    cy.intercept(
+      {
+        method: "GET",
+        url: `/notes/${note.id}`,
+      },
+      {
+        statusCode: 200,
+        body: note,
+      }
+    ).as("note-details");
+  };
+
   const assertNoteEntriesHas = (
     row: Note,
     type: NOTE_ITEM = NOTE_ITEM.CARD
   ): void => {
-    cy.get(
-      `[data-test="notes-section"]  [data-test="note-item-${row.id}"]`
-    ).within(() => {
+    cy.get(`[data-test="note-item-${row.id}"]`).within(() => {
       cy.get('[data-test="note-title"]').should("contain.text", row.title);
       cy.get('[data-test="note-creationDate"]').should(
         "contain.text",
@@ -177,15 +210,21 @@ export const useCypressCommands = () => {
     });
   };
 
-  const stubNotesCreation = (note: Note) => {
+  const stubNoteCreation = (note: Note) => {
+    const tags = note.tags.map((tag) => tag.id);
     cy.intercept(
       {
         method: "POST",
-        url: `/tags`,
+        url: `/notes`,
       },
       {
         statusCode: 201,
-        body: note,
+        body: {
+          id: note.id,
+          title: note.title,
+          content: note.content,
+          tags,
+        },
       }
     ).as("note-creation");
   };
@@ -203,6 +242,12 @@ export const useCypressCommands = () => {
     ).as("empty-notes-list");
   };
 
+  const goToMenu = (menu: string) => {
+    cy.get(
+      ` [data-test="navbar-left-content"] [data-test="menu-item-${menu}"]`
+    ).click();
+  };
+
   return {
     login,
     signUp,
@@ -211,10 +256,14 @@ export const useCypressCommands = () => {
     stubTagsList,
     stubEmptyTagsList,
     assertTagEntriesHas,
-    stubTagsCreation,
+    assertTagHas,
+    stubTagCreation,
     stubNotesList,
     assertNoteEntriesHas,
     stubEmptyNotesList,
-    stubNotesCreation,
+    stubNoteCreation,
+    stubVerifyAccesToken,
+    goToMenu,
+    stubNoteDetails,
   };
 };

@@ -15,7 +15,9 @@
         :items="sideBarItems"
       />
       <TheNavbarVue v-else :navBarItems="navBarItems" />
-      <RouterView :class="sessionStore.isSigned && 'lg:w-4/5'" />
+      <RouterView
+        :class="sessionStore.isSigned && 'lg:w-4/5 h-full overflow-hidden'"
+      />
     </div>
     <TheFooter :isUserSign="sessionStore.isSigned" />
   </div>

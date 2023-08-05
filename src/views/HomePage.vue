@@ -35,6 +35,7 @@
           <BaseButton
             theme="py-1 px-3 text-white text-base dark:text-green-900 bg-green-800 hover:bg-green-800 dark:bg-green-100 dark:hover:bg-green-200 rounded text-lg"
             title="New note"
+            data-test="note-creation-button"
             @click="toggleIstNoteCreationMoalVisible"
           >
             <template #icon-left>
@@ -122,7 +123,7 @@ import NoteItem from "@/components/NoteItem.vue";
 import TagItem from "@/components/TagItem.vue";
 import BaseButton from "@/components/button/BaseButton.vue";
 import PlusIcon from "@/components/icons/PlusIcon.vue";
-import NoteCreationModal from "./notes/NoteCreationModal.vue.vue";
+import NoteCreationModal from "./notes/NoteCreationModal.vue";
 import NoteItemskeleton from "@/components/NoteItemskeleton.vue";
 import TagItemskeleton from "@/components/TagItemskeleton.vue";
 import type { Note } from "@/domain/Note";
@@ -162,11 +163,7 @@ const fetchNotes = async () => {
 const fetchTags = async () => {
   try {
     isTagsListLoading.value = true;
-    tagsList.value = (await useTagStore().getTagsByOwnerId(user.id)).slice(
-      0,
-      5
-    );
-    console.log(tagsList);
+    tagsList.value = (await useTagStore().getTagsByUserId(user.id)).slice(0, 5);
   } catch (error) {
     console.log(error);
   } finally {

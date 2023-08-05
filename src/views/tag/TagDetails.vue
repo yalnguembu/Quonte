@@ -100,6 +100,7 @@ const isNoteDetailsLoading = shallowRef<boolean>(false);
 const fetchDetails = async () => {
   try {
     isNoteDetailsLoading.value = true;
+    console.log(props.id);
     noteDetails.value =
       (await useNoteStore().getNoteById(props.id)) ?? newNullNote();
   } catch (error) {

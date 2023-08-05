@@ -2,7 +2,7 @@
   <BaseButton
     @mouseenter="toogleIsHover"
     @mouseleave="toogleIsHover"
-    :title="isHover ? 'New note' : ''"
+    :title="isHover ? title : ''"
     class="fixed bottom-20 animate-bounce right-5 xl:right-20 shadow-xl lg:bottom-7"
   >
     <template #icon-left>
@@ -18,6 +18,12 @@ import PlusIcon from "../icons/PlusIcon.vue";
 import BaseButton from "./BaseButton.vue";
 
 const isHover = shallowRef<boolean>(false);
+defineProps({
+  title: {
+    type: String,
+    default: "New note",
+  },
+});
 
 const toogleIsHover = () => (isHover.value = !isHover.value);
 </script>

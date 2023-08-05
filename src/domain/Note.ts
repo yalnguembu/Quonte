@@ -1,4 +1,5 @@
-import type { NoteDTO } from "@/services";
+import type { NoteDTO, TagDTO } from "@/services";
+import { Tag } from "./Tag";
 
 export class Note {
   private readonly note: NoteDTO;
@@ -17,8 +18,16 @@ export class Note {
     return this.note.title;
   }
 
+  set title(title: string) {
+    this.note.title = title;
+  }
+
   get content() {
     return this.note.content ?? "";
+  }
+
+  set content(content: string) {
+    this.note.content = content;
   }
 
   get creationDate() {
@@ -26,7 +35,15 @@ export class Note {
   }
 
   get tags() {
-    return this.note.tags;
+    return (this.note.tags ?? []).map((tag) => new Tag(tag));
+  }
+
+  set tags(tags: TagDTO[]) {
+    this.note.tags = tags;
+  }
+
+  get baseNote(): NoteDTO {
+    return this.note;
   }
 }
 export const newNullNote = () => {

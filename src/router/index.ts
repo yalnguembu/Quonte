@@ -35,11 +35,11 @@ export const routes = [
         ],
       },
       {
-        name: "noteDetails",
-        path: "note/:id",
-        component: () => import("@/views/notes/NoteDetails.vue"),
+        name: "note-details",
+        path: "notes/:id",
+        component: () => import("@/views/notes/NotesList.vue"),
         meta: {
-          isPublic: true,
+          isPublic: false,
         },
       },
       {
@@ -47,15 +47,23 @@ export const routes = [
         path: "notes",
         component: () => import("@/views/notes/NotesList.vue"),
         meta: {
-          isPublic: true,
+          isPublic: false,
         },
       },
+      // {
+      //   name: "tag-details",
+      //   path: "tags",
+      //   component: () => import("@/views/tag/TagDetails.vue"),
+      //   meta: {
+      //     isPublic: false,
+      //   },
+      // },
       {
         name: "tags",
         path: "tags",
-        component: () => import("@/views/TagsList.vue"),
+        component: () => import("@/views/tag/TagsList.vue"),
         meta: {
-          isPublic: true,
+          isPublic: false,
         },
       },
       {

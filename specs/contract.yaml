@@ -84,7 +84,7 @@ paths:
                 $ref: "#/components/schemas/RefreshTokenResponseDTO"
         403:
           description: invalid refresh token
-  /auth/verify-token:
+  /auth/verify-access-token:
     post:
       tags:
         - Auth
@@ -133,7 +133,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/NoteDTO"
+              $ref: "#/components/schemas/NoteCreationDTO"
       responses:
         200:
           description: note created successfully
@@ -317,7 +317,7 @@ components:
       type: object
       required:
         - id
-        - access_token
+        - accessToken
         - refresh_token
       properties:
         id:
@@ -333,7 +333,7 @@ components:
         picture:
           type: string
           description: user's picture
-        access_token:
+        accessToken:
           type: string
           description: user's accessToken
         refresh_token:
@@ -350,7 +350,7 @@ components:
     RefreshTokenResponseDTO:
       type: object
       required:
-        - access_token
+        - accessToken
         - id
         - email
       properties:
@@ -367,15 +367,15 @@ components:
         picture:
           type: string
           description: user's email
-        access_token:
+        accessToken:
           type: string
           description: user's accessToken
     AccessTokenDTO:
       type: object
       required:
-        - access_token
+        - accessToken
       properties:
-        access_token:
+        accessToken:
           type: string
           description: new access token
     UserDTO:
@@ -454,3 +454,26 @@ components:
           description: note's owner id
         owner:
           $ref: "#components/schemas/UserDTO"
+    NoteCreationDTO:
+      type: object
+      required:
+        - id
+        - title
+      properties:
+        id:
+          type: string
+          format: uuid
+          description: identifier
+        title:
+          type: string
+          description: note's title
+        content:
+          type: string
+          description: note's content
+        tags:
+          type: array
+          items:
+            type: string
+        ownerId:
+          type: string
+          description: note's owner id

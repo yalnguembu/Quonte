@@ -26,7 +26,7 @@ export class Session {
   }
 
   get accessToken() {
-    return this.auth.access_token;
+    return this.auth.accessToken;
   }
 
   get refreshToken() {
