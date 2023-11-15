@@ -1,68 +1,110 @@
-# bespace
+# Quonte
 
-This template should help get you started developing with Vue 3 in Vite.
+## Description
 
-## Recommended IDE Setup
+Not sure to remind it? Note it with quonte the noting app you wouldn't be anoyed by stuck thing who can be usefull
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+## Table of Contents
 
-## Type Support for `.vue` Imports in TS
+- [Installation](#installation)
+- [Usage](#usage)
+- [Credits](#credits)
+- [License](#license)
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
+---
 
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
+## Installation
 
-1. Disable the built-in TypeScript Extension
-    1) Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-    2) Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
+- fetch the project
 
-## Customize configuration
+- run `$ npm ci`
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+## Usage
 
-## Project Setup
+first you have to start the project by typing the following command
 
-```sh
-npm install
-```
+### in developpement environment
 
-### Compile and Hot-Reload for Development
+- `$ npm run openapi-generate`
 
-```sh
-npm run dev
-```
+- `$ npm run dev`
 
-### Type-Check, Compile and Minify for Production
+### in test environment
 
-```sh
-npm run build
-```
+- `$ npm run openapi-generate`
 
-### Run Unit Tests with [Vitest](https://vitest.dev/)
+- `$ npm run build`
 
-```sh
-npm run test:unit
-```
+- `$ npm run preview`
 
-### Run End-to-End Tests with [Cypress](https://www.cypress.io/)
+### in production environment
 
-```sh
-npm run test:e2e:dev
-```
+- `$ npm run openapi-generate`
 
-This runs the end-to-end tests against the Vite development server.
-It is much faster than the production build.
+- `$ npm run build`
 
-But it's still recommended to test the production build with `test:e2e` before deploying (e.g. in CI environments):
+- `$ npm run start`
 
-```sh
-npm run build
-npm run test:e2e
-```
+---
 
-### Lint with [ESLint](https://eslint.org/)
+## Credits
 
-```sh
-npm run lint
-```
+[WIBRC-IT](https://github.com/WIBRC-45920)
+
+## License
+
+The last section of a high-quality README file is the license. This lets other developers know what they can and cannot do with your project. If you need help choosing a license, refer to [https://choosealicense.com/](https://github.com/settings/keys).
+
+## Badges
+
+`vuejs` | `typescript` | `html` | `css` | `pinia` | `openapi` | `TDD` | `Mobile First approche` | ` Frontend Development`
+
+Badges aren't necessary, per se, but they demonstrate street cred. Badges let other developers know that you know what you're doing. Check out the badges hosted by [shields.io](https://shields.io/). You may not understand what they all represent now, but you will in time.
+
+---
+
+## Features
+
+- roles and permitions management (list, create, edit and assign action to role)
+
+- users management (list, create, edit the asign them roles)
+
+- services mangement (list, create, activate, edit, deactivate service wich are needed to create the employee post)
+
+- posts mangement (create, activate, edit, deactivate post related to a service wich are needed to create the employee),
+
+- employee mangement (list display employees informatios)
+
+- holidays requests management (list holidays and details, aprove or reject holiday of employee)
+
+- user profiole management (update personal informations and set settings and preferences)
+
+---
+
+## How to Contribute
+
+- fork the project
+- create an issue
+- create branche commit with a very explicit name
+- create a pull request to develop
+- a maintener will make a review
+- everybody can review
+- only maintener are allow to merge
+
+---
+
+## Tests
+
+### unit tests
+
+run `$ npm run test:unit`
+
+### e2e tests
+
+- `$ npm run openapi-generate`
+
+- `$ npm run build`
+
+- `$ npm run preview`
+
+- `$ npm run test:unit`
