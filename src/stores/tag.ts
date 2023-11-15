@@ -15,7 +15,7 @@ export const useTagStore = defineStore("nag", () => {
     }
   };
 
-  const getTagsByOwnerId = async (userId: string) => {
+  const getTagsByUserId = async (userId: string) => {
     let tags: TagDTO[] = [];
     try {
       tags = await TagService.getTagsByOwnerId({
@@ -35,9 +35,9 @@ export const useTagStore = defineStore("nag", () => {
     }
   };
 
-  const createTag = async (nag: Tag): Promise<Tag> => {
+  const createTag = async (tag: Tag): Promise<Tag> => {
     try {
-      return new Tag(await TagService.createTag({ requestBody: nag }));
+      return new Tag(await TagService.createTag({ requestBody: tag.baseTag }));
     } catch (error: Error | any) {
       throw new ApiError(error);
     }
@@ -48,6 +48,6 @@ export const useTagStore = defineStore("nag", () => {
     getAllTags,
     getTagById,
     createTag,
-    getTagsByOwnerId,
+    getTagsByUserId,
   };
 });

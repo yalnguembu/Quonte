@@ -47,10 +47,10 @@
             data-test="submit-button"
             :type="ButtonType.submit"
             :disable="v$.$silentErrors.length"
-            :title="signing ? 'Signing...' : 'Sign In'"
+            :title="isSigning ? 'Signing...' : 'Sign In'"
             class="w-full"
             :theme="`w-full px-8 py-1 ${
-              v$.$silentErrors.length || signing
+              v$.$silentErrors.length || isSigning
                 ? 'bg-green-600/30 cursor-not-allowed dark:bg-green-300/20 dark:text-green-400'
                 : 'bg-green-900 hover:bg-green-800 dark:bg-green-100 dark:hover:bg-green-200'
             } text-white dark:text-green-900 rounded text-lg transition delay-200 hover:shadow-lg`"
@@ -91,7 +91,7 @@ const user = reactive<{ email: string; password: string }>({
   password: "",
 });
 
-const signing = shallowRef<boolean>(false);
+const isSigning = shallowRef<boolean>(false);
 const requestError = shallowRef<string>("");
 
 const rules = computed(() => ({
@@ -117,14 +117,15 @@ const signIn = async () => {
 
   if (!v$.value.$invalid) {
     try {
-      signing.value = true;
+      isSigning.value = true;
       await sessionStore.signIn(user);
-      router.push("/");
+      isSigning.value = false;
+      await router.push("/");
     } catch (error: AuthenticationError | any) {
       console.log(error);
       requestError.value = error.message;
     } finally {
-      setTimeout(() => (signing.value = false), 1000);
+      isSigning.value = false;
       user.password = "";
     }
   }

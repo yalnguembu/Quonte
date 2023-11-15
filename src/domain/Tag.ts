@@ -14,11 +14,23 @@ export class Tag {
   }
 
   get title() {
-    return this.tag.title;
+    return this.tag.title ?? "";
+  }
+
+  set title(title: string) {
+    this.tag.title = title ?? "";
   }
 
   get description() {
     return this.tag.description ?? "";
+  }
+
+  set description(description: string) {
+    this.tag.description = description ?? "";
+  }
+
+  get baseTag(): TagDTO {
+    return this.tag;
   }
 }
 

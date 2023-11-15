@@ -14,7 +14,7 @@ export class Session {
   }
 
   get email() {
-    return this.auth.email;
+    return this.auth.email ?? "";
   }
 
   get username() {
@@ -26,7 +26,7 @@ export class Session {
   }
 
   get accessToken() {
-    return this.auth.access_token;
+    return this.auth.accessToken;
   }
 
   get refreshToken() {

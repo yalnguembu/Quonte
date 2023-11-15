@@ -7,5 +7,7 @@ export default defineConfig({
     video: false,
     viewportWidth: 1024,
     viewportHeight: 600,
+    experimentalRunAllSpecs: true,
+    scrollBehavior: "center",
   },
 });

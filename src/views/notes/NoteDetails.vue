@@ -4,7 +4,7 @@
       @click.self="() => {}"
       class="p-4 h-full justify-self-endw-full lg:w-1/3 p-8 bg-white dark:bg-gray-900 h-screen dark:text-gray-100"
     >
-      <NoteDetailsSkeleton v-if="isNoteInformationsLoading" />
+      <NoteDetailsSkeleton v-if="isNoteDetailsLoading" />
       <div v-else>
         <div class="flex justify-between items-center sticky top-0 left-0">
           <div class="flex items-center px-4">
@@ -37,22 +37,22 @@
             <h4
               class="font-bold dark:text-gray-100 text-lg mt-2 w-full text-ellipsis whitespace-pre-all overflow-hidden break-word"
             >
-              {{ note?.title }}
+              {{ noteDetails?.title }}
             </h4>
 
             <p class="font-sm text-gray-400 dark:text-gray-500 mt-2">
-              {{ date().getPassedTime(note?.creationDate ?? "") }}
+              {{ date().getPassedTime(noteDetails?.creationDate ?? "") }}
             </p>
             <div
               class="flex flex-row flex-wrap mt-2 max-h-20 overflow-y-hidden"
             >
               <RouterLink
-                v-for="tagItem in note?.tags"
+                v-for="tagItem in noteDetails?.tags"
                 :key="tagItem.id"
                 :to="tagItem.id"
                 class="max-w-full"
               >
-                <TagItem :title="tagItem.title" />
+                <TagItem :title="tagItem.title" :id="tagItem.id" />
               </RouterLink>
             </div>
           </div>
@@ -61,7 +61,7 @@
               <p
                 class="font-sm dark:text-gray-300 text-gray-500 whitespace-pre-all break-word text-ellipsis"
               >
-                {{ note?.description }}
+                {{ noteDetails?.content }}
               </p>
             </div>
           </div>
@@ -73,26 +73,17 @@
 <script lang="ts" setup>
 import { onBeforeMount, ref, shallowRef } from "vue";
 import { date } from "@/utils/common";
-import { notes } from "@/utils/data";
-import type { Tag } from "@/utils/type";
 import BaseButton from "@/components/button/BaseButton.vue";
 import PincelSquareIcon from "@/components/icons/PincelSquareIcon.vue";
 import PlusIcon from "@/components/icons/PlusIcon.vue";
 import ArchiveArrowDownIcon from "@/components/icons/ArchiveArrowDownIcon.vue";
 import TagItem from "@/components/TagItem.vue";
-import NoteDetailsSkeleton from "@/components/NoteDetailsSkeleton.vue";
+import NoteDetailsSkeleton from "@/components/skeleton/NoteDetailsSkeleton.vue";
 import ModalWrapper from "@/components/ModalWrapper.vue";
+import { useNoteStore } from "@/stores/note";
+import { Note, newNullNote } from "@/domain/Note";
 
 const emit = defineEmits(["close"]);
-
-type Note = {
-  id: string;
-  title: string;
-  description: string;
-  creationDate: string;
-  tags: Tag[];
-};
-
 const props = defineProps({
   id: {
     type: String,
@@ -100,15 +91,25 @@ const props = defineProps({
   },
 });
 
-const note = ref<Note>();
-const isNoteInformationsLoading = shallowRef<boolean>(false);
+const noteDetails = ref<Note>();
+const isNoteDetailsLoading = shallowRef<boolean>(false);
 
-const fetchNote = () => {
-  note.value = notes.find((note) => note.id == props.id);
+// const fetchNote = () => {
+//   noteDetails.value = notes.find((note: Note) => note.id == props.id);
+// };
+const fetchDetails = async () => {
+  try {
+    isNoteDetailsLoading.value = true;
+    noteDetails.value =
+      (await useNoteStore().getNoteById(props.id)) ?? newNullNote();
+  } catch (error) {
+    console.log(error);
+  } finally {
+    isNoteDetailsLoading.value = false;
+  }
 };
+
 onBeforeMount(() => {
-  isNoteInformationsLoading.value = true;
-  fetchNote();
-  setTimeout(() => (isNoteInformationsLoading.value = false), 500);
+  fetchDetails();
 });
 </script>

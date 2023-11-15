@@ -44,7 +44,7 @@ defineProps({
     default: () => ({
       icon: "align-middle h-3 w-3",
       label: "px-4",
-      item: "block text-md text-green-900 dark:text-gray-300 dark:hover:border-gray-700 px-4 py-2 rounded-md border border-transparent hover:border-gray-200",
+      item: "block text-md text-green-900 dark:text-gray-300 dark:hover:border-gray-700 px-4 py-2 rounded-md border border-transparent hover:border-gray-200 text-center",
     }),
   },
 });

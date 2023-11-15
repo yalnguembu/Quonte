@@ -2,7 +2,7 @@
   <div>
     <div
       :class="[
-        'bg-white dark:bg-gray-900 w-full bg-white dark:bg-gray-900',
+        'w-full bg-white dark:bg-gray-900 h-screen',
         { 'lg:flex': sessionStore.isSigned },
       ]"
     >
@@ -15,7 +15,11 @@
         :items="sideBarItems"
       />
       <TheNavbarVue v-else :navBarItems="navBarItems" />
-      <RouterView :class="sessionStore.isSigned && 'lg:w-4/5'" />
+      <RouterView
+        :class="{
+          'h-full overflow-hidden lg:w-5/6 xl:w-4/5': sessionStore.isSigned,
+        }"
+      />
     </div>
     <TheFooter :isUserSign="sessionStore.isSigned" />
   </div>

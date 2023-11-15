@@ -28,6 +28,13 @@ export type Note = {
   id: string;
   title: string;
   creationDate: string;
-  description: string;
+  content: string;
   tags: Tag[];
 };
+
+export interface FilterCriteria {
+  text: string;
+  tags?: string[];
+  startDate: string;
+  endDate: string;
+}

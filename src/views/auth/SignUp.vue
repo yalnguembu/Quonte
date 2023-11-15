@@ -10,7 +10,8 @@
           Sign Up
         </h1>
         <p class="text-gray-500 dark:text-gray-400 py-6 lg:p-6">
-          We need some informations for configure your personal space
+          Welcome back! We need some informations for configure your personal
+          space
         </p>
       </div>
       <div v-if="requestError" class="mb-4">
@@ -43,16 +44,6 @@
             v-model="user.password"
             :errors="v$.password.$errors"
             :isValid="!v$.password.$silentErrors.length"
-          />
-        </div>
-        <div class="mb-4">
-          <PasswordInput
-            data-test="password-input"
-            label="Confirm password"
-            placeholder="Confirm your password"
-            v-model="user.confirmationPassword"
-            :errors="v$.confirmationPassword.$errors"
-            :isValid="!v$.confirmationPassword.$silentErrors.length"
           />
         </div>
         <div class="w-full mb-6 mt-6">
@@ -89,9 +80,9 @@ import { useRouter } from "vue-router";
 import { ButtonType } from "@/utils/type";
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import type { AuthenticationError } from "@/utils/error";
-import { ALERT_BOX_TYPE } from "@/utils/enum";
+import { ALERT_BOX_TYPE, REGEX } from "@/utils/enum";
 import { useVuelidate } from "@vuelidate/core";
-import { required, email, sameAs, helpers } from "@vuelidate/validators";
+import { required, email, helpers } from "@vuelidate/validators";
 import BaseButton from "@/components/button/BaseButton.vue";
 import EmailInput from "@/components/form/EmailInput.vue";
 import PasswordInput from "@/components/form/PasswordInput.vue";
@@ -102,7 +93,6 @@ type User = {
   username: string;
   email: string;
   password: string;
-  confirmationPassword: string;
 };
 
 const sessionStore = useSessionStore();
@@ -111,7 +101,6 @@ const user = reactive<User>({
   username: "",
   email: "",
   password: "",
-  confirmationPassword: "",
 });
 
 const signing = shallowRef<boolean>(false);
@@ -138,15 +127,8 @@ const rules = computed(() => ({
     ),
     mustBeValidPassword: helpers.withMessage(
       "This filed does't repect the awaited format",
-      helpers.regex(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/gm)
+      helpers.regex(REGEX.PASSWORD)
     ),
-  },
-  confirmationPassword: {
-    required: helpers.withMessage(
-      "You may forgot to field this input",
-      required
-    ),
-    sameAsPassword: helpers.withMessage("No matching", sameAs(user.password)),
   },
 }));
 
@@ -169,7 +151,6 @@ const signIn = async () => {
     } finally {
       setTimeout(() => (signing.value = false), 1000);
       user.password = "";
-      user.confirmationPassword = "";
     }
   }
 };

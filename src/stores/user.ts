@@ -1,20 +1,16 @@
+import { User } from "@/domain/User";
+import { UserService, type UserDTO } from "@/services";
 import { defineStore } from "pinia";
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-import { reactive, ref } from "vue";
-import type { UserDTO } from "@/services/bespace";
 
 export const useUserStore = defineStore("user", () => {
-  const user = ref<UserDTO | null>();
-
-  const getAllInformations = async (id: number) => {
-    user.value = {
-      id: id,
-      creationDate: "",
-      updateAt: "",
-      email: "admin@bespace.com",
-      firstName: "admin",
-      lastName: "user",
-    };
+  const fetchUserByUsername = async (username: string): User => {
+    let user: UserDTO;
+    try {
+      user = await UserService.fectUserByUsername({ username });
+      return new User(user);
+    } catch (error: unknown) {
+      console.log(error);
+    }
   };
-  return { user, getAllInformations };
+  return { fetchUserByUsername };
 });

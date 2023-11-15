@@ -14,7 +14,6 @@ import { Session, newNullSession } from "@/domain/Session";
 import { AuthenticationError } from "@/utils/error";
 
 export const useSessionStore = defineStore("session", () => {
-  // const session = ref<Session | null>(null);
   const session = ref<Session>(newNullSession());
 
   const isSigned = computed(() => {
@@ -23,13 +22,13 @@ export const useSessionStore = defineStore("session", () => {
 
   const signIn = async (user: { email: string; password: string }) => {
     try {
-      const data: AuthResponseDTO = await AuthService.signin({
+      const infos: AuthResponseDTO = await AuthService.signin({
         requestBody: user,
       });
-      session.value = new Session(data);
+      session.value = new Session(infos);
       saveAccessToken(session.value.accessToken);
       saveRefreshToken(session.value.accessToken);
-      setRequestHeaderToken(data.access_token);
+      setRequestHeaderToken(session.value.accessToken);
       return { success: true, message: "connected successfully" };
     } catch (error: AxiosError | any) {
       throw new AuthenticationError(error);
@@ -42,13 +41,13 @@ export const useSessionStore = defineStore("session", () => {
     password: string;
   }) => {
     try {
-      const data: AuthResponseDTO = await AuthService.signup({
+      const infos: AuthResponseDTO = await AuthService.signup({
         requestBody: user,
       });
-      session.value = new Session(data);
+      session.value = new Session(infos);
       saveAccessToken(session.value.accessToken);
       saveRefreshToken(session.value.accessToken);
-      setRequestHeaderToken(data.access_token);
+      setRequestHeaderToken(session.value.accessToken);
       return { succes: true };
     } catch (error: AxiosError | any) {
       throw new AuthenticationError(error);
@@ -61,7 +60,20 @@ export const useSessionStore = defineStore("session", () => {
         requestBody: { refresh_token: token },
       });
       session.value = new Session({ ...response, refresh_token: token });
-      saveAccessToken(response.access_token ?? "");
+      saveAccessToken(session.value.accessToken);
+    } catch (error: AxiosError | any) {
+      throw new AuthenticationError(error);
+    }
+  };
+
+  const verifyAccessToken = async (accessToken: string) => {
+    try {
+      const user = await AuthService.verifyToken({
+        requestBody: {
+          accessToken,
+        },
+      });
+      session.value = new Session(user);
     } catch (error: AxiosError | any) {
       throw new AuthenticationError(error);
     }
@@ -80,5 +92,6 @@ export const useSessionStore = defineStore("session", () => {
     signOut,
     getAccessToken,
     refreshToken,
+    verifyAccessToken,
   };
 });

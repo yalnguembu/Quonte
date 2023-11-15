@@ -41,7 +41,7 @@
       </div>
     </div>
     <div v-if="noteItemType === NOTE_ITEM.CARD">
-      <div class="p-4 mb-3 max-h-40 w-full overflow-hidden" v-if="content">
+      <div class="p-4 max-h-40 w-full overflow-hidden" v-if="content">
         <p
           data-test="note-content"
           class="font-sm dark:text-gray-300 text-gray-500 whitespace-pre-all break-word text-ellipsis"
@@ -51,7 +51,7 @@
       </div>
       <p
         data-test="note-creationDate"
-        class="font-sm text-gray-400 dark:text-gray-500 p-4"
+        class="font-sm text-gray-400 dark:text-gray-500 p-4 text-right"
       >
         {{ date().getPassedTime(creationDate) }}
       </p>

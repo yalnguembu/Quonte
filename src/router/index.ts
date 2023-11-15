@@ -1,16 +1,24 @@
 import { createRouter, createWebHistory } from "vue-router";
-import MainWrapper from "@/components/MainWrapper.vue";
-import PageLayout from "@/components/PageLayout.vue";
+import TheLayout from "@/components/TheLayout.vue";
+import PageWrapper from "@/components/PageWrapper.vue";
 
 export const routes = [
   {
     path: "/",
-    component: MainWrapper,
+    component: TheLayout,
     children: [
       {
         name: "home",
         path: "",
-        component: PageLayout,
+        component: PageWrapper,
+        meta: {
+          isPublic: true,
+        },
+      },
+      {
+        name: "contact",
+        path: "contact-us",
+        component: () => import("@/views/ContactUs.vue"),
         meta: {
           isPublic: true,
         },
@@ -35,11 +43,11 @@ export const routes = [
         ],
       },
       {
-        name: "noteDetails",
-        path: "note/:id",
-        component: () => import("@/views/notes/NoteDetails.vue"),
+        name: "note-details",
+        path: "notes/:id",
+        component: () => import("@/views/notes/NotesList.vue"),
         meta: {
-          isPublic: true,
+          isPublic: false,
         },
       },
       {
@@ -47,15 +55,23 @@ export const routes = [
         path: "notes",
         component: () => import("@/views/notes/NotesList.vue"),
         meta: {
+          isPublic: false,
+        },
+      },
+      {
+        name: "details",
+        path: "@:username",
+        component: () => import("@/views/UserProfile.vue"),
+        meta: {
           isPublic: true,
         },
       },
       {
         name: "tags",
         path: "tags",
-        component: () => import("@/views/TagsList.vue"),
+        component: () => import("@/views/tag/TagsList.vue"),
         meta: {
-          isPublic: true,
+          isPublic: false,
         },
       },
       {
@@ -74,7 +90,7 @@ const router = createRouter({
   history: createWebHistory(),
   routes: routes,
   scrollBehavior() {
-    return { top: 0 };
+    return { top: 0, behavior: "smooth" };
   },
 });
 

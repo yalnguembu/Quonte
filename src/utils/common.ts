@@ -6,7 +6,7 @@ const oneSecondsTime = 1000;
 
 export const date = () => {
   const getPassedTime = (isoDate: string): string => {
-    const time = Date.now() - new Date(isoDate).getTime();
+    const time = new Date(isoDate).getTime() - Date.now();
     let passedTime: number = time / oneWeekTime;
 
     if (passedTime > 4) return new Date(isoDate).toDateString();

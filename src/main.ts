@@ -2,7 +2,7 @@ import { createApp } from "vue";
 import { createPinia } from "pinia";
 import App from "./App.vue";
 import router from "./router";
-import { prepareApis, getRefreshToken } from "./utils/api-config";
+import { prepareApis, getAccessToken } from "./utils/api-config";
 import { useSessionStore } from "./stores/session";
 import { appear } from "./utils/custom-directive";
 import "./assets/main.css";
@@ -16,11 +16,12 @@ prepareApis();
 router.beforeEach(async (to, from, next) => {
   const authRequired = !to.meta.isPublic;
   const sessionStore = useSessionStore();
+  const accessToken = (await getAccessToken()) ?? "";
   if (authRequired) {
     if (!sessionStore.isSigned) {
-      if (await getRefreshToken()) {
+      if (accessToken) {
         try {
-          await sessionStore.refreshToken(await getRefreshToken());
+          await sessionStore.verifyAccessToken(accessToken);
           return next();
         } catch (error) {
           console.log(error);
@@ -29,7 +30,8 @@ router.beforeEach(async (to, from, next) => {
       }
       router.push("/auth/sign-in");
     }
-    // await router.push("/auth/sign-in");
+  } else if (to.name === "home" && accessToken) {
+    await sessionStore.verifyAccessToken(accessToken);
   }
   next();
 });

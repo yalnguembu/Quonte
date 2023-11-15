@@ -6,10 +6,10 @@
         'border rounded-full w-12 flex',
         theme === 'dark'
           ? 'justify-end bg-gray-800 border-gray-800'
-          : 'justify-start bg-gray-100 border-gray-200',
+          : 'justify-start bg-gray-100 border-gray-300',
       ]"
     >
-      <div class="rounded-full bg-gray-900 p-0" v-if="theme === 'dark'">
+      <div class="rounded-full bg-gray-500 p-0" v-if="theme === 'dark'">
         <LunaIcon class="w-4 h-4 stroke-gray-100 m-0" />
       </div>
       <div class="rounded-full bg-gray-300" v-else>

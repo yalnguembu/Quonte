@@ -1,6 +1,6 @@
 <template>
   <div class="inline-block">
-    <button :class="theme" :type="type">
+    <button :disabled="disabled" :class="theme" :type="type">
       <slot name="icon-left" data-test="base-button-icon-left" />
       <span
         data-test="base-button-title"
@@ -33,6 +33,10 @@ defineProps({
   type: {
     type: String as PropType<ButtonType>,
     default: ButtonType.button,
+  },
+  disabled: {
+    type: Boolean,
+    default: false,
   },
 });
 const slots = useSlots();

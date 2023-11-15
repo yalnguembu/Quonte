@@ -16,7 +16,7 @@
 <script lang="ts" setup>
 import { ref } from "vue";
 import ButtonWrapper from "./ButtonWrapper.vue";
-import FilterModal from "../FilterModal.vue";
+import FilterModal from "../modal/FilterModal.vue";
 import FilterIcon from "../icons/FilterIcon.vue";
 
 const isModadalVisible = ref<boolean>(false);

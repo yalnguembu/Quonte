@@ -35,7 +35,16 @@ export const useNoteStore = defineStore("note", () => {
 
   const createNote = async (note: Note): Promise<Note> => {
     try {
-      return new Note(await NoteService.createNote({ requestBody: note }));
+      const requestBody = {
+        ...note.baseNote,
+        tags: note.tags.map((tag) => tag.id),
+      };
+
+      return new Note(
+        await NoteService.createNote({
+          requestBody,
+        })
+      );
     } catch (error: Error | any) {
       throw new ApiError(error);
     }
