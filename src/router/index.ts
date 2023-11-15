@@ -1,16 +1,24 @@
 import { createRouter, createWebHistory } from "vue-router";
-import MainWrapper from "@/components/MainWrapper.vue";
-import PageLayout from "@/components/PageLayout.vue";
+import TheLayout from "@/components/TheLayout.vue";
+import PageWrapper from "@/components/PageWrapper.vue";
 
 export const routes = [
   {
     path: "/",
-    component: MainWrapper,
+    component: TheLayout,
     children: [
       {
         name: "home",
         path: "",
-        component: PageLayout,
+        component: PageWrapper,
+        meta: {
+          isPublic: true,
+        },
+      },
+      {
+        name: "contact",
+        path: "contact-us",
+        component: () => import("@/views/ContactUs.vue"),
         meta: {
           isPublic: true,
         },
@@ -50,14 +58,14 @@ export const routes = [
           isPublic: false,
         },
       },
-      // {
-      //   name: "tag-details",
-      //   path: "tags",
-      //   component: () => import("@/views/tag/TagDetails.vue"),
-      //   meta: {
-      //     isPublic: false,
-      //   },
-      // },
+      {
+        name: "details",
+        path: "@:username",
+        component: () => import("@/views/UserProfile.vue"),
+        meta: {
+          isPublic: true,
+        },
+      },
       {
         name: "tags",
         path: "tags",
@@ -82,7 +90,7 @@ const router = createRouter({
   history: createWebHistory(),
   routes: routes,
   scrollBehavior() {
-    return { top: 0 };
+    return { top: 0, behavior: "smooth" };
   },
 });
 

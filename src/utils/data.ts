@@ -7,19 +7,14 @@ import TagIcon from "@/components/icons/TagIcon.vue";
 export const navBarItems = {
   left: [
     {
-      title: "About us",
-      label: "About us",
-      path: "about-us",
-    },
-    {
       title: "Support us",
       label: "Support us",
-      path: "support-us",
+      path: "",
     },
     {
       title: "Contact",
       label: "Contact",
-      path: "contact",
+      path: "/contact-us",
     },
   ],
   center: [
@@ -28,7 +23,7 @@ export const navBarItems = {
       label: "Sign In",
       path: "/auth/sign-in",
       theme: {
-        item: "block text-md text-green-900 dark:text-gray-300 dark:hover:border-gray-700 px-4 py-2 rounded-md border border-transparent hover:border-gray-200",
+        item: "block text-md text-green-900 dark:text-gray-300 dark:hover:border-gray-700 px-4 py-2 rounded-md border border hover:border-gray-200",
       },
     },
     {
@@ -36,7 +31,7 @@ export const navBarItems = {
       label: "Sign Up",
       path: "/auth/sign-up",
       theme: {
-        item: "ml-4 block bg-green-800 text-white dark:bg-green-100 dark:text-gray-800 text-md rounded px-4 py-2 rounded-md border border-transparent hover:border-gray-200",
+        item: "mt-4 block bg-green-800 text-white dark:bg-green-100 dark:text-gray-800 text-md rounded px-4 py-2 rounded-md border border-transparent hover:border-gray-200 lg:ml-4 lg:mt-0",
       },
     },
   ],
@@ -80,12 +75,12 @@ export const footerItems = [
     {
       title: "Product",
       label: "Product",
-      path: "product",
+      path: "",
     },
     {
       title: "Solution",
       label: "Solution",
-      path: "Product",
+      path: "",
     },
     {
       title: "Sign In",
@@ -97,12 +92,12 @@ export const footerItems = [
     {
       title: "About us",
       label: "About us",
-      path: "about-us",
+      path: "/about-us",
     },
     {
       title: "Support us",
       label: "Support us",
-      path: "support-us",
+      path: "",
     },
     {
       title: "Contact us",

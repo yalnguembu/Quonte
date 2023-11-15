@@ -283,7 +283,29 @@ paths:
           schema:
             type: string
             format: uuid
-
+  /users/{username}:
+    get:
+      tags:
+        - User
+      summary: fetch details by user's unername
+      description: fetch details by user's unername
+      operationId: fectUserByUsername
+      parameters:
+        - name: username
+          description: the user's username
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: user fecthed successfully
+          content:
+            application/json:
+              schema:
+                $ref: "#components/schemas/UserDTO"
+        403:
+          description: access forbidden
 components:
   schemas:
     SignUpDTO:
@@ -385,6 +407,7 @@ components:
         - creationDate
         - email
         - username
+        - role
       properties:
         id:
           type: string
@@ -393,18 +416,18 @@ components:
         creationDate:
           type: string
           description: user's creation date
-        updateAt:
-          type: string
-          description: user's updated date
         email:
           type: string
           description: user's email
-        firstName:
+        username:
           type: string
-          description: user's firstname
-        lastName:
+          description: user's username
+        role:
           type: string
-          description: user's lastname
+          description: user's role
+        picture:
+          type: string
+          description: user's picture
     TagDTO:
       type: object
       required:

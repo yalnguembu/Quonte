@@ -2,7 +2,7 @@
   <div
     class="w-screen h-screen bg-gray-500/25 backdrop-blur-sm flex flex-row justify-end fixed top-0 left-0 z-30 transition duration-500"
   >
-    <slot ref="modal" @close="emit('close')" />
+    <slot ref="modal" />
   </div>
 </template>
 <script lang="ts" setup>

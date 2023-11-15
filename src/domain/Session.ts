@@ -14,7 +14,7 @@ export class Session {
   }
 
   get email() {
-    return this.auth.email;
+    return this.auth.email ?? "";
   }
 
   get username() {

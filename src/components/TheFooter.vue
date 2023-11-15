@@ -11,16 +11,27 @@
         <div
           class="max-w-screen-xl items-center flex flex-col justify-between p-4 lg:items-start"
         >
-          <img
-            src="@/assets/logo.png"
-            alt="logo bespace"
-            class="w-24 grayscale hover:grayscale-0"
-          />
-
+          <RouterLink
+            to="/"
+            class="text-xl font-bold text-transparent flex flex-col items-center px-4"
+          >
+            <img src="@/assets/images/logo.svg" alt="" class="w-16 rotate-45" />
+            <span
+              class="bg-clip-text text-4xl bg-gradient-to-r from-green-500 dark:from-green-300 to-yellow-500 dark:to-yellow-500"
+              >Quonte</span
+            >
+          </RouterLink>
           <p class="px-4 py-4 text-gray-500 text-xl lg:text-base">
-            &copy; Quonte by young-it <br />
-            Powered by
-            <a href="https://yalnguembu.netlify.app/">Yal NGUEMBU</a>
+            &copy; {{ thisYear }} Quonte inc<br />
+            By
+            <LinkWrapper
+              path="https://yalnguembu.netlify.app/"
+              title="visit Young-Tech website"
+              is-external
+              class="hover:text-blue-400 hover:underline italic font-sans font-bold"
+            >
+              Young-Tech
+            </LinkWrapper>
           </p>
         </div>
       </AnimeOnScroll>
@@ -37,7 +48,7 @@
               :label="item.label"
               :theme="{
                 label: 'text-xl lg:text-base',
-                item: 'block py-3 rounded px-2 text-gray-500 dark:hover:bg-gray-700 dark:hover:text-gray-300',
+                item: 'block py-3 rounded px-2 text-gray-500 hover:text-green-800 hover:font-bold dark:hover:text-gray-100',
               }"
             />
           </ul>
@@ -56,7 +67,7 @@
               :label="item.label"
               :theme="{
                 label: 'text-xl lg:text-base',
-                item: 'block py-3 rounded px-2 text-gray-500 dark:hover:bg-gray-700 dark:hover:text-gray-300',
+                item: 'block py-3 rounded px-2 text-gray-500 hover:text-green-800 hover:font-bold  dark:hover:text-gray-100',
               }"
             />
           </ul>
@@ -74,16 +85,15 @@
             We'd love to hear from you
           </p>
           <ul class="flex">
-            <MenuItem
+            <LinkWrapper
               v-for="(item, index) in footerItems[2]"
               :key="index"
               :path="item.path"
-              :icon="item.icon"
-              :theme="{
-                icon: 'w-5 h-5 dark:fill-gray-100',
-                item: 'block rounded p-2 px-3 mr-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700',
-              }"
-            />
+              isExternal
+              class="block p-2 px-3 mr-2 rounded-md hover:bg-gray-300 dark:hover:bg-gray-700"
+            >
+              <component :is="item.icon" class="w-5 h-5 dark:fill-gray-100" />
+            </LinkWrapper>
           </ul>
         </div>
       </AnimeOnScroll>
@@ -95,6 +105,7 @@
 import MenuItem from "./menu/MenuItem.vue";
 import { footerItems } from "@/utils/data";
 import AnimeOnScroll from "@/components/AnimeOnScroll.vue";
+import LinkWrapper from "./LinkWrapper.vue";
 
 defineProps({
   isUserSign: {
@@ -102,4 +113,6 @@ defineProps({
     default: false,
   },
 });
+
+const thisYear = new Date().getFullYear();
 </script>

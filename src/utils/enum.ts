@@ -22,3 +22,14 @@ export enum ALERT_BOX_TYPE {
   WARNING = "WARNING",
   ERROR = "ERROR",
 }
+
+export enum THEME {
+  BLUE = "BLUE",
+  GREEN = "GREEN",
+  YELLOW = "YELLOW",
+}
+
+export enum REGEX {
+  EMAIL = "",
+  PASSWORD = /^(?=.*d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/gm,
+}

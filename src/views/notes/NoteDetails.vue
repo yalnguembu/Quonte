@@ -78,7 +78,7 @@ import PincelSquareIcon from "@/components/icons/PincelSquareIcon.vue";
 import PlusIcon from "@/components/icons/PlusIcon.vue";
 import ArchiveArrowDownIcon from "@/components/icons/ArchiveArrowDownIcon.vue";
 import TagItem from "@/components/TagItem.vue";
-import NoteDetailsSkeleton from "@/components/NoteDetailsSkeleton.vue";
+import NoteDetailsSkeleton from "@/components/skeleton/NoteDetailsSkeleton.vue";
 import ModalWrapper from "@/components/ModalWrapper.vue";
 import { useNoteStore } from "@/stores/note";
 import { Note, newNullNote } from "@/domain/Note";

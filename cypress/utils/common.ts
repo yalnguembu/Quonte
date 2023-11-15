@@ -94,11 +94,11 @@ export const useCypressCommands = () => {
     ).as("verify-access-token");
   };
 
-  interface Tag {
+  type Tag = {
     id: string;
     title: string;
     description?: string;
-  }
+  };
 
   const stubTagsList = (ownerId: string, tags: Tag[]) => {
     cy.intercept(
@@ -135,9 +135,10 @@ export const useCypressCommands = () => {
       "have.text",
       tag.title
     );
-    cy.get(
-      `[data-test="tag-item-${tag.id}"] [data-test="tag-description"]`
-    ).should("have.text", tag.description);
+    !!tag.description &&
+      cy
+        .get(`[data-test="tag-item-${tag.id}"] [data-test="tag-description"]`)
+        .should("have.text", tag.description);
   };
 
   const stubTagCreation = (data: Tag) => {
@@ -188,6 +189,29 @@ export const useCypressCommands = () => {
   };
 
   const assertNoteEntriesHas = (
+    row: Note,
+    type: NOTE_ITEM = NOTE_ITEM.CARD
+  ): void => {
+    cy.get(`[data-test="note-item-${row.id}"]`).within(() => {
+      cy.get('[data-test="note-title"]').should("contain.text", row.title);
+      cy.get('[data-test="note-creationDate"]').should(
+        "contain.text",
+        row.creationDate
+      );
+
+      if (type === NOTE_ITEM.CARD)
+        cy.get('[data-test="note-content"]').should(
+          "contain.text",
+          row.content
+        );
+
+      cy.get('[data-test="note-tags"]').within(() => {
+        row.tags.forEach((tag) => assertTagHas(tag));
+      });
+    });
+  };
+
+  const assertNoteDetailsHas = (
     row: Note,
     type: NOTE_ITEM = NOTE_ITEM.CARD
   ): void => {
@@ -265,5 +289,6 @@ export const useCypressCommands = () => {
     stubVerifyAccesToken,
     goToMenu,
     stubNoteDetails,
+    assertNoteDetailsHas,
   };
 };

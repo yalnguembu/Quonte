@@ -1,30 +1,27 @@
 <template>
-  <section class="w-full">
+  <section>
     <div
-      class="w-full grid grid-cols-1 gap-x-4 lg:gap-x-8 lg:grid-cols-9 items-center border-b dark:border-b-gray-700"
+      class="w-full items-center p-4 pb-5 justify-between border-b dark:border-b-gray-700 lg:flex"
     >
-      <div class="col-span-4">
-        <h1
-          class="font-bold text-3xl text-left dark:text-gray-200 mb-4 hidden lg:block lg:mb-0"
-        >
-          {{ title }}
-        </h1>
-      </div>
-      <ListFilter class="col-span-4" />
-      <ViewButton @change="changleView" :view="pageView" />
-      <div class="col-span-8 p-2" />
+      <h1 class="font-bold text-3xl text-left dark:text-gray-200 mb-4 lg:mb-0">
+        {{ title }}
+      </h1>
+      <SearchInput
+        v-model="query"
+        @update:modelValue="$emit('search', query)"
+        placeholder="Search in notes..."
+        class="w-full lg:w-1/3"
+        resizable
+      />
     </div>
   </section>
 </template>
 <script setup lang="ts">
 import { ref } from "vue";
-import ListFilter from "@/components/ListFilter.vue";
-import ViewButton from "@/components/button/ViewButton.vue";
+import SearchInput from "./form/SearchInput.vue";
 
-import { NOTE_ITEM } from "@/utils/enum";
-
-const emits = defineEmits<{
-  (event: "changeView", view: NOTE_ITEM): void;
+defineEmits<{
+  (event: "search", query: string): string;
 }>();
 
 defineProps({
@@ -34,8 +31,5 @@ defineProps({
   },
 });
 
-const pageView = ref<NOTE_ITEM>(NOTE_ITEM.CARD);
-const changleView = (view: NOTE_ITEM): void => {
-  emits("changeView", view);
-};
+const query = ref<string>("");
 </script>

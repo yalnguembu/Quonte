@@ -5,6 +5,7 @@
   "private": true,
   "scripts": {
     "dev": "vite",
+    "dev:local": "vite --host",
     "build": "run-p type-check build-only",
     "openapi-generate": "openapi --useOptions --client axios --input ./specs/contract.yaml --output ./src/services",
     "preview": "vite preview",

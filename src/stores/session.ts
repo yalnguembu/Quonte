@@ -14,7 +14,6 @@ import { Session, newNullSession } from "@/domain/Session";
 import { AuthenticationError } from "@/utils/error";
 
 export const useSessionStore = defineStore("session", () => {
-  // const session = ref<Session | null>(null);
   const session = ref<Session>(newNullSession());
 
   const isSigned = computed(() => {
