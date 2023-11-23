@@ -94,9 +94,6 @@ const props = defineProps({
 const noteDetails = ref<Note>();
 const isNoteDetailsLoading = shallowRef<boolean>(false);
 
-// const fetchNote = () => {
-//   noteDetails.value = notes.find((note: Note) => note.id == props.id);
-// };
 const fetchDetails = async () => {
   try {
     isNoteDetailsLoading.value = true;

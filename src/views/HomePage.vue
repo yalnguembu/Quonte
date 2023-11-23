@@ -54,7 +54,7 @@
           </h4>
         </div>
         <template v-if="isTagsListLoading">
-          <TagItemskeleton v-for="index in [4]" :key="index" />
+          <TagItemSkeleton v-for="index in [4]" :key="index" />
         </template>
         <template v-else-if="tagsList.length">
           <div class="flex w-full flex-wrap mt-2">
@@ -87,7 +87,7 @@
           class="w-full overflow-x-scroll flex gap-6 pb-1 mt-4 scrollbar-hide md:flex-wrap lg:grid lg:grid-cols-2 lg:overflow-hidden"
         >
           <template v-if="isNotesListLoading">
-            <NoteItemskeleton v-for="index in [4]" :key="index" />
+            <NoteItemSkeleton v-for="index in [4]" :key="index" />
           </template>
           <template v-else-if="notesList.length">
             <NoteItem
@@ -118,14 +118,14 @@
   </div>
 </template>
 <script lang="ts" setup>
-import { onBeforeMount, ref } from "vue";
+import {defineAsyncComponent, onBeforeMount, ref} from "vue";
 import NoteItem from "@/components/NoteItem.vue";
 import TagItem from "@/components/TagItem.vue";
 import BaseButton from "@/components/button/BaseButton.vue";
 import PlusIcon from "@/components/icons/PlusIcon.vue";
 import NoteCreationModal from "./notes/NoteCreation.vue";
-import NoteItemskeleton from "@/components/skeleton/NoteItemskeleton.vue";
-import TagItemskeleton from "@/components/skeleton/TagItemskeleton.vue";
+import NoteItemSkeleton from "@/components/skeleton/NoteItemSkeleton.vue";
+import TagItemSkeleton from "@/components/skeleton/TagItemSkeleton.vue";
 import type { Note } from "@/domain/Note";
 import { useNoteStore } from "@/stores/note";
 import { useSessionStore } from "@/stores/session";

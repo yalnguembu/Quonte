@@ -2,8 +2,8 @@
   <div>
     <div
       :class="[
-        'w-full bg-white dark:bg-gray-900 h-screen',
-        { 'lg:flex': sessionStore.isSigned },
+        'w-full bg-white dark:bg-gray-900',
+        { 'lg:flex h-screen': sessionStore.isSigned },
       ]"
     >
       <TheSidebar
@@ -14,21 +14,24 @@
         }"
         :items="sideBarItems"
       />
-      <TheNavbarVue v-else :navBarItems="navBarItems" />
+      <TheNavbarVue v-else :navBarItems="navBarItems"  v-memo="[sessionStore.isSigned]" />
       <RouterView
         :class="{
           'h-full overflow-hidden lg:w-5/6 xl:w-4/5': sessionStore.isSigned,
         }"
       />
     </div>
-    <TheFooter :isUserSign="sessionStore.isSigned" />
+    <TheFooter v-memo="[sessionStore.isSigned]" :isUserSign="sessionStore.isSigned" />
   </div>
 </template>
 <script lang="ts" setup>
-import TheNavbarVue from "./TheNavbar.vue";
 import TheFooter from "./TheFooter.vue";
 import { navBarItems, sideBarItems } from "@/utils/data";
 import { useSessionStore } from "@/stores/session";
-import TheSidebar from "./TheSidebar.vue";
+import {defineAsyncComponent} from "vue";
+
+const TheSidebar = defineAsyncComponent(() => import("@/components/TheSidebar.vue"));
+const TheNavbarVue = defineAsyncComponent(() => import("@/components/TheNavbar.vue"));
+
 const sessionStore = useSessionStore();
 </script>

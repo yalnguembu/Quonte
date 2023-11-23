@@ -16,7 +16,7 @@ prepareApis();
 router.beforeEach(async (to, from, next) => {
   const authRequired = !to.meta.isPublic;
   const sessionStore = useSessionStore();
-  const accessToken = (await getAccessToken()) ?? "";
+  const accessToken = (getAccessToken()) ?? "";
   if (authRequired) {
     if (!sessionStore.isSigned) {
       if (accessToken) {
@@ -25,10 +25,10 @@ router.beforeEach(async (to, from, next) => {
           return next();
         } catch (error) {
           console.log(error);
-          router.push("/auth/sign-in");
+          await router.push("/auth/sign-in");
         }
       }
-      router.push("/auth/sign-in");
+      await router.push("/auth/sign-in");
     }
   } else if (to.name === "home" && accessToken) {
     await sessionStore.verifyAccessToken(accessToken);

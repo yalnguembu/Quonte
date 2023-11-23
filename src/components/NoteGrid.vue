@@ -64,7 +64,7 @@
 import type { Note } from "@/domain/Note";
 import type { PropType } from "vue";
 import NoteItem from "@/components/NoteItem.vue";
-import NoteItemskeleton from "@/components/skeleton/NoteItemskeleton.vue";
+import NoteItemSkeleton from "@/components/skeleton/NoteItemSkeleton.vue";
 
 defineProps({
   notes: {

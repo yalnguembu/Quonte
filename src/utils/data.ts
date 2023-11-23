@@ -1,9 +1,3 @@
-import TwitterIcon from "@/components/icons/TwitterIcon.vue";
-import GithubIcon from "@/components/icons/GithubIcon.vue";
-import NoteIcon from "@/components/icons/NoteIcon.vue";
-import HomeIcon from "@/components/icons/HomeIcon.vue";
-import TagIcon from "@/components/icons/TagIcon.vue";
-
 export const navBarItems = {
   left: [
     {
@@ -40,13 +34,13 @@ export const navBarItems = {
       label: "",
       title: "go to git hub",
       path: "https://github.com/yalnguembu/quonte",
-      icon: GithubIcon,
+      icon: () => import("@/components/icons/GithubIcon.vue"),
     },
     {
       label: "",
       title: "go to twitter",
       path: "https://twitter.com/yalnguembu",
-      icon: TwitterIcon,
+      icon:  () => import("@/components/icons/TwitterIcon.vue"),
     },
   ],
 };
@@ -55,19 +49,19 @@ export const sideBarItems = [
     title: "home",
     label: "Home",
     path: "/",
-    icon: HomeIcon,
+    icon: ()=> import("@/components/icons/HomeIcon.vue"),
   },
   {
     title: "notes",
     label: "Notes",
     path: "/notes",
-    icon: NoteIcon,
+    icon: ()=> import("@/components/icons/NoteIcon.vue"),
   },
   {
     title: "tags",
     label: "Tags",
     path: "/tags",
-    icon: TagIcon,
+    icon: ()=> import("@/components/icons/TagIcon.vue"),
   },
 ];
 export const footerItems = [
@@ -110,13 +104,13 @@ export const footerItems = [
       label: "",
       title: "Github",
       path: "https://github.com/yalnguembu/quonte",
-      icon: GithubIcon,
+      icon: () => import("@/components/icons/GithubIcon.vue"),
     },
     {
       label: "",
       title: "Twitter",
       path: "https://twitter.com/yalnguembu",
-      icon: TwitterIcon,
+      icon: () => import("@/components/icons/TwitterIcon.vue"),
     },
   ],
 ];

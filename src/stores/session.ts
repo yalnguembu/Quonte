@@ -1,17 +1,17 @@
 import { defineStore } from "pinia";
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import type { AxiosError } from "axios";
+import { computed, ref } from "vue";
+import type { AuthResponseDTO } from "@/services/models/AuthResponseDTO";
+import { Session, newNullSession } from "@/domain/Session";
+const AuthenticationError = ()=> import( "@/utils/error");
+const AuthService = ()=> import( "@/services/services/AuthService");
 import {
   saveAccessToken,
   saveRefreshToken,
   setRequestHeaderToken,
   getAccessToken,
 } from "@/utils/api-config";
-import { computed, ref } from "vue";
-import type { AuthResponseDTO } from "@/services";
-import { AuthService } from "@/services";
-import { Session, newNullSession } from "@/domain/Session";
-import { AuthenticationError } from "@/utils/error";
 
 export const useSessionStore = defineStore("session", () => {
   const session = ref<Session>(newNullSession());

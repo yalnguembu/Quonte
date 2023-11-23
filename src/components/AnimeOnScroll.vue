@@ -47,7 +47,7 @@
 import { onMounted, ref } from "vue";
 
 const block = ref<Element | undefined>();
-const animation = ref<boolean>();
+const animation = ref<boolean>(false);
 
 const observer = new IntersectionObserver(
   ([entry]) => {

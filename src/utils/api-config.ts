@@ -1,4 +1,5 @@
 import axios from "axios";
+import { OpenAPI } from "@/services/core/OpenAPI";
 
 let refresh = false;
 axios.interceptors.response.use(
@@ -29,21 +30,19 @@ export const setRequestHeaderToken = (token: string): void => {
   axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
 };
 
-import { OpenAPI } from "@/services";
-
 export const prepareApis = (): void => {
   OpenAPI.BASE = import.meta.env.VITE_BASE_URL;
   OpenAPI.TOKEN = getAccessToken;
 };
 
-export const getAccessToken = async (): Promise<string> =>
+export const getAccessToken = (): string =>
   localStorage.getItem("apiAccessToken") ?? "";
 
-export const getRefreshToken = async (): Promise<string> =>
+export const getRefreshToken = (): string =>
   localStorage.getItem("apiRefreshToken") ?? "";
 
-export const saveAccessToken = async (accessToken: string): Promise<void> =>
+export const saveAccessToken = (accessToken: string): void =>
   localStorage.setItem("apiAccessToken", accessToken);
 
-export const saveRefreshToken = async (accessToken: string): Promise<void> =>
+export const saveRefreshToken = (accessToken: string): void =>
   localStorage.setItem("apiAccessToken", accessToken);

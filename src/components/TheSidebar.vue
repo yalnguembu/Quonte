@@ -62,7 +62,7 @@
         </div>
       </div>
     </nav>
-    <UserProfile
+    <UserDetailsPreview
       class="absolute bottom-14 left-0 lg:bottom-40 lg:left-20 lg:w-[25rem]"
       v-bind="{
         email: user.email,
@@ -89,12 +89,13 @@ import ThemeButton from "./button/ThemeButton.vue";
 import UserAvatar from "./UserAvatar.vue";
 import MenuItem from "./menu/MenuItem.vue";
 import ButtonWrapper from "./button/ButtonWrapper.vue";
-import { VueElement, onMounted, ref } from "vue";
+import {VueElement, onMounted, ref, defineAsyncComponent} from "vue";
 import type { MenuItem as MenuItemType } from "@/utils/type";
 import { useRoute } from "vue-router";
-import UserProfile from "@/components/modal/UserDetailsPreview.vue";
 import SignOutModal from "./modal/SignOutModal.vue";
 import { useSessionStore } from "@/stores/session";
+
+const UserDetailsPreview = defineAsyncComponent(() => import("@/components/modal/UserDetailsPreview.vue"));
 
 defineProps({
   items: {

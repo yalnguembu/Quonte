@@ -102,7 +102,7 @@ import { useRoute, useRouter } from "vue-router";
 import { useTagStore } from "@/stores/tag";
 import type { Tag } from "@/domain/Tag";
 import TagDetails from "./TagDetails.vue";
-import TagItemskeleton from "@/components/skeleton/TagItemskeleton.vue";
+import TagItemSkeleton from "@/components/skeleton/TagItemSkeleton.vue";
 import CreationButton from "@/components/button/CreationButton.vue";
 import TagCreationModal from "./TagCreationModal.vue";
 import TagListItem from "@/components/TagListItem.vue";

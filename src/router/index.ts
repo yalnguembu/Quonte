@@ -1,6 +1,5 @@
 import { createRouter, createWebHistory } from "vue-router";
 import TheLayout from "@/components/TheLayout.vue";
-import PageWrapper from "@/components/PageWrapper.vue";
 
 export const routes = [
   {
@@ -10,7 +9,7 @@ export const routes = [
       {
         name: "home",
         path: "",
-        component: PageWrapper,
+        component: () => import("@/components/PageWrapper.vue"),
         meta: {
           isPublic: true,
         },

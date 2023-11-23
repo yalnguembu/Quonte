@@ -1,7 +1,7 @@
 <template>
   <div class="items-center flex flex-col py-16 pb-24">
     <div class="p-4">
-      <img src="@/assets//images/Group 5604.svg" class="w-14" alt="" />
+      <img src="@/assets/images/Group 5604.svg" class="w-14" alt="" />
     </div>
     <h3
       class="font-bold text-3xl text-green-800 dark:text-green-100 text-center p-8 pb-12"

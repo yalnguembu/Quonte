@@ -1,10 +1,12 @@
 <template>
-  <Home v-if="useSessionStore().isSigned" />
+  <HomePage v-if="useSessionStore().isSigned" />
   <LandingPage v-else />
 </template>
 
 <script lang="ts" setup>
 import { useSessionStore } from "@/stores/session";
-import LandingPage from "@/views/LandingPage.vue";
-import Home from "@/views/HomePage.vue";
+import {defineAsyncComponent} from "vue";
+
+const HomePage = defineAsyncComponent(() => import("@/views/HomePage.vue"));
+const LandingPage = defineAsyncComponent(() => import("@/views/LandingPage.vue"));
 </script>

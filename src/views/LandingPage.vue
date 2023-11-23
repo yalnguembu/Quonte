@@ -9,22 +9,20 @@
       <section class="w-full bg-gray-50 py-8 dark:bg-gray-800/50">
         <HeroSection />
       </section>
-      <section class="max-w-screen-lg mx-auto">
-        <AppPresentation />
-      </section>
-      <section class="max-w-screen-lg mx-auto">
-        <ContributorsSection />
-      </section>
-      <section class="max-w-screen-lg mx-auto">
-        <ContactSection />
-      </section>
+      <AppPresentation class="max-w-screen-lg mx-auto" />
+      <ContributorsSection class="max-w-screen-lg mx-auto" />
+      <ContactSection class="max-w-screen-lg mx-auto" />
     </main>
   </div>
 </template>
 <script lang="ts" setup>
-import HeaderSection from "@/components/landing/HeaderSection.vue";
-import HeroSection from "@/components/landing/HeroSection.vue";
-import AppPresentation from "@/components/landing/AppPresentation.vue";
-import ContributorsSection from "@/components/landing/ContributorsSection.vue";
-import ContactSection from "@/components/landing/ContactSection.vue";
+import {defineAsyncComponent} from "vue";
+import HeaderSection from "@/components/landing/HeaderSection.vue"
+
+const HeroSection = defineAsyncComponent(() => import( "@/components/landing/HeroSection.vue"));
+const AppPresentation = defineAsyncComponent(() => import( "@/components/landing/AppPresentation.vue"));
+const ContributorsSection = defineAsyncComponent(() => import( "@/components/landing/ContributorsSection.vue"));
+const ContactSection = defineAsyncComponent(() => import( "@/components/landing/ContactSection.vue"));
+
+document.title = "Quonte | The note app whose change the game"
 </script>
