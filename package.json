@@ -1,0 +1,44 @@
+{
+  "name": "infinite-notes",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "dev:local": "vite --host",
+    "openapi-generate": "openapi --useOptions --client axios --input ./specs/contract.yaml --output ./services",
+    "test:unit": "vitest --environment jsdom --root src/",
+    "test:unit:coverage": "vitest --coverage --root src/",
+    "test:e2e": "start-server-and-test preview :4173 'cypress run --e2e'",
+    "test:e2e:dev": "start-server-and-test 'vite dev --port 4173' :4173 'cypress open --e2e'",
+    "build-only": "vite build",
+    "type-check": "vue-tsc --noEmit -p tsconfig.vitest.json --composite false",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
+  },
+  "dependencies": {
+    "@pinia/nuxt": "^0.5.1",
+    "@vuelidate/core": "^2.0.3",
+    "@vuelidate/validators": "^2.0.4",
+    "@vueuse/motion": "^2.1.0",
+    "axios": "^1.6.8",
+    "cypress": "^13.7.2",
+    "nuxt": "^3.11.2",
+    "openapi-typescript-codegen": "^0.29.0",
+    "pinia": "^2.1.7",
+    "vitest": "^1.4.0",
+    "vue": "^3.4.21",
+    "vue-router": "^4.3.0"
+  },
+  "devDependencies": {
+    "@nuxtjs/i18n": "^8.3.0",
+    "@nuxtjs/seo": "^2.0.0-rc.10",
+    "@nuxtjs/tailwindcss": "^6.11.4",
+    "@vueuse/core": "^10.9.0",
+    "@vueuse/nuxt": "^10.9.0",
+    "nuxt-og-image": "^3.0.0-rc.52"
+  }
+}
