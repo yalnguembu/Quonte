@@ -1,0 +1,243 @@
+{
+  "resolvedId": "/home/yalnguembu/Perso/quonte/components/landing/HeaderSection.vue?vue&type=i18n&index=0&lang.json",
+  "transforms": [
+    {
+      "name": "vite:vue",
+      "result": "\n{\n  \"en\": {\n    \"logoAlt\": \"Infinite notes - logo\",\n    \"title\": \"Your limitless note taking solution\",\n    \"subtitle\": \"Never forget a thought again. Infinite Notes is your all-in-one note-taking app, letting you capture everything from ideas to grocery lists. Take notes on the go and access them from any device.\",\n    \"illustrationAlt\": \"stars illustration\",\n    \"loginButton\": \"Get started\",\n    \"loginButtonTitle\": \"go to login page\",\n    \"twitterButton\": \"Follow us\",\n    \"twitterButtonTitle\": \"Opening Twitter\"\n  },\n  \"fr\": {\n    \"logoAlt\": \"Logo- Infinite Notes\",\n    \"title\": \"Essayons quelque chose d'extraordinaire\",\n    \"subtitle\": \"N'oubliez plus jamais une idée. Infinite Notes est une application de prise de notes tout-en-un qui vous permet de tout noter, des idées aux listes de courses. Prenez des notes en déplacement et accédez-y depuis n'importe quel appareil.\",\n    \"illustrationAlt\": \"illustration d'étoiles\",\n    \"loginButton\": \"Commencer\",\n    \"loginButtonTitle\": \"aller à la page de connexiongo to login page\",\n    \"twitterButton\": \"Suivez nous\",\n    \"twitterButtonTitle\": \"Ouvrir Twitter\"\n  }\n}\n",
+      "start": 1713208772144,
+      "end": 1713208772144
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1713208772144,
+      "end": 1713208772144,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1713208772144,
+      "end": 1713208772144,
+      "order": "pre"
+    },
+    {
+      "name": "unplugin-vue-i18n",
+      "result": "export default function (Component) {\n  const _Component = Component\n  _Component.__i18n = _Component.__i18n || []\n  _Component.__i18n.push({\n    \"locale\": \"\",\n    \"resource\": {\n      \"en\": {\n        \"logoAlt\": {\"t\":0,\"b\":{\"t\":2,\"i\":[{\"t\":3}],\"s\":\"Infinite notes - logo\"}},\n        \"title\": {\"t\":0,\"b\":{\"t\":2,\"i\":[{\"t\":3}],\"s\":\"Your limitless note taking solution\"}},\n        \"subtitle\": {\"t\":0,\"b\":{\"t\":2,\"i\":[{\"t\":3}],\"s\":\"Never forget a thought again. Infinite Notes is your all-in-one note-taking app, letting you capture everything from ideas to grocery lists. Take notes on the go and access them from any device.\"}},\n        \"illustrationAlt\": {\"t\":0,\"b\":{\"t\":2,\"i\":[{\"t\":3}],\"s\":\"stars illustration\"}},\n        \"loginButton\": {\"t\":0,\"b\":{\"t\":2,\"i\":[{\"t\":3}],\"s\":\"Get started\"}},\n        \"loginButtonTitle\": {\"t\":0,\"b\":{\"t\":2,\"i\":[{\"t\":3}],\"s\":\"go to login page\"}},\n        \"twitterButton\": {\"t\":0,\"b\":{\"t\":2,\"i\":[{\"t\":3}],\"s\":\"Follow us\"}},\n        \"twitterButtonTitle\": {\"t\":0,\"b\":{\"t\":2,\"i\":[{\"t\":3}],\"s\":\"Opening Twitter\"}}\n      },\n      \"fr\": {\n        \"logoAlt\": {\"t\":0,\"b\":{\"t\":2,\"i\":[{\"t\":3}],\"s\":\"Logo- Infinite Notes\"}},\n        \"title\": {\"t\":0,\"b\":{\"t\":2,\"i\":[{\"t\":3}],\"s\":\"Essayons quelque chose d\\u0027extraordinaire\"}},\n        \"subtitle\": {\"t\":0,\"b\":{\"t\":2,\"i\":[{\"t\":3}],\"s\":\"N\\u0027oubliez plus jamais une idée. Infinite Notes est une application de prise de notes tout-en-un qui vous permet de tout noter, des idées aux listes de courses. Prenez des notes en déplacement et accédez-y depuis n\\u0027importe quel appareil.\"}},\n        \"illustrationAlt\": {\"t\":0,\"b\":{\"t\":2,\"i\":[{\"t\":3}],\"s\":\"illustration d\\u0027étoiles\"}},\n        \"loginButton\": {\"t\":0,\"b\":{\"t\":2,\"i\":[{\"t\":3}],\"s\":\"Commencer\"}},\n        \"loginButtonTitle\": {\"t\":0,\"b\":{\"t\":2,\"i\":[{\"t\":3}],\"s\":\"aller à la page de connexiongo to login page\"}},\n        \"twitterButton\": {\"t\":0,\"b\":{\"t\":2,\"i\":[{\"t\":3}],\"s\":\"Suivez nous\"}},\n        \"twitterButtonTitle\": {\"t\":0,\"b\":{\"t\":2,\"i\":[{\"t\":3}],\"s\":\"Ouvrir Twitter\"}}\n      }\n    }\n  })\n}\n",
+      "start": 1713208772144,
+      "end": 1713208772151,
+      "order": "pre",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "nuxtjs:i18n-macros-transform",
+      "start": 1713208772151,
+      "end": 1713208772151,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1713208772151,
+      "end": 1713208772151,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1713208772151,
+      "end": 1713208772151,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1713208772151,
+      "end": 1713208772151,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1713208772151,
+      "end": 1713208772151,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1713208772152,
+      "end": 1713208772152,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1713208772152,
+      "end": 1713208772152,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1713208772152,
+      "end": 1713208772152,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1713208772154,
+      "end": 1713208772154,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1713208772154,
+      "end": 1713208772154,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1713208772154,
+      "end": 1713208772154,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1713208772154,
+      "end": 1713208772154,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1713208772159,
+      "end": 1713208772159,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1713208772159,
+      "end": 1713208772159,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1713208772159,
+      "end": 1713208772159,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1713208772163,
+      "end": 1713208772163,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1713208772164,
+      "end": 1713208772164,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1713208772164,
+      "end": 1713208772164,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1713208772164,
+      "end": 1713208772164,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1713208772164,
+      "end": 1713208772164,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1713208772164,
+      "end": 1713208772164,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1713208772164,
+      "end": 1713208772164,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1713208772164,
+      "end": 1713208772165,
+      "order": "post"
+    },
+    {
+      "name": "unhead:use-seo-meta-transform",
+      "start": 1713208772165,
+      "end": 1713208772165,
+      "order": "post"
+    },
+    {
+      "name": "nuxtjs:i18n-resource",
+      "start": 1713208772165,
+      "end": 1713208772165,
+      "order": "post"
+    },
+    {
+      "name": "nuxtjs:i18n-meta-deprecation",
+      "start": 1713208772165,
+      "end": 1713208772165,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1713208772213,
+      "end": 1713208772213,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1713208772214,
+      "end": 1713208772214,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1713208772214,
+      "end": 1713208772214,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1713208772214,
+      "end": 1713208772215,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1713208772215,
+      "end": 1713208772215,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1713208772215,
+      "end": 1713208772215,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1713208772215,
+      "end": 1713208772216,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1713208772216,
+      "end": 1713208772216,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1713208772216,
+      "end": 1713208772216,
+      "order": "normal"
+    }
+  ]
+}

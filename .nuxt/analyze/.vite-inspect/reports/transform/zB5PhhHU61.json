@@ -1,0 +1,252 @@
+{
+  "resolvedId": "/home/yalnguembu/Perso/quonte/services/services/UserService.ts",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "/* generated using openapi-typescript-codegen -- do not edit */\n/* istanbul ignore file */\n/* tslint:disable */\n/* eslint-disable */\nimport type { components_schemas_UserDTO } from '../models/components_schemas_UserDTO';\nimport type { CancelablePromise } from '../core/CancelablePromise';\nimport { OpenAPI } from '../core/OpenAPI';\nimport { request as __request } from '../core/request';\nexport class UserService {\n    /**\n     * fetch details by user's unername\n     * fetch details by user's unername\n     * @returns components_schemas_UserDTO user fecthed successfully\n     * @throws ApiError\n     */\n    public static fectUserByUsername({\n        username,\n    }: {\n        /**\n         * the user's username\n         */\n        username: string,\n    }): CancelablePromise<components_schemas_UserDTO> {\n        return __request(OpenAPI, {\n            method: 'GET',\n            url: '/users/{username}',\n            path: {\n                'username': username,\n            },\n            errors: {\n                403: `access forbidden`,\n            },\n        });\n    }\n}\n",
+      "start": 1713208772402,
+      "end": 1713208772479,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1713208772479,
+      "end": 1713208772479,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1713208772479,
+      "end": 1713208772479,
+      "order": "pre"
+    },
+    {
+      "name": "unplugin-vue-i18n",
+      "start": 1713208772479,
+      "end": 1713208772479,
+      "order": "pre"
+    },
+    {
+      "name": "nuxtjs:i18n-macros-transform",
+      "start": 1713208772479,
+      "end": 1713208772479,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1713208772479,
+      "end": 1713208772479,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1713208772479,
+      "end": 1713208772479,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { OpenAPI } from \"../core/OpenAPI\";\nimport { request as __request } from \"../core/request\";\nexport class UserService {\n  /**\n   * fetch details by user's unername\n   * fetch details by user's unername\n   * @returns components_schemas_UserDTO user fecthed successfully\n   * @throws ApiError\n   */\n  static fectUserByUsername({\n    username\n  }) {\n    return __request(OpenAPI, {\n      method: \"GET\",\n      url: \"/users/{username}\",\n      path: {\n        \"username\": username\n      },\n      errors: {\n        403: `access forbidden`\n      }\n    });\n  }\n}\n",
+      "start": 1713208772479,
+      "end": 1713208772489,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "/home/yalnguembu/Perso/quonte/services/services/UserService.ts"
+        ],
+        "sourcesContent": [
+          "/* generated using openapi-typescript-codegen -- do not edit */\n/* istanbul ignore file */\n/* tslint:disable */\n/* eslint-disable */\nimport type { components_schemas_UserDTO } from '../models/components_schemas_UserDTO';\nimport type { CancelablePromise } from '../core/CancelablePromise';\nimport { OpenAPI } from '../core/OpenAPI';\nimport { request as __request } from '../core/request';\nexport class UserService {\n    /**\n     * fetch details by user's unername\n     * fetch details by user's unername\n     * @returns components_schemas_UserDTO user fecthed successfully\n     * @throws ApiError\n     */\n    public static fectUserByUsername({\n        username,\n    }: {\n        /**\n         * the user's username\n         */\n        username: string,\n    }): CancelablePromise<components_schemas_UserDTO> {\n        return __request(OpenAPI, {\n            method: 'GET',\n            url: '/users/{username}',\n            path: {\n                'username': username,\n            },\n            errors: {\n                403: `access forbidden`,\n            },\n        });\n    }\n}\n"
+        ],
+        "mappings": "AAMA,SAAS,eAAe;AACxB,SAAS,WAAW,iBAAiB;AAC9B,aAAM,YAAY;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,EAOrB,OAAc,mBAAmB;AAAA,IAC7B;AAAA,EACJ,GAKkD;AAC9C,WAAO,UAAU,SAAS;AAAA,MACtB,QAAQ;AAAA,MACR,KAAK;AAAA,MACL,MAAM;AAAA,QACF,YAAY;AAAA,MAChB;AAAA,MACA,QAAQ;AAAA,QACJ,KAAK;AAAA,MACT;AAAA,IACJ,CAAC;AAAA,EACL;AACJ;",
+        "names": []
+      }
+    },
+    {
+      "name": "vite:json",
+      "start": 1713208772489,
+      "end": 1713208772489,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1713208772489,
+      "end": 1713208772489,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1713208772489,
+      "end": 1713208772489,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1713208772489,
+      "end": 1713208772489,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1713208772489,
+      "end": 1713208772489,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1713208772489,
+      "end": 1713208772489,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1713208772489,
+      "end": 1713208772489,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1713208772490,
+      "end": 1713208772490,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1713208772490,
+      "end": 1713208772490,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1713208772490,
+      "end": 1713208772490,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1713208772490,
+      "end": 1713208772490,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1713208772490,
+      "end": 1713208772490,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1713208772490,
+      "end": 1713208772490,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1713208772490,
+      "end": 1713208772490,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1713208772490,
+      "end": 1713208772490,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1713208772490,
+      "end": 1713208772490,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1713208772490,
+      "end": 1713208772490,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1713208772490,
+      "end": 1713208772490,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1713208772490,
+      "end": 1713208772490,
+      "order": "post"
+    },
+    {
+      "name": "unhead:use-seo-meta-transform",
+      "start": 1713208772491,
+      "end": 1713208772491,
+      "order": "post"
+    },
+    {
+      "name": "nuxtjs:i18n-resource",
+      "start": 1713208772491,
+      "end": 1713208772491,
+      "order": "post"
+    },
+    {
+      "name": "nuxtjs:i18n-meta-deprecation",
+      "start": 1713208772491,
+      "end": 1713208772491,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1713208772491,
+      "end": 1713208772495,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1713208772495,
+      "end": 1713208772495,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1713208772495,
+      "end": 1713208772495,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1713208772496,
+      "end": 1713208772496,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1713208772496,
+      "end": 1713208772496,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1713208772496,
+      "end": 1713208772496,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1713208772496,
+      "end": 1713208772496,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1713208772496,
+      "end": 1713208772496,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1713208772497,
+      "end": 1713208772497,
+      "order": "normal"
+    }
+  ]
+}

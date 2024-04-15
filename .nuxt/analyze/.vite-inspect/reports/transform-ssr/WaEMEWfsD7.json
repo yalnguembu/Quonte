@@ -1,0 +1,318 @@
+{
+  "resolvedId": "/home/yalnguembu/Perso/quonte/node_modules/@unhead/schema-org/dist/index.mjs",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import { U as UnheadSchemaOrg } from './shared/schema-org.e127cd72.mjs';\nexport { H as HowToId, a1 as PluginSchemaOrg, P as PrimaryArticleId, k as PrimaryBookId, m as PrimaryBreadcrumbId, s as PrimaryEventId, X as PrimaryWebPageId, _ as PrimaryWebSiteId, M as ProductId, R as RecipeId, a2 as SchemaOrgUnheadPlugin, L as addressResolver, g as aggregateOfferResolver, h as aggregateRatingResolver, i as articleResolver, j as bookEditionResolver, l as bookResolver, o as breadcrumbResolver, p as commentResolver, q as courseResolver, c as createSchemaOrgGraph, a as dedupeNodes, d as defineSchemaOrgResolver, t as eventResolver, w as foodEstablishmentResolver, x as howToResolver, z as howToStepDirectionResolver, y as howToStepResolver, B as imageResolver, A as itemListResolver, C as jobPostingResolver, D as listItemResolver, E as localBusinessResolver, F as movieResolver, n as normaliseNodes, G as offerResolver, I as openingHoursResolver, J as organizationResolver, K as personResolver, u as placeResolver, N as productResolver, O as questionResolver, Q as ratingResolver, Z as readActionResolver, S as recipeResolver, r as resolveMeta, b as resolveNode, e as resolveNodeId, f as resolveRelation, V as reviewResolver, a0 as searchActionResolver, T as softwareAppResolver, W as videoResolver, v as virtualLocationResolver, Y as webPageResolver, $ as webSiteResolver } from './shared/schema-org.e127cd72.mjs';\nimport { getActiveHead, useHead } from 'unhead';\nimport '@unhead/shared';\nimport 'ufo';\n\nfunction provideResolver(input, resolver) {\n  if (!input)\n    input = {};\n  input._resolver = resolver;\n  return input;\n}\nfunction defineAddress(input) {\n  return provideResolver(input, \"address\");\n}\nfunction defineAggregateOffer(input) {\n  return provideResolver(input, \"aggregateOffer\");\n}\nfunction defineAggregateRating(input) {\n  return provideResolver(input, \"aggregateRating\");\n}\nfunction defineArticle(input) {\n  return provideResolver(input, \"article\");\n}\nfunction defineBreadcrumb(input) {\n  return provideResolver(input, \"breadcrumb\");\n}\nfunction defineComment(input) {\n  return provideResolver(input, \"comment\");\n}\nfunction defineEvent(input) {\n  return provideResolver(input, \"event\");\n}\nfunction defineFoodEstablishment(input) {\n  return provideResolver(input, \"foodEstablishment\");\n}\nfunction defineVirtualLocation(input) {\n  return provideResolver(input, \"virtualLocation\");\n}\nfunction definePlace(input) {\n  return provideResolver(input, \"place\");\n}\nfunction defineHowTo(input) {\n  return provideResolver(input, \"howTo\");\n}\nfunction defineHowToStep(input) {\n  return provideResolver(input, \"howToStep\");\n}\nfunction defineImage(input) {\n  return provideResolver(input, \"image\");\n}\nfunction defineJobPosting(input) {\n  return provideResolver(input, \"jobPosting\");\n}\nfunction defineLocalBusiness(input) {\n  return provideResolver(input, \"localBusiness\");\n}\nfunction defineOffer(input) {\n  return provideResolver(input, \"offer\");\n}\nfunction defineOpeningHours(input) {\n  return provideResolver(input, \"openingHours\");\n}\nfunction defineOrganization(input) {\n  return provideResolver(input, \"organization\");\n}\nfunction definePerson(input) {\n  return provideResolver(input, \"person\");\n}\nfunction defineProduct(input) {\n  return provideResolver(input, \"product\");\n}\nfunction defineQuestion(input) {\n  return provideResolver(input, \"question\");\n}\nfunction defineRecipe(input) {\n  return provideResolver(input, \"recipe\");\n}\nfunction defineReview(input) {\n  return provideResolver(input, \"review\");\n}\nfunction defineVideo(input) {\n  return provideResolver(input, \"video\");\n}\nfunction defineWebPage(input) {\n  return provideResolver(input, \"webPage\");\n}\nfunction defineWebSite(input) {\n  return provideResolver(input, \"webSite\");\n}\nfunction defineBook(input) {\n  return provideResolver(input, \"book\");\n}\nfunction defineCourse(input) {\n  return provideResolver(input, \"course\");\n}\nfunction defineItemList(input) {\n  return provideResolver(input, \"itemList\");\n}\nfunction defineListItem(input) {\n  return provideResolver(input, \"listItem\");\n}\nfunction defineMovie(input) {\n  return provideResolver(input, \"movie\");\n}\nfunction defineSearchAction(input) {\n  return provideResolver(input, \"searchAction\");\n}\nfunction defineReadAction(input) {\n  return provideResolver(input, \"readAction\");\n}\nfunction defineSoftwareApp(input) {\n  return provideResolver(input, \"softwareApp\");\n}\nfunction defineBookEdition(input) {\n  return provideResolver(input, \"bookEdition\");\n}\nfunction useSchemaOrg(input) {\n  const head = getActiveHead();\n  if (!head)\n    return;\n  head.use(UnheadSchemaOrg());\n  return useHead({\n    script: [\n      {\n        type: \"application/ld+json\",\n        key: \"schema-org-graph\",\n        nodes: input\n      }\n    ]\n  });\n}\n\nexport { UnheadSchemaOrg, defineAddress, defineAggregateOffer, defineAggregateRating, defineArticle, defineBook, defineBookEdition, defineBreadcrumb, defineComment, defineCourse, defineEvent, defineFoodEstablishment, defineHowTo, defineHowToStep, defineImage, defineItemList, defineJobPosting, defineListItem, defineLocalBusiness, defineMovie, defineOffer, defineOpeningHours, defineOrganization, definePerson, definePlace, defineProduct, defineQuestion, defineReadAction, defineRecipe, defineReview, defineSearchAction, defineSoftwareApp, defineVideo, defineVirtualLocation, defineWebPage, defineWebSite, useSchemaOrg };\n",
+      "start": 1713208777177,
+      "end": 1713208777968,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1713208777969,
+      "end": 1713208777969,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1713208777969,
+      "end": 1713208777969,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1713208777969,
+      "end": 1713208777969,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1713208777969,
+      "end": 1713208777969,
+      "order": "pre"
+    },
+    {
+      "name": "unplugin-vue-i18n",
+      "start": 1713208777969,
+      "end": 1713208777969,
+      "order": "pre"
+    },
+    {
+      "name": "unplugin-vue-i18n",
+      "start": 1713208777969,
+      "end": 1713208777969,
+      "order": "pre"
+    },
+    {
+      "name": "nuxtjs:i18n-macros-transform",
+      "start": 1713208777969,
+      "end": 1713208777969,
+      "order": "pre"
+    },
+    {
+      "name": "nuxtjs:i18n-macros-transform",
+      "start": 1713208777969,
+      "end": 1713208777969,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1713208777969,
+      "end": 1713208777969,
+      "order": "pre"
+    },
+    {
+      "name": "server-only-component-transform",
+      "start": 1713208777969,
+      "end": 1713208777969,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1713208777969,
+      "end": 1713208777969,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1713208777969,
+      "end": 1713208777969,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1713208777969,
+      "end": 1713208777969,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1713208777969,
+      "end": 1713208777969,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1713208777969,
+      "end": 1713208777969,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1713208777969,
+      "end": 1713208777969,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1713208777969,
+      "end": 1713208777969,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1713208777969,
+      "end": 1713208777969,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1713208777969,
+      "end": 1713208777969,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1713208777969,
+      "end": 1713208777969,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1713208777969,
+      "end": 1713208777969,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1713208777969,
+      "end": 1713208777969,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1713208777969,
+      "end": 1713208777969,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1713208777969,
+      "end": 1713208777969,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1713208777969,
+      "end": 1713208777969,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1713208777969,
+      "end": 1713208777969,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1713208777969,
+      "end": 1713208777969,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1713208777970,
+      "end": 1713208777970,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1713208777970,
+      "end": 1713208777970,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1713208777970,
+      "end": 1713208777970,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1713208777970,
+      "end": 1713208777970,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1713208777970,
+      "end": 1713208777970,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1713208777970,
+      "end": 1713208777970,
+      "order": "post"
+    },
+    {
+      "name": "unhead:remove-server-composables",
+      "start": 1713208777970,
+      "end": 1713208777970,
+      "order": "post"
+    },
+    {
+      "name": "unhead:use-seo-meta-transform",
+      "start": 1713208777970,
+      "end": 1713208777970,
+      "order": "post"
+    },
+    {
+      "name": "unhead:use-seo-meta-transform",
+      "start": 1713208777970,
+      "end": 1713208777970,
+      "order": "post"
+    },
+    {
+      "name": "nuxtjs:i18n-resource",
+      "start": 1713208777970,
+      "end": 1713208777970,
+      "order": "post"
+    },
+    {
+      "name": "nuxtjs:i18n-resource",
+      "start": 1713208777970,
+      "end": 1713208777970,
+      "order": "post"
+    },
+    {
+      "name": "nuxtjs:i18n-meta-deprecation",
+      "start": 1713208777970,
+      "end": 1713208777970,
+      "order": "post"
+    },
+    {
+      "name": "nuxtjs:i18n-meta-deprecation",
+      "start": 1713208777970,
+      "end": 1713208777970,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1713208777970,
+      "end": 1713208777970,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1713208777970,
+      "end": 1713208777970,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1713208777970,
+      "end": 1713208777970,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1713208777970,
+      "end": 1713208777970,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1713208777970,
+      "end": 1713208777970,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1713208777970,
+      "end": 1713208777970,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-template",
+      "start": 1713208777970,
+      "end": 1713208777970,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1713208777970,
+      "end": 1713208777970,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1713208777970,
+      "end": 1713208777970,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1713208777970,
+      "end": 1713208777970,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1713208777970,
+      "end": 1713208777970,
+      "order": "normal"
+    }
+  ]
+}

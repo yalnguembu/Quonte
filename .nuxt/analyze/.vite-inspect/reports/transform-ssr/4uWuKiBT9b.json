@@ -1,0 +1,340 @@
+{
+  "resolvedId": "/home/yalnguembu/Perso/quonte/pages/index.vue?macro=true",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "<template>\n  <div\n    class=\"w-full bg-white dark:bg-gray-900 text-center lg:text-left mt-12 lg:mt-0\"\n  >\n    <header class=\"w-full h-fit\">\n      <HeaderSection />\n    </header>\n    <main class=\"min-h-screen block\">\n      <section class=\"w-full bg-gray-50 py-8 dark:bg-gray-800/50\">\n        <HeroSection />\n      </section>\n      <section class=\"max-w-screen-lg mx-auto\">\n        <AppPresentation />\n      </section>\n      <section class=\"max-w-screen-lg mx-auto\">\n        <ContributorsSection />\n      </section>\n      <section class=\"max-w-screen-lg mx-auto\">\n        <ContactSection />\n      </section>\n    </main>\n  </div>\n</template>\n<i18n lang=\"json\">\n{\n  \"en\": {\n    \"name\": \"Infinite Notes\",\n    \"logoAlt\": \"Infinite notes - logo\",\n    \"title\": \"Your limitless note taking solution\",\n    \"subtitle\": \"Never forget a thought again. Infinite Notes is your all-in-one note-taking app, letting you capture everything from ideas to grocery lists. Take notes on the go and access them from any device.\"\n  },\n  \"fr\": {\n    \"name\": \"Infinite Notes\",\n    \"logoAlt\": \"Logo - Infinite Notes\",\n    \"title\": \"Essayons quelque chose d'extraordinaire\",\n    \"subtitle\": \"Your all-in-one note-taking app, letting you capture everything from ideas to grocery lists. Take notes on the go and access them from any device.\"\n  }\n}\n</i18n>\n<script lang=\"ts\" setup>\nimport HeaderSection from \"~/components/landing/HeaderSection.vue\";\nimport HeroSection from \"~/components/landing/HeroSection.vue\";\nimport AppPresentation from \"~/components/landing/AppPresentation.vue\";\nimport ContributorsSection from \"~/components/landing/ContributorsSection.vue\";\nimport ContactSection from \"~/components/landing/ContactSection.vue\";\nimport {defineOgImageComponent} from \"#imports\";\n\nconst { t } = useI18n({\n  useScope: 'local'\n});\n\nuseSeoMeta({\n  title: t(\"title\"),\n  ogTitle: t(\"title\"),\n  description: t(\"subtitle\"),\n  ogDescription: t(\"subtitle\"),\n  ogImage: '~/public/logo.png',\n  ogImageUrl: '~/public/logo.png',\n  ogImageAlt: t(\"logoAlt\"),\n  robots:{\n    notranslate: true,\n  },\n  ogType: 'website',\n  twitterTitle: t(\"title\"),\n  twitterDescription: t(\"subtitle\"),\n  twitterImage: {\n    alt: t(\"logoAlt\"),\n    url: '~/public/logo.svg',\n  },\n})\n\nuseHead({\n  link: [\n    { rel: 'icon', type: 'image/png', href: '~/static/logo.png' },\n    { rel: 'icon', type: 'image/x-icon', href: '~/static/logo.png' }\n  ],\n})\ndefineOgImageComponent(\"LandingPage\", {\n  title: t(\"title\"),\n  description: t(\"subtitle\"),\n  headline: t(\"name\"),\n  alt: t(\"logoAlt\"),\n})\n</script>\n",
+      "start": 1713208777290,
+      "end": 1713208778108,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1713208778108,
+      "end": 1713208778108,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1713208778108,
+      "end": 1713208778108,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1713208778108,
+      "end": 1713208778108,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1713208778108,
+      "end": 1713208778108,
+      "order": "pre"
+    },
+    {
+      "name": "unplugin-vue-i18n",
+      "start": 1713208778108,
+      "end": 1713208778108,
+      "order": "pre"
+    },
+    {
+      "name": "unplugin-vue-i18n",
+      "start": 1713208778108,
+      "end": 1713208778108,
+      "order": "pre"
+    },
+    {
+      "name": "nuxtjs:i18n-macros-transform",
+      "start": 1713208778108,
+      "end": 1713208778108,
+      "order": "pre"
+    },
+    {
+      "name": "nuxtjs:i18n-macros-transform",
+      "start": 1713208778108,
+      "end": 1713208778108,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1713208778108,
+      "end": 1713208778108,
+      "order": "pre"
+    },
+    {
+      "name": "server-only-component-transform",
+      "start": 1713208778108,
+      "end": 1713208778108,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1713208778108,
+      "end": 1713208778108,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1713208778108,
+      "end": 1713208778108,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1713208778108,
+      "end": 1713208778108,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1713208778108,
+      "end": 1713208778108,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "result": "import _sfc_main from \"/home/yalnguembu/Perso/quonte/pages/index.vue?vue&type=script&setup=true&lang.ts\";\nexport * from \"/home/yalnguembu/Perso/quonte/pages/index.vue?vue&type=script&setup=true&lang.ts\";\nimport block0 from \"/home/yalnguembu/Perso/quonte/pages/index.vue?vue&type=i18n&index=0&lang.json\";\nif (typeof block0 === \"function\")\n  block0(_sfc_main);\nimport { useSSRContext as __vite_useSSRContext } from \"vue\";\nconst _sfc_setup = _sfc_main.setup;\n_sfc_main.setup = (props, ctx) => {\n  const ssrContext = __vite_useSSRContext();\n  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add(\"pages/index.vue\");\n  return _sfc_setup ? _sfc_setup(props, ctx) : void 0;\n};\nexport default _sfc_main;\n",
+      "start": 1713208778108,
+      "end": 1713208778118,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1713208778118,
+      "end": 1713208778118,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1713208778118,
+      "end": 1713208778118,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1713208778118,
+      "end": 1713208778118,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1713208778119,
+      "end": 1713208778119,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1713208778119,
+      "end": 1713208778119,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1713208778119,
+      "end": 1713208778119,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1713208778119,
+      "end": 1713208778119,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1713208778119,
+      "end": 1713208778119,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1713208778119,
+      "end": 1713208778119,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1713208778119,
+      "end": 1713208778119,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1713208778119,
+      "end": 1713208778119,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1713208778119,
+      "end": 1713208778119,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1713208778119,
+      "end": 1713208778119,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1713208778120,
+      "end": 1713208778120,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1713208778120,
+      "end": 1713208778120,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1713208778120,
+      "end": 1713208778120,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1713208778120,
+      "end": 1713208778120,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1713208778120,
+      "end": 1713208778120,
+      "order": "post"
+    },
+    {
+      "name": "unhead:remove-server-composables",
+      "start": 1713208778120,
+      "end": 1713208778120,
+      "order": "post"
+    },
+    {
+      "name": "unhead:use-seo-meta-transform",
+      "start": 1713208778120,
+      "end": 1713208778120,
+      "order": "post"
+    },
+    {
+      "name": "unhead:use-seo-meta-transform",
+      "start": 1713208778120,
+      "end": 1713208778120,
+      "order": "post"
+    },
+    {
+      "name": "nuxtjs:i18n-resource",
+      "start": 1713208778120,
+      "end": 1713208778120,
+      "order": "post"
+    },
+    {
+      "name": "nuxtjs:i18n-resource",
+      "start": 1713208778120,
+      "end": 1713208778120,
+      "order": "post"
+    },
+    {
+      "name": "nuxtjs:i18n-meta-deprecation",
+      "start": 1713208778121,
+      "end": 1713208778121,
+      "order": "post"
+    },
+    {
+      "name": "nuxtjs:i18n-meta-deprecation",
+      "start": 1713208778121,
+      "end": 1713208778121,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1713208778121,
+      "end": 1713208778123,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1713208778121,
+      "end": 1713208778123,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1713208778124,
+      "end": 1713208778124,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1713208778124,
+      "end": 1713208778124,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "result": "export { default } from \"/home/yalnguembu/Perso/quonte/pages/index.vue?macro=true&vue&type=script&setup=true&lang.ts\"",
+      "start": 1713208778125,
+      "end": 1713208778128,
+      "order": "post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          ""
+        ],
+        "names": [],
+        "mappings": "AAAA"
+      }
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "result": "export { default } from \"/home/yalnguembu/Perso/quonte/pages/index.vue?macro=true&vue&type=script&setup=true&lang.ts\"",
+      "start": 1713208778125,
+      "end": 1713208778128,
+      "order": "post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          ""
+        ],
+        "names": [],
+        "mappings": "AAAA"
+      }
+    },
+    {
+      "name": "nuxt:tree-shake-template",
+      "start": 1713208778129,
+      "end": 1713208778129,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1713208778129,
+      "end": 1713208778129,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1713208778129,
+      "end": 1713208778129,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1713208778129,
+      "end": 1713208778129,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1713208778129,
+      "end": 1713208778129,
+      "order": "normal"
+    }
+  ]
+}

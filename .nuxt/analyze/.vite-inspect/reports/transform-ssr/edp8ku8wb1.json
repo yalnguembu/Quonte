@@ -1,0 +1,318 @@
+{
+  "resolvedId": "/home/yalnguembu/Perso/quonte/node_modules/@unhead/schema-org/dist/vue.mjs",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import { U as UnheadSchemaOrg } from './shared/schema-org.e127cd72.mjs';\nexport { a1 as PluginSchemaOrg, a2 as SchemaOrgUnheadPlugin } from './shared/schema-org.e127cd72.mjs';\nimport { injectHead, useHead } from '@unhead/vue';\nimport { defineComponent, ref, computed, unref, h } from 'vue';\nimport '@unhead/shared';\nimport 'ufo';\n\nconst schemaAutoImports = [\n  \"defineAddress\",\n  \"defineAggregateOffer\",\n  \"defineAggregateRating\",\n  \"defineArticle\",\n  \"defineBook\",\n  \"defineBookEdition\",\n  \"defineBreadcrumb\",\n  \"defineComment\",\n  \"defineCourse\",\n  \"defineEvent\",\n  \"defineFoodEstablishment\",\n  \"defineHowTo\",\n  \"defineHowToStep\",\n  \"defineImage\",\n  \"defineItemList\",\n  \"defineJobPosting\",\n  \"defineListItem\",\n  \"defineLocalBusiness\",\n  \"defineMovie\",\n  \"defineOffer\",\n  \"defineOpeningHours\",\n  \"defineOrganization\",\n  \"definePerson\",\n  \"definePlace\",\n  \"defineProduct\",\n  \"defineQuestion\",\n  \"defineReadAction\",\n  \"defineRecipe\",\n  \"defineReview\",\n  \"defineSearchAction\",\n  \"defineSoftwareApp\",\n  \"defineVideo\",\n  \"defineVirtualLocation\",\n  \"defineWebPage\",\n  \"defineWebSite\",\n  \"useSchemaOrg\"\n];\nconst schemaOrgAutoImports = [\n  {\n    from: \"@unhead/schema-org/vue\",\n    imports: schemaAutoImports\n  }\n];\nconst schemaOrgComponents = [\n  \"SchemaOrgDebug\",\n  \"SchemaOrgArticle\",\n  \"SchemaOrgBreadcrumb\",\n  \"SchemaOrgComment\",\n  \"SchemaOrgEvent\",\n  \"SchemaOrgFoodEstablishment\",\n  \"SchemaOrgHowTo\",\n  \"SchemaOrgImage\",\n  \"SchemaOrgJobPosting\",\n  \"SchemaOrgLocalBusiness\",\n  \"SchemaOrgOrganization\",\n  \"SchemaOrgPerson\",\n  \"SchemaOrgProduct\",\n  \"SchemaOrgQuestion\",\n  \"SchemaOrgRecipe\",\n  \"SchemaOrgReview\",\n  \"SchemaOrgVideo\",\n  \"SchemaOrgWebPage\",\n  \"SchemaOrgWebSite\",\n  \"SchemaOrgMovie\",\n  \"SchemaOrgCourse\",\n  \"SchemaOrgItemList\",\n  \"SchemaOrgBook\",\n  \"SchemaOrgSoftwareApp\"\n];\nfunction SchemaOrgResolver(options = {}) {\n  const { prefix = \"\" } = options;\n  return {\n    type: \"component\",\n    resolve: (name) => {\n      if (name.startsWith(prefix)) {\n        const componentName = name.substring(prefix.length);\n        if (schemaOrgComponents.includes(componentName)) {\n          return {\n            name: componentName,\n            from: \"@unhead/schema-org/vue\"\n          };\n        }\n      }\n    }\n  };\n}\n\nfunction provideResolver(input, resolver) {\n  if (!input)\n    input = {};\n  input._resolver = resolver;\n  return input;\n}\nfunction defineAddress(input) {\n  return provideResolver(input, \"address\");\n}\nfunction defineAggregateOffer(input) {\n  return provideResolver(input, \"aggregateOffer\");\n}\nfunction defineAggregateRating(input) {\n  return provideResolver(input, \"aggregateRating\");\n}\nfunction defineArticle(input) {\n  return provideResolver(input, \"article\");\n}\nfunction defineBreadcrumb(input) {\n  return provideResolver(input, \"breadcrumb\");\n}\nfunction defineComment(input) {\n  return provideResolver(input, \"comment\");\n}\nfunction defineEvent(input) {\n  return provideResolver(input, \"event\");\n}\nfunction defineFoodEstablishment(input) {\n  return provideResolver(input, \"foodEstablishment\");\n}\nfunction defineVirtualLocation(input) {\n  return provideResolver(input, \"virtualLocation\");\n}\nfunction definePlace(input) {\n  return provideResolver(input, \"place\");\n}\nfunction defineHowTo(input) {\n  return provideResolver(input, \"howTo\");\n}\nfunction defineHowToStep(input) {\n  return provideResolver(input, \"howToStep\");\n}\nfunction defineImage(input) {\n  return provideResolver(input, \"image\");\n}\nfunction defineJobPosting(input) {\n  return provideResolver(input, \"jobPosting\");\n}\nfunction defineLocalBusiness(input) {\n  return provideResolver(input, \"localBusiness\");\n}\nfunction defineOffer(input) {\n  return provideResolver(input, \"offer\");\n}\nfunction defineOpeningHours(input) {\n  return provideResolver(input, \"openingHours\");\n}\nfunction defineOrganization(input) {\n  return provideResolver(input, \"organization\");\n}\nfunction definePerson(input) {\n  return provideResolver(input, \"person\");\n}\nfunction defineProduct(input) {\n  return provideResolver(input, \"product\");\n}\nfunction defineQuestion(input) {\n  return provideResolver(input, \"question\");\n}\nfunction defineRecipe(input) {\n  return provideResolver(input, \"recipe\");\n}\nfunction defineReview(input) {\n  return provideResolver(input, \"review\");\n}\nfunction defineVideo(input) {\n  return provideResolver(input, \"video\");\n}\nfunction defineWebPage(input) {\n  return provideResolver(input, \"webPage\");\n}\nfunction defineWebSite(input) {\n  return provideResolver(input, \"webSite\");\n}\nfunction defineBook(input) {\n  return provideResolver(input, \"book\");\n}\nfunction defineCourse(input) {\n  return provideResolver(input, \"course\");\n}\nfunction defineItemList(input) {\n  return provideResolver(input, \"itemList\");\n}\nfunction defineListItem(input) {\n  return provideResolver(input, \"listItem\");\n}\nfunction defineMovie(input) {\n  return provideResolver(input, \"movie\");\n}\nfunction defineSearchAction(input) {\n  return provideResolver(input, \"searchAction\");\n}\nfunction defineReadAction(input) {\n  return provideResolver(input, \"readAction\");\n}\nfunction defineSoftwareApp(input) {\n  return provideResolver(input, \"softwareApp\");\n}\nfunction defineBookEdition(input) {\n  return provideResolver(input, \"bookEdition\");\n}\nfunction useSchemaOrg(input) {\n  const head = injectHead();\n  head.use(UnheadSchemaOrg());\n  return useHead({\n    script: [\n      {\n        type: \"application/ld+json\",\n        id: \"schema-org-graph\",\n        key: \"schema-org-graph\",\n        nodes: input\n      }\n    ]\n  });\n}\n\nfunction shallowVNodesToText(nodes) {\n  let text = \"\";\n  for (const node of nodes) {\n    if (typeof node.children === \"string\")\n      text += node.children.trim();\n  }\n  return text;\n}\nfunction fixKey(s) {\n  let key = s.replace(/-./g, (x) => x[1].toUpperCase());\n  if (key === \"type\" || key === \"id\")\n    key = `@${key}`;\n  return key;\n}\nfunction ignoreKey(s) {\n  if (s.startsWith(\"aria-\") || s.startsWith(\"data-\"))\n    return false;\n  return [\"class\", \"style\"].includes(s);\n}\nfunction defineSchemaOrgComponent(name, defineFn) {\n  return defineComponent({\n    name,\n    props: {\n      as: String\n    },\n    setup(props, { slots, attrs }) {\n      const node = ref(null);\n      const nodePartial = computed(() => {\n        const val = {};\n        Object.entries(unref(attrs)).forEach(([key, value]) => {\n          if (!ignoreKey(key)) {\n            val[fixKey(key)] = unref(value);\n          }\n        });\n        if (!node.value) {\n          for (const [key, slot] of Object.entries(slots)) {\n            if (!slot || key === \"default\")\n              continue;\n            val[fixKey(key)] = shallowVNodesToText(slot(props));\n          }\n        }\n        return val;\n      });\n      if (defineFn) {\n        useSchemaOrg(defineFn(unref(nodePartial)));\n      }\n      return () => {\n        const data = unref(nodePartial);\n        if (!slots.default)\n          return null;\n        const childSlots = [];\n        if (slots.default)\n          childSlots.push(slots.default(data));\n        return h(props.as || \"div\", {}, childSlots);\n      };\n    }\n  });\n}\nconst SchemaOrgArticle = /* @__PURE__ */ defineSchemaOrgComponent(\"SchemaOrgArticle\", defineArticle);\nconst SchemaOrgBreadcrumb = /* @__PURE__ */ defineSchemaOrgComponent(\"SchemaOrgBreadcrumb\", defineBreadcrumb);\nconst SchemaOrgComment = /* @__PURE__ */ defineSchemaOrgComponent(\"SchemaOrgComment\", defineComment);\nconst SchemaOrgEvent = /* @__PURE__ */ defineSchemaOrgComponent(\"SchemaOrgEvent\", defineEvent);\nconst SchemaOrgFoodEstablishment = /* @__PURE__ */ defineSchemaOrgComponent(\"SchemaOrgFoodEstablishment\", defineFoodEstablishment);\nconst SchemaOrgHowTo = /* @__PURE__ */ defineSchemaOrgComponent(\"SchemaOrgHowTo\", defineHowTo);\nconst SchemaOrgImage = /* @__PURE__ */ defineSchemaOrgComponent(\"SchemaOrgImage\", defineImage);\nconst SchemaOrgJobPosting = /* @__PURE__ */ defineSchemaOrgComponent(\"SchemaOrgJobPosting\", defineJobPosting);\nconst SchemaOrgLocalBusiness = /* @__PURE__ */ defineSchemaOrgComponent(\"SchemaOrgLocalBusiness\", defineLocalBusiness);\nconst SchemaOrgOrganization = /* @__PURE__ */ defineSchemaOrgComponent(\"SchemaOrgOrganization\", defineOrganization);\nconst SchemaOrgPerson = /* @__PURE__ */ defineSchemaOrgComponent(\"SchemaOrgPerson\", definePerson);\nconst SchemaOrgProduct = /* @__PURE__ */ defineSchemaOrgComponent(\"SchemaOrgProduct\", defineProduct);\nconst SchemaOrgQuestion = /* @__PURE__ */ defineSchemaOrgComponent(\"SchemaOrgQuestion\", defineQuestion);\nconst SchemaOrgRecipe = /* @__PURE__ */ defineSchemaOrgComponent(\"SchemaOrgRecipe\", defineRecipe);\nconst SchemaOrgReview = /* @__PURE__ */ defineSchemaOrgComponent(\"SchemaOrgReview\", defineReview);\nconst SchemaOrgVideo = /* @__PURE__ */ defineSchemaOrgComponent(\"SchemaOrgVideo\", defineVideo);\nconst SchemaOrgWebPage = /* @__PURE__ */ defineSchemaOrgComponent(\"SchemaOrgWebPage\", defineWebPage);\nconst SchemaOrgWebSite = /* @__PURE__ */ defineSchemaOrgComponent(\"SchemaOrgWebSite\", defineWebSite);\nconst SchemaOrgMovie = /* @__PURE__ */ defineSchemaOrgComponent(\"SchemaOrgMovie\", defineMovie);\nconst SchemaOrgCourse = /* @__PURE__ */ defineSchemaOrgComponent(\"SchemaOrgCourse\", defineCourse);\nconst SchemaOrgItemList = /* @__PURE__ */ defineSchemaOrgComponent(\"SchemaOrgItemList\", defineItemList);\nconst SchemaOrgBook = /* @__PURE__ */ defineSchemaOrgComponent(\"SchemaOrgBook\", defineBook);\nconst SchemaOrgSoftwareApp = /* @__PURE__ */ defineSchemaOrgComponent(\"SchemaOrgSoftwareApp\", defineSoftwareApp);\n\nexport { SchemaOrgArticle, SchemaOrgBook, SchemaOrgBreadcrumb, SchemaOrgComment, SchemaOrgCourse, SchemaOrgEvent, SchemaOrgFoodEstablishment, SchemaOrgHowTo, SchemaOrgImage, SchemaOrgItemList, SchemaOrgJobPosting, SchemaOrgLocalBusiness, SchemaOrgMovie, SchemaOrgOrganization, SchemaOrgPerson, SchemaOrgProduct, SchemaOrgQuestion, SchemaOrgRecipe, SchemaOrgResolver, SchemaOrgReview, SchemaOrgSoftwareApp, SchemaOrgVideo, SchemaOrgWebPage, SchemaOrgWebSite, defineAddress, defineAggregateOffer, defineAggregateRating, defineArticle, defineBook, defineBookEdition, defineBreadcrumb, defineComment, defineCourse, defineEvent, defineFoodEstablishment, defineHowTo, defineHowToStep, defineImage, defineItemList, defineJobPosting, defineListItem, defineLocalBusiness, defineMovie, defineOffer, defineOpeningHours, defineOrganization, definePerson, definePlace, defineProduct, defineQuestion, defineReadAction, defineRecipe, defineReview, defineSchemaOrgComponent, defineSearchAction, defineSoftwareApp, defineVideo, defineVirtualLocation, defineWebPage, defineWebSite, schemaAutoImports, schemaOrgAutoImports, schemaOrgComponents, useSchemaOrg };\n",
+      "start": 1713208776899,
+      "end": 1713208777166,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1713208777167,
+      "end": 1713208777167,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1713208777167,
+      "end": 1713208777167,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1713208777167,
+      "end": 1713208777167,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1713208777167,
+      "end": 1713208777167,
+      "order": "pre"
+    },
+    {
+      "name": "unplugin-vue-i18n",
+      "start": 1713208777167,
+      "end": 1713208777168,
+      "order": "pre"
+    },
+    {
+      "name": "unplugin-vue-i18n",
+      "start": 1713208777167,
+      "end": 1713208777168,
+      "order": "pre"
+    },
+    {
+      "name": "nuxtjs:i18n-macros-transform",
+      "start": 1713208777168,
+      "end": 1713208777168,
+      "order": "pre"
+    },
+    {
+      "name": "nuxtjs:i18n-macros-transform",
+      "start": 1713208777168,
+      "end": 1713208777168,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1713208777168,
+      "end": 1713208777168,
+      "order": "pre"
+    },
+    {
+      "name": "server-only-component-transform",
+      "start": 1713208777168,
+      "end": 1713208777168,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1713208777168,
+      "end": 1713208777168,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1713208777169,
+      "end": 1713208777169,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1713208777169,
+      "end": 1713208777169,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1713208777169,
+      "end": 1713208777169,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1713208777169,
+      "end": 1713208777169,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1713208777169,
+      "end": 1713208777169,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1713208777169,
+      "end": 1713208777169,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1713208777169,
+      "end": 1713208777169,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1713208777169,
+      "end": 1713208777169,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1713208777169,
+      "end": 1713208777169,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1713208777169,
+      "end": 1713208777169,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1713208777169,
+      "end": 1713208777169,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1713208777169,
+      "end": 1713208777169,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1713208777169,
+      "end": 1713208777169,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1713208777169,
+      "end": 1713208777169,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1713208777169,
+      "end": 1713208777169,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1713208777169,
+      "end": 1713208777169,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1713208777170,
+      "end": 1713208777170,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1713208777170,
+      "end": 1713208777170,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1713208777170,
+      "end": 1713208777170,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1713208777170,
+      "end": 1713208777170,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1713208777170,
+      "end": 1713208777170,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1713208777170,
+      "end": 1713208777170,
+      "order": "post"
+    },
+    {
+      "name": "unhead:remove-server-composables",
+      "start": 1713208777170,
+      "end": 1713208777170,
+      "order": "post"
+    },
+    {
+      "name": "unhead:use-seo-meta-transform",
+      "start": 1713208777170,
+      "end": 1713208777170,
+      "order": "post"
+    },
+    {
+      "name": "unhead:use-seo-meta-transform",
+      "start": 1713208777170,
+      "end": 1713208777170,
+      "order": "post"
+    },
+    {
+      "name": "nuxtjs:i18n-resource",
+      "start": 1713208777170,
+      "end": 1713208777170,
+      "order": "post"
+    },
+    {
+      "name": "nuxtjs:i18n-resource",
+      "start": 1713208777170,
+      "end": 1713208777170,
+      "order": "post"
+    },
+    {
+      "name": "nuxtjs:i18n-meta-deprecation",
+      "start": 1713208777170,
+      "end": 1713208777170,
+      "order": "post"
+    },
+    {
+      "name": "nuxtjs:i18n-meta-deprecation",
+      "start": 1713208777170,
+      "end": 1713208777170,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1713208777170,
+      "end": 1713208777170,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1713208777170,
+      "end": 1713208777170,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1713208777170,
+      "end": 1713208777170,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1713208777170,
+      "end": 1713208777170,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1713208777170,
+      "end": 1713208777170,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1713208777170,
+      "end": 1713208777170,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-template",
+      "start": 1713208777170,
+      "end": 1713208777170,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1713208777170,
+      "end": 1713208777170,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1713208777170,
+      "end": 1713208777170,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1713208777170,
+      "end": 1713208777170,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1713208777170,
+      "end": 1713208777170,
+      "order": "normal"
+    }
+  ]
+}

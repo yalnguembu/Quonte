@@ -1,0 +1,330 @@
+{
+  "resolvedId": "/home/yalnguembu/Perso/quonte/components/landing/ContributorsSection.vue",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "<template>\n  <div class=\"py-8 px-4\">\n    <div v-motion-slide-visible-bottom>\n      <h3\n        class=\"font-bold text-3xl text-green-800 dark:text-green-100 text-center my-8 lg:my-24\"\n      >\n        <span class=\"relative\">\n          Those who give us power\n          <img\n            src=\"@/assets/images/Group 5601.svg\"\n            alt=\"\"\n            class=\"absolute w-12 -top-14 -left-5 -rotate-90 lg:-left-12 lg:-rotate-90\"\n          />\n        </span>\n      </h3>\n    </div>\n    <div class=\"grid grid-cols-2 gap-4 mt-8 md:grid-cols-4\">\n      <div v-motion-slide-visible-bottom>\n        <div class=\"p-4 flex items-center justify-center\">\n          <img\n            src=\"@/assets/images/Vue.js_Logo.svg\"\n            class=\"w-full grayscale hover:grayscale-0 hover:drop-shadow-lg lg:w-1/2\"\n            alt=\"\"\n          />\n        </div>\n      </div>\n      <div v-motion-slide-visible-bottom>\n        <div class=\"p-4 flex items-center justify-center\">\n          <img\n            src=\"@/assets/images/Tailwind_CSS_Logo.svg\"\n            class=\"w-full grayscale hover:grayscale-0 hover:drop-shadow-lg lg:w-1/2\"\n            alt=\"\"\n          />\n        </div>\n      </div>\n      <div v-motion-slide-visible-bottom>\n        <div class=\"p-4 flex items-center justify-center\">\n          <img\n            src=\"@/assets/images/Unofficial_JavaScript_logo.svg\"\n            class=\"w-full grayscale hover:grayscale-0 hover:drop-shadow-lg lg:w-1/2\"\n            alt=\"\"\n          />\n        </div>\n      </div>\n      <div v-motion-slide-visible-bottom>\n        <div class=\"p-4 flex items-center justify-center\">\n          <img\n            src=\"@/assets/images/vite_logo.svg\"\n            class=\"w-full grayscale hover:grayscale-0 hover:drop-shadow-lg lg:w-1/2\"\n            alt=\"\"\n          />\n        </div>\n      </div>\n    </div>\n  </div>\n</template>\n",
+      "start": 1713208779190,
+      "end": 1713208779692,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1713208779692,
+      "end": 1713208779692,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1713208779692,
+      "end": 1713208779692,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1713208779692,
+      "end": 1713208779693,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1713208779692,
+      "end": 1713208779693,
+      "order": "pre"
+    },
+    {
+      "name": "unplugin-vue-i18n",
+      "start": 1713208779693,
+      "end": 1713208779693,
+      "order": "pre"
+    },
+    {
+      "name": "unplugin-vue-i18n",
+      "start": 1713208779693,
+      "end": 1713208779693,
+      "order": "pre"
+    },
+    {
+      "name": "nuxtjs:i18n-macros-transform",
+      "start": 1713208779693,
+      "end": 1713208779693,
+      "order": "pre"
+    },
+    {
+      "name": "nuxtjs:i18n-macros-transform",
+      "start": 1713208779693,
+      "end": 1713208779693,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1713208779693,
+      "end": 1713208779693,
+      "order": "pre"
+    },
+    {
+      "name": "server-only-component-transform",
+      "start": 1713208779693,
+      "end": 1713208779693,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1713208779693,
+      "end": 1713208779693,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1713208779693,
+      "end": 1713208779693,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1713208779693,
+      "end": 1713208779693,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1713208779693,
+      "end": 1713208779693,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "result": "const _sfc_main = {}\nimport { resolveDirective as _resolveDirective, mergeProps as _mergeProps } from \"vue\"\nimport { ssrRenderAttr as _ssrRenderAttr, ssrGetDirectiveProps as _ssrGetDirectiveProps, ssrRenderAttrs as _ssrRenderAttrs } from \"vue/server-renderer\"\nimport _imports_0 from '@/assets/images/Group 5601.svg'\nimport _imports_1 from '@/assets/images/Vue.js_Logo.svg'\nimport _imports_2 from '@/assets/images/Tailwind_CSS_Logo.svg'\nimport _imports_3 from '@/assets/images/Unofficial_JavaScript_logo.svg'\nimport _imports_4 from '@/assets/images/vite_logo.svg'\n\n\nfunction _sfc_ssrRender(_ctx, _push, _parent, _attrs) {\n  const _directive_motion_slide_visible_bottom = _resolveDirective(\"motion-slide-visible-bottom\")\n\n  _push(`<div${\n    _ssrRenderAttrs(_mergeProps({ class: \"py-8 px-4\" }, _attrs))\n  }><div${\n    _ssrRenderAttrs(_ssrGetDirectiveProps(_ctx, _directive_motion_slide_visible_bottom))\n  }><h3 class=\"font-bold text-3xl text-green-800 dark:text-green-100 text-center my-8 lg:my-24\"><span class=\"relative\"> Those who give us power <img${\n    _ssrRenderAttr(\"src\", _imports_0)\n  } alt=\"\" class=\"absolute w-12 -top-14 -left-5 -rotate-90 lg:-left-12 lg:-rotate-90\"></span></h3></div><div class=\"grid grid-cols-2 gap-4 mt-8 md:grid-cols-4\"><div${\n    _ssrRenderAttrs(_ssrGetDirectiveProps(_ctx, _directive_motion_slide_visible_bottom))\n  }><div class=\"p-4 flex items-center justify-center\"><img${\n    _ssrRenderAttr(\"src\", _imports_1)\n  } class=\"w-full grayscale hover:grayscale-0 hover:drop-shadow-lg lg:w-1/2\" alt=\"\"></div></div><div${\n    _ssrRenderAttrs(_ssrGetDirectiveProps(_ctx, _directive_motion_slide_visible_bottom))\n  }><div class=\"p-4 flex items-center justify-center\"><img${\n    _ssrRenderAttr(\"src\", _imports_2)\n  } class=\"w-full grayscale hover:grayscale-0 hover:drop-shadow-lg lg:w-1/2\" alt=\"\"></div></div><div${\n    _ssrRenderAttrs(_ssrGetDirectiveProps(_ctx, _directive_motion_slide_visible_bottom))\n  }><div class=\"p-4 flex items-center justify-center\"><img${\n    _ssrRenderAttr(\"src\", _imports_3)\n  } class=\"w-full grayscale hover:grayscale-0 hover:drop-shadow-lg lg:w-1/2\" alt=\"\"></div></div><div${\n    _ssrRenderAttrs(_ssrGetDirectiveProps(_ctx, _directive_motion_slide_visible_bottom))\n  }><div class=\"p-4 flex items-center justify-center\"><img${\n    _ssrRenderAttr(\"src\", _imports_4)\n  } class=\"w-full grayscale hover:grayscale-0 hover:drop-shadow-lg lg:w-1/2\" alt=\"\"></div></div></div></div>`)\n}\n\n\nimport { useSSRContext as __vite_useSSRContext } from 'vue'\nconst _sfc_setup = _sfc_main.setup\n_sfc_main.setup = (props, ctx) => {\n  const ssrContext = __vite_useSSRContext()\n  ;(ssrContext.modules || (ssrContext.modules = new Set())).add(\"components/landing/ContributorsSection.vue\")\n  return _sfc_setup ? _sfc_setup(props, ctx) : undefined\n}\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['ssrRender',_sfc_ssrRender]])",
+      "start": 1713208779693,
+      "end": 1713208779694,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "/home/yalnguembu/Perso/quonte/components/landing/ContributorsSection.vue"
+        ],
+        "names": [],
+        "mappings": ";;OASY,UAAoC;OAWpC,UAAqC;OASrC,UAA2C;OAS3C,UAAoD;OASpD,UAAmC;;;;;;EA/C/C;IAAA,gBAAA,cACO,KAAK,EAAC,WAAW,IADxB;;IAAA,gBAAA;;IAAA,eASY,KAAoC,EAApC,UAAoC;;IAThD,gBAAA;;IAAA,eAoBY,KAAqC,EAArC,UAAqC;;IApBjD,gBAAA;;IAAA,eA6BY,KAA2C,EAA3C,UAA2C;;IA7BvD,gBAAA;;IAAA,eAsCY,KAAoD,EAApD,UAAoD;;IAtChE,gBAAA;;IAAA,eA+CY,KAAmC,EAAnC,UAAmC",
+        "sourcesContent": [
+          "<template>\n  <div class=\"py-8 px-4\">\n    <div v-motion-slide-visible-bottom>\n      <h3\n        class=\"font-bold text-3xl text-green-800 dark:text-green-100 text-center my-8 lg:my-24\"\n      >\n        <span class=\"relative\">\n          Those who give us power\n          <img\n            src=\"@/assets/images/Group 5601.svg\"\n            alt=\"\"\n            class=\"absolute w-12 -top-14 -left-5 -rotate-90 lg:-left-12 lg:-rotate-90\"\n          />\n        </span>\n      </h3>\n    </div>\n    <div class=\"grid grid-cols-2 gap-4 mt-8 md:grid-cols-4\">\n      <div v-motion-slide-visible-bottom>\n        <div class=\"p-4 flex items-center justify-center\">\n          <img\n            src=\"@/assets/images/Vue.js_Logo.svg\"\n            class=\"w-full grayscale hover:grayscale-0 hover:drop-shadow-lg lg:w-1/2\"\n            alt=\"\"\n          />\n        </div>\n      </div>\n      <div v-motion-slide-visible-bottom>\n        <div class=\"p-4 flex items-center justify-center\">\n          <img\n            src=\"@/assets/images/Tailwind_CSS_Logo.svg\"\n            class=\"w-full grayscale hover:grayscale-0 hover:drop-shadow-lg lg:w-1/2\"\n            alt=\"\"\n          />\n        </div>\n      </div>\n      <div v-motion-slide-visible-bottom>\n        <div class=\"p-4 flex items-center justify-center\">\n          <img\n            src=\"@/assets/images/Unofficial_JavaScript_logo.svg\"\n            class=\"w-full grayscale hover:grayscale-0 hover:drop-shadow-lg lg:w-1/2\"\n            alt=\"\"\n          />\n        </div>\n      </div>\n      <div v-motion-slide-visible-bottom>\n        <div class=\"p-4 flex items-center justify-center\">\n          <img\n            src=\"@/assets/images/vite_logo.svg\"\n            class=\"w-full grayscale hover:grayscale-0 hover:drop-shadow-lg lg:w-1/2\"\n            alt=\"\"\n          />\n        </div>\n      </div>\n    </div>\n  </div>\n</template>\n"
+        ]
+      }
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1713208779694,
+      "end": 1713208779694,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1713208779694,
+      "end": 1713208779694,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1713208779694,
+      "end": 1713208779694,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1713208779694,
+      "end": 1713208779694,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1713208779694,
+      "end": 1713208779694,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1713208779694,
+      "end": 1713208779694,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1713208779694,
+      "end": 1713208779694,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1713208779694,
+      "end": 1713208779695,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1713208779695,
+      "end": 1713208779695,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1713208779695,
+      "end": 1713208779695,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1713208779695,
+      "end": 1713208779695,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1713208779695,
+      "end": 1713208779695,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1713208779695,
+      "end": 1713208779695,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1713208779695,
+      "end": 1713208779695,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1713208779695,
+      "end": 1713208779695,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1713208779695,
+      "end": 1713208779695,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1713208779695,
+      "end": 1713208779695,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1713208779695,
+      "end": 1713208779695,
+      "order": "post"
+    },
+    {
+      "name": "unhead:remove-server-composables",
+      "start": 1713208779695,
+      "end": 1713208779695,
+      "order": "post"
+    },
+    {
+      "name": "unhead:use-seo-meta-transform",
+      "start": 1713208779695,
+      "end": 1713208779695,
+      "order": "post"
+    },
+    {
+      "name": "unhead:use-seo-meta-transform",
+      "start": 1713208779695,
+      "end": 1713208779695,
+      "order": "post"
+    },
+    {
+      "name": "nuxtjs:i18n-resource",
+      "start": 1713208779695,
+      "end": 1713208779695,
+      "order": "post"
+    },
+    {
+      "name": "nuxtjs:i18n-resource",
+      "start": 1713208779695,
+      "end": 1713208779695,
+      "order": "post"
+    },
+    {
+      "name": "nuxtjs:i18n-meta-deprecation",
+      "start": 1713208779695,
+      "end": 1713208779695,
+      "order": "post"
+    },
+    {
+      "name": "nuxtjs:i18n-meta-deprecation",
+      "start": 1713208779695,
+      "end": 1713208779695,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1713208779695,
+      "end": 1713208779696,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1713208779695,
+      "end": 1713208779696,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1713208779696,
+      "end": 1713208779696,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1713208779696,
+      "end": 1713208779696,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1713208779696,
+      "end": 1713208779696,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1713208779696,
+      "end": 1713208779696,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-template",
+      "start": 1713208779696,
+      "end": 1713208779696,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1713208779696,
+      "end": 1713208779696,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1713208779696,
+      "end": 1713208779696,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1713208779696,
+      "end": 1713208779697,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1713208779697,
+      "end": 1713208779697,
+      "order": "normal"
+    }
+  ]
+}

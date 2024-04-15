@@ -1,0 +1,340 @@
+{
+  "resolvedId": "/home/yalnguembu/Perso/quonte/components/AlertBox.vue?vue&type=script&setup=true&lang.ts",
+  "transforms": [
+    {
+      "name": "vite:vue",
+      "result": "import { defineComponent as _defineComponent } from 'vue'\nimport { unref as _unref, mergeProps as _mergeProps } from \"vue\"\nimport { ssrRenderComponent as _ssrRenderComponent, ssrRenderClass as _ssrRenderClass, ssrRenderAttrs as _ssrRenderAttrs, ssrInterpolate as _ssrInterpolate } from \"vue/server-renderer\"\n\nimport InformationIcon from \"./icons/InformationIcon.vue\";\nimport { ALERT_BOX_TYPE } from \"@/utils/enum\";\nimport type { PropType } from \"vue\";\n\n\nexport default /*#__PURE__*/_defineComponent({\n  __name: 'AlertBox',\n  __ssrInlineRender: true,\n  props: {\n  summary: {\n    type: String,\n    required: true,\n  },\n  alertType: {\n    required: true,\n    type: String as PropType<ALERT_BOX_TYPE>,\n  },\n},\n  setup(__props) {\n\nconst props = __props;\n\nconst theme =\n  props.alertType === ALERT_BOX_TYPE.ERROR\n    ? {\n        box: \"bg-red-100 dark:bg-red-800/20 p-2 rounded-lg\",\n        icon: \"dark:stroke-red-400 stroke-red-500 mr-2 align-middle\",\n        title: \"underline font-bold text-lg text-red-500 dark:text-red-400\",\n      }\n    : props.alertType === ALERT_BOX_TYPE.WARNING\n    ? {\n        box: \"bg-orange-100 dark:bg-orange-900/50 p-2 rounded-lg\",\n        icon: \"dark:stroke-orange-400 stroke-orange-500 mr-2 align-middle\",\n        title:\n          \"underline font-bold text-lg text-orange-500 dark:text-orange-400\",\n      }\n    : props.alertType === ALERT_BOX_TYPE.INFO\n    ? {\n        box: \"bg-blue-100 dark:bg-blue-900/50 p-2 rounded-lg\",\n        icon: \"dark:stroke-blue-400 stroke-blue-500 mr-2 align-middle\",\n        title: \"underline font-bold text-lg text-blue-500 dark:text-blue-400\",\n      }\n    : props.alertType === ALERT_BOX_TYPE.SUCCESS\n    ? {\n        box: \"bg-green-100 dark:bg-green-900/50 p-2 rounded-lg\",\n        icon: \"dark:stroke-green-400 stroke-green-500 mr-2 align{theme}-middle\",\n        title: \"underline font-bold text-lg text-green-500 dark:text-green-400\",\n      }\n    : {\n        box: \"bg-gray-100 dark:bg-gray-900/50 p-2 rounded-lg\",\n        icon: \"dark:stroke-$gray-400 stroke-gray-500 mr-2 align-middle\",\n        title: \"underline font-bold text-lg text-gray-500 dark:text-gray-400\",\n      };\n\nreturn (_ctx: any,_push: any,_parent: any,_attrs: any) => {\n  _push(`<div${_ssrRenderAttrs(_mergeProps({\n    class: _unref(theme).box\n  }, _attrs))}><div class=\"flex items-center\">`)\n  _push(_ssrRenderComponent(InformationIcon, {\n    class: _unref(theme).icon\n  }, null, _parent))\n  _push(`<h3 class=\"${\n    _ssrRenderClass(_unref(theme).title)\n  }\">${\n    _ssrInterpolate(__props.alertType === _unref(ALERT_BOX_TYPE).ERROR\n            ? \"Error\"\n            : props.alertType === _unref(ALERT_BOX_TYPE).WARNING\n            ? \"Warning\"\n            : props.alertType === _unref(ALERT_BOX_TYPE).INFO\n            ? \"Information\"\n            : \"Note\")\n  }: </h3></div><p class=\"text-gray-500 dark:text-gray-400 p-2\">${\n    _ssrInterpolate(__props.summary)\n  }</p></div>`)\n}\n}\n\n})",
+      "start": 1713208780007,
+      "end": 1713208780007,
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "/home/yalnguembu/Perso/quonte/components/AlertBox.vue"
+        ],
+        "sourcesContent": [
+          "<template>\n  <div :class=\"theme.box\">\n    <div class=\"flex items-center\">\n      <InformationIcon :class=\"theme.icon\" />\n      <h3 :class=\"theme.title\">\n        {{\n          alertType === ALERT_BOX_TYPE.ERROR\n            ? \"Error\"\n            : props.alertType === ALERT_BOX_TYPE.WARNING\n            ? \"Warning\"\n            : props.alertType === ALERT_BOX_TYPE.INFO\n            ? \"Information\"\n            : \"Note\"\n        }}:\n      </h3>\n    </div>\n    <p class=\"text-gray-500 dark:text-gray-400 p-2\">\n      {{ summary }}\n    </p>\n  </div>\n</template>\n<script lang=\"ts\" setup>\nimport InformationIcon from \"./icons/InformationIcon.vue\";\nimport { ALERT_BOX_TYPE } from \"@/utils/enum\";\nimport type { PropType } from \"vue\";\n\nconst props = defineProps({\n  summary: {\n    type: String,\n    required: true,\n  },\n  alertType: {\n    required: true,\n    type: String as PropType<ALERT_BOX_TYPE>,\n  },\n});\n\nconst theme =\n  props.alertType === ALERT_BOX_TYPE.ERROR\n    ? {\n        box: \"bg-red-100 dark:bg-red-800/20 p-2 rounded-lg\",\n        icon: \"dark:stroke-red-400 stroke-red-500 mr-2 align-middle\",\n        title: \"underline font-bold text-lg text-red-500 dark:text-red-400\",\n      }\n    : props.alertType === ALERT_BOX_TYPE.WARNING\n    ? {\n        box: \"bg-orange-100 dark:bg-orange-900/50 p-2 rounded-lg\",\n        icon: \"dark:stroke-orange-400 stroke-orange-500 mr-2 align-middle\",\n        title:\n          \"underline font-bold text-lg text-orange-500 dark:text-orange-400\",\n      }\n    : props.alertType === ALERT_BOX_TYPE.INFO\n    ? {\n        box: \"bg-blue-100 dark:bg-blue-900/50 p-2 rounded-lg\",\n        icon: \"dark:stroke-blue-400 stroke-blue-500 mr-2 align-middle\",\n        title: \"underline font-bold text-lg text-blue-500 dark:text-blue-400\",\n      }\n    : props.alertType === ALERT_BOX_TYPE.SUCCESS\n    ? {\n        box: \"bg-green-100 dark:bg-green-900/50 p-2 rounded-lg\",\n        icon: \"dark:stroke-green-400 stroke-green-500 mr-2 align{theme}-middle\",\n        title: \"underline font-bold text-lg text-green-500 dark:text-green-400\",\n      }\n    : {\n        box: \"bg-gray-100 dark:bg-gray-900/50 p-2 rounded-lg\",\n        icon: \"dark:stroke-$gray-400 stroke-gray-500 mr-2 align-middle\",\n        title: \"underline font-bold text-lg text-gray-500 dark:text-gray-400\",\n      };\n</script>\n"
+        ],
+        "names": [],
+        "mappings": ";;;;AAsBA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpC;;;;;;;;;;;;;;;;AAJwB;AAKxB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,OASZ,CAAC;AACH;AACA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACb,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC1C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5E,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAClE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3E,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACd,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7E,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC7C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9E,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACP,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9E,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;;;;;;;;;;;;;;;;;;;;;;;;;"
+      }
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1713208780007,
+      "end": 1713208780007,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1713208780007,
+      "end": 1713208780007,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1713208780007,
+      "end": 1713208780007,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1713208780007,
+      "end": 1713208780007,
+      "order": "pre"
+    },
+    {
+      "name": "unplugin-vue-i18n",
+      "start": 1713208780007,
+      "end": 1713208780007,
+      "order": "pre"
+    },
+    {
+      "name": "unplugin-vue-i18n",
+      "start": 1713208780007,
+      "end": 1713208780007,
+      "order": "pre"
+    },
+    {
+      "name": "nuxtjs:i18n-macros-transform",
+      "start": 1713208780007,
+      "end": 1713208780007,
+      "order": "pre"
+    },
+    {
+      "name": "nuxtjs:i18n-macros-transform",
+      "start": 1713208780007,
+      "end": 1713208780007,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1713208780007,
+      "end": 1713208780007,
+      "order": "pre"
+    },
+    {
+      "name": "server-only-component-transform",
+      "start": 1713208780007,
+      "end": 1713208780007,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1713208780007,
+      "end": 1713208780007,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { defineComponent as _defineComponent } from \"vue\";\nimport { unref as _unref, mergeProps as _mergeProps } from \"vue\";\nimport { ssrRenderComponent as _ssrRenderComponent, ssrRenderClass as _ssrRenderClass, ssrRenderAttrs as _ssrRenderAttrs, ssrInterpolate as _ssrInterpolate } from \"vue/server-renderer\";\nimport InformationIcon from \"./icons/InformationIcon.vue\";\nimport { ALERT_BOX_TYPE } from \"@/utils/enum\";\nexport default /* @__PURE__ */ _defineComponent({\n  __name: \"AlertBox\",\n  __ssrInlineRender: true,\n  props: {\n    summary: {\n      type: String,\n      required: true\n    },\n    alertType: {\n      required: true,\n      type: String\n    }\n  },\n  setup(__props) {\n    const props = __props;\n    const theme = props.alertType === ALERT_BOX_TYPE.ERROR ? {\n      box: \"bg-red-100 dark:bg-red-800/20 p-2 rounded-lg\",\n      icon: \"dark:stroke-red-400 stroke-red-500 mr-2 align-middle\",\n      title: \"underline font-bold text-lg text-red-500 dark:text-red-400\"\n    } : props.alertType === ALERT_BOX_TYPE.WARNING ? {\n      box: \"bg-orange-100 dark:bg-orange-900/50 p-2 rounded-lg\",\n      icon: \"dark:stroke-orange-400 stroke-orange-500 mr-2 align-middle\",\n      title: \"underline font-bold text-lg text-orange-500 dark:text-orange-400\"\n    } : props.alertType === ALERT_BOX_TYPE.INFO ? {\n      box: \"bg-blue-100 dark:bg-blue-900/50 p-2 rounded-lg\",\n      icon: \"dark:stroke-blue-400 stroke-blue-500 mr-2 align-middle\",\n      title: \"underline font-bold text-lg text-blue-500 dark:text-blue-400\"\n    } : props.alertType === ALERT_BOX_TYPE.SUCCESS ? {\n      box: \"bg-green-100 dark:bg-green-900/50 p-2 rounded-lg\",\n      icon: \"dark:stroke-green-400 stroke-green-500 mr-2 align{theme}-middle\",\n      title: \"underline font-bold text-lg text-green-500 dark:text-green-400\"\n    } : {\n      box: \"bg-gray-100 dark:bg-gray-900/50 p-2 rounded-lg\",\n      icon: \"dark:stroke-$gray-400 stroke-gray-500 mr-2 align-middle\",\n      title: \"underline font-bold text-lg text-gray-500 dark:text-gray-400\"\n    };\n    return (_ctx, _push, _parent, _attrs) => {\n      _push(`<div${_ssrRenderAttrs(_mergeProps({\n        class: _unref(theme).box\n      }, _attrs))}><div class=\"flex items-center\">`);\n      _push(_ssrRenderComponent(InformationIcon, {\n        class: _unref(theme).icon\n      }, null, _parent));\n      _push(`<h3 class=\"${_ssrRenderClass(_unref(theme).title)}\">${_ssrInterpolate(__props.alertType === _unref(ALERT_BOX_TYPE).ERROR ? \"Error\" : props.alertType === _unref(ALERT_BOX_TYPE).WARNING ? \"Warning\" : props.alertType === _unref(ALERT_BOX_TYPE).INFO ? \"Information\" : \"Note\")}: </h3></div><p class=\"text-gray-500 dark:text-gray-400 p-2\">${_ssrInterpolate(__props.summary)}</p></div>`);\n    };\n  }\n});\n",
+      "start": 1713208780007,
+      "end": 1713208780015,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "/home/yalnguembu/Perso/quonte/components/AlertBox.vue?vue&type=script&setup=true&lang.ts"
+        ],
+        "sourcesContent": [
+          "import { defineComponent as _defineComponent } from 'vue'\nimport { unref as _unref, mergeProps as _mergeProps } from \"vue\"\nimport { ssrRenderComponent as _ssrRenderComponent, ssrRenderClass as _ssrRenderClass, ssrRenderAttrs as _ssrRenderAttrs, ssrInterpolate as _ssrInterpolate } from \"vue/server-renderer\"\n\nimport InformationIcon from \"./icons/InformationIcon.vue\";\nimport { ALERT_BOX_TYPE } from \"@/utils/enum\";\nimport type { PropType } from \"vue\";\n\n\nexport default /*#__PURE__*/_defineComponent({\n  __name: 'AlertBox',\n  __ssrInlineRender: true,\n  props: {\n  summary: {\n    type: String,\n    required: true,\n  },\n  alertType: {\n    required: true,\n    type: String as PropType<ALERT_BOX_TYPE>,\n  },\n},\n  setup(__props) {\n\nconst props = __props;\n\nconst theme =\n  props.alertType === ALERT_BOX_TYPE.ERROR\n    ? {\n        box: \"bg-red-100 dark:bg-red-800/20 p-2 rounded-lg\",\n        icon: \"dark:stroke-red-400 stroke-red-500 mr-2 align-middle\",\n        title: \"underline font-bold text-lg text-red-500 dark:text-red-400\",\n      }\n    : props.alertType === ALERT_BOX_TYPE.WARNING\n    ? {\n        box: \"bg-orange-100 dark:bg-orange-900/50 p-2 rounded-lg\",\n        icon: \"dark:stroke-orange-400 stroke-orange-500 mr-2 align-middle\",\n        title:\n          \"underline font-bold text-lg text-orange-500 dark:text-orange-400\",\n      }\n    : props.alertType === ALERT_BOX_TYPE.INFO\n    ? {\n        box: \"bg-blue-100 dark:bg-blue-900/50 p-2 rounded-lg\",\n        icon: \"dark:stroke-blue-400 stroke-blue-500 mr-2 align-middle\",\n        title: \"underline font-bold text-lg text-blue-500 dark:text-blue-400\",\n      }\n    : props.alertType === ALERT_BOX_TYPE.SUCCESS\n    ? {\n        box: \"bg-green-100 dark:bg-green-900/50 p-2 rounded-lg\",\n        icon: \"dark:stroke-green-400 stroke-green-500 mr-2 align{theme}-middle\",\n        title: \"underline font-bold text-lg text-green-500 dark:text-green-400\",\n      }\n    : {\n        box: \"bg-gray-100 dark:bg-gray-900/50 p-2 rounded-lg\",\n        icon: \"dark:stroke-$gray-400 stroke-gray-500 mr-2 align-middle\",\n        title: \"underline font-bold text-lg text-gray-500 dark:text-gray-400\",\n      };\n\nreturn (_ctx: any,_push: any,_parent: any,_attrs: any) => {\n  _push(`<div${_ssrRenderAttrs(_mergeProps({\n    class: _unref(theme).box\n  }, _attrs))}><div class=\"flex items-center\">`)\n  _push(_ssrRenderComponent(InformationIcon, {\n    class: _unref(theme).icon\n  }, null, _parent))\n  _push(`<h3 class=\"${\n    _ssrRenderClass(_unref(theme).title)\n  }\">${\n    _ssrInterpolate(__props.alertType === _unref(ALERT_BOX_TYPE).ERROR\n            ? \"Error\"\n            : props.alertType === _unref(ALERT_BOX_TYPE).WARNING\n            ? \"Warning\"\n            : props.alertType === _unref(ALERT_BOX_TYPE).INFO\n            ? \"Information\"\n            : \"Note\")\n  }: </h3></div><p class=\"text-gray-500 dark:text-gray-400 p-2\">${\n    _ssrInterpolate(__props.summary)\n  }</p></div>`)\n}\n}\n\n})"
+        ],
+        "mappings": "AAAA,SAAS,mBAAmB,wBAAwB;AACpD,SAAS,SAAS,QAAQ,cAAc,mBAAmB;AAC3D,SAAS,sBAAsB,qBAAqB,kBAAkB,iBAAiB,kBAAkB,iBAAiB,kBAAkB,uBAAuB;AAEnK,OAAO,qBAAqB;AAC5B,SAAS,sBAAsB;AAI/B,eAA4B,iCAAiB;AAAA,EAC3C,QAAQ;AAAA,EACR,mBAAmB;AAAA,EACnB,OAAO;AAAA,IACP,SAAS;AAAA,MACP,MAAM;AAAA,MACN,UAAU;AAAA,IACZ;AAAA,IACA,WAAW;AAAA,MACT,UAAU;AAAA,MACV,MAAM;AAAA,IACR;AAAA,EACF;AAAA,EACE,MAAM,SAAS;AAEjB,UAAM,QAAQ;AAEd,UAAM,QACJ,MAAM,cAAc,eAAe,QAC/B;AAAA,MACE,KAAK;AAAA,MACL,MAAM;AAAA,MACN,OAAO;AAAA,IACT,IACA,MAAM,cAAc,eAAe,UACnC;AAAA,MACE,KAAK;AAAA,MACL,MAAM;AAAA,MACN,OACE;AAAA,IACJ,IACA,MAAM,cAAc,eAAe,OACnC;AAAA,MACE,KAAK;AAAA,MACL,MAAM;AAAA,MACN,OAAO;AAAA,IACT,IACA,MAAM,cAAc,eAAe,UACnC;AAAA,MACE,KAAK;AAAA,MACL,MAAM;AAAA,MACN,OAAO;AAAA,IACT,IACA;AAAA,MACE,KAAK;AAAA,MACL,MAAM;AAAA,MACN,OAAO;AAAA,IACT;AAEN,WAAO,CAAC,MAAU,OAAW,SAAa,WAAgB;AACxD,YAAM,OAAO,gBAAgB,YAAY;AAAA,QACvC,OAAO,OAAO,KAAK,EAAE;AAAA,MACvB,GAAG,MAAM,CAAC,CAAC,kCAAkC;AAC7C,YAAM,oBAAoB,iBAAiB;AAAA,QACzC,OAAO,OAAO,KAAK,EAAE;AAAA,MACvB,GAAG,MAAM,OAAO,CAAC;AACjB,YAAM,cACJ,gBAAgB,OAAO,KAAK,EAAE,KAAK,CACrC,KACE,gBAAgB,QAAQ,cAAc,OAAO,cAAc,EAAE,QACnD,UACA,MAAM,cAAc,OAAO,cAAc,EAAE,UAC3C,YACA,MAAM,cAAc,OAAO,cAAc,EAAE,OAC3C,gBACA,MAAM,CAClB,gEACE,gBAAgB,QAAQ,OAAO,CACjC,YAAY;AAAA,IACd;AAAA,EACA;AAEA,CAAC;",
+        "names": []
+      }
+    },
+    {
+      "name": "vite:json",
+      "start": 1713208780016,
+      "end": 1713208780016,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1713208780016,
+      "end": 1713208780016,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1713208780016,
+      "end": 1713208780016,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1713208780016,
+      "end": 1713208780016,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1713208780016,
+      "end": 1713208780016,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1713208780016,
+      "end": 1713208780016,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1713208780016,
+      "end": 1713208780016,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1713208780016,
+      "end": 1713208780016,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1713208780016,
+      "end": 1713208780016,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1713208780016,
+      "end": 1713208780016,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1713208780017,
+      "end": 1713208780018,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1713208780018,
+      "end": 1713208780018,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1713208780018,
+      "end": 1713208780018,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1713208780018,
+      "end": 1713208780018,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1713208780018,
+      "end": 1713208780018,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1713208780018,
+      "end": 1713208780018,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1713208780018,
+      "end": 1713208780018,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1713208780018,
+      "end": 1713208780018,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1713208780019,
+      "end": 1713208780019,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1713208780019,
+      "end": 1713208780019,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1713208780019,
+      "end": 1713208780019,
+      "order": "post"
+    },
+    {
+      "name": "unhead:remove-server-composables",
+      "start": 1713208780019,
+      "end": 1713208780019,
+      "order": "post"
+    },
+    {
+      "name": "unhead:use-seo-meta-transform",
+      "start": 1713208780019,
+      "end": 1713208780019,
+      "order": "post"
+    },
+    {
+      "name": "unhead:use-seo-meta-transform",
+      "start": 1713208780019,
+      "end": 1713208780019,
+      "order": "post"
+    },
+    {
+      "name": "nuxtjs:i18n-resource",
+      "start": 1713208780019,
+      "end": 1713208780019,
+      "order": "post"
+    },
+    {
+      "name": "nuxtjs:i18n-resource",
+      "start": 1713208780019,
+      "end": 1713208780021,
+      "order": "post"
+    },
+    {
+      "name": "nuxtjs:i18n-meta-deprecation",
+      "start": 1713208780021,
+      "end": 1713208780021,
+      "order": "post"
+    },
+    {
+      "name": "nuxtjs:i18n-meta-deprecation",
+      "start": 1713208780021,
+      "end": 1713208780021,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1713208780021,
+      "end": 1713208780025,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1713208780021,
+      "end": 1713208780025,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1713208780025,
+      "end": 1713208780025,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1713208780025,
+      "end": 1713208780025,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1713208780025,
+      "end": 1713208780025,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1713208780025,
+      "end": 1713208780025,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-template",
+      "start": 1713208780025,
+      "end": 1713208780025,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1713208780026,
+      "end": 1713208780026,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1713208780026,
+      "end": 1713208780026,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1713208780026,
+      "end": 1713208780027,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1713208780027,
+      "end": 1713208780027,
+      "order": "normal"
+    }
+  ]
+}

@@ -1,0 +1,343 @@
+{
+  "resolvedId": "/home/yalnguembu/Perso/quonte/components/landing/ContactSection.vue?vue&type=script&setup=true&lang.ts",
+  "transforms": [
+    {
+      "name": "vite:vue",
+      "result": "import { defineComponent as _defineComponent } from 'vue'\nimport { withCtx as _withCtx, createVNode as _createVNode, createTextVNode as _createTextVNode, resolveDirective as _resolveDirective, mergeProps as _mergeProps } from \"vue\"\nimport { ssrRenderAttr as _ssrRenderAttr, ssrRenderComponent as _ssrRenderComponent, ssrGetDirectiveProps as _ssrGetDirectiveProps, ssrRenderAttrs as _ssrRenderAttrs } from \"vue/server-renderer\"\nimport _imports_0 from '@/assets/images/Group 5601.svg'\n\n\nimport TelegramIcon from \"@/components/icons/TelegramIcon.vue\";\nimport LinkWrapper from \"@/components/LinkWrapper.vue\";\n\nexport default /*#__PURE__*/_defineComponent({\n  __name: 'ContactSection',\n  __ssrInlineRender: true,\n  setup(__props) {\n\n\nreturn (_ctx: any,_push: any,_parent: any,_attrs: any) => {\n  const _directive_motion_slide_visible_bottom = _resolveDirective(\"motion-slide-visible-bottom\")!\n\n  _push(`<div${\n    _ssrRenderAttrs(_mergeProps(_attrs, _ssrGetDirectiveProps(_ctx, _directive_motion_slide_visible_bottom)))\n  }><div class=\"flex flex-col items-center w-full py-12 lg:py-20 lg:px-4\" id=\"contact\"><h3 class=\"font-bold text-3xl text-green-800 dark:text-green-100 text-center p-8 pb-4\"><span class=\"relative block\"> What&#39;s your Quonte idea? <img${\n    _ssrRenderAttr(\"src\", _imports_0)\n  } alt=\"\" class=\"absolute w-12 -top-10 -right-3 lg:rotate-90 lg:-right-20\"></span></h3><h4 class=\"text-gray-500 text-xl\">Let&#39;s chat and see how we can help</h4><div class=\"w-full px-4 py-8 flex flex-col space-y-8 md:space-y-0 md:space-x-8 md:flex-row md:justify-center\">`)\n  _push(_ssrRenderComponent(LinkWrapper, {\n    isExternal: \"\",\n    path: \"https://t.me/yalnguembu\",\n    class: \"w-full px-6 py-1 hover:shadow-md hover:shadow-yellow-300 dark:hover:shadow-yellow-900 bg-yellow-500 hover:bg-yellow-400 dark:hover:bg-yellow-400 flex items-center rounded-xl md:justify-evenly md:w-auto\"\n  }, {\n    default: _withCtx((_, _push, _parent, _scopeId) => {\n      if (_push) {\n        _push(_ssrRenderComponent(TelegramIcon, { class: \"fill-gray-500 h-10 w-10\" }, null, _parent, _scopeId))\n        _push(`<span class=\"p-4 py-2 text-left\"${\n          _scopeId\n        }><span class=\"font-bold text-lg\"${\n          _scopeId\n        }> Telegram </span> <br${\n          _scopeId\n        }><span class=\"text-gray-600\"${\n          _scopeId\n        }>@quonte_io </span></span>`)\n      } else {\n        return [\n          _createVNode(TelegramIcon, { class: \"fill-gray-500 h-10 w-10\" }),\n          _createVNode(\"span\", { class: \"p-4 py-2 text-left\" }, [\n            _createVNode(\"span\", { class: \"font-bold text-lg\" }, \" Telegram \"),\n            _createTextVNode(),\n            _createVNode(\"br\"),\n            _createVNode(\"span\", { class: \"text-gray-600\" }, \"@quonte_io \")\n          ])\n        ]\n      }\n    }),\n    _: 1\n  }, _parent))\n  _push(_ssrRenderComponent(LinkWrapper, {\n    path: \"mailto:yalnguembu@gmail.com\",\n    isExternal: \"\",\n    class: \"w-full px-6 py-1 hover:shadow-md hover:shadow-green-700 bg-green-800 dark:bg-green-100 hover:bg-green-700 dark:hover:bg-green-300 flex items-center rounded-xl md:justify-evenly md:w-auto\"\n  }, {\n    default: _withCtx((_, _push, _parent, _scopeId) => {\n      if (_push) {\n        _push(`<span class=\"text-5xl text-white dark:text-green-800\"${\n          _scopeId\n        }>@</span><span class=\"p-4 py-2 text-left\"${\n          _scopeId\n        }><span class=\"font-bold text-lg text-white dark:text-green-800\"${\n          _scopeId\n        }> Email </span><br${\n          _scopeId\n        }><span class=\"text-gray-400 dark:text-gray-600\"${\n          _scopeId\n        }>@quonte_io </span></span>`)\n      } else {\n        return [\n          _createVNode(\"span\", { class: \"text-5xl text-white dark:text-green-800\" }, \"@\"),\n          _createVNode(\"span\", { class: \"p-4 py-2 text-left\" }, [\n            _createVNode(\"span\", { class: \"font-bold text-lg text-white dark:text-green-800\" }, \" Email \"),\n            _createVNode(\"br\"),\n            _createVNode(\"span\", { class: \"text-gray-400 dark:text-gray-600\" }, \"@quonte_io \")\n          ])\n        ]\n      }\n    }),\n    _: 1\n  }, _parent))\n  _push(`</div></div></div>`)\n}\n}\n\n})",
+      "start": 1713208779944,
+      "end": 1713208779944,
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "/home/yalnguembu/Perso/quonte/components/landing/ContactSection.vue"
+        ],
+        "sourcesContent": [
+          "<template>\n  <div v-motion-slide-visible-bottom>\n    <div\n      class=\"flex flex-col items-center w-full py-12 lg:py-20 lg:px-4\"\n      id=\"contact\"\n    >\n      <h3\n        class=\"font-bold text-3xl text-green-800 dark:text-green-100 text-center p-8 pb-4\"\n      >\n        <span class=\"relative block\">\n          What's your Quonte idea?\n          <img\n            src=\"@/assets/images/Group 5601.svg\"\n            alt=\"\"\n            class=\"absolute w-12 -top-10 -right-3 lg:rotate-90 lg:-right-20\"\n          />\n        </span>\n      </h3>\n      <h4 class=\"text-gray-500 text-xl\">Let's chat and see how we can help</h4>\n      <div\n        class=\"w-full px-4 py-8 flex flex-col space-y-8 md:space-y-0 md:space-x-8 md:flex-row md:justify-center\"\n      >\n        <LinkWrapper\n          isExternal\n          path=\"https://t.me/yalnguembu\"\n          class=\"w-full px-6 py-1 hover:shadow-md hover:shadow-yellow-300 dark:hover:shadow-yellow-900 bg-yellow-500 hover:bg-yellow-400 dark:hover:bg-yellow-400 flex items-center rounded-xl md:justify-evenly md:w-auto\"\n        >\n          <TelegramIcon class=\"fill-gray-500 h-10 w-10\" />\n          <span class=\"p-4 py-2 text-left\">\n            <span class=\"font-bold text-lg\"> Telegram </span> <br />\n            <span class=\"text-gray-600\">@quonte_io </span>\n          </span>\n        </LinkWrapper>\n        <LinkWrapper\n          path=\"mailto:yalnguembu@gmail.com\"\n          isExternal\n          class=\"w-full px-6 py-1 hover:shadow-md hover:shadow-green-700 bg-green-800 dark:bg-green-100 hover:bg-green-700 dark:hover:bg-green-300 flex items-center rounded-xl md:justify-evenly md:w-auto\"\n        >\n          <span class=\"text-5xl text-white dark:text-green-800\">@</span>\n          <span class=\"p-4 py-2 text-left\">\n            <span class=\"font-bold text-lg text-white dark:text-green-800\">\n              Email\n            </span>\n            <br />\n            <span class=\"text-gray-400 dark:text-gray-600\">@quonte_io </span>\n          </span>\n        </LinkWrapper>\n      </div>\n    </div>\n  </div>\n</template>\n<script lang=\"ts\" setup>\nimport TelegramIcon from \"@/components/icons/TelegramIcon.vue\";\nimport LinkWrapper from \"@/components/LinkWrapper.vue\";\n</script>\n"
+        ],
+        "names": [],
+        "mappings": ";;;;;;AAoDA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;;;;;;AAF/B;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;"
+      }
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1713208779944,
+      "end": 1713208779944,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1713208779944,
+      "end": 1713208779944,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1713208779944,
+      "end": 1713208779944,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1713208779944,
+      "end": 1713208779944,
+      "order": "pre"
+    },
+    {
+      "name": "unplugin-vue-i18n",
+      "start": 1713208779944,
+      "end": 1713208779944,
+      "order": "pre"
+    },
+    {
+      "name": "unplugin-vue-i18n",
+      "start": 1713208779944,
+      "end": 1713208779944,
+      "order": "pre"
+    },
+    {
+      "name": "nuxtjs:i18n-macros-transform",
+      "start": 1713208779944,
+      "end": 1713208779945,
+      "order": "pre"
+    },
+    {
+      "name": "nuxtjs:i18n-macros-transform",
+      "start": 1713208779944,
+      "end": 1713208779945,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1713208779945,
+      "end": 1713208779945,
+      "order": "pre"
+    },
+    {
+      "name": "server-only-component-transform",
+      "start": 1713208779945,
+      "end": 1713208779945,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1713208779945,
+      "end": 1713208779945,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { defineComponent as _defineComponent } from \"vue\";\nimport { withCtx as _withCtx, createVNode as _createVNode, createTextVNode as _createTextVNode, resolveDirective as _resolveDirective, mergeProps as _mergeProps } from \"vue\";\nimport { ssrRenderAttr as _ssrRenderAttr, ssrRenderComponent as _ssrRenderComponent, ssrGetDirectiveProps as _ssrGetDirectiveProps, ssrRenderAttrs as _ssrRenderAttrs } from \"vue/server-renderer\";\nimport _imports_0 from \"@/assets/images/Group 5601.svg\";\nimport TelegramIcon from \"@/components/icons/TelegramIcon.vue\";\nimport LinkWrapper from \"@/components/LinkWrapper.vue\";\nexport default /* @__PURE__ */ _defineComponent({\n  __name: \"ContactSection\",\n  __ssrInlineRender: true,\n  setup(__props) {\n    return (_ctx, _push, _parent, _attrs) => {\n      const _directive_motion_slide_visible_bottom = _resolveDirective(\"motion-slide-visible-bottom\");\n      _push(`<div${_ssrRenderAttrs(_mergeProps(_attrs, _ssrGetDirectiveProps(_ctx, _directive_motion_slide_visible_bottom)))}><div class=\"flex flex-col items-center w-full py-12 lg:py-20 lg:px-4\" id=\"contact\"><h3 class=\"font-bold text-3xl text-green-800 dark:text-green-100 text-center p-8 pb-4\"><span class=\"relative block\"> What&#39;s your Quonte idea? <img${_ssrRenderAttr(\"src\", _imports_0)} alt=\"\" class=\"absolute w-12 -top-10 -right-3 lg:rotate-90 lg:-right-20\"></span></h3><h4 class=\"text-gray-500 text-xl\">Let&#39;s chat and see how we can help</h4><div class=\"w-full px-4 py-8 flex flex-col space-y-8 md:space-y-0 md:space-x-8 md:flex-row md:justify-center\">`);\n      _push(_ssrRenderComponent(LinkWrapper, {\n        isExternal: \"\",\n        path: \"https://t.me/yalnguembu\",\n        class: \"w-full px-6 py-1 hover:shadow-md hover:shadow-yellow-300 dark:hover:shadow-yellow-900 bg-yellow-500 hover:bg-yellow-400 dark:hover:bg-yellow-400 flex items-center rounded-xl md:justify-evenly md:w-auto\"\n      }, {\n        default: _withCtx((_, _push2, _parent2, _scopeId) => {\n          if (_push2) {\n            _push2(_ssrRenderComponent(TelegramIcon, { class: \"fill-gray-500 h-10 w-10\" }, null, _parent2, _scopeId));\n            _push2(`<span class=\"p-4 py-2 text-left\"${_scopeId}><span class=\"font-bold text-lg\"${_scopeId}> Telegram </span> <br${_scopeId}><span class=\"text-gray-600\"${_scopeId}>@quonte_io </span></span>`);\n          } else {\n            return [\n              _createVNode(TelegramIcon, { class: \"fill-gray-500 h-10 w-10\" }),\n              _createVNode(\"span\", { class: \"p-4 py-2 text-left\" }, [\n                _createVNode(\"span\", { class: \"font-bold text-lg\" }, \" Telegram \"),\n                _createTextVNode(),\n                _createVNode(\"br\"),\n                _createVNode(\"span\", { class: \"text-gray-600\" }, \"@quonte_io \")\n              ])\n            ];\n          }\n        }),\n        _: 1\n      }, _parent));\n      _push(_ssrRenderComponent(LinkWrapper, {\n        path: \"mailto:yalnguembu@gmail.com\",\n        isExternal: \"\",\n        class: \"w-full px-6 py-1 hover:shadow-md hover:shadow-green-700 bg-green-800 dark:bg-green-100 hover:bg-green-700 dark:hover:bg-green-300 flex items-center rounded-xl md:justify-evenly md:w-auto\"\n      }, {\n        default: _withCtx((_, _push2, _parent2, _scopeId) => {\n          if (_push2) {\n            _push2(`<span class=\"text-5xl text-white dark:text-green-800\"${_scopeId}>@</span><span class=\"p-4 py-2 text-left\"${_scopeId}><span class=\"font-bold text-lg text-white dark:text-green-800\"${_scopeId}> Email </span><br${_scopeId}><span class=\"text-gray-400 dark:text-gray-600\"${_scopeId}>@quonte_io </span></span>`);\n          } else {\n            return [\n              _createVNode(\"span\", { class: \"text-5xl text-white dark:text-green-800\" }, \"@\"),\n              _createVNode(\"span\", { class: \"p-4 py-2 text-left\" }, [\n                _createVNode(\"span\", { class: \"font-bold text-lg text-white dark:text-green-800\" }, \" Email \"),\n                _createVNode(\"br\"),\n                _createVNode(\"span\", { class: \"text-gray-400 dark:text-gray-600\" }, \"@quonte_io \")\n              ])\n            ];\n          }\n        }),\n        _: 1\n      }, _parent));\n      _push(`</div></div></div>`);\n    };\n  }\n});\n",
+      "start": 1713208779945,
+      "end": 1713208779982,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "/home/yalnguembu/Perso/quonte/components/landing/ContactSection.vue?vue&type=script&setup=true&lang.ts"
+        ],
+        "sourcesContent": [
+          "import { defineComponent as _defineComponent } from 'vue'\nimport { withCtx as _withCtx, createVNode as _createVNode, createTextVNode as _createTextVNode, resolveDirective as _resolveDirective, mergeProps as _mergeProps } from \"vue\"\nimport { ssrRenderAttr as _ssrRenderAttr, ssrRenderComponent as _ssrRenderComponent, ssrGetDirectiveProps as _ssrGetDirectiveProps, ssrRenderAttrs as _ssrRenderAttrs } from \"vue/server-renderer\"\nimport _imports_0 from '@/assets/images/Group 5601.svg'\n\n\nimport TelegramIcon from \"@/components/icons/TelegramIcon.vue\";\nimport LinkWrapper from \"@/components/LinkWrapper.vue\";\n\nexport default /*#__PURE__*/_defineComponent({\n  __name: 'ContactSection',\n  __ssrInlineRender: true,\n  setup(__props) {\n\n\nreturn (_ctx: any,_push: any,_parent: any,_attrs: any) => {\n  const _directive_motion_slide_visible_bottom = _resolveDirective(\"motion-slide-visible-bottom\")!\n\n  _push(`<div${\n    _ssrRenderAttrs(_mergeProps(_attrs, _ssrGetDirectiveProps(_ctx, _directive_motion_slide_visible_bottom)))\n  }><div class=\"flex flex-col items-center w-full py-12 lg:py-20 lg:px-4\" id=\"contact\"><h3 class=\"font-bold text-3xl text-green-800 dark:text-green-100 text-center p-8 pb-4\"><span class=\"relative block\"> What&#39;s your Quonte idea? <img${\n    _ssrRenderAttr(\"src\", _imports_0)\n  } alt=\"\" class=\"absolute w-12 -top-10 -right-3 lg:rotate-90 lg:-right-20\"></span></h3><h4 class=\"text-gray-500 text-xl\">Let&#39;s chat and see how we can help</h4><div class=\"w-full px-4 py-8 flex flex-col space-y-8 md:space-y-0 md:space-x-8 md:flex-row md:justify-center\">`)\n  _push(_ssrRenderComponent(LinkWrapper, {\n    isExternal: \"\",\n    path: \"https://t.me/yalnguembu\",\n    class: \"w-full px-6 py-1 hover:shadow-md hover:shadow-yellow-300 dark:hover:shadow-yellow-900 bg-yellow-500 hover:bg-yellow-400 dark:hover:bg-yellow-400 flex items-center rounded-xl md:justify-evenly md:w-auto\"\n  }, {\n    default: _withCtx((_, _push, _parent, _scopeId) => {\n      if (_push) {\n        _push(_ssrRenderComponent(TelegramIcon, { class: \"fill-gray-500 h-10 w-10\" }, null, _parent, _scopeId))\n        _push(`<span class=\"p-4 py-2 text-left\"${\n          _scopeId\n        }><span class=\"font-bold text-lg\"${\n          _scopeId\n        }> Telegram </span> <br${\n          _scopeId\n        }><span class=\"text-gray-600\"${\n          _scopeId\n        }>@quonte_io </span></span>`)\n      } else {\n        return [\n          _createVNode(TelegramIcon, { class: \"fill-gray-500 h-10 w-10\" }),\n          _createVNode(\"span\", { class: \"p-4 py-2 text-left\" }, [\n            _createVNode(\"span\", { class: \"font-bold text-lg\" }, \" Telegram \"),\n            _createTextVNode(),\n            _createVNode(\"br\"),\n            _createVNode(\"span\", { class: \"text-gray-600\" }, \"@quonte_io \")\n          ])\n        ]\n      }\n    }),\n    _: 1\n  }, _parent))\n  _push(_ssrRenderComponent(LinkWrapper, {\n    path: \"mailto:yalnguembu@gmail.com\",\n    isExternal: \"\",\n    class: \"w-full px-6 py-1 hover:shadow-md hover:shadow-green-700 bg-green-800 dark:bg-green-100 hover:bg-green-700 dark:hover:bg-green-300 flex items-center rounded-xl md:justify-evenly md:w-auto\"\n  }, {\n    default: _withCtx((_, _push, _parent, _scopeId) => {\n      if (_push) {\n        _push(`<span class=\"text-5xl text-white dark:text-green-800\"${\n          _scopeId\n        }>@</span><span class=\"p-4 py-2 text-left\"${\n          _scopeId\n        }><span class=\"font-bold text-lg text-white dark:text-green-800\"${\n          _scopeId\n        }> Email </span><br${\n          _scopeId\n        }><span class=\"text-gray-400 dark:text-gray-600\"${\n          _scopeId\n        }>@quonte_io </span></span>`)\n      } else {\n        return [\n          _createVNode(\"span\", { class: \"text-5xl text-white dark:text-green-800\" }, \"@\"),\n          _createVNode(\"span\", { class: \"p-4 py-2 text-left\" }, [\n            _createVNode(\"span\", { class: \"font-bold text-lg text-white dark:text-green-800\" }, \" Email \"),\n            _createVNode(\"br\"),\n            _createVNode(\"span\", { class: \"text-gray-400 dark:text-gray-600\" }, \"@quonte_io \")\n          ])\n        ]\n      }\n    }),\n    _: 1\n  }, _parent))\n  _push(`</div></div></div>`)\n}\n}\n\n})"
+        ],
+        "mappings": "AAAA,SAAS,mBAAmB,wBAAwB;AACpD,SAAS,WAAW,UAAU,eAAe,cAAc,mBAAmB,kBAAkB,oBAAoB,mBAAmB,cAAc,mBAAmB;AACxK,SAAS,iBAAiB,gBAAgB,sBAAsB,qBAAqB,wBAAwB,uBAAuB,kBAAkB,uBAAuB;AAC7K,OAAO,gBAAgB;AAGvB,OAAO,kBAAkB;AACzB,OAAO,iBAAiB;AAExB,eAA4B,iCAAiB;AAAA,EAC3C,QAAQ;AAAA,EACR,mBAAmB;AAAA,EACnB,MAAM,SAAS;AAGjB,WAAO,CAAC,MAAU,OAAW,SAAa,WAAgB;AACxD,YAAM,yCAAyC,kBAAkB,6BAA6B;AAE9F,YAAM,OACJ,gBAAgB,YAAY,QAAQ,sBAAsB,MAAM,sCAAsC,CAAC,CAAC,CAC1G,6OACE,eAAe,OAAO,UAAU,CAClC,kRAAkR;AAClR,YAAM,oBAAoB,aAAa;AAAA,QACrC,YAAY;AAAA,QACZ,MAAM;AAAA,QACN,OAAO;AAAA,MACT,GAAG;AAAA,QACD,SAAS,SAAS,CAAC,GAAGA,QAAOC,UAAS,aAAa;AACjD,cAAID,QAAO;AACT,YAAAA,OAAM,oBAAoB,cAAc,EAAE,OAAO,0BAA0B,GAAG,MAAMC,UAAS,QAAQ,CAAC;AACtG,YAAAD,OAAM,mCACJ,QACF,mCACE,QACF,yBACE,QACF,+BACE,QACF,4BAA4B;AAAA,UAC9B,OAAO;AACL,mBAAO;AAAA,cACL,aAAa,cAAc,EAAE,OAAO,0BAA0B,CAAC;AAAA,cAC/D,aAAa,QAAQ,EAAE,OAAO,qBAAqB,GAAG;AAAA,gBACpD,aAAa,QAAQ,EAAE,OAAO,oBAAoB,GAAG,YAAY;AAAA,gBACjE,iBAAiB;AAAA,gBACjB,aAAa,IAAI;AAAA,gBACjB,aAAa,QAAQ,EAAE,OAAO,gBAAgB,GAAG,aAAa;AAAA,cAChE,CAAC;AAAA,YACH;AAAA,UACF;AAAA,QACF,CAAC;AAAA,QACD,GAAG;AAAA,MACL,GAAG,OAAO,CAAC;AACX,YAAM,oBAAoB,aAAa;AAAA,QACrC,MAAM;AAAA,QACN,YAAY;AAAA,QACZ,OAAO;AAAA,MACT,GAAG;AAAA,QACD,SAAS,SAAS,CAAC,GAAGA,QAAOC,UAAS,aAAa;AACjD,cAAID,QAAO;AACT,YAAAA,OAAM,wDACJ,QACF,4CACE,QACF,kEACE,QACF,qBACE,QACF,kDACE,QACF,4BAA4B;AAAA,UAC9B,OAAO;AACL,mBAAO;AAAA,cACL,aAAa,QAAQ,EAAE,OAAO,0CAA0C,GAAG,GAAG;AAAA,cAC9E,aAAa,QAAQ,EAAE,OAAO,qBAAqB,GAAG;AAAA,gBACpD,aAAa,QAAQ,EAAE,OAAO,mDAAmD,GAAG,SAAS;AAAA,gBAC7F,aAAa,IAAI;AAAA,gBACjB,aAAa,QAAQ,EAAE,OAAO,mCAAmC,GAAG,aAAa;AAAA,cACnF,CAAC;AAAA,YACH;AAAA,UACF;AAAA,QACF,CAAC;AAAA,QACD,GAAG;AAAA,MACL,GAAG,OAAO,CAAC;AACX,YAAM,oBAAoB;AAAA,IAC5B;AAAA,EACA;AAEA,CAAC;",
+        "names": [
+          "_push",
+          "_parent"
+        ]
+      }
+    },
+    {
+      "name": "vite:json",
+      "start": 1713208779982,
+      "end": 1713208779982,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1713208779982,
+      "end": 1713208779982,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1713208779983,
+      "end": 1713208779983,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1713208779983,
+      "end": 1713208779983,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1713208779983,
+      "end": 1713208779983,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1713208779983,
+      "end": 1713208779983,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1713208779983,
+      "end": 1713208779983,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1713208779983,
+      "end": 1713208779983,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1713208779984,
+      "end": 1713208779984,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1713208779984,
+      "end": 1713208779984,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1713208779984,
+      "end": 1713208779985,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1713208779985,
+      "end": 1713208779985,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1713208779985,
+      "end": 1713208779985,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1713208779985,
+      "end": 1713208779985,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1713208779985,
+      "end": 1713208779985,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1713208779985,
+      "end": 1713208779985,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1713208779985,
+      "end": 1713208779985,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1713208779985,
+      "end": 1713208779985,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1713208779986,
+      "end": 1713208779986,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1713208779986,
+      "end": 1713208779986,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1713208779986,
+      "end": 1713208779986,
+      "order": "post"
+    },
+    {
+      "name": "unhead:remove-server-composables",
+      "start": 1713208779986,
+      "end": 1713208779986,
+      "order": "post"
+    },
+    {
+      "name": "unhead:use-seo-meta-transform",
+      "start": 1713208779986,
+      "end": 1713208779986,
+      "order": "post"
+    },
+    {
+      "name": "unhead:use-seo-meta-transform",
+      "start": 1713208779986,
+      "end": 1713208779986,
+      "order": "post"
+    },
+    {
+      "name": "nuxtjs:i18n-resource",
+      "start": 1713208779988,
+      "end": 1713208779988,
+      "order": "post"
+    },
+    {
+      "name": "nuxtjs:i18n-resource",
+      "start": 1713208779988,
+      "end": 1713208779988,
+      "order": "post"
+    },
+    {
+      "name": "nuxtjs:i18n-meta-deprecation",
+      "start": 1713208779988,
+      "end": 1713208779988,
+      "order": "post"
+    },
+    {
+      "name": "nuxtjs:i18n-meta-deprecation",
+      "start": 1713208779988,
+      "end": 1713208779988,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1713208779988,
+      "end": 1713208779991,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1713208779988,
+      "end": 1713208779991,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1713208779992,
+      "end": 1713208779992,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1713208779992,
+      "end": 1713208779992,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1713208779992,
+      "end": 1713208779992,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1713208779992,
+      "end": 1713208779992,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-template",
+      "start": 1713208779992,
+      "end": 1713208779992,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1713208779992,
+      "end": 1713208779993,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1713208779993,
+      "end": 1713208779993,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1713208779993,
+      "end": 1713208779994,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1713208779994,
+      "end": 1713208779994,
+      "order": "normal"
+    }
+  ]
+}

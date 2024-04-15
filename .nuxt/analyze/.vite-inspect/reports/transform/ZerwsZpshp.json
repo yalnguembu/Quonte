@@ -1,0 +1,240 @@
+{
+  "resolvedId": "/home/yalnguembu/Perso/quonte/node_modules/@unhead/addons/dist/index.mjs",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import { defineHeadPlugin, resolveTitleTemplate } from '@unhead/shared';\n\n// @__NO_SIDE_EFFECTS__\nfunction InferSeoMetaPlugin(options = {}) {\n  return defineHeadPlugin({\n    hooks: {\n      entries: {\n        resolve({ entries }) {\n          let titleTemplate = null;\n          for (const entry of entries) {\n            const inputKey = entry.resolvedInput ? \"resolvedInput\" : \"input\";\n            const input = entry[inputKey];\n            if (typeof input.titleTemplate !== \"undefined\")\n              titleTemplate = input.titleTemplate;\n          }\n          for (const entry of entries) {\n            const inputKey = entry.resolvedInput ? \"resolvedInput\" : \"input\";\n            const input = entry[inputKey];\n            const resolvedMeta = input.meta || [];\n            titleTemplate = resolveTitleTemplate(titleTemplate, input.title);\n            const title = input.title;\n            const description = resolvedMeta.find((meta) => meta.name === \"description\")?.content;\n            const hasOgTitle = resolvedMeta.some((meta) => meta.property === \"og:title\");\n            const hasOgImage = resolvedMeta.some((meta) => meta.property === \"og:image\");\n            const hasTwitterCard = resolvedMeta.some((meta) => meta.name === \"twitter:card\");\n            const hasOgDescription = resolvedMeta.some((meta) => meta.property === \"og:description\");\n            entry[inputKey].meta = input.meta || [];\n            if (!hasOgTitle && (input.titleTemplate || input.title)) {\n              let newOgTitle = options?.ogTitle || titleTemplate || input.title;\n              if (typeof newOgTitle === \"function\")\n                newOgTitle = newOgTitle(title);\n              if (newOgTitle) {\n                entry[inputKey].meta.push({\n                  property: \"og:title\",\n                  // have the og:title be removed if we don't have a title\n                  content: String(newOgTitle)\n                });\n              }\n            }\n            if (description && !hasOgDescription) {\n              let newOgDescription = options?.ogDescription || description;\n              if (typeof newOgDescription === \"function\")\n                newOgDescription = newOgDescription(title);\n              if (newOgDescription) {\n                entry[inputKey].meta.push({\n                  property: \"og:description\",\n                  content: String(newOgDescription)\n                });\n              }\n            }\n            if (hasOgImage && !hasTwitterCard) {\n              entry[inputKey].meta.push({\n                name: \"twitter:card\",\n                content: options?.twitterCard || \"summary_large_image\"\n              });\n            }\n          }\n        }\n      }\n    }\n  });\n}\n\nconst DefaultCriticalTags = {\n  htmlAttrs: {\n    lang: \"en\"\n  },\n  meta: [\n    { charset: \"utf-8\" },\n    { name: \"viewport\", content: \"width=device-width, initial-scale=1\" }\n  ]\n};\n\nexport { DefaultCriticalTags, InferSeoMetaPlugin };\n",
+      "start": 1713208768128,
+      "end": 1713208768246,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1713208768246,
+      "end": 1713208768246,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1713208768246,
+      "end": 1713208768246,
+      "order": "pre"
+    },
+    {
+      "name": "unplugin-vue-i18n",
+      "start": 1713208768246,
+      "end": 1713208768246,
+      "order": "pre"
+    },
+    {
+      "name": "nuxtjs:i18n-macros-transform",
+      "start": 1713208768246,
+      "end": 1713208768246,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1713208768246,
+      "end": 1713208768246,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1713208768246,
+      "end": 1713208768246,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1713208768246,
+      "end": 1713208768246,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1713208768246,
+      "end": 1713208768246,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1713208768246,
+      "end": 1713208768246,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1713208768246,
+      "end": 1713208768246,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1713208768246,
+      "end": 1713208768246,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1713208768246,
+      "end": 1713208768246,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1713208768246,
+      "end": 1713208768246,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1713208768246,
+      "end": 1713208768246,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1713208768247,
+      "end": 1713208768247,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1713208768247,
+      "end": 1713208768247,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1713208768247,
+      "end": 1713208768247,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1713208768247,
+      "end": 1713208768247,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1713208768247,
+      "end": 1713208768247,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1713208768247,
+      "end": 1713208768247,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1713208768247,
+      "end": 1713208768247,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1713208768247,
+      "end": 1713208768247,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1713208768247,
+      "end": 1713208768247,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1713208768247,
+      "end": 1713208768247,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1713208768247,
+      "end": 1713208768247,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1713208768247,
+      "end": 1713208768247,
+      "order": "post"
+    },
+    {
+      "name": "unhead:use-seo-meta-transform",
+      "start": 1713208768247,
+      "end": 1713208768247,
+      "order": "post"
+    },
+    {
+      "name": "nuxtjs:i18n-resource",
+      "start": 1713208768247,
+      "end": 1713208768247,
+      "order": "post"
+    },
+    {
+      "name": "nuxtjs:i18n-meta-deprecation",
+      "start": 1713208768247,
+      "end": 1713208768247,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1713208768247,
+      "end": 1713208768247,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1713208768247,
+      "end": 1713208768247,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1713208768247,
+      "end": 1713208768247,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1713208768247,
+      "end": 1713208768247,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1713208768247,
+      "end": 1713208768247,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1713208768247,
+      "end": 1713208768248,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1713208768248,
+      "end": 1713208768248,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1713208768248,
+      "end": 1713208768248,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1713208768248,
+      "end": 1713208768248,
+      "order": "normal"
+    }
+  ]
+}

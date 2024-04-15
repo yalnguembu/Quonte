@@ -1,0 +1,251 @@
+{
+  "resolvedId": "/home/yalnguembu/Perso/quonte/components/OgImage/LandingPage.vue?vue&type=script&setup=true&lang.ts",
+  "transforms": [
+    {
+      "name": "vite:vue",
+      "result": "import { defineComponent as _defineComponent } from 'vue'\nimport { createElementVNode as _createElementVNode, toDisplayString as _toDisplayString, openBlock as _openBlock, createElementBlock as _createElementBlock } from \"vue\"\nimport _imports_0 from '/logo.svg'\n\n\nconst _hoisted_1 = { class: \"w-full flex px-2 py-4 justify-between\" }\nconst _hoisted_2 = { class: \"flex justify-center items-center\" }\nconst _hoisted_3 = { class: \"w-4/5 mx-auto flex justify-center items-center relative lg:w-full\" }\nconst _hoisted_4 = [\"alt\"]\nconst _hoisted_5 = { class: \"w-full flex justify-center items-center absolute\" }\nconst _hoisted_6 = [\"alt\"]\nconst _hoisted_7 = { class: \"w-3/4\" }\nconst _hoisted_8 = { class: \"border\" }\nconst _hoisted_9 = { class: \"text-lg font-bold text-green-800 dark:text-green-200 mt-4\" }\nconst _hoisted_10 = { class: \"text-5xl font-bold text-gray-900 dark:text-green-200 bord lg:text-7xl xl:mb-8 text-pretty\" }\nconst _hoisted_11 = { class: \"text-lg text-gray-800 dark:text-gray-300 mt-4 lg:text-xl xl:mb-12\" }\n\n\nexport default /*#__PURE__*/_defineComponent({\n  __name: 'LandingPage',\n  props: {\n    headline: {},\n    title: {},\n    description: {},\n    alt: {}\n  },\n  setup(__props: any) {\n\n\n\nreturn (_ctx: any,_cache: any) => {\n  return (_openBlock(), _createElementBlock(\"div\", _hoisted_1, [\n    _createElementVNode(\"section\", _hoisted_2, [\n      _createElementVNode(\"div\", _hoisted_3, [\n        _createElementVNode(\"img\", {\n          src: _imports_0,\n          class: \"w-full -rotate-45 opacity-60 blur-xl dark:blur-2xl border\",\n          alt: _ctx.alt\n        }, null, 8, _hoisted_4),\n        _createElementVNode(\"div\", _hoisted_5, [\n          _createElementVNode(\"img\", {\n            src: _imports_0,\n            class: \"drop-shadow-3xl w-4/5 rotate-45\",\n            alt: _ctx.alt\n          }, null, 8, _hoisted_6)\n        ])\n      ])\n    ]),\n    _createElementVNode(\"section\", _hoisted_7, [\n      _createElementVNode(\"div\", _hoisted_8, [\n        _createElementVNode(\"h3\", _hoisted_9, _toDisplayString(_ctx.headline), 1),\n        _createElementVNode(\"h2\", _hoisted_10, _toDisplayString(_ctx.title), 1),\n        _createElementVNode(\"div\", null, [\n          _createElementVNode(\"p\", _hoisted_11, _toDisplayString(_ctx.description), 1)\n        ])\n      ])\n    ])\n  ]))\n}\n}\n\n})",
+      "start": 1713208771464,
+      "end": 1713208771464
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1713208771464,
+      "end": 1713208771464,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1713208771464,
+      "end": 1713208771464,
+      "order": "pre"
+    },
+    {
+      "name": "unplugin-vue-i18n",
+      "start": 1713208771464,
+      "end": 1713208771464,
+      "order": "pre"
+    },
+    {
+      "name": "nuxtjs:i18n-macros-transform",
+      "start": 1713208771464,
+      "end": 1713208771465,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1713208771465,
+      "end": 1713208771465,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1713208771468,
+      "end": 1713208771468,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { defineComponent as _defineComponent } from \"vue\";\nimport { createElementVNode as _createElementVNode, toDisplayString as _toDisplayString, openBlock as _openBlock, createElementBlock as _createElementBlock } from \"vue\";\nimport _imports_0 from \"/logo.svg\";\nconst _hoisted_1 = { class: \"w-full flex px-2 py-4 justify-between\" };\nconst _hoisted_2 = { class: \"flex justify-center items-center\" };\nconst _hoisted_3 = { class: \"w-4/5 mx-auto flex justify-center items-center relative lg:w-full\" };\nconst _hoisted_4 = [\"alt\"];\nconst _hoisted_5 = { class: \"w-full flex justify-center items-center absolute\" };\nconst _hoisted_6 = [\"alt\"];\nconst _hoisted_7 = { class: \"w-3/4\" };\nconst _hoisted_8 = { class: \"border\" };\nconst _hoisted_9 = { class: \"text-lg font-bold text-green-800 dark:text-green-200 mt-4\" };\nconst _hoisted_10 = { class: \"text-5xl font-bold text-gray-900 dark:text-green-200 bord lg:text-7xl xl:mb-8 text-pretty\" };\nconst _hoisted_11 = { class: \"text-lg text-gray-800 dark:text-gray-300 mt-4 lg:text-xl xl:mb-12\" };\nexport default /* @__PURE__ */ _defineComponent({\n  __name: \"LandingPage\",\n  props: {\n    headline: {},\n    title: {},\n    description: {},\n    alt: {}\n  },\n  setup(__props) {\n    return (_ctx, _cache) => {\n      return _openBlock(), _createElementBlock(\"div\", _hoisted_1, [\n        _createElementVNode(\"section\", _hoisted_2, [\n          _createElementVNode(\"div\", _hoisted_3, [\n            _createElementVNode(\"img\", {\n              src: _imports_0,\n              class: \"w-full -rotate-45 opacity-60 blur-xl dark:blur-2xl border\",\n              alt: _ctx.alt\n            }, null, 8, _hoisted_4),\n            _createElementVNode(\"div\", _hoisted_5, [\n              _createElementVNode(\"img\", {\n                src: _imports_0,\n                class: \"drop-shadow-3xl w-4/5 rotate-45\",\n                alt: _ctx.alt\n              }, null, 8, _hoisted_6)\n            ])\n          ])\n        ]),\n        _createElementVNode(\"section\", _hoisted_7, [\n          _createElementVNode(\"div\", _hoisted_8, [\n            _createElementVNode(\"h3\", _hoisted_9, _toDisplayString(_ctx.headline), 1),\n            _createElementVNode(\"h2\", _hoisted_10, _toDisplayString(_ctx.title), 1),\n            _createElementVNode(\"div\", null, [\n              _createElementVNode(\"p\", _hoisted_11, _toDisplayString(_ctx.description), 1)\n            ])\n          ])\n        ])\n      ]);\n    };\n  }\n});\n",
+      "start": 1713208771468,
+      "end": 1713208771590,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "/home/yalnguembu/Perso/quonte/components/OgImage/LandingPage.vue?vue&type=script&setup=true&lang.ts"
+        ],
+        "sourcesContent": [
+          "import { defineComponent as _defineComponent } from 'vue'\nimport { createElementVNode as _createElementVNode, toDisplayString as _toDisplayString, openBlock as _openBlock, createElementBlock as _createElementBlock } from \"vue\"\nimport _imports_0 from '/logo.svg'\n\n\nconst _hoisted_1 = { class: \"w-full flex px-2 py-4 justify-between\" }\nconst _hoisted_2 = { class: \"flex justify-center items-center\" }\nconst _hoisted_3 = { class: \"w-4/5 mx-auto flex justify-center items-center relative lg:w-full\" }\nconst _hoisted_4 = [\"alt\"]\nconst _hoisted_5 = { class: \"w-full flex justify-center items-center absolute\" }\nconst _hoisted_6 = [\"alt\"]\nconst _hoisted_7 = { class: \"w-3/4\" }\nconst _hoisted_8 = { class: \"border\" }\nconst _hoisted_9 = { class: \"text-lg font-bold text-green-800 dark:text-green-200 mt-4\" }\nconst _hoisted_10 = { class: \"text-5xl font-bold text-gray-900 dark:text-green-200 bord lg:text-7xl xl:mb-8 text-pretty\" }\nconst _hoisted_11 = { class: \"text-lg text-gray-800 dark:text-gray-300 mt-4 lg:text-xl xl:mb-12\" }\n\n\nexport default /*#__PURE__*/_defineComponent({\n  __name: 'LandingPage',\n  props: {\n    headline: {},\n    title: {},\n    description: {},\n    alt: {}\n  },\n  setup(__props: any) {\n\n\n\nreturn (_ctx: any,_cache: any) => {\n  return (_openBlock(), _createElementBlock(\"div\", _hoisted_1, [\n    _createElementVNode(\"section\", _hoisted_2, [\n      _createElementVNode(\"div\", _hoisted_3, [\n        _createElementVNode(\"img\", {\n          src: _imports_0,\n          class: \"w-full -rotate-45 opacity-60 blur-xl dark:blur-2xl border\",\n          alt: _ctx.alt\n        }, null, 8, _hoisted_4),\n        _createElementVNode(\"div\", _hoisted_5, [\n          _createElementVNode(\"img\", {\n            src: _imports_0,\n            class: \"drop-shadow-3xl w-4/5 rotate-45\",\n            alt: _ctx.alt\n          }, null, 8, _hoisted_6)\n        ])\n      ])\n    ]),\n    _createElementVNode(\"section\", _hoisted_7, [\n      _createElementVNode(\"div\", _hoisted_8, [\n        _createElementVNode(\"h3\", _hoisted_9, _toDisplayString(_ctx.headline), 1),\n        _createElementVNode(\"h2\", _hoisted_10, _toDisplayString(_ctx.title), 1),\n        _createElementVNode(\"div\", null, [\n          _createElementVNode(\"p\", _hoisted_11, _toDisplayString(_ctx.description), 1)\n        ])\n      ])\n    ])\n  ]))\n}\n}\n\n})"
+        ],
+        "mappings": "AAAA,SAAS,mBAAmB,wBAAwB;AACpD,SAAS,sBAAsB,qBAAqB,mBAAmB,kBAAkB,aAAa,YAAY,sBAAsB,2BAA2B;AACnK,OAAO,gBAAgB;AAGvB,MAAM,aAAa,EAAE,OAAO,wCAAwC;AACpE,MAAM,aAAa,EAAE,OAAO,mCAAmC;AAC/D,MAAM,aAAa,EAAE,OAAO,oEAAoE;AAChG,MAAM,aAAa,CAAC,KAAK;AACzB,MAAM,aAAa,EAAE,OAAO,mDAAmD;AAC/E,MAAM,aAAa,CAAC,KAAK;AACzB,MAAM,aAAa,EAAE,OAAO,QAAQ;AACpC,MAAM,aAAa,EAAE,OAAO,SAAS;AACrC,MAAM,aAAa,EAAE,OAAO,4DAA4D;AACxF,MAAM,cAAc,EAAE,OAAO,4FAA4F;AACzH,MAAM,cAAc,EAAE,OAAO,oEAAoE;AAGjG,eAA4B,iCAAiB;AAAA,EAC3C,QAAQ;AAAA,EACR,OAAO;AAAA,IACL,UAAU,CAAC;AAAA,IACX,OAAO,CAAC;AAAA,IACR,aAAa,CAAC;AAAA,IACd,KAAK,CAAC;AAAA,EACR;AAAA,EACA,MAAM,SAAc;AAItB,WAAO,CAAC,MAAU,WAAgB;AAChC,aAAQ,WAAW,GAAG,oBAAoB,OAAO,YAAY;AAAA,QAC3D,oBAAoB,WAAW,YAAY;AAAA,UACzC,oBAAoB,OAAO,YAAY;AAAA,YACrC,oBAAoB,OAAO;AAAA,cACzB,KAAK;AAAA,cACL,OAAO;AAAA,cACP,KAAK,KAAK;AAAA,YACZ,GAAG,MAAM,GAAG,UAAU;AAAA,YACtB,oBAAoB,OAAO,YAAY;AAAA,cACrC,oBAAoB,OAAO;AAAA,gBACzB,KAAK;AAAA,gBACL,OAAO;AAAA,gBACP,KAAK,KAAK;AAAA,cACZ,GAAG,MAAM,GAAG,UAAU;AAAA,YACxB,CAAC;AAAA,UACH,CAAC;AAAA,QACH,CAAC;AAAA,QACD,oBAAoB,WAAW,YAAY;AAAA,UACzC,oBAAoB,OAAO,YAAY;AAAA,YACrC,oBAAoB,MAAM,YAAY,iBAAiB,KAAK,QAAQ,GAAG,CAAC;AAAA,YACxE,oBAAoB,MAAM,aAAa,iBAAiB,KAAK,KAAK,GAAG,CAAC;AAAA,YACtE,oBAAoB,OAAO,MAAM;AAAA,cAC/B,oBAAoB,KAAK,aAAa,iBAAiB,KAAK,WAAW,GAAG,CAAC;AAAA,YAC7E,CAAC;AAAA,UACH,CAAC;AAAA,QACH,CAAC;AAAA,MACH,CAAC;AAAA,IACH;AAAA,EACA;AAEA,CAAC;",
+        "names": []
+      }
+    },
+    {
+      "name": "vite:json",
+      "start": 1713208771590,
+      "end": 1713208771590,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1713208771590,
+      "end": 1713208771590,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1713208771591,
+      "end": 1713208771591,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1713208771591,
+      "end": 1713208771591,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1713208771591,
+      "end": 1713208771591,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1713208771591,
+      "end": 1713208771591,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1713208771591,
+      "end": 1713208771591,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1713208771592,
+      "end": 1713208771592,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1713208771592,
+      "end": 1713208771592,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1713208771592,
+      "end": 1713208771592,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1713208771593,
+      "end": 1713208771593,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1713208771593,
+      "end": 1713208771593,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1713208771593,
+      "end": 1713208771593,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1713208771593,
+      "end": 1713208771593,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1713208771593,
+      "end": 1713208771593,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1713208771593,
+      "end": 1713208771593,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1713208771593,
+      "end": 1713208771593,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1713208771593,
+      "end": 1713208771593,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1713208771593,
+      "end": 1713208771593,
+      "order": "post"
+    },
+    {
+      "name": "unhead:use-seo-meta-transform",
+      "start": 1713208771594,
+      "end": 1713208771594,
+      "order": "post"
+    },
+    {
+      "name": "nuxtjs:i18n-resource",
+      "start": 1713208771594,
+      "end": 1713208771594,
+      "order": "post"
+    },
+    {
+      "name": "nuxtjs:i18n-meta-deprecation",
+      "start": 1713208771594,
+      "end": 1713208771594,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1713208771594,
+      "end": 1713208771598,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1713208771600,
+      "end": 1713208771600,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1713208771600,
+      "end": 1713208771600,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1713208771600,
+      "end": 1713208771600,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1713208771601,
+      "end": 1713208771601,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1713208771601,
+      "end": 1713208771601,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1713208771601,
+      "end": 1713208771601,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1713208771602,
+      "end": 1713208771602,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1713208771603,
+      "end": 1713208771603,
+      "order": "normal"
+    }
+  ]
+}
