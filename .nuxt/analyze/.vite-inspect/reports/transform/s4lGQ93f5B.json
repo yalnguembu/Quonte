@@ -1,0 +1,252 @@
+{
+  "resolvedId": "/home/yalnguembu/Perso/quonte/services/services/AuthService.ts",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "/* generated using openapi-typescript-codegen -- do not edit */\n/* istanbul ignore file */\n/* tslint:disable */\n/* eslint-disable */\nimport type { AccessTokenDTO } from '../models/AccessTokenDTO';\nimport type { AuthDTO } from '../models/AuthDTO';\nimport type { AuthResponseDTO } from '../models/AuthResponseDTO';\nimport type { RefreshTokenDTO } from '../models/RefreshTokenDTO';\nimport type { RefreshTokenResponseDTO } from '../models/RefreshTokenResponseDTO';\nimport type { SignUpDTO } from '../models/SignUpDTO';\nimport type { CancelablePromise } from '../core/CancelablePromise';\nimport { OpenAPI } from '../core/OpenAPI';\nimport { request as __request } from '../core/request';\nexport class AuthService {\n    /**\n     * Singin the user\n     * Signin the user\n     * @returns AuthResponseDTO successfull sigin\n     * @throws ApiError\n     */\n    public static signin({\n        requestBody,\n    }: {\n        /**\n         * Auth object that we need to signin\n         */\n        requestBody: AuthDTO,\n    }): CancelablePromise<AuthResponseDTO> {\n        return __request(OpenAPI, {\n            method: 'POST',\n            url: '/auth/signin',\n            body: requestBody,\n            mediaType: 'application/json',\n            errors: {\n                403: `wrong crudentials`,\n            },\n        });\n    }\n    /**\n     * Signup the user\n     * Signup the user\n     * @returns AuthResponseDTO successfull sigin\n     * @throws ApiError\n     */\n    public static signup({\n        requestBody,\n    }: {\n        /**\n         * Auth object that we need to signup\n         */\n        requestBody: SignUpDTO,\n    }): CancelablePromise<AuthResponseDTO> {\n        return __request(OpenAPI, {\n            method: 'POST',\n            url: '/auth/signup',\n            body: requestBody,\n            mediaType: 'application/json',\n            errors: {\n                403: `wrong crudentials`,\n            },\n        });\n    }\n    /**\n     * refresh the user token\n     * refresh the user token\n     * @returns RefreshTokenResponseDTO token refreshed successfully\n     * @throws ApiError\n     */\n    public static refreshToken({\n        requestBody,\n    }: {\n        /**\n         * refresh token that we need to refresh the token\n         */\n        requestBody: RefreshTokenDTO,\n    }): CancelablePromise<RefreshTokenResponseDTO> {\n        return __request(OpenAPI, {\n            method: 'POST',\n            url: '/auth/refresh-token',\n            body: requestBody,\n            mediaType: 'application/json',\n            errors: {\n                403: `invalid refresh token`,\n            },\n        });\n    }\n    /**\n     * verify the user token\n     * verify the user token\n     * @returns any token verifyhed successfully\n     * @throws ApiError\n     */\n    public static verifyToken({\n        requestBody,\n    }: {\n        /**\n         * verify token that we need to verify the token\n         */\n        requestBody: AccessTokenDTO,\n    }): CancelablePromise<any> {\n        return __request(OpenAPI, {\n            method: 'POST',\n            url: '/auth/verify-access-token',\n            body: requestBody,\n            mediaType: 'application/json',\n            errors: {\n                403: `invalid refresh token`,\n            },\n        });\n    }\n}\n",
+      "start": 1713208772374,
+      "end": 1713208772451,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1713208772451,
+      "end": 1713208772451,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1713208772451,
+      "end": 1713208772451,
+      "order": "pre"
+    },
+    {
+      "name": "unplugin-vue-i18n",
+      "start": 1713208772451,
+      "end": 1713208772451,
+      "order": "pre"
+    },
+    {
+      "name": "nuxtjs:i18n-macros-transform",
+      "start": 1713208772451,
+      "end": 1713208772451,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1713208772451,
+      "end": 1713208772451,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1713208772451,
+      "end": 1713208772451,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { OpenAPI } from \"../core/OpenAPI\";\nimport { request as __request } from \"../core/request\";\nexport class AuthService {\n  /**\n   * Singin the user\n   * Signin the user\n   * @returns AuthResponseDTO successfull sigin\n   * @throws ApiError\n   */\n  static signin({\n    requestBody\n  }) {\n    return __request(OpenAPI, {\n      method: \"POST\",\n      url: \"/auth/signin\",\n      body: requestBody,\n      mediaType: \"application/json\",\n      errors: {\n        403: `wrong crudentials`\n      }\n    });\n  }\n  /**\n   * Signup the user\n   * Signup the user\n   * @returns AuthResponseDTO successfull sigin\n   * @throws ApiError\n   */\n  static signup({\n    requestBody\n  }) {\n    return __request(OpenAPI, {\n      method: \"POST\",\n      url: \"/auth/signup\",\n      body: requestBody,\n      mediaType: \"application/json\",\n      errors: {\n        403: `wrong crudentials`\n      }\n    });\n  }\n  /**\n   * refresh the user token\n   * refresh the user token\n   * @returns RefreshTokenResponseDTO token refreshed successfully\n   * @throws ApiError\n   */\n  static refreshToken({\n    requestBody\n  }) {\n    return __request(OpenAPI, {\n      method: \"POST\",\n      url: \"/auth/refresh-token\",\n      body: requestBody,\n      mediaType: \"application/json\",\n      errors: {\n        403: `invalid refresh token`\n      }\n    });\n  }\n  /**\n   * verify the user token\n   * verify the user token\n   * @returns any token verifyhed successfully\n   * @throws ApiError\n   */\n  static verifyToken({\n    requestBody\n  }) {\n    return __request(OpenAPI, {\n      method: \"POST\",\n      url: \"/auth/verify-access-token\",\n      body: requestBody,\n      mediaType: \"application/json\",\n      errors: {\n        403: `invalid refresh token`\n      }\n    });\n  }\n}\n",
+      "start": 1713208772451,
+      "end": 1713208772463,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "/home/yalnguembu/Perso/quonte/services/services/AuthService.ts"
+        ],
+        "sourcesContent": [
+          "/* generated using openapi-typescript-codegen -- do not edit */\n/* istanbul ignore file */\n/* tslint:disable */\n/* eslint-disable */\nimport type { AccessTokenDTO } from '../models/AccessTokenDTO';\nimport type { AuthDTO } from '../models/AuthDTO';\nimport type { AuthResponseDTO } from '../models/AuthResponseDTO';\nimport type { RefreshTokenDTO } from '../models/RefreshTokenDTO';\nimport type { RefreshTokenResponseDTO } from '../models/RefreshTokenResponseDTO';\nimport type { SignUpDTO } from '../models/SignUpDTO';\nimport type { CancelablePromise } from '../core/CancelablePromise';\nimport { OpenAPI } from '../core/OpenAPI';\nimport { request as __request } from '../core/request';\nexport class AuthService {\n    /**\n     * Singin the user\n     * Signin the user\n     * @returns AuthResponseDTO successfull sigin\n     * @throws ApiError\n     */\n    public static signin({\n        requestBody,\n    }: {\n        /**\n         * Auth object that we need to signin\n         */\n        requestBody: AuthDTO,\n    }): CancelablePromise<AuthResponseDTO> {\n        return __request(OpenAPI, {\n            method: 'POST',\n            url: '/auth/signin',\n            body: requestBody,\n            mediaType: 'application/json',\n            errors: {\n                403: `wrong crudentials`,\n            },\n        });\n    }\n    /**\n     * Signup the user\n     * Signup the user\n     * @returns AuthResponseDTO successfull sigin\n     * @throws ApiError\n     */\n    public static signup({\n        requestBody,\n    }: {\n        /**\n         * Auth object that we need to signup\n         */\n        requestBody: SignUpDTO,\n    }): CancelablePromise<AuthResponseDTO> {\n        return __request(OpenAPI, {\n            method: 'POST',\n            url: '/auth/signup',\n            body: requestBody,\n            mediaType: 'application/json',\n            errors: {\n                403: `wrong crudentials`,\n            },\n        });\n    }\n    /**\n     * refresh the user token\n     * refresh the user token\n     * @returns RefreshTokenResponseDTO token refreshed successfully\n     * @throws ApiError\n     */\n    public static refreshToken({\n        requestBody,\n    }: {\n        /**\n         * refresh token that we need to refresh the token\n         */\n        requestBody: RefreshTokenDTO,\n    }): CancelablePromise<RefreshTokenResponseDTO> {\n        return __request(OpenAPI, {\n            method: 'POST',\n            url: '/auth/refresh-token',\n            body: requestBody,\n            mediaType: 'application/json',\n            errors: {\n                403: `invalid refresh token`,\n            },\n        });\n    }\n    /**\n     * verify the user token\n     * verify the user token\n     * @returns any token verifyhed successfully\n     * @throws ApiError\n     */\n    public static verifyToken({\n        requestBody,\n    }: {\n        /**\n         * verify token that we need to verify the token\n         */\n        requestBody: AccessTokenDTO,\n    }): CancelablePromise<any> {\n        return __request(OpenAPI, {\n            method: 'POST',\n            url: '/auth/verify-access-token',\n            body: requestBody,\n            mediaType: 'application/json',\n            errors: {\n                403: `invalid refresh token`,\n            },\n        });\n    }\n}\n"
+        ],
+        "mappings": "AAWA,SAAS,eAAe;AACxB,SAAS,WAAW,iBAAiB;AAC9B,aAAM,YAAY;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,EAOrB,OAAc,OAAO;AAAA,IACjB;AAAA,EACJ,GAKuC;AACnC,WAAO,UAAU,SAAS;AAAA,MACtB,QAAQ;AAAA,MACR,KAAK;AAAA,MACL,MAAM;AAAA,MACN,WAAW;AAAA,MACX,QAAQ;AAAA,QACJ,KAAK;AAAA,MACT;AAAA,IACJ,CAAC;AAAA,EACL;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,EAOA,OAAc,OAAO;AAAA,IACjB;AAAA,EACJ,GAKuC;AACnC,WAAO,UAAU,SAAS;AAAA,MACtB,QAAQ;AAAA,MACR,KAAK;AAAA,MACL,MAAM;AAAA,MACN,WAAW;AAAA,MACX,QAAQ;AAAA,QACJ,KAAK;AAAA,MACT;AAAA,IACJ,CAAC;AAAA,EACL;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,EAOA,OAAc,aAAa;AAAA,IACvB;AAAA,EACJ,GAK+C;AAC3C,WAAO,UAAU,SAAS;AAAA,MACtB,QAAQ;AAAA,MACR,KAAK;AAAA,MACL,MAAM;AAAA,MACN,WAAW;AAAA,MACX,QAAQ;AAAA,QACJ,KAAK;AAAA,MACT;AAAA,IACJ,CAAC;AAAA,EACL;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,EAOA,OAAc,YAAY;AAAA,IACtB;AAAA,EACJ,GAK2B;AACvB,WAAO,UAAU,SAAS;AAAA,MACtB,QAAQ;AAAA,MACR,KAAK;AAAA,MACL,MAAM;AAAA,MACN,WAAW;AAAA,MACX,QAAQ;AAAA,QACJ,KAAK;AAAA,MACT;AAAA,IACJ,CAAC;AAAA,EACL;AACJ;",
+        "names": []
+      }
+    },
+    {
+      "name": "vite:json",
+      "start": 1713208772463,
+      "end": 1713208772463,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1713208772463,
+      "end": 1713208772463,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1713208772464,
+      "end": 1713208772464,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1713208772464,
+      "end": 1713208772464,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1713208772464,
+      "end": 1713208772464,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1713208772464,
+      "end": 1713208772464,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1713208772464,
+      "end": 1713208772464,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1713208772464,
+      "end": 1713208772464,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1713208772465,
+      "end": 1713208772465,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1713208772465,
+      "end": 1713208772465,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1713208772465,
+      "end": 1713208772465,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1713208772465,
+      "end": 1713208772465,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1713208772465,
+      "end": 1713208772465,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1713208772465,
+      "end": 1713208772465,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1713208772465,
+      "end": 1713208772465,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1713208772465,
+      "end": 1713208772465,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1713208772465,
+      "end": 1713208772465,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1713208772465,
+      "end": 1713208772465,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1713208772466,
+      "end": 1713208772466,
+      "order": "post"
+    },
+    {
+      "name": "unhead:use-seo-meta-transform",
+      "start": 1713208772466,
+      "end": 1713208772466,
+      "order": "post"
+    },
+    {
+      "name": "nuxtjs:i18n-resource",
+      "start": 1713208772466,
+      "end": 1713208772466,
+      "order": "post"
+    },
+    {
+      "name": "nuxtjs:i18n-meta-deprecation",
+      "start": 1713208772466,
+      "end": 1713208772466,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1713208772467,
+      "end": 1713208772472,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1713208772472,
+      "end": 1713208772472,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1713208772472,
+      "end": 1713208772472,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1713208772472,
+      "end": 1713208772472,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1713208772473,
+      "end": 1713208772473,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1713208772473,
+      "end": 1713208772473,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1713208772473,
+      "end": 1713208772473,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1713208772473,
+      "end": 1713208772474,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1713208772474,
+      "end": 1713208772474,
+      "order": "normal"
+    }
+  ]
+}

@@ -1,0 +1,340 @@
+{
+  "resolvedId": "/home/yalnguembu/Perso/quonte/components/form/EmailInput.vue?vue&type=script&setup=true&lang.ts",
+  "transforms": [
+    {
+      "name": "vite:vue",
+      "result": "import { defineComponent as _defineComponent } from 'vue'\nimport { mergeProps as _mergeProps } from \"vue\"\nimport { ssrRenderClass as _ssrRenderClass, ssrRenderAttr as _ssrRenderAttr, ssrRenderAttrs as _ssrRenderAttrs, ssrInterpolate as _ssrInterpolate, ssrRenderList as _ssrRenderList } from \"vue/server-renderer\"\n\nimport type { ErrorObject } from \"@vuelidate/core\";\n\n\nexport default /*#__PURE__*/_defineComponent({\n  __name: 'EmailInput',\n  __ssrInlineRender: true,\n  props: {\n    modelValue: {},\n    label: {},\n    placeholder: {},\n    errors: { default: () => [] },\n    isValid: { type: Boolean, default: false }\n  },\n  emits: [\"update:modelValue\"],\n  setup(__props: any, { emit: __emit }) {\n\nconst emit = __emit;\n\n\n\nreturn (_ctx: any,_push: any,_parent: any,_attrs: any) => {\n  _push(`<div${\n    _ssrRenderAttrs(_mergeProps({ class: \"w-full\" }, _attrs))\n  }><label class=\"font-500 dark:text-gray-100\" data-test=\"email-input-label\">${\n    _ssrInterpolate(_ctx.label)\n  }</label><input class=\"${\n    _ssrRenderClass([\n        'rounded border px-3 py-1 w-full mt-2 bg-transparent outline-none dark:text-gray-100 dark:border-gray-700',\n        _ctx.isValid\n          ? 'outline-green-500 dark:outline-green-600'\n          : _ctx.errors.length\n          ? 'outline-red-500'\n          : 'focus:outline-blue-500 dark:focus:outline-blue-600',\n      ])\n  }\" type=\"email\"${\n    _ssrRenderAttr(\"placeholder\", _ctx.placeholder)\n  }${\n    _ssrRenderAttr(\"value\", _ctx.modelValue)\n  }><!--[-->`)\n  _ssrRenderList(_ctx.errors, (error) => {\n    _push(`<p${\n      _ssrRenderAttr(\"data-test\", `email-input-error-${error.$uid}`)\n    } class=\"pt-1 text-red-500 transition delay-500 text-sm\">${\n      _ssrInterpolate(error.$message)\n    }</p>`)\n  })\n  _push(`<!--]--></div>`)\n}\n}\n\n})",
+      "start": 1713208780000,
+      "end": 1713208780000,
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "/home/yalnguembu/Perso/quonte/components/form/EmailInput.vue"
+        ],
+        "sourcesContent": [
+          "<template>\n  <div class=\"w-full\">\n    <label class=\"font-500 dark:text-gray-100\" data-test=\"email-input-label\">\n      {{ label }}\n    </label>\n    <input\n      :class=\"[\n        'rounded border px-3 py-1 w-full mt-2 bg-transparent outline-none dark:text-gray-100 dark:border-gray-700',\n        isValid\n          ? 'outline-green-500 dark:outline-green-600'\n          : errors.length\n          ? 'outline-red-500'\n          : 'focus:outline-blue-500 dark:focus:outline-blue-600',\n      ]\"\n      type=\"email\"\n      :placeholder=\"placeholder\"\n      :value=\"modelValue\"\n      @input=\"(event :Event)=>emit('update:modelValue', (event.target as HTMLInputElement).value)\"\n    />\n    <p\n      :data-test=\"`email-input-error-${error.$uid}`\"\n      v-for=\"error in errors\"\n      :key=\"error.$uid\"\n      class=\"pt-1 text-red-500 transition delay-500 text-sm\"\n    >\n      {{ error.$message }}\n    </p>\n  </div>\n</template>\n<script setup lang=\"ts\">\nimport type { ErrorObject } from \"@vuelidate/core\";\n\nconst emit = defineEmits([\"update:modelValue\"]);\n\nwithDefaults(\n  defineProps<{\n    modelValue: string;\n    label?: string;\n    placeholder?: string;\n    errors?: ErrorObject[];\n    isValid?: boolean;\n  }>(),\n  {\n    isValid: false,\n    errors: () => [],\n  }\n);\n</script>\n"
+        ],
+        "names": [],
+        "mappings": ";;;;AA8BA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnD;;;;;;;;;;;;;;AAFwB;AAGxB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,MAAkC,CAAC;AAChD;AAaE;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;"
+      }
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1713208780000,
+      "end": 1713208780000,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1713208780000,
+      "end": 1713208780000,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1713208780000,
+      "end": 1713208780000,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1713208780000,
+      "end": 1713208780000,
+      "order": "pre"
+    },
+    {
+      "name": "unplugin-vue-i18n",
+      "start": 1713208780000,
+      "end": 1713208780000,
+      "order": "pre"
+    },
+    {
+      "name": "unplugin-vue-i18n",
+      "start": 1713208780000,
+      "end": 1713208780000,
+      "order": "pre"
+    },
+    {
+      "name": "nuxtjs:i18n-macros-transform",
+      "start": 1713208780000,
+      "end": 1713208780001,
+      "order": "pre"
+    },
+    {
+      "name": "nuxtjs:i18n-macros-transform",
+      "start": 1713208780000,
+      "end": 1713208780001,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1713208780001,
+      "end": 1713208780001,
+      "order": "pre"
+    },
+    {
+      "name": "server-only-component-transform",
+      "start": 1713208780001,
+      "end": 1713208780001,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1713208780001,
+      "end": 1713208780001,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { defineComponent as _defineComponent } from \"vue\";\nimport { mergeProps as _mergeProps } from \"vue\";\nimport { ssrRenderClass as _ssrRenderClass, ssrRenderAttr as _ssrRenderAttr, ssrRenderAttrs as _ssrRenderAttrs, ssrInterpolate as _ssrInterpolate, ssrRenderList as _ssrRenderList } from \"vue/server-renderer\";\nexport default /* @__PURE__ */ _defineComponent({\n  __name: \"EmailInput\",\n  __ssrInlineRender: true,\n  props: {\n    modelValue: {},\n    label: {},\n    placeholder: {},\n    errors: { default: () => [] },\n    isValid: { type: Boolean, default: false }\n  },\n  emits: [\"update:modelValue\"],\n  setup(__props, { emit: __emit }) {\n    const emit = __emit;\n    return (_ctx, _push, _parent, _attrs) => {\n      _push(`<div${_ssrRenderAttrs(_mergeProps({ class: \"w-full\" }, _attrs))}><label class=\"font-500 dark:text-gray-100\" data-test=\"email-input-label\">${_ssrInterpolate(_ctx.label)}</label><input class=\"${_ssrRenderClass([\n        \"rounded border px-3 py-1 w-full mt-2 bg-transparent outline-none dark:text-gray-100 dark:border-gray-700\",\n        _ctx.isValid ? \"outline-green-500 dark:outline-green-600\" : _ctx.errors.length ? \"outline-red-500\" : \"focus:outline-blue-500 dark:focus:outline-blue-600\"\n      ])}\" type=\"email\"${_ssrRenderAttr(\"placeholder\", _ctx.placeholder)}${_ssrRenderAttr(\"value\", _ctx.modelValue)}><!--[-->`);\n      _ssrRenderList(_ctx.errors, (error) => {\n        _push(`<p${_ssrRenderAttr(\"data-test\", `email-input-error-${error.$uid}`)} class=\"pt-1 text-red-500 transition delay-500 text-sm\">${_ssrInterpolate(error.$message)}</p>`);\n      });\n      _push(`<!--]--></div>`);\n    };\n  }\n});\n",
+      "start": 1713208780001,
+      "end": 1713208780015,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "/home/yalnguembu/Perso/quonte/components/form/EmailInput.vue?vue&type=script&setup=true&lang.ts"
+        ],
+        "sourcesContent": [
+          "import { defineComponent as _defineComponent } from 'vue'\nimport { mergeProps as _mergeProps } from \"vue\"\nimport { ssrRenderClass as _ssrRenderClass, ssrRenderAttr as _ssrRenderAttr, ssrRenderAttrs as _ssrRenderAttrs, ssrInterpolate as _ssrInterpolate, ssrRenderList as _ssrRenderList } from \"vue/server-renderer\"\n\nimport type { ErrorObject } from \"@vuelidate/core\";\n\n\nexport default /*#__PURE__*/_defineComponent({\n  __name: 'EmailInput',\n  __ssrInlineRender: true,\n  props: {\n    modelValue: {},\n    label: {},\n    placeholder: {},\n    errors: { default: () => [] },\n    isValid: { type: Boolean, default: false }\n  },\n  emits: [\"update:modelValue\"],\n  setup(__props: any, { emit: __emit }) {\n\nconst emit = __emit;\n\n\n\nreturn (_ctx: any,_push: any,_parent: any,_attrs: any) => {\n  _push(`<div${\n    _ssrRenderAttrs(_mergeProps({ class: \"w-full\" }, _attrs))\n  }><label class=\"font-500 dark:text-gray-100\" data-test=\"email-input-label\">${\n    _ssrInterpolate(_ctx.label)\n  }</label><input class=\"${\n    _ssrRenderClass([\n        'rounded border px-3 py-1 w-full mt-2 bg-transparent outline-none dark:text-gray-100 dark:border-gray-700',\n        _ctx.isValid\n          ? 'outline-green-500 dark:outline-green-600'\n          : _ctx.errors.length\n          ? 'outline-red-500'\n          : 'focus:outline-blue-500 dark:focus:outline-blue-600',\n      ])\n  }\" type=\"email\"${\n    _ssrRenderAttr(\"placeholder\", _ctx.placeholder)\n  }${\n    _ssrRenderAttr(\"value\", _ctx.modelValue)\n  }><!--[-->`)\n  _ssrRenderList(_ctx.errors, (error) => {\n    _push(`<p${\n      _ssrRenderAttr(\"data-test\", `email-input-error-${error.$uid}`)\n    } class=\"pt-1 text-red-500 transition delay-500 text-sm\">${\n      _ssrInterpolate(error.$message)\n    }</p>`)\n  })\n  _push(`<!--]--></div>`)\n}\n}\n\n})"
+        ],
+        "mappings": "AAAA,SAAS,mBAAmB,wBAAwB;AACpD,SAAS,cAAc,mBAAmB;AAC1C,SAAS,kBAAkB,iBAAiB,iBAAiB,gBAAgB,kBAAkB,iBAAiB,kBAAkB,iBAAiB,iBAAiB,sBAAsB;AAK1L,eAA4B,iCAAiB;AAAA,EAC3C,QAAQ;AAAA,EACR,mBAAmB;AAAA,EACnB,OAAO;AAAA,IACL,YAAY,CAAC;AAAA,IACb,OAAO,CAAC;AAAA,IACR,aAAa,CAAC;AAAA,IACd,QAAQ,EAAE,SAAS,MAAM,CAAC,EAAE;AAAA,IAC5B,SAAS,EAAE,MAAM,SAAS,SAAS,MAAM;AAAA,EAC3C;AAAA,EACA,OAAO,CAAC,mBAAmB;AAAA,EAC3B,MAAM,SAAc,EAAE,MAAM,OAAO,GAAG;AAExC,UAAM,OAAO;AAIb,WAAO,CAAC,MAAU,OAAW,SAAa,WAAgB;AACxD,YAAM,OACJ,gBAAgB,YAAY,EAAE,OAAO,SAAS,GAAG,MAAM,CAAC,CAC1D,6EACE,gBAAgB,KAAK,KAAK,CAC5B,yBACE,gBAAgB;AAAA,QACZ;AAAA,QACA,KAAK,UACD,6CACA,KAAK,OAAO,SACZ,oBACA;AAAA,MACN,CAAC,CACL,iBACE,eAAe,eAAe,KAAK,WAAW,CAChD,GACE,eAAe,SAAS,KAAK,UAAU,CACzC,WAAW;AACX,qBAAe,KAAK,QAAQ,CAAC,UAAU;AACrC,cAAM,KACJ,eAAe,aAAa,qBAAqB,MAAM,IAAI,EAAE,CAC/D,2DACE,gBAAgB,MAAM,QAAQ,CAChC,MAAM;AAAA,MACR,CAAC;AACD,YAAM,gBAAgB;AAAA,IACxB;AAAA,EACA;AAEA,CAAC;",
+        "names": []
+      }
+    },
+    {
+      "name": "vite:json",
+      "start": 1713208780016,
+      "end": 1713208780016,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1713208780016,
+      "end": 1713208780016,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1713208780016,
+      "end": 1713208780016,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1713208780016,
+      "end": 1713208780016,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1713208780016,
+      "end": 1713208780016,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1713208780016,
+      "end": 1713208780016,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1713208780016,
+      "end": 1713208780016,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1713208780016,
+      "end": 1713208780016,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1713208780016,
+      "end": 1713208780016,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1713208780016,
+      "end": 1713208780016,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1713208780016,
+      "end": 1713208780018,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1713208780018,
+      "end": 1713208780018,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1713208780018,
+      "end": 1713208780018,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1713208780018,
+      "end": 1713208780018,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1713208780018,
+      "end": 1713208780018,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1713208780018,
+      "end": 1713208780018,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1713208780018,
+      "end": 1713208780018,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1713208780018,
+      "end": 1713208780018,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1713208780018,
+      "end": 1713208780019,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1713208780019,
+      "end": 1713208780019,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1713208780019,
+      "end": 1713208780019,
+      "order": "post"
+    },
+    {
+      "name": "unhead:remove-server-composables",
+      "start": 1713208780019,
+      "end": 1713208780019,
+      "order": "post"
+    },
+    {
+      "name": "unhead:use-seo-meta-transform",
+      "start": 1713208780019,
+      "end": 1713208780019,
+      "order": "post"
+    },
+    {
+      "name": "unhead:use-seo-meta-transform",
+      "start": 1713208780019,
+      "end": 1713208780019,
+      "order": "post"
+    },
+    {
+      "name": "nuxtjs:i18n-resource",
+      "start": 1713208780019,
+      "end": 1713208780019,
+      "order": "post"
+    },
+    {
+      "name": "nuxtjs:i18n-resource",
+      "start": 1713208780019,
+      "end": 1713208780021,
+      "order": "post"
+    },
+    {
+      "name": "nuxtjs:i18n-meta-deprecation",
+      "start": 1713208780021,
+      "end": 1713208780021,
+      "order": "post"
+    },
+    {
+      "name": "nuxtjs:i18n-meta-deprecation",
+      "start": 1713208780021,
+      "end": 1713208780021,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1713208780021,
+      "end": 1713208780025,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1713208780021,
+      "end": 1713208780025,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1713208780025,
+      "end": 1713208780025,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1713208780025,
+      "end": 1713208780025,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1713208780025,
+      "end": 1713208780025,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1713208780025,
+      "end": 1713208780025,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-template",
+      "start": 1713208780025,
+      "end": 1713208780026,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1713208780026,
+      "end": 1713208780026,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1713208780026,
+      "end": 1713208780026,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1713208780027,
+      "end": 1713208780027,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1713208780027,
+      "end": 1713208780027,
+      "order": "normal"
+    }
+  ]
+}

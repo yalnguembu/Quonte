@@ -1,0 +1,338 @@
+{
+  "resolvedId": "/home/yalnguembu/Perso/quonte/node_modules/nuxt-site-config/dist/runtime/nuxt/composables/updateSiteConfig.mjs",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import { consola } from \"consola\";\nimport { useRequestEvent } from \"#imports\";\nexport function updateSiteConfig(input = {}) {\n  if (process.server) {\n    const stack = useRequestEvent().context.siteConfig;\n    stack.push(input);\n    return;\n  }\n  if (process.dev)\n    consola.warn(\"[Nuxt Site Config] `updateSiteConfig` is only available on server-side.\");\n}\n",
+      "start": 1713208776916,
+      "end": 1713208777189,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1713208777190,
+      "end": 1713208777190,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1713208777190,
+      "end": 1713208777190,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1713208777190,
+      "end": 1713208777190,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1713208777190,
+      "end": 1713208777190,
+      "order": "pre"
+    },
+    {
+      "name": "unplugin-vue-i18n",
+      "start": 1713208777190,
+      "end": 1713208777190,
+      "order": "pre"
+    },
+    {
+      "name": "unplugin-vue-i18n",
+      "start": 1713208777190,
+      "end": 1713208777190,
+      "order": "pre"
+    },
+    {
+      "name": "nuxtjs:i18n-macros-transform",
+      "start": 1713208777190,
+      "end": 1713208777190,
+      "order": "pre"
+    },
+    {
+      "name": "nuxtjs:i18n-macros-transform",
+      "start": 1713208777190,
+      "end": 1713208777190,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1713208777190,
+      "end": 1713208777190,
+      "order": "pre"
+    },
+    {
+      "name": "server-only-component-transform",
+      "start": 1713208777190,
+      "end": 1713208777190,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1713208777190,
+      "end": 1713208777190,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1713208777190,
+      "end": 1713208777190,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1713208777190,
+      "end": 1713208777190,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1713208777190,
+      "end": 1713208777190,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1713208777190,
+      "end": 1713208777190,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1713208777190,
+      "end": 1713208777190,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1713208777190,
+      "end": 1713208777190,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1713208777190,
+      "end": 1713208777190,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1713208777190,
+      "end": 1713208777190,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1713208777190,
+      "end": 1713208777190,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1713208777190,
+      "end": 1713208777190,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1713208777190,
+      "end": 1713208777190,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1713208777190,
+      "end": 1713208777190,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "result": "import { consola } from \"consola\";\nimport { useRequestEvent } from \"#imports\";\nexport function updateSiteConfig(input = {}) {\n  if (true) {\n    const stack = useRequestEvent().context.siteConfig;\n    stack.push(input);\n    return;\n  }\n  if (false)\n    consola.warn(\"[Nuxt Site Config] `updateSiteConfig` is only available on server-side.\");\n}\n",
+      "start": 1713208777190,
+      "end": 1713208777210,
+      "order": "normal",
+      "sourcemaps": "{\n  \"version\": 3,\n  \"sources\": [\"/home/yalnguembu/Perso/quonte/node_modules/nuxt-site-config/dist/runtime/nuxt/composables/updateSiteConfig.mjs\"],\n  \"sourcesContent\": [\"import { consola } from \\\"consola\\\";\\nimport { useRequestEvent } from \\\"#imports\\\";\\nexport function updateSiteConfig(input = {}) {\\n  if (process.server) {\\n    const stack = useRequestEvent().context.siteConfig;\\n    stack.push(input);\\n    return;\\n  }\\n  if (process.dev)\\n    consola.warn(\\\"[Nuxt Site Config] `updateSiteConfig` is only available on server-side.\\\");\\n}\\n\"],\n  \"mappings\": \"AAAA,SAAS,eAAe;AACxB,SAAS,uBAAuB;AACzB,gBAAS,iBAAiB,QAAQ,CAAC,GAAG;AAC3C,MAAI,MAAgB;AAClB,UAAM,QAAQ,gBAAgB,EAAE,QAAQ;AACxC,UAAM,KAAK,KAAK;AAChB;AAAA,EACF;AACA,MAAI;AACF,YAAQ,KAAK,yEAAyE;AAC1F;\",\n  \"names\": []\n}\n"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1713208777210,
+      "end": 1713208777210,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1713208777210,
+      "end": 1713208777210,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1713208777210,
+      "end": 1713208777210,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1713208777210,
+      "end": 1713208777210,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1713208777210,
+      "end": 1713208777210,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1713208777210,
+      "end": 1713208777210,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1713208777210,
+      "end": 1713208777210,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1713208777210,
+      "end": 1713208777210,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1713208777210,
+      "end": 1713208777210,
+      "order": "post"
+    },
+    {
+      "name": "unhead:remove-server-composables",
+      "start": 1713208777210,
+      "end": 1713208777210,
+      "order": "post"
+    },
+    {
+      "name": "unhead:use-seo-meta-transform",
+      "start": 1713208777210,
+      "end": 1713208777210,
+      "order": "post"
+    },
+    {
+      "name": "unhead:use-seo-meta-transform",
+      "start": 1713208777210,
+      "end": 1713208777210,
+      "order": "post"
+    },
+    {
+      "name": "nuxtjs:i18n-resource",
+      "start": 1713208777210,
+      "end": 1713208777210,
+      "order": "post"
+    },
+    {
+      "name": "nuxtjs:i18n-resource",
+      "start": 1713208777210,
+      "end": 1713208777210,
+      "order": "post"
+    },
+    {
+      "name": "nuxtjs:i18n-meta-deprecation",
+      "start": 1713208777210,
+      "end": 1713208777210,
+      "order": "post"
+    },
+    {
+      "name": "nuxtjs:i18n-meta-deprecation",
+      "start": 1713208777210,
+      "end": 1713208777210,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "result": "import { useRequestEvent } from '#app/composables/ssr';\nimport { consola } from \"consola\";\nexport function updateSiteConfig(input = {}) {\n  if (true) {\n    const stack = useRequestEvent().context.siteConfig;\n    stack.push(input);\n    return;\n  }\n  if (false)\n    consola.warn(\"[Nuxt Site Config] `updateSiteConfig` is only available on server-side.\");\n}\n",
+      "start": 1713208777210,
+      "end": 1713208777211,
+      "order": "post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          ""
+        ],
+        "names": [],
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAElC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACb,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACX,CAAC,CAAC,CAAC;AACH,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACZ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5F,CAAC;"
+      }
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "result": "import { useRequestEvent } from '#app/composables/ssr';\nimport { consola } from \"consola\";\nexport function updateSiteConfig(input = {}) {\n  if (true) {\n    const stack = useRequestEvent().context.siteConfig;\n    stack.push(input);\n    return;\n  }\n  if (false)\n    consola.warn(\"[Nuxt Site Config] `updateSiteConfig` is only available on server-side.\");\n}\n",
+      "start": 1713208777210,
+      "end": 1713208777211,
+      "order": "post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          ""
+        ],
+        "names": [],
+        "mappings": ";AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAElC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC9C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACb,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACvD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACX,CAAC,CAAC,CAAC;AACH,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACZ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5F,CAAC;"
+      }
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1713208777211,
+      "end": 1713208777211,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1713208777211,
+      "end": 1713208777211,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1713208777211,
+      "end": 1713208777211,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1713208777211,
+      "end": 1713208777211,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-template",
+      "start": 1713208777211,
+      "end": 1713208777211,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1713208777212,
+      "end": 1713208777212,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1713208777212,
+      "end": 1713208777212,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1713208777212,
+      "end": 1713208777212,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1713208777214,
+      "end": 1713208777214,
+      "order": "normal"
+    }
+  ]
+}

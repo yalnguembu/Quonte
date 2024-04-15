@@ -1,0 +1,340 @@
+{
+  "resolvedId": "/home/yalnguembu/Perso/quonte/components/form/PasswordInput.vue?vue&type=script&setup=true&lang.ts",
+  "transforms": [
+    {
+      "name": "vite:vue",
+      "result": "import { defineComponent as _defineComponent } from 'vue'\nimport { mergeProps as _mergeProps } from \"vue\"\nimport { ssrRenderAttr as _ssrRenderAttr, ssrRenderComponent as _ssrRenderComponent, ssrRenderClass as _ssrRenderClass, ssrRenderAttrs as _ssrRenderAttrs, ssrInterpolate as _ssrInterpolate, ssrRenderList as _ssrRenderList } from \"vue/server-renderer\"\n\nimport type { ErrorObject } from \"@vuelidate/core\";\nimport { shallowRef } from \"vue\";\nimport EyeIcon from \"../icons/EyeIcon.vue\";\nimport EyeSlashIcon from \"../icons/EyeSlashIcon.vue\";\n\n\nexport default /*#__PURE__*/_defineComponent({\n  __name: 'PasswordInput',\n  __ssrInlineRender: true,\n  props: {\n    modelValue: {},\n    label: {},\n    placeholder: {},\n    errors: { default: () => [] },\n    isValid: { type: Boolean, default: false }\n  },\n  emits: [\"update:modelValue\"],\n  setup(__props: any, { emit: __emit }) {\n\nconst emit = __emit;\nconst props = __props;\n\nconst isTextVisible = shallowRef<boolean>(false);\nconst toggleIstextVisible = () => (isTextVisible.value = !isTextVisible.value);\n\nconst isFocus = shallowRef<boolean>(false);\nconst toggleIsFocus = () => (isFocus.value = !isFocus.value);\n\nreturn (_ctx: any,_push: any,_parent: any,_attrs: any) => {\n  _push(`<div${\n    _ssrRenderAttrs(_mergeProps({ class: \"w-full\" }, _attrs))\n  }><label class=\"font-500 dark:text-gray-100\">${\n    _ssrInterpolate(_ctx.label)\n  }</label><div class=\"${\n    _ssrRenderClass([\n        'rounded border px-3 py-1 w-full flex mt-2 bg-transparent outline-none dark:text-gray-100 dark:border-gray-700',\n        _ctx.isValid\n          ? 'outline-green-500 dark:outline-green-600'\n          : _ctx.errors.length\n          ? 'outline-red-500'\n          : isFocus.value\n          ? 'focus:outline-blue-500 dark:focus:outline-blue-600'\n          : '',\n      ])\n  }\"><input class=\"bg-transparent px-3 outline-none dark:text-gray-100 w-full\"${\n    _ssrRenderAttr(\"type\", isTextVisible.value ? 'text' : 'password')\n  }${\n    _ssrRenderAttr(\"placeholder\", props.placeholder)\n  }${\n    _ssrRenderAttr(\"value\", props.modelValue)\n  }><button class=\"outline-none\" type=\"button\">`)\n  _push(_ssrRenderComponent(EyeIcon, {\n    class: \"w-[1.2rem]\",\n    style: (isTextVisible.value) ? null : { display: \"none\" }\n  }, null, _parent))\n  _push(_ssrRenderComponent(EyeSlashIcon, {\n    class: \"w-[1.2rem]\",\n    style: (!isTextVisible.value) ? null : { display: \"none\" }\n  }, null, _parent))\n  _push(`</button></div><!--[-->`)\n  _ssrRenderList(props.errors, (error) => {\n    _push(`<p${\n      _ssrRenderAttr(\"data-test\", `error-${error.$uid}`)\n    } class=\"pt-1 text-red-500 transition delay-500 text-sm\">${\n      _ssrInterpolate(error.$message)\n    }</p>`)\n  })\n  _push(`<!--]--></div>`)\n}\n}\n\n})",
+      "start": 1713208780002,
+      "end": 1713208780002,
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "/home/yalnguembu/Perso/quonte/components/form/PasswordInput.vue"
+        ],
+        "sourcesContent": [
+          "<template>\n  <div class=\"w-full\">\n    <label class=\"font-500 dark:text-gray-100\">{{ label }}</label>\n    <div\n      :class=\"[\n        'rounded border px-3 py-1 w-full flex mt-2 bg-transparent outline-none dark:text-gray-100 dark:border-gray-700',\n        isValid\n          ? 'outline-green-500 dark:outline-green-600'\n          : errors.length\n          ? 'outline-red-500'\n          : isFocus\n          ? 'focus:outline-blue-500 dark:focus:outline-blue-600'\n          : '',\n      ]\"\n    >\n      <input\n        class=\"bg-transparent px-3 outline-none dark:text-gray-100 w-full\"\n        :type=\"isTextVisible ? 'text' : 'password'\"\n        :placeholder=\"props.placeholder\"\n        :value=\"props.modelValue\"\n        @focus=\"toggleIsFocus\"\n        @blur=\"toggleIsFocus\"\n        @input=\"(event :Event)=>emit('update:modelValue', (event.target as HTMLInputElement).value)\"\n      />\n      <button @click=\"toggleIstextVisible\" class=\"outline-none\" type=\"button\">\n        <EyeIcon class=\"w-[1.2rem]\" v-show=\"isTextVisible\" />\n        <EyeSlashIcon class=\"w-[1.2rem]\" v-show=\"!isTextVisible\" />\n      </button>\n    </div>\n    <p\n      :data-test=\"`error-${error.$uid}`\"\n      v-for=\"error in props.errors\"\n      :key=\"error.$uid\"\n      class=\"pt-1 text-red-500 transition delay-500 text-sm\"\n    >\n      {{ error.$message }}\n    </p>\n  </div>\n</template>\n<script setup lang=\"ts\">\nimport type { ErrorObject } from \"@vuelidate/core\";\nimport { shallowRef } from \"vue\";\nimport EyeIcon from \"../icons/EyeIcon.vue\";\nimport EyeSlashIcon from \"../icons/EyeSlashIcon.vue\";\n\nconst emit = defineEmits([\"update:modelValue\"]);\nconst props = withDefaults(\n  defineProps<{\n    modelValue: string;\n    label?: string;\n    placeholder?: string;\n    errors?: ErrorObject[];\n    isValid?: boolean;\n  }>(),\n  {\n    isValid: false,\n    errors: () => [],\n  }\n);\n\nconst isTextVisible = shallowRef<boolean>(false);\nconst toggleIstextVisible = () => (isTextVisible.value = !isTextVisible.value);\n\nconst isFocus = shallowRef<boolean>(false);\nconst toggleIsFocus = () => (isFocus.value = !isFocus.value);\n</script>\n"
+        ],
+        "names": [],
+        "mappings": ";;;;AAwCA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrD;;;;;;;;;;;;;;AALwB;AAMxB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,MAAkC,CAAC;AAChD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,OAYb,CAAC;AACF;AACA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACjD,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/E;AACA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;"
+      }
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1713208780002,
+      "end": 1713208780002,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1713208780002,
+      "end": 1713208780002,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1713208780002,
+      "end": 1713208780002,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1713208780002,
+      "end": 1713208780002,
+      "order": "pre"
+    },
+    {
+      "name": "unplugin-vue-i18n",
+      "start": 1713208780002,
+      "end": 1713208780003,
+      "order": "pre"
+    },
+    {
+      "name": "unplugin-vue-i18n",
+      "start": 1713208780002,
+      "end": 1713208780003,
+      "order": "pre"
+    },
+    {
+      "name": "nuxtjs:i18n-macros-transform",
+      "start": 1713208780003,
+      "end": 1713208780003,
+      "order": "pre"
+    },
+    {
+      "name": "nuxtjs:i18n-macros-transform",
+      "start": 1713208780003,
+      "end": 1713208780003,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1713208780003,
+      "end": 1713208780003,
+      "order": "pre"
+    },
+    {
+      "name": "server-only-component-transform",
+      "start": 1713208780003,
+      "end": 1713208780003,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1713208780003,
+      "end": 1713208780003,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { defineComponent as _defineComponent } from \"vue\";\nimport { mergeProps as _mergeProps } from \"vue\";\nimport { ssrRenderAttr as _ssrRenderAttr, ssrRenderComponent as _ssrRenderComponent, ssrRenderClass as _ssrRenderClass, ssrRenderAttrs as _ssrRenderAttrs, ssrInterpolate as _ssrInterpolate, ssrRenderList as _ssrRenderList } from \"vue/server-renderer\";\nimport { shallowRef } from \"vue\";\nimport EyeIcon from \"../icons/EyeIcon.vue\";\nimport EyeSlashIcon from \"../icons/EyeSlashIcon.vue\";\nexport default /* @__PURE__ */ _defineComponent({\n  __name: \"PasswordInput\",\n  __ssrInlineRender: true,\n  props: {\n    modelValue: {},\n    label: {},\n    placeholder: {},\n    errors: { default: () => [] },\n    isValid: { type: Boolean, default: false }\n  },\n  emits: [\"update:modelValue\"],\n  setup(__props, { emit: __emit }) {\n    const emit = __emit;\n    const props = __props;\n    const isTextVisible = shallowRef(false);\n    const toggleIstextVisible = () => isTextVisible.value = !isTextVisible.value;\n    const isFocus = shallowRef(false);\n    const toggleIsFocus = () => isFocus.value = !isFocus.value;\n    return (_ctx, _push, _parent, _attrs) => {\n      _push(`<div${_ssrRenderAttrs(_mergeProps({ class: \"w-full\" }, _attrs))}><label class=\"font-500 dark:text-gray-100\">${_ssrInterpolate(_ctx.label)}</label><div class=\"${_ssrRenderClass([\n        \"rounded border px-3 py-1 w-full flex mt-2 bg-transparent outline-none dark:text-gray-100 dark:border-gray-700\",\n        _ctx.isValid ? \"outline-green-500 dark:outline-green-600\" : _ctx.errors.length ? \"outline-red-500\" : isFocus.value ? \"focus:outline-blue-500 dark:focus:outline-blue-600\" : \"\"\n      ])}\"><input class=\"bg-transparent px-3 outline-none dark:text-gray-100 w-full\"${_ssrRenderAttr(\"type\", isTextVisible.value ? \"text\" : \"password\")}${_ssrRenderAttr(\"placeholder\", props.placeholder)}${_ssrRenderAttr(\"value\", props.modelValue)}><button class=\"outline-none\" type=\"button\">`);\n      _push(_ssrRenderComponent(EyeIcon, {\n        class: \"w-[1.2rem]\",\n        style: isTextVisible.value ? null : { display: \"none\" }\n      }, null, _parent));\n      _push(_ssrRenderComponent(EyeSlashIcon, {\n        class: \"w-[1.2rem]\",\n        style: !isTextVisible.value ? null : { display: \"none\" }\n      }, null, _parent));\n      _push(`</button></div><!--[-->`);\n      _ssrRenderList(props.errors, (error) => {\n        _push(`<p${_ssrRenderAttr(\"data-test\", `error-${error.$uid}`)} class=\"pt-1 text-red-500 transition delay-500 text-sm\">${_ssrInterpolate(error.$message)}</p>`);\n      });\n      _push(`<!--]--></div>`);\n    };\n  }\n});\n",
+      "start": 1713208780003,
+      "end": 1713208780015,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "/home/yalnguembu/Perso/quonte/components/form/PasswordInput.vue?vue&type=script&setup=true&lang.ts"
+        ],
+        "sourcesContent": [
+          "import { defineComponent as _defineComponent } from 'vue'\nimport { mergeProps as _mergeProps } from \"vue\"\nimport { ssrRenderAttr as _ssrRenderAttr, ssrRenderComponent as _ssrRenderComponent, ssrRenderClass as _ssrRenderClass, ssrRenderAttrs as _ssrRenderAttrs, ssrInterpolate as _ssrInterpolate, ssrRenderList as _ssrRenderList } from \"vue/server-renderer\"\n\nimport type { ErrorObject } from \"@vuelidate/core\";\nimport { shallowRef } from \"vue\";\nimport EyeIcon from \"../icons/EyeIcon.vue\";\nimport EyeSlashIcon from \"../icons/EyeSlashIcon.vue\";\n\n\nexport default /*#__PURE__*/_defineComponent({\n  __name: 'PasswordInput',\n  __ssrInlineRender: true,\n  props: {\n    modelValue: {},\n    label: {},\n    placeholder: {},\n    errors: { default: () => [] },\n    isValid: { type: Boolean, default: false }\n  },\n  emits: [\"update:modelValue\"],\n  setup(__props: any, { emit: __emit }) {\n\nconst emit = __emit;\nconst props = __props;\n\nconst isTextVisible = shallowRef<boolean>(false);\nconst toggleIstextVisible = () => (isTextVisible.value = !isTextVisible.value);\n\nconst isFocus = shallowRef<boolean>(false);\nconst toggleIsFocus = () => (isFocus.value = !isFocus.value);\n\nreturn (_ctx: any,_push: any,_parent: any,_attrs: any) => {\n  _push(`<div${\n    _ssrRenderAttrs(_mergeProps({ class: \"w-full\" }, _attrs))\n  }><label class=\"font-500 dark:text-gray-100\">${\n    _ssrInterpolate(_ctx.label)\n  }</label><div class=\"${\n    _ssrRenderClass([\n        'rounded border px-3 py-1 w-full flex mt-2 bg-transparent outline-none dark:text-gray-100 dark:border-gray-700',\n        _ctx.isValid\n          ? 'outline-green-500 dark:outline-green-600'\n          : _ctx.errors.length\n          ? 'outline-red-500'\n          : isFocus.value\n          ? 'focus:outline-blue-500 dark:focus:outline-blue-600'\n          : '',\n      ])\n  }\"><input class=\"bg-transparent px-3 outline-none dark:text-gray-100 w-full\"${\n    _ssrRenderAttr(\"type\", isTextVisible.value ? 'text' : 'password')\n  }${\n    _ssrRenderAttr(\"placeholder\", props.placeholder)\n  }${\n    _ssrRenderAttr(\"value\", props.modelValue)\n  }><button class=\"outline-none\" type=\"button\">`)\n  _push(_ssrRenderComponent(EyeIcon, {\n    class: \"w-[1.2rem]\",\n    style: (isTextVisible.value) ? null : { display: \"none\" }\n  }, null, _parent))\n  _push(_ssrRenderComponent(EyeSlashIcon, {\n    class: \"w-[1.2rem]\",\n    style: (!isTextVisible.value) ? null : { display: \"none\" }\n  }, null, _parent))\n  _push(`</button></div><!--[-->`)\n  _ssrRenderList(props.errors, (error) => {\n    _push(`<p${\n      _ssrRenderAttr(\"data-test\", `error-${error.$uid}`)\n    } class=\"pt-1 text-red-500 transition delay-500 text-sm\">${\n      _ssrInterpolate(error.$message)\n    }</p>`)\n  })\n  _push(`<!--]--></div>`)\n}\n}\n\n})"
+        ],
+        "mappings": "AAAA,SAAS,mBAAmB,wBAAwB;AACpD,SAAS,cAAc,mBAAmB;AAC1C,SAAS,iBAAiB,gBAAgB,sBAAsB,qBAAqB,kBAAkB,iBAAiB,kBAAkB,iBAAiB,kBAAkB,iBAAiB,iBAAiB,sBAAsB;AAGrO,SAAS,kBAAkB;AAC3B,OAAO,aAAa;AACpB,OAAO,kBAAkB;AAGzB,eAA4B,iCAAiB;AAAA,EAC3C,QAAQ;AAAA,EACR,mBAAmB;AAAA,EACnB,OAAO;AAAA,IACL,YAAY,CAAC;AAAA,IACb,OAAO,CAAC;AAAA,IACR,aAAa,CAAC;AAAA,IACd,QAAQ,EAAE,SAAS,MAAM,CAAC,EAAE;AAAA,IAC5B,SAAS,EAAE,MAAM,SAAS,SAAS,MAAM;AAAA,EAC3C;AAAA,EACA,OAAO,CAAC,mBAAmB;AAAA,EAC3B,MAAM,SAAc,EAAE,MAAM,OAAO,GAAG;AAExC,UAAM,OAAO;AACb,UAAM,QAAQ;AAEd,UAAM,gBAAgB,WAAoB,KAAK;AAC/C,UAAM,sBAAsB,MAAO,cAAc,QAAQ,CAAC,cAAc;AAExE,UAAM,UAAU,WAAoB,KAAK;AACzC,UAAM,gBAAgB,MAAO,QAAQ,QAAQ,CAAC,QAAQ;AAEtD,WAAO,CAAC,MAAU,OAAW,SAAa,WAAgB;AACxD,YAAM,OACJ,gBAAgB,YAAY,EAAE,OAAO,SAAS,GAAG,MAAM,CAAC,CAC1D,+CACE,gBAAgB,KAAK,KAAK,CAC5B,uBACE,gBAAgB;AAAA,QACZ;AAAA,QACA,KAAK,UACD,6CACA,KAAK,OAAO,SACZ,oBACA,QAAQ,QACR,uDACA;AAAA,MACN,CAAC,CACL,8EACE,eAAe,QAAQ,cAAc,QAAQ,SAAS,UAAU,CAClE,GACE,eAAe,eAAe,MAAM,WAAW,CACjD,GACE,eAAe,SAAS,MAAM,UAAU,CAC1C,8CAA8C;AAC9C,YAAM,oBAAoB,SAAS;AAAA,QACjC,OAAO;AAAA,QACP,OAAQ,cAAc,QAAS,OAAO,EAAE,SAAS,OAAO;AAAA,MAC1D,GAAG,MAAM,OAAO,CAAC;AACjB,YAAM,oBAAoB,cAAc;AAAA,QACtC,OAAO;AAAA,QACP,OAAQ,CAAC,cAAc,QAAS,OAAO,EAAE,SAAS,OAAO;AAAA,MAC3D,GAAG,MAAM,OAAO,CAAC;AACjB,YAAM,yBAAyB;AAC/B,qBAAe,MAAM,QAAQ,CAAC,UAAU;AACtC,cAAM,KACJ,eAAe,aAAa,SAAS,MAAM,IAAI,EAAE,CACnD,2DACE,gBAAgB,MAAM,QAAQ,CAChC,MAAM;AAAA,MACR,CAAC;AACD,YAAM,gBAAgB;AAAA,IACxB;AAAA,EACA;AAEA,CAAC;",
+        "names": []
+      }
+    },
+    {
+      "name": "vite:json",
+      "start": 1713208780016,
+      "end": 1713208780016,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1713208780016,
+      "end": 1713208780016,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1713208780016,
+      "end": 1713208780016,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1713208780016,
+      "end": 1713208780016,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1713208780016,
+      "end": 1713208780016,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1713208780016,
+      "end": 1713208780016,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1713208780016,
+      "end": 1713208780016,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1713208780016,
+      "end": 1713208780016,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1713208780016,
+      "end": 1713208780016,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1713208780016,
+      "end": 1713208780016,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1713208780017,
+      "end": 1713208780018,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1713208780018,
+      "end": 1713208780018,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1713208780018,
+      "end": 1713208780018,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1713208780018,
+      "end": 1713208780018,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1713208780018,
+      "end": 1713208780018,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1713208780018,
+      "end": 1713208780018,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1713208780018,
+      "end": 1713208780018,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1713208780018,
+      "end": 1713208780018,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1713208780019,
+      "end": 1713208780019,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1713208780019,
+      "end": 1713208780019,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1713208780019,
+      "end": 1713208780019,
+      "order": "post"
+    },
+    {
+      "name": "unhead:remove-server-composables",
+      "start": 1713208780019,
+      "end": 1713208780019,
+      "order": "post"
+    },
+    {
+      "name": "unhead:use-seo-meta-transform",
+      "start": 1713208780019,
+      "end": 1713208780019,
+      "order": "post"
+    },
+    {
+      "name": "unhead:use-seo-meta-transform",
+      "start": 1713208780019,
+      "end": 1713208780019,
+      "order": "post"
+    },
+    {
+      "name": "nuxtjs:i18n-resource",
+      "start": 1713208780019,
+      "end": 1713208780019,
+      "order": "post"
+    },
+    {
+      "name": "nuxtjs:i18n-resource",
+      "start": 1713208780019,
+      "end": 1713208780021,
+      "order": "post"
+    },
+    {
+      "name": "nuxtjs:i18n-meta-deprecation",
+      "start": 1713208780021,
+      "end": 1713208780021,
+      "order": "post"
+    },
+    {
+      "name": "nuxtjs:i18n-meta-deprecation",
+      "start": 1713208780021,
+      "end": 1713208780021,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1713208780021,
+      "end": 1713208780025,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1713208780021,
+      "end": 1713208780025,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1713208780025,
+      "end": 1713208780025,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1713208780025,
+      "end": 1713208780025,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1713208780025,
+      "end": 1713208780025,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1713208780025,
+      "end": 1713208780025,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-template",
+      "start": 1713208780026,
+      "end": 1713208780026,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1713208780026,
+      "end": 1713208780026,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1713208780026,
+      "end": 1713208780026,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1713208780027,
+      "end": 1713208780027,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1713208780027,
+      "end": 1713208780027,
+      "order": "normal"
+    }
+  ]
+}

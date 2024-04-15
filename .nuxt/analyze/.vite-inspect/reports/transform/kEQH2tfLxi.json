@@ -1,0 +1,252 @@
+{
+  "resolvedId": "/home/yalnguembu/Perso/quonte/layouts/default.vue?vue&type=script&setup=true&lang.ts",
+  "transforms": [
+    {
+      "name": "vite:vue",
+      "result": "import { defineComponent as _defineComponent } from 'vue'\nimport { unref as _unref, createVNode as _createVNode, resolveComponent as _resolveComponent, withCtx as _withCtx, normalizeClass as _normalizeClass, createElementVNode as _createElementVNode, openBlock as _openBlock, createElementBlock as _createElementBlock } from \"vue\"\n\nconst _hoisted_1 = {\n  class: /*#__PURE__*/_normalizeClass([\n        'w-full bg-white dark:bg-gray-900 min-h-screen block',\n        { 'lg:flex': false },\n      ])\n}\n\nimport TheNavbarVue from \"~/components/TheNavbar.vue\";\nimport TheFooter from \"~/components/TheFooter.vue\";\nimport { navBarItems, sideBarItems } from \"@/utils/data\";\n// import { useSessionStore } from \"@/stores/session\";\n// import TheSidebar from \"~/components/TheSidebar.vue\";\n// const sessionStore = useSessionStore();\n\nexport default /*#__PURE__*/_defineComponent({\n  __name: 'default',\n  setup(__props) {\n\n\nreturn (_ctx: any,_cache: any) => {\n  const _component_ClientOnly = _resolveComponent(\"ClientOnly\")!\n  const _component_RouterView = _resolveComponent(\"RouterView\")!\n\n  return (_openBlock(), _createElementBlock(\"div\", null, [\n    _createElementVNode(\"div\", _hoisted_1, [\n      _createVNode(_component_ClientOnly, null, {\n        default: _withCtx(() => [\n          _createVNode(TheNavbarVue, { navBarItems: _unref(navBarItems) }, null, 8, [\"navBarItems\"])\n        ]),\n        _: 1\n      }),\n      _createVNode(_component_RouterView, {\n        class: _normalizeClass({\n          'h-full overflow-hidden border lg:w-5/6 xl:w-4/5': false,\n        })\n      })\n    ]),\n    _createVNode(TheFooter)\n  ]))\n}\n}\n\n})",
+      "start": 1713208771453,
+      "end": 1713208771453
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1713208771453,
+      "end": 1713208771453,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1713208771453,
+      "end": 1713208771453,
+      "order": "pre"
+    },
+    {
+      "name": "unplugin-vue-i18n",
+      "start": 1713208771453,
+      "end": 1713208771453,
+      "order": "pre"
+    },
+    {
+      "name": "nuxtjs:i18n-macros-transform",
+      "start": 1713208771453,
+      "end": 1713208771453,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1713208771453,
+      "end": 1713208771453,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1713208771453,
+      "end": 1713208771453,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { defineComponent as _defineComponent } from \"vue\";\nimport { unref as _unref, createVNode as _createVNode, resolveComponent as _resolveComponent, withCtx as _withCtx, normalizeClass as _normalizeClass, createElementVNode as _createElementVNode, openBlock as _openBlock, createElementBlock as _createElementBlock } from \"vue\";\nconst _hoisted_1 = {\n  class: /* @__PURE__ */ _normalizeClass([\n    \"w-full bg-white dark:bg-gray-900 min-h-screen block\",\n    { \"lg:flex\": false }\n  ])\n};\nimport TheNavbarVue from \"~/components/TheNavbar.vue\";\nimport TheFooter from \"~/components/TheFooter.vue\";\nimport { navBarItems } from \"@/utils/data\";\nexport default /* @__PURE__ */ _defineComponent({\n  __name: \"default\",\n  setup(__props) {\n    return (_ctx, _cache) => {\n      const _component_ClientOnly = _resolveComponent(\"ClientOnly\");\n      const _component_RouterView = _resolveComponent(\"RouterView\");\n      return _openBlock(), _createElementBlock(\"div\", null, [\n        _createElementVNode(\"div\", _hoisted_1, [\n          _createVNode(_component_ClientOnly, null, {\n            default: _withCtx(() => [\n              _createVNode(TheNavbarVue, { navBarItems: _unref(navBarItems) }, null, 8, [\"navBarItems\"])\n            ]),\n            _: 1\n          }),\n          _createVNode(_component_RouterView, {\n            class: _normalizeClass({\n              \"h-full overflow-hidden border lg:w-5/6 xl:w-4/5\": false\n            })\n          })\n        ]),\n        _createVNode(TheFooter)\n      ]);\n    };\n  }\n});\n",
+      "start": 1713208771453,
+      "end": 1713208771561,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "/home/yalnguembu/Perso/quonte/layouts/default.vue?vue&type=script&setup=true&lang.ts"
+        ],
+        "sourcesContent": [
+          "import { defineComponent as _defineComponent } from 'vue'\nimport { unref as _unref, createVNode as _createVNode, resolveComponent as _resolveComponent, withCtx as _withCtx, normalizeClass as _normalizeClass, createElementVNode as _createElementVNode, openBlock as _openBlock, createElementBlock as _createElementBlock } from \"vue\"\n\nconst _hoisted_1 = {\n  class: /*#__PURE__*/_normalizeClass([\n        'w-full bg-white dark:bg-gray-900 min-h-screen block',\n        { 'lg:flex': false },\n      ])\n}\n\nimport TheNavbarVue from \"~/components/TheNavbar.vue\";\nimport TheFooter from \"~/components/TheFooter.vue\";\nimport { navBarItems, sideBarItems } from \"@/utils/data\";\n// import { useSessionStore } from \"@/stores/session\";\n// import TheSidebar from \"~/components/TheSidebar.vue\";\n// const sessionStore = useSessionStore();\n\nexport default /*#__PURE__*/_defineComponent({\n  __name: 'default',\n  setup(__props) {\n\n\nreturn (_ctx: any,_cache: any) => {\n  const _component_ClientOnly = _resolveComponent(\"ClientOnly\")!\n  const _component_RouterView = _resolveComponent(\"RouterView\")!\n\n  return (_openBlock(), _createElementBlock(\"div\", null, [\n    _createElementVNode(\"div\", _hoisted_1, [\n      _createVNode(_component_ClientOnly, null, {\n        default: _withCtx(() => [\n          _createVNode(TheNavbarVue, { navBarItems: _unref(navBarItems) }, null, 8, [\"navBarItems\"])\n        ]),\n        _: 1\n      }),\n      _createVNode(_component_RouterView, {\n        class: _normalizeClass({\n          'h-full overflow-hidden border lg:w-5/6 xl:w-4/5': false,\n        })\n      })\n    ]),\n    _createVNode(TheFooter)\n  ]))\n}\n}\n\n})"
+        ],
+        "mappings": "AAAA,SAAS,mBAAmB,wBAAwB;AACpD,SAAS,SAAS,QAAQ,eAAe,cAAc,oBAAoB,mBAAmB,WAAW,UAAU,kBAAkB,iBAAiB,sBAAsB,qBAAqB,aAAa,YAAY,sBAAsB,2BAA2B;AAE3Q,MAAM,aAAa;AAAA,EACjB,OAAoB,gCAAgB;AAAA,IAC9B;AAAA,IACA,EAAE,WAAW,MAAM;AAAA,EACrB,CAAC;AACP;AAEA,OAAO,kBAAkB;AACzB,OAAO,eAAe;AACtB,SAAS,mBAAiC;AAK1C,eAA4B,iCAAiB;AAAA,EAC3C,QAAQ;AAAA,EACR,MAAM,SAAS;AAGjB,WAAO,CAAC,MAAU,WAAgB;AAChC,YAAM,wBAAwB,kBAAkB,YAAY;AAC5D,YAAM,wBAAwB,kBAAkB,YAAY;AAE5D,aAAQ,WAAW,GAAG,oBAAoB,OAAO,MAAM;AAAA,QACrD,oBAAoB,OAAO,YAAY;AAAA,UACrC,aAAa,uBAAuB,MAAM;AAAA,YACxC,SAAS,SAAS,MAAM;AAAA,cACtB,aAAa,cAAc,EAAE,aAAa,OAAO,WAAW,EAAE,GAAG,MAAM,GAAG,CAAC,aAAa,CAAC;AAAA,YAC3F,CAAC;AAAA,YACD,GAAG;AAAA,UACL,CAAC;AAAA,UACD,aAAa,uBAAuB;AAAA,YAClC,OAAO,gBAAgB;AAAA,cACrB,mDAAmD;AAAA,YACrD,CAAC;AAAA,UACH,CAAC;AAAA,QACH,CAAC;AAAA,QACD,aAAa,SAAS;AAAA,MACxB,CAAC;AAAA,IACH;AAAA,EACA;AAEA,CAAC;",
+        "names": []
+      }
+    },
+    {
+      "name": "vite:json",
+      "start": 1713208771561,
+      "end": 1713208771561,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1713208771561,
+      "end": 1713208771561,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1713208771561,
+      "end": 1713208771561,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1713208771561,
+      "end": 1713208771561,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1713208771562,
+      "end": 1713208771562,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1713208771562,
+      "end": 1713208771562,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1713208771562,
+      "end": 1713208771562,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1713208771562,
+      "end": 1713208771563,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1713208771563,
+      "end": 1713208771563,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1713208771563,
+      "end": 1713208771563,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1713208771563,
+      "end": 1713208771563,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1713208771563,
+      "end": 1713208771563,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1713208771563,
+      "end": 1713208771563,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1713208771563,
+      "end": 1713208771563,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1713208771563,
+      "end": 1713208771563,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1713208771563,
+      "end": 1713208771563,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1713208771564,
+      "end": 1713208771564,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1713208771564,
+      "end": 1713208771564,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1713208771564,
+      "end": 1713208771564,
+      "order": "post"
+    },
+    {
+      "name": "unhead:use-seo-meta-transform",
+      "start": 1713208771566,
+      "end": 1713208771566,
+      "order": "post"
+    },
+    {
+      "name": "nuxtjs:i18n-resource",
+      "start": 1713208771566,
+      "end": 1713208771566,
+      "order": "post"
+    },
+    {
+      "name": "nuxtjs:i18n-meta-deprecation",
+      "start": 1713208771566,
+      "end": 1713208771567,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1713208771567,
+      "end": 1713208771575,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1713208771577,
+      "end": 1713208771577,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1713208771578,
+      "end": 1713208771578,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1713208771579,
+      "end": 1713208771579,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1713208771580,
+      "end": 1713208771580,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "result": "import { default as __nuxt_component_0 } from \"/home/yalnguembu/Perso/quonte/node_modules/nuxt/dist/app/components/client-only\";\nimport { defineComponent as _defineComponent } from \"vue\";\nimport { unref as _unref, createVNode as _createVNode, resolveComponent as _resolveComponent, withCtx as _withCtx, normalizeClass as _normalizeClass, createElementVNode as _createElementVNode, openBlock as _openBlock, createElementBlock as _createElementBlock } from \"vue\";\nconst _hoisted_1 = {\n  class: /* @__PURE__ */ _normalizeClass([\n    \"w-full bg-white dark:bg-gray-900 min-h-screen block\",\n    { \"lg:flex\": false }\n  ])\n};\nimport TheNavbarVue from \"~/components/TheNavbar.vue\";\nimport TheFooter from \"~/components/TheFooter.vue\";\nimport { navBarItems } from \"@/utils/data\";\nexport default /* @__PURE__ */ _defineComponent({\n  __name: \"default\",\n  setup(__props) {\n    return (_ctx, _cache) => {\n      const _component_ClientOnly = __nuxt_component_0;\n      const _component_RouterView = _resolveComponent(\"RouterView\");\n      return _openBlock(), _createElementBlock(\"div\", null, [\n        _createElementVNode(\"div\", _hoisted_1, [\n          _createVNode(_component_ClientOnly, null, {\n            default: _withCtx(() => [\n              _createVNode(TheNavbarVue, { navBarItems: _unref(navBarItems) }, null, 8, [\"navBarItems\"])\n            ]),\n            _: 1\n          }),\n          _createVNode(_component_RouterView, {\n            class: _normalizeClass({\n              \"h-full overflow-hidden border lg:w-5/6 xl:w-4/5\": false\n            })\n          })\n        ]),\n        _createVNode(TheFooter)\n      ]);\n    };\n  }\n});\n",
+      "start": 1713208771580,
+      "end": 1713208771580,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1713208771581,
+      "end": 1713208771581,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1713208771581,
+      "end": 1713208771582,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1713208771583,
+      "end": 1713208771583,
+      "order": "normal"
+    }
+  ]
+}

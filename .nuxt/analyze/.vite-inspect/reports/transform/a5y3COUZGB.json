@@ -1,0 +1,243 @@
+{
+  "resolvedId": "/home/yalnguembu/Perso/quonte/pages/index.vue?vue&type=i18n&index=0&lang.json",
+  "transforms": [
+    {
+      "name": "vite:vue",
+      "result": "\n{\n  \"en\": {\n    \"name\": \"Infinite Notes\",\n    \"logoAlt\": \"Infinite notes - logo\",\n    \"title\": \"Your limitless note taking solution\",\n    \"subtitle\": \"Never forget a thought again. Infinite Notes is your all-in-one note-taking app, letting you capture everything from ideas to grocery lists. Take notes on the go and access them from any device.\"\n  },\n  \"fr\": {\n    \"name\": \"Infinite Notes\",\n    \"logoAlt\": \"Logo - Infinite Notes\",\n    \"title\": \"Essayons quelque chose d'extraordinaire\",\n    \"subtitle\": \"Your all-in-one note-taking app, letting you capture everything from ideas to grocery lists. Take notes on the go and access them from any device.\"\n  }\n}\n",
+      "start": 1713208771415,
+      "end": 1713208771415
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1713208771415,
+      "end": 1713208771415,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1713208771415,
+      "end": 1713208771415,
+      "order": "pre"
+    },
+    {
+      "name": "unplugin-vue-i18n",
+      "result": "export default function (Component) {\n  const _Component = Component\n  _Component.__i18n = _Component.__i18n || []\n  _Component.__i18n.push({\n    \"locale\": \"\",\n    \"resource\": {\n      \"en\": {\n        \"name\": {\"t\":0,\"b\":{\"t\":2,\"i\":[{\"t\":3}],\"s\":\"Infinite Notes\"}},\n        \"logoAlt\": {\"t\":0,\"b\":{\"t\":2,\"i\":[{\"t\":3}],\"s\":\"Infinite notes - logo\"}},\n        \"title\": {\"t\":0,\"b\":{\"t\":2,\"i\":[{\"t\":3}],\"s\":\"Your limitless note taking solution\"}},\n        \"subtitle\": {\"t\":0,\"b\":{\"t\":2,\"i\":[{\"t\":3}],\"s\":\"Never forget a thought again. Infinite Notes is your all-in-one note-taking app, letting you capture everything from ideas to grocery lists. Take notes on the go and access them from any device.\"}}\n      },\n      \"fr\": {\n        \"name\": {\"t\":0,\"b\":{\"t\":2,\"i\":[{\"t\":3}],\"s\":\"Infinite Notes\"}},\n        \"logoAlt\": {\"t\":0,\"b\":{\"t\":2,\"i\":[{\"t\":3}],\"s\":\"Logo - Infinite Notes\"}},\n        \"title\": {\"t\":0,\"b\":{\"t\":2,\"i\":[{\"t\":3}],\"s\":\"Essayons quelque chose d\\u0027extraordinaire\"}},\n        \"subtitle\": {\"t\":0,\"b\":{\"t\":2,\"i\":[{\"t\":3}],\"s\":\"Your all-in-one note-taking app, letting you capture everything from ideas to grocery lists. Take notes on the go and access them from any device.\"}}\n      }\n    }\n  })\n}\n",
+      "start": 1713208771415,
+      "end": 1713208771445,
+      "order": "pre",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "nuxtjs:i18n-macros-transform",
+      "start": 1713208771445,
+      "end": 1713208771445,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1713208771445,
+      "end": 1713208771445,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1713208771445,
+      "end": 1713208771445,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1713208771446,
+      "end": 1713208771446,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1713208771446,
+      "end": 1713208771446,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1713208771446,
+      "end": 1713208771446,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1713208771446,
+      "end": 1713208771446,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1713208771446,
+      "end": 1713208771446,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1713208771446,
+      "end": 1713208771446,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1713208771446,
+      "end": 1713208771446,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1713208771446,
+      "end": 1713208771446,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1713208771447,
+      "end": 1713208771447,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1713208771447,
+      "end": 1713208771447,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1713208771447,
+      "end": 1713208771447,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1713208771447,
+      "end": 1713208771447,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1713208771447,
+      "end": 1713208771447,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1713208771448,
+      "end": 1713208771448,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1713208771448,
+      "end": 1713208771448,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1713208771448,
+      "end": 1713208771448,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1713208771448,
+      "end": 1713208771448,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1713208771448,
+      "end": 1713208771448,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1713208771448,
+      "end": 1713208771448,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1713208771448,
+      "end": 1713208771448,
+      "order": "post"
+    },
+    {
+      "name": "unhead:use-seo-meta-transform",
+      "start": 1713208771449,
+      "end": 1713208771449,
+      "order": "post"
+    },
+    {
+      "name": "nuxtjs:i18n-resource",
+      "start": 1713208771449,
+      "end": 1713208771449,
+      "order": "post"
+    },
+    {
+      "name": "nuxtjs:i18n-meta-deprecation",
+      "start": 1713208771449,
+      "end": 1713208771449,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1713208771449,
+      "end": 1713208771449,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1713208771450,
+      "end": 1713208771450,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1713208771450,
+      "end": 1713208771450,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1713208771450,
+      "end": 1713208771450,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1713208771450,
+      "end": 1713208771450,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1713208771451,
+      "end": 1713208771451,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1713208771451,
+      "end": 1713208771451,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1713208771451,
+      "end": 1713208771451,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1713208771451,
+      "end": 1713208771451,
+      "order": "normal"
+    }
+  ]
+}

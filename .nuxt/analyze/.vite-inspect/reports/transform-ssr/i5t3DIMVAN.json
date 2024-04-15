@@ -1,0 +1,332 @@
+{
+  "resolvedId": "/home/yalnguembu/Perso/quonte/utils/api-config.ts",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import axios from \"axios\";\n\nlet refresh = false;\naxios.interceptors.response.use(\n  (resp) => resp,\n  async (error) => {\n    if (error.response?.status === 401 && !refresh) {\n      refresh = true;\n\n      const { status, data } = await axios.post(\n        \"refresh\",\n        {},\n        {\n          withCredentials: true,\n        }\n      );\n\n      if (status === 200) {\n        axios.defaults.headers.common[\"Authorization\"] = `Bearer ${data.token}`;\n        return axios(error.config);\n      }\n    }\n    refresh = false;\n    throw error;\n  }\n);\n\nexport const setRequestHeaderToken = (token: string): void => {\n  axios.defaults.headers.common[\"Authorization\"] = `Bearer ${token}`;\n};\n\nimport { OpenAPI } from \"@/services\";\n\nexport const prepareApis = (): void => {\n  OpenAPI.BASE = import.meta.env.VITE_BASE_URL;\n  OpenAPI.TOKEN = getAccessToken;\n};\n\nexport const getAccessToken = async (): Promise<string> =>\n  localStorage.getItem(\"apiAccessToken\") ?? \"\";\n\nexport const getRefreshToken = async (): Promise<string> =>\n  localStorage.getItem(\"apiRefreshToken\") ?? \"\";\n\nexport const saveAccessToken = async (accessToken: string): Promise<void> =>\n  localStorage.setItem(\"apiAccessToken\", accessToken);\n\nexport const saveRefreshToken = async (accessToken: string): Promise<void> =>\n  localStorage.setItem(\"apiAccessToken\", accessToken);\n",
+      "start": 1713208779955,
+      "end": 1713208780105,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1713208780105,
+      "end": 1713208780105,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1713208780105,
+      "end": 1713208780105,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1713208780105,
+      "end": 1713208780105,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1713208780105,
+      "end": 1713208780105,
+      "order": "pre"
+    },
+    {
+      "name": "unplugin-vue-i18n",
+      "start": 1713208780105,
+      "end": 1713208780105,
+      "order": "pre"
+    },
+    {
+      "name": "unplugin-vue-i18n",
+      "start": 1713208780105,
+      "end": 1713208780105,
+      "order": "pre"
+    },
+    {
+      "name": "nuxtjs:i18n-macros-transform",
+      "start": 1713208780105,
+      "end": 1713208780105,
+      "order": "pre"
+    },
+    {
+      "name": "nuxtjs:i18n-macros-transform",
+      "start": 1713208780105,
+      "end": 1713208780105,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1713208780105,
+      "end": 1713208780105,
+      "order": "pre"
+    },
+    {
+      "name": "server-only-component-transform",
+      "start": 1713208780105,
+      "end": 1713208780105,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1713208780105,
+      "end": 1713208780105,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import axios from \"axios\";\nlet refresh = false;\naxios.interceptors.response.use(\n  (resp) => resp,\n  async (error) => {\n    if (error.response?.status === 401 && !refresh) {\n      refresh = true;\n      const { status, data } = await axios.post(\n        \"refresh\",\n        {},\n        {\n          withCredentials: true\n        }\n      );\n      if (status === 200) {\n        axios.defaults.headers.common[\"Authorization\"] = `Bearer ${data.token}`;\n        return axios(error.config);\n      }\n    }\n    refresh = false;\n    throw error;\n  }\n);\nexport const setRequestHeaderToken = (token) => {\n  axios.defaults.headers.common[\"Authorization\"] = `Bearer ${token}`;\n};\nimport { OpenAPI } from \"@/services\";\nexport const prepareApis = () => {\n  OpenAPI.BASE = import.meta.env.VITE_BASE_URL;\n  OpenAPI.TOKEN = getAccessToken;\n};\nexport const getAccessToken = async () => localStorage.getItem(\"apiAccessToken\") ?? \"\";\nexport const getRefreshToken = async () => localStorage.getItem(\"apiRefreshToken\") ?? \"\";\nexport const saveAccessToken = async (accessToken) => localStorage.setItem(\"apiAccessToken\", accessToken);\nexport const saveRefreshToken = async (accessToken) => localStorage.setItem(\"apiAccessToken\", accessToken);\n",
+      "start": 1713208780105,
+      "end": 1713208780126,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "/home/yalnguembu/Perso/quonte/utils/api-config.ts"
+        ],
+        "sourcesContent": [
+          "import axios from \"axios\";\n\nlet refresh = false;\naxios.interceptors.response.use(\n  (resp) => resp,\n  async (error) => {\n    if (error.response?.status === 401 && !refresh) {\n      refresh = true;\n\n      const { status, data } = await axios.post(\n        \"refresh\",\n        {},\n        {\n          withCredentials: true,\n        }\n      );\n\n      if (status === 200) {\n        axios.defaults.headers.common[\"Authorization\"] = `Bearer ${data.token}`;\n        return axios(error.config);\n      }\n    }\n    refresh = false;\n    throw error;\n  }\n);\n\nexport const setRequestHeaderToken = (token: string): void => {\n  axios.defaults.headers.common[\"Authorization\"] = `Bearer ${token}`;\n};\n\nimport { OpenAPI } from \"@/services\";\n\nexport const prepareApis = (): void => {\n  OpenAPI.BASE = import.meta.env.VITE_BASE_URL;\n  OpenAPI.TOKEN = getAccessToken;\n};\n\nexport const getAccessToken = async (): Promise<string> =>\n  localStorage.getItem(\"apiAccessToken\") ?? \"\";\n\nexport const getRefreshToken = async (): Promise<string> =>\n  localStorage.getItem(\"apiRefreshToken\") ?? \"\";\n\nexport const saveAccessToken = async (accessToken: string): Promise<void> =>\n  localStorage.setItem(\"apiAccessToken\", accessToken);\n\nexport const saveRefreshToken = async (accessToken: string): Promise<void> =>\n  localStorage.setItem(\"apiAccessToken\", accessToken);\n"
+        ],
+        "mappings": "AAAA,OAAO,WAAW;AAElB,IAAI,UAAU;AACd,MAAM,aAAa,SAAS;AAAA,EAC1B,CAAC,SAAS;AAAA,EACV,OAAO,UAAU;AACf,QAAI,MAAM,UAAU,WAAW,OAAO,CAAC,SAAS;AAC9C,gBAAU;AAEV,YAAM,EAAE,QAAQ,KAAK,IAAI,MAAM,MAAM;AAAA,QACnC;AAAA,QACA,CAAC;AAAA,QACD;AAAA,UACE,iBAAiB;AAAA,QACnB;AAAA,MACF;AAEA,UAAI,WAAW,KAAK;AAClB,cAAM,SAAS,QAAQ,OAAO,eAAe,IAAI,UAAU,KAAK,KAAK;AACrE,eAAO,MAAM,MAAM,MAAM;AAAA,MAC3B;AAAA,IACF;AACA,cAAU;AACV,UAAM;AAAA,EACR;AACF;AAEO,aAAM,wBAAwB,CAAC,UAAwB;AAC5D,QAAM,SAAS,QAAQ,OAAO,eAAe,IAAI,UAAU,KAAK;AAClE;AAEA,SAAS,eAAe;AAEjB,aAAM,cAAc,MAAY;AACrC,UAAQ,OAAO,YAAY,IAAI;AAC/B,UAAQ,QAAQ;AAClB;AAEO,aAAM,iBAAiB,YAC5B,aAAa,QAAQ,gBAAgB,KAAK;AAErC,aAAM,kBAAkB,YAC7B,aAAa,QAAQ,iBAAiB,KAAK;AAEtC,aAAM,kBAAkB,OAAO,gBACpC,aAAa,QAAQ,kBAAkB,WAAW;AAE7C,aAAM,mBAAmB,OAAO,gBACrC,aAAa,QAAQ,kBAAkB,WAAW;",
+        "names": []
+      }
+    },
+    {
+      "name": "vite:json",
+      "start": 1713208780126,
+      "end": 1713208780126,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1713208780126,
+      "end": 1713208780126,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1713208780126,
+      "end": 1713208780126,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1713208780126,
+      "end": 1713208780126,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1713208780126,
+      "end": 1713208780126,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1713208780126,
+      "end": 1713208780126,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1713208780126,
+      "end": 1713208780126,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1713208780126,
+      "end": 1713208780126,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1713208780126,
+      "end": 1713208780126,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1713208780127,
+      "end": 1713208780127,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1713208780127,
+      "end": 1713208780127,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "result": "var define_import_meta_env_default = { BASE_URL: \"/\", MODE: \"production\", DEV: false, PROD: true, SSR: true };\nimport axios from \"axios\";\nlet refresh = false;\naxios.interceptors.response.use(\n  (resp) => resp,\n  async (error) => {\n    if (error.response?.status === 401 && !refresh) {\n      refresh = true;\n      const { status, data } = await axios.post(\n        \"refresh\",\n        {},\n        {\n          withCredentials: true\n        }\n      );\n      if (status === 200) {\n        axios.defaults.headers.common[\"Authorization\"] = `Bearer ${data.token}`;\n        return axios(error.config);\n      }\n    }\n    refresh = false;\n    throw error;\n  }\n);\nexport const setRequestHeaderToken = (token) => {\n  axios.defaults.headers.common[\"Authorization\"] = `Bearer ${token}`;\n};\nimport { OpenAPI } from \"@/services\";\nexport const prepareApis = () => {\n  OpenAPI.BASE = define_import_meta_env_default.VITE_BASE_URL;\n  OpenAPI.TOKEN = getAccessToken;\n};\nexport const getAccessToken = async () => localStorage.getItem(\"apiAccessToken\") ?? \"\";\nexport const getRefreshToken = async () => localStorage.getItem(\"apiRefreshToken\") ?? \"\";\nexport const saveAccessToken = async (accessToken) => localStorage.setItem(\"apiAccessToken\", accessToken);\nexport const saveRefreshToken = async (accessToken) => localStorage.setItem(\"apiAccessToken\", accessToken);\n",
+      "start": 1713208780127,
+      "end": 1713208780136,
+      "order": "normal",
+      "sourcemaps": "{\"version\":3,\"names\":[],\"sources\":[\"/home/yalnguembu/Perso/quonte/utils/api-config.ts\"],\"sourcesContent\":[\"\",\"import axios from \\\"axios\\\";\\nlet refresh = false;\\naxios.interceptors.response.use(\\n  (resp) => resp,\\n  async (error) => {\\n    if (error.response?.status === 401 && !refresh) {\\n      refresh = true;\\n      const { status, data } = await axios.post(\\n        \\\"refresh\\\",\\n        {},\\n        {\\n          withCredentials: true\\n        }\\n      );\\n      if (status === 200) {\\n        axios.defaults.headers.common[\\\"Authorization\\\"] = `Bearer ${data.token}`;\\n        return axios(error.config);\\n      }\\n    }\\n    refresh = false;\\n    throw error;\\n  }\\n);\\nexport const setRequestHeaderToken = (token) => {\\n  axios.defaults.headers.common[\\\"Authorization\\\"] = `Bearer ${token}`;\\n};\\nimport { OpenAPI } from \\\"@/services\\\";\\nexport const prepareApis = () => {\\n  OpenAPI.BASE = import.meta.env.VITE_BASE_URL;\\n  OpenAPI.TOKEN = getAccessToken;\\n};\\nexport const getAccessToken = async () => localStorage.getItem(\\\"apiAccessToken\\\") ?? \\\"\\\";\\nexport const getRefreshToken = async () => localStorage.getItem(\\\"apiRefreshToken\\\") ?? \\\"\\\";\\nexport const saveAccessToken = async (accessToken) => localStorage.setItem(\\\"apiAccessToken\\\", accessToken);\\nexport const saveRefreshToken = async (accessToken) => localStorage.setItem(\\\"apiAccessToken\\\", accessToken);\\n\"],\"mappings\":\";AAAA,OAAO,WAAW;AAClB,IAAI,UAAU;AACd,MAAM,aAAa,SAAS;AAAA,EAC1B,CAAC,SAAS;AAAA,EACV,OAAO,UAAU;AACf,QAAI,MAAM,UAAU,WAAW,OAAO,CAAC,SAAS;AAC9C,gBAAU;AACV,YAAM,EAAE,QAAQ,KAAK,IAAI,MAAM,MAAM;AAAA,QACnC;AAAA,QACA,CAAC;AAAA,QACD;AAAA,UACE,iBAAiB;AAAA,QACnB;AAAA,MACF;AACA,UAAI,WAAW,KAAK;AAClB,cAAM,SAAS,QAAQ,OAAO,eAAe,IAAI,UAAU,KAAK,KAAK;AACrE,eAAO,MAAM,MAAM,MAAM;AAAA,MAC3B;AAAA,IACF;AACA,cAAU;AACV,UAAM;AAAA,EACR;AACF;AACO,aAAM,wBAAwB,CAAC,UAAU;AAC9C,QAAM,SAAS,QAAQ,OAAO,eAAe,IAAI,UAAU,KAAK;AAClE;AACA,SAAS,eAAe;AACjB,aAAM,cAAc,MAAM;AAC/B,UAAQ,OAAO,+BAAgB;AAC/B,UAAQ,QAAQ;AAClB;AACO,aAAM,iBAAiB,YAAY,aAAa,QAAQ,gBAAgB,KAAK;AAC7E,aAAM,kBAAkB,YAAY,aAAa,QAAQ,iBAAiB,KAAK;AAC/E,aAAM,kBAAkB,OAAO,gBAAgB,aAAa,QAAQ,kBAAkB,WAAW;AACjG,aAAM,mBAAmB,OAAO,gBAAgB,aAAa,QAAQ,kBAAkB,WAAW;\"}"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1713208780136,
+      "end": 1713208780136,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1713208780136,
+      "end": 1713208780136,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1713208780136,
+      "end": 1713208780136,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1713208780136,
+      "end": 1713208780136,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1713208780136,
+      "end": 1713208780136,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1713208780136,
+      "end": 1713208780136,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1713208780136,
+      "end": 1713208780136,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1713208780136,
+      "end": 1713208780136,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1713208780136,
+      "end": 1713208780136,
+      "order": "post"
+    },
+    {
+      "name": "unhead:remove-server-composables",
+      "start": 1713208780136,
+      "end": 1713208780136,
+      "order": "post"
+    },
+    {
+      "name": "unhead:use-seo-meta-transform",
+      "start": 1713208780136,
+      "end": 1713208780136,
+      "order": "post"
+    },
+    {
+      "name": "unhead:use-seo-meta-transform",
+      "start": 1713208780136,
+      "end": 1713208780136,
+      "order": "post"
+    },
+    {
+      "name": "nuxtjs:i18n-resource",
+      "start": 1713208780136,
+      "end": 1713208780137,
+      "order": "post"
+    },
+    {
+      "name": "nuxtjs:i18n-resource",
+      "start": 1713208780136,
+      "end": 1713208780137,
+      "order": "post"
+    },
+    {
+      "name": "nuxtjs:i18n-meta-deprecation",
+      "start": 1713208780137,
+      "end": 1713208780137,
+      "order": "post"
+    },
+    {
+      "name": "nuxtjs:i18n-meta-deprecation",
+      "start": 1713208780137,
+      "end": 1713208780137,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1713208780137,
+      "end": 1713208780137,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1713208780137,
+      "end": 1713208780137,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1713208780137,
+      "end": 1713208780137,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1713208780137,
+      "end": 1713208780137,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1713208780137,
+      "end": 1713208780137,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1713208780137,
+      "end": 1713208780137,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-template",
+      "start": 1713208780137,
+      "end": 1713208780137,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1713208780137,
+      "end": 1713208780137,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1713208780137,
+      "end": 1713208780137,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1713208780137,
+      "end": 1713208780137,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1713208780137,
+      "end": 1713208780137,
+      "order": "normal"
+    }
+  ]
+}
