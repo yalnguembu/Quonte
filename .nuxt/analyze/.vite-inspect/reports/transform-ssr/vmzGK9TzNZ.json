@@ -1,0 +1,338 @@
+{
+  "resolvedId": "/home/yalnguembu/Perso/quonte/node_modules/nuxt-site-config/dist/runtime/nuxt/composables/useNitroOrigin.mjs",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import { useRequestEvent } from \"#imports\";\nexport function useNitroOrigin(e) {\n  if (process.server) {\n    e = e || useRequestEvent();\n    return e.context.siteConfigNitroOrigin;\n  }\n  if (process.client)\n    return window.location.origin;\n  return \"\";\n}\n",
+      "start": 1713208777966,
+      "end": 1713208778165,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1713208778165,
+      "end": 1713208778165,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1713208778165,
+      "end": 1713208778165,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1713208778165,
+      "end": 1713208778165,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1713208778165,
+      "end": 1713208778166,
+      "order": "pre"
+    },
+    {
+      "name": "unplugin-vue-i18n",
+      "start": 1713208778166,
+      "end": 1713208778166,
+      "order": "pre"
+    },
+    {
+      "name": "unplugin-vue-i18n",
+      "start": 1713208778166,
+      "end": 1713208778166,
+      "order": "pre"
+    },
+    {
+      "name": "nuxtjs:i18n-macros-transform",
+      "start": 1713208778166,
+      "end": 1713208778166,
+      "order": "pre"
+    },
+    {
+      "name": "nuxtjs:i18n-macros-transform",
+      "start": 1713208778166,
+      "end": 1713208778166,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1713208778166,
+      "end": 1713208778166,
+      "order": "pre"
+    },
+    {
+      "name": "server-only-component-transform",
+      "start": 1713208778166,
+      "end": 1713208778166,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1713208778166,
+      "end": 1713208778166,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1713208778166,
+      "end": 1713208778166,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1713208778166,
+      "end": 1713208778166,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1713208778166,
+      "end": 1713208778166,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1713208778166,
+      "end": 1713208778166,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1713208778166,
+      "end": 1713208778166,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1713208778166,
+      "end": 1713208778166,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1713208778166,
+      "end": 1713208778166,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1713208778166,
+      "end": 1713208778166,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1713208778166,
+      "end": 1713208778166,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1713208778166,
+      "end": 1713208778166,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1713208778166,
+      "end": 1713208778166,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1713208778166,
+      "end": 1713208778166,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "result": "import { useRequestEvent } from \"#imports\";\nexport function useNitroOrigin(e) {\n  if (true) {\n    e = e || useRequestEvent();\n    return e.context.siteConfigNitroOrigin;\n  }\n  if (false)\n    return (void 0).location.origin;\n  return \"\";\n}\n",
+      "start": 1713208778166,
+      "end": 1713208778202,
+      "order": "normal",
+      "sourcemaps": "{\n  \"version\": 3,\n  \"sources\": [\"/home/yalnguembu/Perso/quonte/node_modules/nuxt-site-config/dist/runtime/nuxt/composables/useNitroOrigin.mjs\"],\n  \"sourcesContent\": [\"import { useRequestEvent } from \\\"#imports\\\";\\nexport function useNitroOrigin(e) {\\n  if (process.server) {\\n    e = e || useRequestEvent();\\n    return e.context.siteConfigNitroOrigin;\\n  }\\n  if (process.client)\\n    return window.location.origin;\\n  return \\\"\\\";\\n}\\n\"],\n  \"mappings\": \"AAAA,SAAS,uBAAuB;AACzB,gBAAS,eAAe,GAAG;AAChC,MAAI,MAAgB;AAClB,QAAI,KAAK,gBAAgB;AACzB,WAAO,EAAE,QAAQ;AAAA,EACnB;AACA,MAAI;AACF,WAAO,SAAO,SAAS;AACzB,SAAO;AACT;\",\n  \"names\": []\n}\n"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1713208778202,
+      "end": 1713208778202,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1713208778202,
+      "end": 1713208778202,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1713208778203,
+      "end": 1713208778203,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1713208778203,
+      "end": 1713208778203,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1713208778204,
+      "end": 1713208778205,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1713208778205,
+      "end": 1713208778205,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1713208778206,
+      "end": 1713208778206,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1713208778207,
+      "end": 1713208778207,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1713208778207,
+      "end": 1713208778207,
+      "order": "post"
+    },
+    {
+      "name": "unhead:remove-server-composables",
+      "start": 1713208778207,
+      "end": 1713208778207,
+      "order": "post"
+    },
+    {
+      "name": "unhead:use-seo-meta-transform",
+      "start": 1713208778207,
+      "end": 1713208778207,
+      "order": "post"
+    },
+    {
+      "name": "unhead:use-seo-meta-transform",
+      "start": 1713208778207,
+      "end": 1713208778208,
+      "order": "post"
+    },
+    {
+      "name": "nuxtjs:i18n-resource",
+      "start": 1713208778208,
+      "end": 1713208778208,
+      "order": "post"
+    },
+    {
+      "name": "nuxtjs:i18n-resource",
+      "start": 1713208778208,
+      "end": 1713208778208,
+      "order": "post"
+    },
+    {
+      "name": "nuxtjs:i18n-meta-deprecation",
+      "start": 1713208778208,
+      "end": 1713208778208,
+      "order": "post"
+    },
+    {
+      "name": "nuxtjs:i18n-meta-deprecation",
+      "start": 1713208778208,
+      "end": 1713208778208,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "result": "import { useRequestEvent } from '#app/composables/ssr';\nexport function useNitroOrigin(e) {\n  if (true) {\n    e = e || useRequestEvent();\n    return e.context.siteConfigNitroOrigin;\n  }\n  if (false)\n    return (void 0).location.origin;\n  return \"\";\n}\n",
+      "start": 1713208778209,
+      "end": 1713208778212,
+      "order": "post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          ""
+        ],
+        "names": [],
+        "mappings": ";AACA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACb,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3C,CAAC,CAAC,CAAC;AACH,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACZ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACZ,CAAC;"
+      }
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "result": "import { useRequestEvent } from '#app/composables/ssr';\nexport function useNitroOrigin(e) {\n  if (true) {\n    e = e || useRequestEvent();\n    return e.context.siteConfigNitroOrigin;\n  }\n  if (false)\n    return (void 0).location.origin;\n  return \"\";\n}\n",
+      "start": 1713208778209,
+      "end": 1713208778212,
+      "order": "post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          ""
+        ],
+        "names": [],
+        "mappings": ";AACA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACnC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACb,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC/B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3C,CAAC,CAAC,CAAC;AACH,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACZ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACZ,CAAC;"
+      }
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1713208778213,
+      "end": 1713208778213,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1713208778213,
+      "end": 1713208778213,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1713208778213,
+      "end": 1713208778213,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1713208778213,
+      "end": 1713208778213,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-template",
+      "start": 1713208778213,
+      "end": 1713208778214,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1713208778214,
+      "end": 1713208778214,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1713208778214,
+      "end": 1713208778214,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1713208778219,
+      "end": 1713208778219,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1713208778222,
+      "end": 1713208778222,
+      "order": "normal"
+    }
+  ]
+}

@@ -1,0 +1,251 @@
+{
+  "resolvedId": "/home/yalnguembu/Perso/quonte/node_modules/nuxt-og-image/dist/runtime/nuxt/components/Templates/Community/WithEmoji.vue?vue&type=script&setup=true&lang.ts",
+  "transforms": [
+    {
+      "name": "vite:vue",
+      "result": "import { defineComponent as _defineComponent } from 'vue'\nimport { toDisplayString as _toDisplayString, createElementVNode as _createElementVNode, openBlock as _openBlock, createElementBlock as _createElementBlock } from \"vue\"\n\nconst _hoisted_1 = { class: \"h-full w-full flex items-start justify-start bg-sky-50\" }\nconst _hoisted_2 = { class: \"flex items-start justify-start h-full\" }\nconst _hoisted_3 = { class: \"flex flex-col justify-center items-center px-20 w-full h-full text-center\" }\nconst _hoisted_4 = { class: \"text-[120px] mx-auto text-center font-bold mb-0\" }\nconst _hoisted_5 = { class: \"text-[60px] font-bold\" }\n\n\nexport default /*#__PURE__*/_defineComponent({\n  __name: 'WithEmoji',\n  props: {\n    emoji: { default: '👋' },\n    title: { default: 'title' }\n  },\n  setup(__props: any) {\n\n/**\n * @credits Full Stack Heroes <https://fullstackheroes.com/>\n */\n\n\n\nreturn (_ctx: any,_cache: any) => {\n  return (_openBlock(), _createElementBlock(\"div\", _hoisted_1, [\n    _createElementVNode(\"div\", _hoisted_2, [\n      _createElementVNode(\"div\", _hoisted_3, [\n        _createElementVNode(\"p\", _hoisted_4, _toDisplayString(_ctx.emoji), 1),\n        _createElementVNode(\"h1\", _hoisted_5, _toDisplayString(_ctx.title), 1)\n      ])\n    ])\n  ]))\n}\n}\n\n})",
+      "start": 1713208771500,
+      "end": 1713208771501
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1713208771501,
+      "end": 1713208771501,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1713208771501,
+      "end": 1713208771501,
+      "order": "pre"
+    },
+    {
+      "name": "unplugin-vue-i18n",
+      "start": 1713208771502,
+      "end": 1713208771502,
+      "order": "pre"
+    },
+    {
+      "name": "nuxtjs:i18n-macros-transform",
+      "start": 1713208771502,
+      "end": 1713208771502,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1713208771502,
+      "end": 1713208771502,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1713208771502,
+      "end": 1713208771502,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { defineComponent as _defineComponent } from \"vue\";\nimport { toDisplayString as _toDisplayString, createElementVNode as _createElementVNode, openBlock as _openBlock, createElementBlock as _createElementBlock } from \"vue\";\nconst _hoisted_1 = { class: \"h-full w-full flex items-start justify-start bg-sky-50\" };\nconst _hoisted_2 = { class: \"flex items-start justify-start h-full\" };\nconst _hoisted_3 = { class: \"flex flex-col justify-center items-center px-20 w-full h-full text-center\" };\nconst _hoisted_4 = { class: \"text-[120px] mx-auto text-center font-bold mb-0\" };\nconst _hoisted_5 = { class: \"text-[60px] font-bold\" };\nexport default /* @__PURE__ */ _defineComponent({\n  __name: \"WithEmoji\",\n  props: {\n    emoji: { default: \"👋\" },\n    title: { default: \"title\" }\n  },\n  setup(__props) {\n    return (_ctx, _cache) => {\n      return _openBlock(), _createElementBlock(\"div\", _hoisted_1, [\n        _createElementVNode(\"div\", _hoisted_2, [\n          _createElementVNode(\"div\", _hoisted_3, [\n            _createElementVNode(\"p\", _hoisted_4, _toDisplayString(_ctx.emoji), 1),\n            _createElementVNode(\"h1\", _hoisted_5, _toDisplayString(_ctx.title), 1)\n          ])\n        ])\n      ]);\n    };\n  }\n});\n",
+      "start": 1713208771502,
+      "end": 1713208771604,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "/home/yalnguembu/Perso/quonte/node_modules/nuxt-og-image/dist/runtime/nuxt/components/Templates/Community/WithEmoji.vue?vue&type=script&setup=true&lang.ts"
+        ],
+        "sourcesContent": [
+          "import { defineComponent as _defineComponent } from 'vue'\nimport { toDisplayString as _toDisplayString, createElementVNode as _createElementVNode, openBlock as _openBlock, createElementBlock as _createElementBlock } from \"vue\"\n\nconst _hoisted_1 = { class: \"h-full w-full flex items-start justify-start bg-sky-50\" }\nconst _hoisted_2 = { class: \"flex items-start justify-start h-full\" }\nconst _hoisted_3 = { class: \"flex flex-col justify-center items-center px-20 w-full h-full text-center\" }\nconst _hoisted_4 = { class: \"text-[120px] mx-auto text-center font-bold mb-0\" }\nconst _hoisted_5 = { class: \"text-[60px] font-bold\" }\n\n\nexport default /*#__PURE__*/_defineComponent({\n  __name: 'WithEmoji',\n  props: {\n    emoji: { default: '👋' },\n    title: { default: 'title' }\n  },\n  setup(__props: any) {\n\n/**\n * @credits Full Stack Heroes <https://fullstackheroes.com/>\n */\n\n\n\nreturn (_ctx: any,_cache: any) => {\n  return (_openBlock(), _createElementBlock(\"div\", _hoisted_1, [\n    _createElementVNode(\"div\", _hoisted_2, [\n      _createElementVNode(\"div\", _hoisted_3, [\n        _createElementVNode(\"p\", _hoisted_4, _toDisplayString(_ctx.emoji), 1),\n        _createElementVNode(\"h1\", _hoisted_5, _toDisplayString(_ctx.title), 1)\n      ])\n    ])\n  ]))\n}\n}\n\n})"
+        ],
+        "mappings": "AAAA,SAAS,mBAAmB,wBAAwB;AACpD,SAAS,mBAAmB,kBAAkB,sBAAsB,qBAAqB,aAAa,YAAY,sBAAsB,2BAA2B;AAEnK,MAAM,aAAa,EAAE,OAAO,yDAAyD;AACrF,MAAM,aAAa,EAAE,OAAO,wCAAwC;AACpE,MAAM,aAAa,EAAE,OAAO,4EAA4E;AACxG,MAAM,aAAa,EAAE,OAAO,kDAAkD;AAC9E,MAAM,aAAa,EAAE,OAAO,wBAAwB;AAGpD,eAA4B,iCAAiB;AAAA,EAC3C,QAAQ;AAAA,EACR,OAAO;AAAA,IACL,OAAO,EAAE,SAAS,KAAK;AAAA,IACvB,OAAO,EAAE,SAAS,QAAQ;AAAA,EAC5B;AAAA,EACA,MAAM,SAAc;AAQtB,WAAO,CAAC,MAAU,WAAgB;AAChC,aAAQ,WAAW,GAAG,oBAAoB,OAAO,YAAY;AAAA,QAC3D,oBAAoB,OAAO,YAAY;AAAA,UACrC,oBAAoB,OAAO,YAAY;AAAA,YACrC,oBAAoB,KAAK,YAAY,iBAAiB,KAAK,KAAK,GAAG,CAAC;AAAA,YACpE,oBAAoB,MAAM,YAAY,iBAAiB,KAAK,KAAK,GAAG,CAAC;AAAA,UACvE,CAAC;AAAA,QACH,CAAC;AAAA,MACH,CAAC;AAAA,IACH;AAAA,EACA;AAEA,CAAC;",
+        "names": []
+      }
+    },
+    {
+      "name": "vite:json",
+      "start": 1713208771604,
+      "end": 1713208771604,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1713208771604,
+      "end": 1713208771605,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1713208771605,
+      "end": 1713208771606,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1713208771607,
+      "end": 1713208771607,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1713208771607,
+      "end": 1713208771607,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1713208771607,
+      "end": 1713208771607,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1713208771607,
+      "end": 1713208771607,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1713208771607,
+      "end": 1713208771607,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1713208771608,
+      "end": 1713208771608,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1713208771608,
+      "end": 1713208771608,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1713208771608,
+      "end": 1713208771608,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1713208771608,
+      "end": 1713208771608,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1713208771621,
+      "end": 1713208771621,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1713208771627,
+      "end": 1713208771628,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1713208771628,
+      "end": 1713208771628,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1713208771628,
+      "end": 1713208771628,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1713208771628,
+      "end": 1713208771628,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1713208771628,
+      "end": 1713208771628,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1713208771628,
+      "end": 1713208771628,
+      "order": "post"
+    },
+    {
+      "name": "unhead:use-seo-meta-transform",
+      "start": 1713208771628,
+      "end": 1713208771628,
+      "order": "post"
+    },
+    {
+      "name": "nuxtjs:i18n-resource",
+      "start": 1713208771629,
+      "end": 1713208771629,
+      "order": "post"
+    },
+    {
+      "name": "nuxtjs:i18n-meta-deprecation",
+      "start": 1713208771629,
+      "end": 1713208771629,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1713208771641,
+      "end": 1713208771641,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1713208771650,
+      "end": 1713208771650,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1713208771655,
+      "end": 1713208771655,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1713208771656,
+      "end": 1713208771656,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1713208771656,
+      "end": 1713208771656,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1713208771656,
+      "end": 1713208771656,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1713208771656,
+      "end": 1713208771656,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1713208771657,
+      "end": 1713208771657,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1713208771657,
+      "end": 1713208771657,
+      "order": "normal"
+    }
+  ]
+}

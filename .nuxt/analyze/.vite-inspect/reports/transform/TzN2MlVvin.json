@@ -1,0 +1,240 @@
+{
+  "resolvedId": "/home/yalnguembu/Perso/quonte/node_modules/@vuelidate/core/dist/index.mjs",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import { isReactive, isReadonly, computed, unref, ref, watch, isRef, reactive, nextTick, inject, provide, getCurrentInstance, onBeforeMount, onBeforeUnmount } from 'vue-demi';\n\nfunction ownKeys(object, enumerableOnly) {\n  var keys = Object.keys(object);\n\n  if (Object.getOwnPropertySymbols) {\n    var symbols = Object.getOwnPropertySymbols(object);\n    enumerableOnly && (symbols = symbols.filter(function (sym) {\n      return Object.getOwnPropertyDescriptor(object, sym).enumerable;\n    })), keys.push.apply(keys, symbols);\n  }\n\n  return keys;\n}\n\nfunction _objectSpread2(target) {\n  for (var i = 1; i < arguments.length; i++) {\n    var source = null != arguments[i] ? arguments[i] : {};\n    i % 2 ? ownKeys(Object(source), !0).forEach(function (key) {\n      _defineProperty(target, key, source[key]);\n    }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) {\n      Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));\n    });\n  }\n\n  return target;\n}\n\nfunction _defineProperty(obj, key, value) {\n  if (key in obj) {\n    Object.defineProperty(obj, key, {\n      value: value,\n      enumerable: true,\n      configurable: true,\n      writable: true\n    });\n  } else {\n    obj[key] = value;\n  }\n\n  return obj;\n}\n\nfunction unwrapObj(obj) {\n  let ignoreKeys = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : [];\n  return Object.keys(obj).reduce((o, k) => {\n    if (ignoreKeys.includes(k)) return o;\n    o[k] = unref(obj[k]);\n    return o;\n  }, {});\n}\nfunction isFunction(val) {\n  return typeof val === 'function';\n}\nfunction isProxy(value) {\n  return isReactive(value) || isReadonly(value);\n}\nfunction get(obj, stringPath, def) {\n  let current = obj;\n  const path = stringPath.split('.');\n\n  for (let i = 0; i < path.length; i++) {\n    if (!current[path[i]]) return def;\n    current = current[path[i]];\n  }\n\n  return current;\n}\nfunction gatherBooleanGroupProperties(group, nestedResults, property) {\n  return computed(() => {\n    return group.some(path => {\n      return get(nestedResults, path, {\n        [property]: false\n      })[property];\n    });\n  });\n}\nfunction gatherArrayGroupProperties(group, nestedResults, property) {\n  return computed(() => {\n    return group.reduce((all, path) => {\n      const fetchedProperty = get(nestedResults, path, {\n        [property]: false\n      })[property] || [];\n      return all.concat(fetchedProperty);\n    }, []);\n  });\n}\n\nfunction callRule(rule, value, siblingState, instance) {\n  return rule.call(instance, unref(value), unref(siblingState), instance);\n}\n\nfunction normalizeValidatorResponse(result) {\n  return result.$valid !== undefined ? !result.$valid : !result;\n}\n\nfunction createAsyncResult(rule, model, $pending, $dirty, _ref, $response, instance) {\n  let {\n    $lazy,\n    $rewardEarly\n  } = _ref;\n  let watchTargets = arguments.length > 7 && arguments[7] !== undefined ? arguments[7] : [];\n  let siblingState = arguments.length > 8 ? arguments[8] : undefined;\n  let $lastInvalidState = arguments.length > 9 ? arguments[9] : undefined;\n  let $lastCommittedOn = arguments.length > 10 ? arguments[10] : undefined;\n  const $invalid = ref(!!$dirty.value);\n  const $pendingCounter = ref(0);\n  $pending.value = false;\n  const $unwatch = watch([model, $dirty].concat(watchTargets, $lastCommittedOn), () => {\n    if ($lazy && !$dirty.value || $rewardEarly && !$lastInvalidState.value && !$pending.value) {\n      return;\n    }\n\n    let ruleResult;\n\n    try {\n      ruleResult = callRule(rule, model, siblingState, instance);\n    } catch (err) {\n      ruleResult = Promise.reject(err);\n    }\n\n    $pendingCounter.value++;\n    $pending.value = !!$pendingCounter.value;\n    $invalid.value = false;\n    Promise.resolve(ruleResult).then(data => {\n      $pendingCounter.value--;\n      $pending.value = !!$pendingCounter.value;\n      $response.value = data;\n      $invalid.value = normalizeValidatorResponse(data);\n    }).catch(error => {\n      $pendingCounter.value--;\n      $pending.value = !!$pendingCounter.value;\n      $response.value = error;\n      $invalid.value = true;\n    });\n  }, {\n    immediate: true,\n    deep: typeof model === 'object'\n  });\n  return {\n    $invalid,\n    $unwatch\n  };\n}\n\nfunction createSyncResult(rule, model, $dirty, _ref2, $response, instance, siblingState, $lastInvalidState) {\n  let {\n    $lazy,\n    $rewardEarly\n  } = _ref2;\n\n  const $unwatch = () => ({});\n\n  const $invalid = computed(() => {\n    if ($lazy && !$dirty.value || $rewardEarly && !$lastInvalidState.value) {\n      return false;\n    }\n\n    let returnValue = true;\n\n    try {\n      const result = callRule(rule, model, siblingState, instance);\n      $response.value = result;\n      returnValue = normalizeValidatorResponse(result);\n    } catch (err) {\n      $response.value = err;\n    }\n\n    return returnValue;\n  });\n  return {\n    $unwatch,\n    $invalid\n  };\n}\n\nfunction createValidatorResult(rule, model, $dirty, config, instance, validatorName, propertyKey, propertyPath, siblingState, $lastInvalidState, $lastCommittedOn) {\n  const $pending = ref(false);\n  const $params = rule.$params || {};\n  const $response = ref(null);\n  let $invalid;\n  let $unwatch;\n\n  if (rule.$async) {\n    ({\n      $invalid,\n      $unwatch\n    } = createAsyncResult(rule.$validator, model, $pending, $dirty, config, $response, instance, rule.$watchTargets, siblingState, $lastInvalidState, $lastCommittedOn));\n  } else {\n    ({\n      $invalid,\n      $unwatch\n    } = createSyncResult(rule.$validator, model, $dirty, config, $response, instance, siblingState, $lastInvalidState));\n  }\n\n  const message = rule.$message;\n  const $message = isFunction(message) ? computed(() => message(unwrapObj({\n    $pending,\n    $invalid,\n    $params: unwrapObj($params),\n    $model: model,\n    $response,\n    $validator: validatorName,\n    $propertyPath: propertyPath,\n    $property: propertyKey\n  }))) : message || '';\n  return {\n    $message,\n    $params,\n    $pending,\n    $invalid,\n    $response,\n    $unwatch\n  };\n}\n\nfunction sortValidations() {\n  let validationsRaw = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};\n  const validations = unref(validationsRaw);\n  const validationKeys = Object.keys(validations);\n  const rules = {};\n  const nestedValidators = {};\n  const config = {};\n  let validationGroups = null;\n  validationKeys.forEach(key => {\n    const v = validations[key];\n\n    switch (true) {\n      case isFunction(v.$validator):\n        rules[key] = v;\n        break;\n\n      case isFunction(v):\n        rules[key] = {\n          $validator: v\n        };\n        break;\n\n      case key === '$validationGroups':\n        validationGroups = v;\n        break;\n\n      case key.startsWith('$'):\n        config[key] = v;\n        break;\n\n      default:\n        nestedValidators[key] = v;\n    }\n  });\n  return {\n    rules,\n    nestedValidators,\n    config,\n    validationGroups\n  };\n}\n\nconst ROOT_PATH = '__root';\n\nfunction createValidationResults(rules, model, key, resultsCache, path, config, instance, externalResults, siblingState) {\n  const ruleKeys = Object.keys(rules);\n  const cachedResult = resultsCache.get(path, rules);\n  const $dirty = ref(false);\n  const $lastInvalidState = ref(false);\n  const $lastCommittedOn = ref(0);\n\n  if (cachedResult) {\n    if (!cachedResult.$partial) return cachedResult;\n    cachedResult.$unwatch();\n    $dirty.value = cachedResult.$dirty.value;\n  }\n\n  const result = {\n    $dirty,\n    $path: path,\n    $touch: () => {\n      if (!$dirty.value) $dirty.value = true;\n    },\n    $reset: () => {\n      if ($dirty.value) $dirty.value = false;\n    },\n    $commit: () => {}\n  };\n\n  if (!ruleKeys.length) {\n    cachedResult && resultsCache.set(path, rules, result);\n    return result;\n  }\n\n  ruleKeys.forEach(ruleKey => {\n    result[ruleKey] = createValidatorResult(rules[ruleKey], model, result.$dirty, config, instance, ruleKey, key, path, siblingState, $lastInvalidState, $lastCommittedOn);\n  });\n  result.$externalResults = computed(() => {\n    if (!externalResults.value) return [];\n    return [].concat(externalResults.value).map((stringError, index) => ({\n      $propertyPath: path,\n      $property: key,\n      $validator: '$externalResults',\n      $uid: `${path}-externalResult-${index}`,\n      $message: stringError,\n      $params: {},\n      $response: null,\n      $pending: false\n    }));\n  });\n  result.$invalid = computed(() => {\n    const r = ruleKeys.some(ruleKey => unref(result[ruleKey].$invalid));\n    $lastInvalidState.value = r;\n    return !!result.$externalResults.value.length || r;\n  });\n  result.$pending = computed(() => ruleKeys.some(ruleKey => unref(result[ruleKey].$pending)));\n  result.$error = computed(() => result.$dirty.value ? result.$pending.value || result.$invalid.value : false);\n  result.$silentErrors = computed(() => ruleKeys.filter(ruleKey => unref(result[ruleKey].$invalid)).map(ruleKey => {\n    const res = result[ruleKey];\n    return reactive({\n      $propertyPath: path,\n      $property: key,\n      $validator: ruleKey,\n      $uid: `${path}-${ruleKey}`,\n      $message: res.$message,\n      $params: res.$params,\n      $response: res.$response,\n      $pending: res.$pending\n    });\n  }).concat(result.$externalResults.value));\n  result.$errors = computed(() => result.$dirty.value ? result.$silentErrors.value : []);\n\n  result.$unwatch = () => ruleKeys.forEach(ruleKey => {\n    result[ruleKey].$unwatch();\n  });\n\n  result.$commit = () => {\n    $lastInvalidState.value = true;\n    $lastCommittedOn.value = Date.now();\n  };\n\n  resultsCache.set(path, rules, result);\n  return result;\n}\n\nfunction collectNestedValidationResults(validations, nestedState, path, resultsCache, config, instance, nestedExternalResults) {\n  const nestedValidationKeys = Object.keys(validations);\n  if (!nestedValidationKeys.length) return {};\n  return nestedValidationKeys.reduce((results, nestedKey) => {\n    results[nestedKey] = setValidations({\n      validations: validations[nestedKey],\n      state: nestedState,\n      key: nestedKey,\n      parentKey: path,\n      resultsCache,\n      globalConfig: config,\n      instance,\n      externalResults: nestedExternalResults\n    });\n    return results;\n  }, {});\n}\n\nfunction createMetaFields(results, nestedResults, childResults) {\n  const allResults = computed(() => [nestedResults, childResults].filter(res => res).reduce((allRes, res) => {\n    return allRes.concat(Object.values(unref(res)));\n  }, []));\n  const $dirty = computed({\n    get() {\n      return results.$dirty.value || (allResults.value.length ? allResults.value.every(r => r.$dirty) : false);\n    },\n\n    set(v) {\n      results.$dirty.value = v;\n    }\n\n  });\n  const $silentErrors = computed(() => {\n    const modelErrors = unref(results.$silentErrors) || [];\n    const nestedErrors = allResults.value.filter(result => (unref(result).$silentErrors || []).length).reduce((errors, result) => {\n      return errors.concat(...result.$silentErrors);\n    }, []);\n    return modelErrors.concat(nestedErrors);\n  });\n  const $errors = computed(() => {\n    const modelErrors = unref(results.$errors) || [];\n    const nestedErrors = allResults.value.filter(result => (unref(result).$errors || []).length).reduce((errors, result) => {\n      return errors.concat(...result.$errors);\n    }, []);\n    return modelErrors.concat(nestedErrors);\n  });\n  const $invalid = computed(() => allResults.value.some(r => r.$invalid) || unref(results.$invalid) || false);\n  const $pending = computed(() => allResults.value.some(r => unref(r.$pending)) || unref(results.$pending) || false);\n  const $anyDirty = computed(() => allResults.value.some(r => r.$dirty) || allResults.value.some(r => r.$anyDirty) || $dirty.value);\n  const $error = computed(() => $dirty.value ? $pending.value || $invalid.value : false);\n\n  const $touch = () => {\n    results.$touch();\n    allResults.value.forEach(result => {\n      result.$touch();\n    });\n  };\n\n  const $commit = () => {\n    results.$commit();\n    allResults.value.forEach(result => {\n      result.$commit();\n    });\n  };\n\n  const $reset = () => {\n    results.$reset();\n    allResults.value.forEach(result => {\n      result.$reset();\n    });\n  };\n\n  if (allResults.value.length && allResults.value.every(nr => nr.$dirty)) $touch();\n  return {\n    $dirty,\n    $errors,\n    $invalid,\n    $anyDirty,\n    $error,\n    $pending,\n    $touch,\n    $reset,\n    $silentErrors,\n    $commit\n  };\n}\n\nfunction setValidations(_ref) {\n  let {\n    validations,\n    state,\n    key,\n    parentKey,\n    childResults,\n    resultsCache,\n    globalConfig = {},\n    instance,\n    externalResults\n  } = _ref;\n  const path = parentKey ? `${parentKey}.${key}` : key;\n  const {\n    rules,\n    nestedValidators,\n    config,\n    validationGroups\n  } = sortValidations(validations);\n\n  const mergedConfig = _objectSpread2(_objectSpread2({}, globalConfig), config);\n\n  const nestedState = key ? computed(() => {\n    const s = unref(state);\n    return s ? unref(s[key]) : undefined;\n  }) : state;\n\n  const cachedExternalResults = _objectSpread2({}, unref(externalResults) || {});\n\n  const nestedExternalResults = computed(() => {\n    const results = unref(externalResults);\n    if (!key) return results;\n    return results ? unref(results[key]) : undefined;\n  });\n  const results = createValidationResults(rules, nestedState, key, resultsCache, path, mergedConfig, instance, nestedExternalResults, state);\n  const nestedResults = collectNestedValidationResults(nestedValidators, nestedState, path, resultsCache, mergedConfig, instance, nestedExternalResults);\n  const $validationGroups = {};\n\n  if (validationGroups) {\n    Object.entries(validationGroups).forEach(_ref2 => {\n      let [key, group] = _ref2;\n      $validationGroups[key] = {\n        $invalid: gatherBooleanGroupProperties(group, nestedResults, '$invalid'),\n        $error: gatherBooleanGroupProperties(group, nestedResults, '$error'),\n        $pending: gatherBooleanGroupProperties(group, nestedResults, '$pending'),\n        $errors: gatherArrayGroupProperties(group, nestedResults, '$errors'),\n        $silentErrors: gatherArrayGroupProperties(group, nestedResults, '$silentErrors')\n      };\n    });\n  }\n\n  const {\n    $dirty,\n    $errors,\n    $invalid,\n    $anyDirty,\n    $error,\n    $pending,\n    $touch,\n    $reset,\n    $silentErrors,\n    $commit\n  } = createMetaFields(results, nestedResults, childResults);\n  const $model = key ? computed({\n    get: () => unref(nestedState),\n    set: val => {\n      $dirty.value = true;\n      const s = unref(state);\n      const external = unref(externalResults);\n\n      if (external) {\n        external[key] = cachedExternalResults[key];\n      }\n\n      if (isRef(s[key])) {\n        s[key].value = val;\n      } else {\n        s[key] = val;\n      }\n    }\n  }) : null;\n\n  if (key && mergedConfig.$autoDirty) {\n    watch(nestedState, () => {\n      if (!$dirty.value) $touch();\n      const external = unref(externalResults);\n\n      if (external) {\n        external[key] = cachedExternalResults[key];\n      }\n    }, {\n      flush: 'sync'\n    });\n  }\n\n  async function $validate() {\n    $touch();\n\n    if (mergedConfig.$rewardEarly) {\n      $commit();\n      await nextTick();\n    }\n\n    await nextTick();\n    return new Promise(resolve => {\n      if (!$pending.value) return resolve(!$invalid.value);\n      const unwatch = watch($pending, () => {\n        resolve(!$invalid.value);\n        unwatch();\n      });\n    });\n  }\n\n  function $getResultsForChild(key) {\n    return (childResults.value || {})[key];\n  }\n\n  function $clearExternalResults() {\n    if (isRef(externalResults)) {\n      externalResults.value = cachedExternalResults;\n    } else {\n      if (Object.keys(cachedExternalResults).length === 0) {\n        Object.keys(externalResults).forEach(k => {\n          delete externalResults[k];\n        });\n      } else {\n        Object.assign(externalResults, cachedExternalResults);\n      }\n    }\n  }\n\n  return reactive(_objectSpread2(_objectSpread2(_objectSpread2({}, results), {}, {\n    $model,\n    $dirty,\n    $error,\n    $errors,\n    $invalid,\n    $anyDirty,\n    $pending,\n    $touch,\n    $reset,\n    $path: path || ROOT_PATH,\n    $silentErrors,\n    $validate,\n    $commit\n  }, childResults && {\n    $getResultsForChild,\n    $clearExternalResults,\n    $validationGroups\n  }), nestedResults));\n}\n\nclass ResultsStorage {\n  constructor() {\n    this.storage = new Map();\n  }\n\n  set(path, rules, result) {\n    this.storage.set(path, {\n      rules,\n      result\n    });\n  }\n\n  checkRulesValidity(path, rules, storedRules) {\n    const storedRulesKeys = Object.keys(storedRules);\n    const newRulesKeys = Object.keys(rules);\n    if (newRulesKeys.length !== storedRulesKeys.length) return false;\n    const hasAllValidators = newRulesKeys.every(ruleKey => storedRulesKeys.includes(ruleKey));\n    if (!hasAllValidators) return false;\n    return newRulesKeys.every(ruleKey => {\n      if (!rules[ruleKey].$params) return true;\n      return Object.keys(rules[ruleKey].$params).every(paramKey => {\n        return unref(storedRules[ruleKey].$params[paramKey]) === unref(rules[ruleKey].$params[paramKey]);\n      });\n    });\n  }\n\n  get(path, rules) {\n    const storedRuleResultPair = this.storage.get(path);\n    if (!storedRuleResultPair) return undefined;\n    const {\n      rules: storedRules,\n      result\n    } = storedRuleResultPair;\n    const isValidCache = this.checkRulesValidity(path, rules, storedRules);\n    const $unwatch = result.$unwatch ? result.$unwatch : () => ({});\n    if (!isValidCache) return {\n      $dirty: result.$dirty,\n      $partial: true,\n      $unwatch\n    };\n    return result;\n  }\n\n}\n\nconst CollectFlag = {\n  COLLECT_ALL: true,\n  COLLECT_NONE: false\n};\nconst VuelidateInjectChildResults = Symbol('vuelidate#injectChildResults');\nconst VuelidateRemoveChildResults = Symbol('vuelidate#removeChildResults');\nfunction nestedValidations(_ref) {\n  let {\n    $scope,\n    instance\n  } = _ref;\n  const childResultsRaw = {};\n  const childResultsKeys = ref([]);\n  const childResults = computed(() => childResultsKeys.value.reduce((results, key) => {\n    results[key] = unref(childResultsRaw[key]);\n    return results;\n  }, {}));\n\n  function injectChildResultsIntoParent(results, _ref2) {\n    let {\n      $registerAs: key,\n      $scope: childScope,\n      $stopPropagation\n    } = _ref2;\n    if ($stopPropagation || $scope === CollectFlag.COLLECT_NONE || childScope === CollectFlag.COLLECT_NONE || $scope !== CollectFlag.COLLECT_ALL && $scope !== childScope) return;\n    childResultsRaw[key] = results;\n    childResultsKeys.value.push(key);\n  }\n\n  instance.__vuelidateInjectInstances = [].concat(instance.__vuelidateInjectInstances || [], injectChildResultsIntoParent);\n\n  function removeChildResultsFromParent(key) {\n    childResultsKeys.value = childResultsKeys.value.filter(childKey => childKey !== key);\n    delete childResultsRaw[key];\n  }\n\n  instance.__vuelidateRemoveInstances = [].concat(instance.__vuelidateRemoveInstances || [], removeChildResultsFromParent);\n  const sendValidationResultsToParent = inject(VuelidateInjectChildResults, []);\n  provide(VuelidateInjectChildResults, instance.__vuelidateInjectInstances);\n  const removeValidationResultsFromParent = inject(VuelidateRemoveChildResults, []);\n  provide(VuelidateRemoveChildResults, instance.__vuelidateRemoveInstances);\n  return {\n    childResults,\n    sendValidationResultsToParent,\n    removeValidationResultsFromParent\n  };\n}\n\nfunction ComputedProxyFactory(target) {\n  return new Proxy(target, {\n    get(target, prop) {\n      return typeof target[prop] === 'object' ? ComputedProxyFactory(target[prop]) : computed(() => target[prop]);\n    }\n\n  });\n}\n\nlet uid = 0;\nfunction useVuelidate(validations, state) {\n  var _getCurrentInstance;\n\n  let globalConfig = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};\n\n  if (arguments.length === 1) {\n    globalConfig = validations;\n    validations = undefined;\n    state = undefined;\n  }\n\n  let {\n    $registerAs,\n    $scope = CollectFlag.COLLECT_ALL,\n    $stopPropagation,\n    $externalResults,\n    currentVueInstance\n  } = globalConfig;\n  const instance = currentVueInstance || ((_getCurrentInstance = getCurrentInstance()) === null || _getCurrentInstance === void 0 ? void 0 : _getCurrentInstance.proxy);\n  const componentOptions = instance ? instance.$options : {};\n\n  if (!$registerAs) {\n    uid += 1;\n    $registerAs = `_vuelidate_${uid}`;\n  }\n\n  const validationResults = ref({});\n  const resultsCache = new ResultsStorage();\n  const {\n    childResults,\n    sendValidationResultsToParent,\n    removeValidationResultsFromParent\n  } = instance ? nestedValidations({\n    $scope,\n    instance\n  }) : {\n    childResults: ref({})\n  };\n\n  if (!validations && componentOptions.validations) {\n    const rules = componentOptions.validations;\n    state = ref({});\n    onBeforeMount(() => {\n      state.value = instance;\n      watch(() => isFunction(rules) ? rules.call(state.value, new ComputedProxyFactory(state.value)) : rules, validations => {\n        validationResults.value = setValidations({\n          validations,\n          state,\n          childResults,\n          resultsCache,\n          globalConfig,\n          instance,\n          externalResults: $externalResults || instance.vuelidateExternalResults\n        });\n      }, {\n        immediate: true\n      });\n    });\n    globalConfig = componentOptions.validationsConfig || globalConfig;\n  } else {\n    const validationsWatchTarget = isRef(validations) || isProxy(validations) ? validations : reactive(validations || {});\n    watch(validationsWatchTarget, newValidationRules => {\n      validationResults.value = setValidations({\n        validations: newValidationRules,\n        state,\n        childResults,\n        resultsCache,\n        globalConfig,\n        instance: instance !== null && instance !== void 0 ? instance : {},\n        externalResults: $externalResults\n      });\n    }, {\n      immediate: true\n    });\n  }\n\n  if (instance) {\n    sendValidationResultsToParent.forEach(f => f(validationResults, {\n      $registerAs,\n      $scope,\n      $stopPropagation\n    }));\n    onBeforeUnmount(() => removeValidationResultsFromParent.forEach(f => f($registerAs)));\n  }\n\n  return computed(() => {\n    return _objectSpread2(_objectSpread2({}, unref(validationResults.value)), childResults.value);\n  });\n}\n\nexport { CollectFlag, useVuelidate as default, useVuelidate };\n",
+      "start": 1713208771722,
+      "end": 1713208771847,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1713208771848,
+      "end": 1713208771848,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1713208771848,
+      "end": 1713208771848,
+      "order": "pre"
+    },
+    {
+      "name": "unplugin-vue-i18n",
+      "start": 1713208771848,
+      "end": 1713208771848,
+      "order": "pre"
+    },
+    {
+      "name": "nuxtjs:i18n-macros-transform",
+      "start": 1713208771848,
+      "end": 1713208771848,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1713208771848,
+      "end": 1713208771848,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1713208771848,
+      "end": 1713208771848,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1713208771848,
+      "end": 1713208771848,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1713208771848,
+      "end": 1713208771848,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1713208771848,
+      "end": 1713208771848,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1713208771848,
+      "end": 1713208771848,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1713208771848,
+      "end": 1713208771848,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1713208771848,
+      "end": 1713208771848,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1713208771848,
+      "end": 1713208771848,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1713208771848,
+      "end": 1713208771848,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1713208771848,
+      "end": 1713208771848,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1713208771848,
+      "end": 1713208771849,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1713208771849,
+      "end": 1713208771849,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1713208771849,
+      "end": 1713208771849,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1713208771849,
+      "end": 1713208771849,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1713208771849,
+      "end": 1713208771849,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1713208771849,
+      "end": 1713208771849,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1713208771849,
+      "end": 1713208771849,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1713208771849,
+      "end": 1713208771849,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1713208771849,
+      "end": 1713208771849,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1713208771849,
+      "end": 1713208771849,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1713208771849,
+      "end": 1713208771849,
+      "order": "post"
+    },
+    {
+      "name": "unhead:use-seo-meta-transform",
+      "start": 1713208771849,
+      "end": 1713208771849,
+      "order": "post"
+    },
+    {
+      "name": "nuxtjs:i18n-resource",
+      "start": 1713208771849,
+      "end": 1713208771849,
+      "order": "post"
+    },
+    {
+      "name": "nuxtjs:i18n-meta-deprecation",
+      "start": 1713208771849,
+      "end": 1713208771849,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1713208771849,
+      "end": 1713208771849,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1713208771849,
+      "end": 1713208771849,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1713208771849,
+      "end": 1713208771849,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1713208771849,
+      "end": 1713208771849,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1713208771849,
+      "end": 1713208771849,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1713208771849,
+      "end": 1713208771849,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1713208771849,
+      "end": 1713208771849,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1713208771850,
+      "end": 1713208771850,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1713208771850,
+      "end": 1713208771850,
+      "order": "normal"
+    }
+  ]
+}

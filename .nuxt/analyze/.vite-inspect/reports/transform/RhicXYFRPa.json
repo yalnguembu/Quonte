@@ -1,0 +1,244 @@
+{
+  "resolvedId": "/home/yalnguembu/Perso/quonte/components/landing/HeroSection.vue",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "<template>\n  <div class=\"h-full grid gap-x-8 lg:grid-cols-2 lg:w-4/5 xl:py-8 mx-auto items-center\">\n      <section class=\"h-full flex items-center justify-center py-8 lg:py-4\" v-motion-slide-visible-once-left>\n        <img\n          src=\"@/assets/images/not-board.svg\"\n          class=\"w-1/2 lg:w-full hover:scale-125 hover:drop-shadow-md hero-image\"\n          :alt=\"t('logoAlt')\"\n        />\n      </section>\n      <section class=\"py-12 px-6 sm:px-12 lg:px-4\" v-motion-slide-visible-bottom>\n        <h3\n          class=\"font-bold text-green-800 text-4xl dark:text-gray-100 relative\"\n        >\n          <span> {{ t(\"title\") }} </span>\n\n          <img\n            v-motion-roll-visible-bottom\n            src=\"@/assets/images/Group 5597.svg\"\n            :alt=\"t('createButtonTitle')\"\n            class=\"absolute w-20 h-20 -top-20 -right-5 lg:-right-12 lg:-top-10\"\n          />\n        </h3>\n        <p class=\"text-gray-500 dark:text-gray-300 text-lg my-8\">\n          {{ t(\"description\") }}\n        </p>\n        <BaseButton :title=\"t('createButtonTitle')\" />\n      </section>\n  </div>\n</template>\n<i18n lang=\"json\">\n{\n  \"en\": {\n    \"logoAlt\": \"Infinite Notes - logo\",\n    \"title\": \"Let'us try something amazing\",\n    \"description\": \"Infinite Notes is your digital notepad for everything under the sun. Capture fleeting ideas, brainstorm like a pro, and keep your thoughts organized – the possibilities are infinite.\",\n    \"createButtonTitle\": \"New Note\",\n    \"illustrationAlt\": \"stars illustration\"\n  },\n  \"fr\": {\n    \"logoAlt\": \"Logo- Infinite Notes\",\n    \"title\": \"Essayons quelque chose d'extraordinaire\",\n    \"description\": \"Infinite Notes est votre bloc-notes numérique pour tout ce qui se passe sous le soleil. Capturez les idées fugaces, faites du brainstorming comme un pro et organisez vos pensées - les possibilités sont infinies.\",\n    \"createButtonTitle\": \"Nouvelle note\",\n    \"illustrationAlt\": \"illustration d'étoiles\"\n  }\n}\n</i18n>\n<style scoped>\n.hero-image:hover {\n  transform: rotateY(180deg);\n  transition: all;\n  transition-duration: 500ms;\n}\n</style>\n<script lang=\"ts\" setup>\nimport BaseButton from \"@/components/button/BaseButton.vue\";\n\nconst { t } = useI18n({\n  useScope: 'local'\n});\n</script>\n",
+      "start": 1713208771805,
+      "end": 1713208771982,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1713208771982,
+      "end": 1713208771982,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1713208771982,
+      "end": 1713208771982,
+      "order": "pre"
+    },
+    {
+      "name": "unplugin-vue-i18n",
+      "start": 1713208771982,
+      "end": 1713208771983,
+      "order": "pre"
+    },
+    {
+      "name": "nuxtjs:i18n-macros-transform",
+      "start": 1713208771983,
+      "end": 1713208771986,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1713208771986,
+      "end": 1713208771986,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1713208771986,
+      "end": 1713208771986,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1713208771986,
+      "end": 1713208771986,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1713208771986,
+      "end": 1713208771986,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1713208771986,
+      "end": 1713208771986,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "result": "import _sfc_main from \"/home/yalnguembu/Perso/quonte/components/landing/HeroSection.vue?vue&type=script&setup=true&lang.ts\";\nexport * from \"/home/yalnguembu/Perso/quonte/components/landing/HeroSection.vue?vue&type=script&setup=true&lang.ts\";\nimport \"/home/yalnguembu/Perso/quonte/components/landing/HeroSection.vue?vue&type=style&index=0&scoped=c0479ee2&lang.css\";\nimport block0 from \"/home/yalnguembu/Perso/quonte/components/landing/HeroSection.vue?vue&type=i18n&index=0&lang.json\";\nif (typeof block0 === \"function\")\n  block0(_sfc_main);\nimport _export_sfc from \"\\0plugin-vue:export-helper\";\nexport default /* @__PURE__ */ _export_sfc(_sfc_main, [[\"__scopeId\", \"data-v-c0479ee2\"]]);\n",
+      "start": 1713208771986,
+      "end": 1713208772098,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1713208772098,
+      "end": 1713208772098,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1713208772098,
+      "end": 1713208772098,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1713208772098,
+      "end": 1713208772098,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1713208772098,
+      "end": 1713208772098,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1713208772098,
+      "end": 1713208772098,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1713208772099,
+      "end": 1713208772099,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1713208772099,
+      "end": 1713208772099,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1713208772099,
+      "end": 1713208772099,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1713208772099,
+      "end": 1713208772099,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1713208772099,
+      "end": 1713208772099,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1713208772099,
+      "end": 1713208772099,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1713208772099,
+      "end": 1713208772099,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1713208772099,
+      "end": 1713208772099,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1713208772099,
+      "end": 1713208772099,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1713208772099,
+      "end": 1713208772099,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1713208772100,
+      "end": 1713208772100,
+      "order": "post"
+    },
+    {
+      "name": "unhead:use-seo-meta-transform",
+      "start": 1713208772100,
+      "end": 1713208772100,
+      "order": "post"
+    },
+    {
+      "name": "nuxtjs:i18n-resource",
+      "start": 1713208772100,
+      "end": 1713208772100,
+      "order": "post"
+    },
+    {
+      "name": "nuxtjs:i18n-meta-deprecation",
+      "start": 1713208772100,
+      "end": 1713208772100,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1713208772101,
+      "end": 1713208772102,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1713208772102,
+      "end": 1713208772103,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1713208772103,
+      "end": 1713208772103,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1713208772104,
+      "end": 1713208772104,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1713208772104,
+      "end": 1713208772104,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1713208772105,
+      "end": 1713208772105,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1713208772105,
+      "end": 1713208772105,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1713208772105,
+      "end": 1713208772106,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1713208772107,
+      "end": 1713208772107,
+      "order": "normal"
+    }
+  ]
+}

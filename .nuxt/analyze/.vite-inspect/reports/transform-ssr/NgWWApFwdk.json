@@ -1,0 +1,322 @@
+{
+  "resolvedId": "/home/yalnguembu/Perso/quonte/components/TheFooter.vue",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "<template>\n  <footer\n    class=\"block min-h-4 w-full bg-gray-100 dark:bg-gray-800 dark:text-gray-100\"\n  >\n    <div\n      class=\"grid grid-cols-1 gap-4 lg:grid-cols-4 lg:p-12\"\n    >\n      <AnimeOnScroll>\n        <div\n          class=\"max-w-screen-xl items-center flex flex-col justify-between p-4 lg:items-start\"\n        >\n          <RouterLink\n            to=\"/\"\n            class=\"text-xl font-bold text-transparent flex flex-col items-center px-4\"\n          >\n            <img src=\"@/assets/images/logo.svg\" alt=\"\" class=\"w-16 rotate-45\" />\n            <span\n              class=\"bg-clip-text text-4xl bg-gradient-to-r from-green-500 dark:from-green-300 to-yellow-500 dark:to-yellow-500\"\n              >Quonte</span\n            >\n          </RouterLink>\n          <p class=\"px-4 py-4 text-gray-500 text-xl lg:text-base\">\n            &copy; {{ thisYear }} Quonte inc<br />\n            By\n            <LinkWrapper\n              path=\"https://yalnguembu.netlify.app/\"\n              title=\"visit Young-Tech website\"\n              is-external\n              class=\"hover:text-blue-400 hover:underline italic font-sans font-bold\"\n            >\n              Young-Tech\n            </LinkWrapper>\n          </p>\n        </div>\n      </AnimeOnScroll>\n      <AnimeOnScroll>\n        <div class=\"p-4 text-center lg:text-left\">\n          <h5 class=\"dark:text-gray-100 text-3xl lg:text-xl px-2 mb-2\">\n            Products\n          </h5>\n          <ul>\n            <MenuItem\n              v-for=\"(item, index) in footerItems[0]\"\n              :key=\"index\"\n              :path=\"item.path\"\n              :label=\"item.label\"\n              :theme=\"{\n                label: 'text-xl lg:text-base',\n                item: 'block py-3 rounded px-2 text-gray-500 hover:text-green-800 hover:font-bold dark:hover:text-gray-100',\n              }\"\n            />\n          </ul>\n        </div>\n      </AnimeOnScroll>\n      <AnimeOnScroll>\n        <div class=\"p-4 text-center lg:text-left\">\n          <h5 class=\"dark:text-gray-100 text-3xl lg:text-xl px-2 mb-2\">\n            About us\n          </h5>\n          <ul>\n            <MenuItem\n              v-for=\"(item, index) in footerItems[1]\"\n              :key=\"index\"\n              :path=\"item.path\"\n              :label=\"item.label\"\n              :theme=\"{\n                label: 'text-xl lg:text-base',\n                item: 'block py-3 rounded px-2 text-gray-500 hover:text-green-800 hover:font-bold  dark:hover:text-gray-100',\n              }\"\n            />\n          </ul>\n        </div>\n      </AnimeOnScroll>\n      <AnimeOnScroll>\n        <div\n          class=\"p-4 flex flex-col items-center justify-between lg:items-start\"\n        >\n          <h5 class=\"dark:text-gray-100 text-3xl lg:text-xl px-2 mb-2\">\n            Get in touch\n          </h5>\n          <p class=\"px-2 py-4 text-gray-500 text-xl lg:text-base\">\n            Question or feedback? <br />\n            We'd love to hear from you\n          </p>\n          <ul class=\"flex\">\n            <LinkWrapper\n              v-for=\"(item, index) in footerItems[2]\"\n              :key=\"index\"\n              :path=\"item.path\"\n              isExternal\n              class=\"block p-2 px-3 mr-2 rounded-md hover:bg-gray-300 dark:hover:bg-gray-700\"\n            >\n              <component :is=\"item.icon\" class=\"w-5 h-5 dark:fill-gray-100\" />\n            </LinkWrapper>\n          </ul>\n        </div>\n      </AnimeOnScroll>\n    </div>\n  </footer>\n</template>\n\n<script lang=\"ts\" setup>\nimport MenuItem from \"./menu/MenuItem.vue\";\nimport { footerItems } from \"@/utils/data\";\nimport AnimeOnScroll from \"@/components/AnimeOnScroll.vue\";\nimport LinkWrapper from \"./LinkWrapper.vue\";\n\nconst thisYear = new Date().getFullYear();\n</script>\n",
+      "start": 1713208780249,
+      "end": 1713208780250,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1713208780250,
+      "end": 1713208780250,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1713208780250,
+      "end": 1713208780250,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1713208780250,
+      "end": 1713208780250,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1713208780250,
+      "end": 1713208780250,
+      "order": "pre"
+    },
+    {
+      "name": "unplugin-vue-i18n",
+      "start": 1713208780250,
+      "end": 1713208780250,
+      "order": "pre"
+    },
+    {
+      "name": "unplugin-vue-i18n",
+      "start": 1713208780250,
+      "end": 1713208780250,
+      "order": "pre"
+    },
+    {
+      "name": "nuxtjs:i18n-macros-transform",
+      "start": 1713208780250,
+      "end": 1713208780250,
+      "order": "pre"
+    },
+    {
+      "name": "nuxtjs:i18n-macros-transform",
+      "start": 1713208780250,
+      "end": 1713208780250,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1713208780250,
+      "end": 1713208780250,
+      "order": "pre"
+    },
+    {
+      "name": "server-only-component-transform",
+      "start": 1713208780250,
+      "end": 1713208780250,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1713208780250,
+      "end": 1713208780250,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1713208780250,
+      "end": 1713208780250,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1713208780250,
+      "end": 1713208780250,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1713208780250,
+      "end": 1713208780250,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "result": "import _sfc_main from \"/home/yalnguembu/Perso/quonte/components/TheFooter.vue?vue&type=script&setup=true&lang.ts\";\nexport * from \"/home/yalnguembu/Perso/quonte/components/TheFooter.vue?vue&type=script&setup=true&lang.ts\";\nimport { useSSRContext as __vite_useSSRContext } from \"vue\";\nconst _sfc_setup = _sfc_main.setup;\n_sfc_main.setup = (props, ctx) => {\n  const ssrContext = __vite_useSSRContext();\n  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add(\"components/TheFooter.vue\");\n  return _sfc_setup ? _sfc_setup(props, ctx) : void 0;\n};\nexport default _sfc_main;\n",
+      "start": 1713208780250,
+      "end": 1713208780275,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1713208780275,
+      "end": 1713208780275,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1713208780275,
+      "end": 1713208780275,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1713208780275,
+      "end": 1713208780275,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1713208780275,
+      "end": 1713208780275,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1713208780275,
+      "end": 1713208780275,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1713208780275,
+      "end": 1713208780275,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1713208780275,
+      "end": 1713208780275,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1713208780275,
+      "end": 1713208780275,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1713208780275,
+      "end": 1713208780275,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1713208780275,
+      "end": 1713208780276,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1713208780276,
+      "end": 1713208780276,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1713208780276,
+      "end": 1713208780276,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1713208780276,
+      "end": 1713208780276,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1713208780276,
+      "end": 1713208780276,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1713208780276,
+      "end": 1713208780276,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1713208780276,
+      "end": 1713208780276,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1713208780276,
+      "end": 1713208780276,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1713208780276,
+      "end": 1713208780276,
+      "order": "post"
+    },
+    {
+      "name": "unhead:remove-server-composables",
+      "start": 1713208780276,
+      "end": 1713208780276,
+      "order": "post"
+    },
+    {
+      "name": "unhead:use-seo-meta-transform",
+      "start": 1713208780276,
+      "end": 1713208780276,
+      "order": "post"
+    },
+    {
+      "name": "unhead:use-seo-meta-transform",
+      "start": 1713208780276,
+      "end": 1713208780276,
+      "order": "post"
+    },
+    {
+      "name": "nuxtjs:i18n-resource",
+      "start": 1713208780276,
+      "end": 1713208780276,
+      "order": "post"
+    },
+    {
+      "name": "nuxtjs:i18n-resource",
+      "start": 1713208780276,
+      "end": 1713208780276,
+      "order": "post"
+    },
+    {
+      "name": "nuxtjs:i18n-meta-deprecation",
+      "start": 1713208780276,
+      "end": 1713208780276,
+      "order": "post"
+    },
+    {
+      "name": "nuxtjs:i18n-meta-deprecation",
+      "start": 1713208780276,
+      "end": 1713208780276,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1713208780276,
+      "end": 1713208780277,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1713208780276,
+      "end": 1713208780277,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1713208780277,
+      "end": 1713208780277,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1713208780277,
+      "end": 1713208780277,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1713208780278,
+      "end": 1713208780278,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1713208780278,
+      "end": 1713208780278,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-template",
+      "start": 1713208780278,
+      "end": 1713208780279,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1713208780279,
+      "end": 1713208780279,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1713208780279,
+      "end": 1713208780279,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1713208780279,
+      "end": 1713208780279,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1713208780279,
+      "end": 1713208780279,
+      "order": "normal"
+    }
+  ]
+}

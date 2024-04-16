@@ -1,0 +1,251 @@
+{
+  "resolvedId": "/home/yalnguembu/Perso/quonte/node_modules/nuxt-site-config/dist/runtime/nuxt/composables/useSiteConfig.mjs",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import { defu } from \"defu\";\nimport {\n  useNuxtApp,\n  useRequestEvent\n} from \"#imports\";\nexport function useSiteConfig(options) {\n  let stack;\n  if (process.server)\n    stack = useRequestEvent().context.siteConfig.get(defu({ resolveRefs: true }, options));\n  else\n    stack = useNuxtApp().$nuxtSiteConfig;\n  return stack || {};\n}\n",
+      "start": 1713208768127,
+      "end": 1713208768244,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1713208768244,
+      "end": 1713208768244,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1713208768244,
+      "end": 1713208768244,
+      "order": "pre"
+    },
+    {
+      "name": "unplugin-vue-i18n",
+      "start": 1713208768244,
+      "end": 1713208768244,
+      "order": "pre"
+    },
+    {
+      "name": "nuxtjs:i18n-macros-transform",
+      "start": 1713208768245,
+      "end": 1713208768245,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1713208768245,
+      "end": 1713208768245,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1713208768245,
+      "end": 1713208768245,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1713208768245,
+      "end": 1713208768245,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1713208768245,
+      "end": 1713208768245,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1713208768245,
+      "end": 1713208768245,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1713208768245,
+      "end": 1713208768245,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1713208768245,
+      "end": 1713208768245,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1713208768245,
+      "end": 1713208768245,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1713208768245,
+      "end": 1713208768245,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1713208768245,
+      "end": 1713208768245,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1713208768245,
+      "end": 1713208768245,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1713208768245,
+      "end": 1713208768245,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1713208768245,
+      "end": 1713208768245,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "result": "import { defu } from \"defu\";\nimport {\n  useNuxtApp,\n  useRequestEvent\n} from \"#imports\";\nexport function useSiteConfig(options) {\n  let stack;\n  if (false)\n    stack = useRequestEvent().context.siteConfig.get(defu({ resolveRefs: true }, options));\n  else\n    stack = useNuxtApp().$nuxtSiteConfig;\n  return stack || {};\n}\n",
+      "start": 1713208768245,
+      "end": 1713208768345,
+      "order": "normal",
+      "sourcemaps": null
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1713208768345,
+      "end": 1713208768345,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1713208768345,
+      "end": 1713208768345,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1713208768345,
+      "end": 1713208768345,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1713208768345,
+      "end": 1713208768345,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1713208768345,
+      "end": 1713208768345,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1713208768345,
+      "end": 1713208768345,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1713208768345,
+      "end": 1713208768345,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1713208768345,
+      "end": 1713208768345,
+      "order": "post"
+    },
+    {
+      "name": "unhead:use-seo-meta-transform",
+      "start": 1713208768345,
+      "end": 1713208768345,
+      "order": "post"
+    },
+    {
+      "name": "nuxtjs:i18n-resource",
+      "start": 1713208768345,
+      "end": 1713208768345,
+      "order": "post"
+    },
+    {
+      "name": "nuxtjs:i18n-meta-deprecation",
+      "start": 1713208768346,
+      "end": 1713208768346,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "result": "import { useNuxtApp } from '#app/nuxt';\nimport { useRequestEvent } from '#app/composables/ssr';\nimport { defu } from \"defu\";\nexport function useSiteConfig(options) {\n  let stack;\n  if (false)\n    stack = useRequestEvent().context.siteConfig.get(defu({ resolveRefs: true }, options));\n  else\n    stack = useNuxtApp().$nuxtSiteConfig;\n  return stack || {};\n}\n",
+      "start": 1713208768346,
+      "end": 1713208768346,
+      "order": "post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          ""
+        ],
+        "names": [],
+        "mappings": ";;AAAA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAK5B,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACZ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACZ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3F,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACN,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACzC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrB,CAAC;"
+      }
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1713208768346,
+      "end": 1713208768346,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1713208768346,
+      "end": 1713208768346,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1713208768347,
+      "end": 1713208768347,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1713208768347,
+      "end": 1713208768347,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1713208768347,
+      "end": 1713208768347,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1713208768347,
+      "end": 1713208768347,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1713208768347,
+      "end": 1713208768347,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1713208768347,
+      "end": 1713208768347,
+      "order": "normal"
+    }
+  ]
+}

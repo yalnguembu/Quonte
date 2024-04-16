@@ -1,0 +1,244 @@
+{
+  "resolvedId": "/home/yalnguembu/Perso/quonte/components/AnimeOnScroll.vue",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "<template>\n  <div ref=\"block\">\n      <div v-motion-slide-visible-once-bottom>\n        <slot />\n      </div>\n  </div>\n</template>",
+      "start": 1713208772320,
+      "end": 1713208772413,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1713208772413,
+      "end": 1713208772413,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1713208772413,
+      "end": 1713208772413,
+      "order": "pre"
+    },
+    {
+      "name": "unplugin-vue-i18n",
+      "start": 1713208772413,
+      "end": 1713208772413,
+      "order": "pre"
+    },
+    {
+      "name": "nuxtjs:i18n-macros-transform",
+      "start": 1713208772413,
+      "end": 1713208772414,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1713208772414,
+      "end": 1713208772414,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1713208772414,
+      "end": 1713208772414,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1713208772414,
+      "end": 1713208772414,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1713208772414,
+      "end": 1713208772414,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1713208772414,
+      "end": 1713208772414,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "result": "const _sfc_main = {}\nimport { renderSlot as _renderSlot, resolveDirective as _resolveDirective, openBlock as _openBlock, createElementBlock as _createElementBlock, withDirectives as _withDirectives } from \"vue\"\n\nconst _hoisted_1 = { ref: \"block\" }\n\nfunction _sfc_render(_ctx, _cache) {\n  const _directive_motion_slide_visible_once_bottom = _resolveDirective(\"motion-slide-visible-once-bottom\")\n\n  return (_openBlock(), _createElementBlock(\"div\", _hoisted_1, [\n    _withDirectives((_openBlock(), _createElementBlock(\"div\", null, [\n      _renderSlot(_ctx.$slots, \"default\")\n    ])), [\n      [_directive_motion_slide_visible_once_bottom]\n    ])\n  ], 512))\n}\n\n\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['render',_sfc_render]])",
+      "start": 1713208772414,
+      "end": 1713208772414,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1713208772415,
+      "end": 1713208772415,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1713208772415,
+      "end": 1713208772415,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1713208772415,
+      "end": 1713208772415,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1713208772415,
+      "end": 1713208772415,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1713208772415,
+      "end": 1713208772415,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1713208772415,
+      "end": 1713208772415,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1713208772415,
+      "end": 1713208772415,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1713208772415,
+      "end": 1713208772415,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1713208772415,
+      "end": 1713208772415,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1713208772415,
+      "end": 1713208772415,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1713208772415,
+      "end": 1713208772415,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1713208772415,
+      "end": 1713208772415,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1713208772415,
+      "end": 1713208772415,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1713208772415,
+      "end": 1713208772415,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1713208772415,
+      "end": 1713208772415,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1713208772415,
+      "end": 1713208772415,
+      "order": "post"
+    },
+    {
+      "name": "unhead:use-seo-meta-transform",
+      "start": 1713208772415,
+      "end": 1713208772415,
+      "order": "post"
+    },
+    {
+      "name": "nuxtjs:i18n-resource",
+      "start": 1713208772415,
+      "end": 1713208772415,
+      "order": "post"
+    },
+    {
+      "name": "nuxtjs:i18n-meta-deprecation",
+      "start": 1713208772415,
+      "end": 1713208772415,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1713208772415,
+      "end": 1713208772416,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1713208772416,
+      "end": 1713208772416,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1713208772416,
+      "end": 1713208772416,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1713208772416,
+      "end": 1713208772416,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1713208772416,
+      "end": 1713208772416,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1713208772416,
+      "end": 1713208772416,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1713208772416,
+      "end": 1713208772416,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1713208772416,
+      "end": 1713208772416,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1713208772416,
+      "end": 1713208772416,
+      "order": "normal"
+    }
+  ]
+}

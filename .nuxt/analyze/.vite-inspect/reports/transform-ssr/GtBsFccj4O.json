@@ -1,0 +1,340 @@
+{
+  "resolvedId": "/home/yalnguembu/Perso/quonte/node_modules/nuxt-og-image/dist/runtime/nuxt/components/Templates/Community/WithEmoji.vue?vue&type=script&setup=true&lang.ts",
+  "transforms": [
+    {
+      "name": "vite:vue",
+      "result": "import { defineComponent as _defineComponent } from 'vue'\nimport { mergeProps as _mergeProps } from \"vue\"\nimport { ssrRenderAttrs as _ssrRenderAttrs, ssrInterpolate as _ssrInterpolate } from \"vue/server-renderer\"\n\n\nexport default /*#__PURE__*/_defineComponent({\n  __name: 'WithEmoji',\n  __ssrInlineRender: true,\n  props: {\n    emoji: { default: '👋' },\n    title: { default: 'title' }\n  },\n  setup(__props: any) {\n\n/**\n * @credits Full Stack Heroes <https://fullstackheroes.com/>\n */\n\n\n\nreturn (_ctx: any,_push: any,_parent: any,_attrs: any) => {\n  _push(`<div${\n    _ssrRenderAttrs(_mergeProps({ class: \"h-full w-full flex items-start justify-start bg-sky-50\" }, _attrs))\n  }><div class=\"flex items-start justify-start h-full\"><div class=\"flex flex-col justify-center items-center px-20 w-full h-full text-center\"><p class=\"text-[120px] mx-auto text-center font-bold mb-0\">${\n    _ssrInterpolate(_ctx.emoji)\n  }</p><h1 class=\"text-[60px] font-bold\">${\n    _ssrInterpolate(_ctx.title)\n  }</h1></div></div></div>`)\n}\n}\n\n})",
+      "start": 1713208779805,
+      "end": 1713208779805,
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "/home/yalnguembu/Perso/quonte/node_modules/nuxt-og-image/dist/runtime/nuxt/components/Templates/Community/WithEmoji.vue"
+        ],
+        "sourcesContent": [
+          "<script setup lang=\"ts\">\n/**\n * @credits Full Stack Heroes <https://fullstackheroes.com/>\n */\n\nwithDefaults(defineProps<{\n  emoji?: string\n  title?: string\n}>(), {\n  title: 'title',\n  emoji: '👋',\n})\n</script>\n\n<template>\n  <div class=\"h-full w-full flex items-start justify-start bg-sky-50\">\n    <div class=\"flex items-start justify-start h-full\">\n      <div class=\"flex flex-col justify-center items-center px-20 w-full h-full text-center\">\n        <p class=\"text-[120px] mx-auto text-center font-bold mb-0\">\n          {{ emoji }}\n        </p>\n        <h1 class=\"text-[60px] font-bold\">\n          {{ title }}\n        </h1>\n      </div>\n    </div>\n  </div>\n</template>\n"
+        ],
+        "names": [],
+        "mappings": ";;;;;;;;;;;;;AAAwB;AACxB,CAAC,CAAC,CAAC;AACH,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5D,CAAC,CAAC,CAAC;AACH;AAOE;;;;;;;;;;;;;"
+      }
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1713208779805,
+      "end": 1713208779805,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1713208779805,
+      "end": 1713208779805,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1713208779805,
+      "end": 1713208779805,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1713208779805,
+      "end": 1713208779805,
+      "order": "pre"
+    },
+    {
+      "name": "unplugin-vue-i18n",
+      "start": 1713208779805,
+      "end": 1713208779805,
+      "order": "pre"
+    },
+    {
+      "name": "unplugin-vue-i18n",
+      "start": 1713208779805,
+      "end": 1713208779805,
+      "order": "pre"
+    },
+    {
+      "name": "nuxtjs:i18n-macros-transform",
+      "start": 1713208779805,
+      "end": 1713208779806,
+      "order": "pre"
+    },
+    {
+      "name": "nuxtjs:i18n-macros-transform",
+      "start": 1713208779805,
+      "end": 1713208779806,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1713208779806,
+      "end": 1713208779806,
+      "order": "pre"
+    },
+    {
+      "name": "server-only-component-transform",
+      "start": 1713208779806,
+      "end": 1713208779806,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1713208779806,
+      "end": 1713208779806,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { defineComponent as _defineComponent } from \"vue\";\nimport { mergeProps as _mergeProps } from \"vue\";\nimport { ssrRenderAttrs as _ssrRenderAttrs, ssrInterpolate as _ssrInterpolate } from \"vue/server-renderer\";\nexport default /* @__PURE__ */ _defineComponent({\n  __name: \"WithEmoji\",\n  __ssrInlineRender: true,\n  props: {\n    emoji: { default: \"👋\" },\n    title: { default: \"title\" }\n  },\n  setup(__props) {\n    return (_ctx, _push, _parent, _attrs) => {\n      _push(`<div${_ssrRenderAttrs(_mergeProps({ class: \"h-full w-full flex items-start justify-start bg-sky-50\" }, _attrs))}><div class=\"flex items-start justify-start h-full\"><div class=\"flex flex-col justify-center items-center px-20 w-full h-full text-center\"><p class=\"text-[120px] mx-auto text-center font-bold mb-0\">${_ssrInterpolate(_ctx.emoji)}</p><h1 class=\"text-[60px] font-bold\">${_ssrInterpolate(_ctx.title)}</h1></div></div></div>`);\n    };\n  }\n});\n",
+      "start": 1713208779806,
+      "end": 1713208779881,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "/home/yalnguembu/Perso/quonte/node_modules/nuxt-og-image/dist/runtime/nuxt/components/Templates/Community/WithEmoji.vue?vue&type=script&setup=true&lang.ts"
+        ],
+        "sourcesContent": [
+          "import { defineComponent as _defineComponent } from 'vue'\nimport { mergeProps as _mergeProps } from \"vue\"\nimport { ssrRenderAttrs as _ssrRenderAttrs, ssrInterpolate as _ssrInterpolate } from \"vue/server-renderer\"\n\n\nexport default /*#__PURE__*/_defineComponent({\n  __name: 'WithEmoji',\n  __ssrInlineRender: true,\n  props: {\n    emoji: { default: '👋' },\n    title: { default: 'title' }\n  },\n  setup(__props: any) {\n\n/**\n * @credits Full Stack Heroes <https://fullstackheroes.com/>\n */\n\n\n\nreturn (_ctx: any,_push: any,_parent: any,_attrs: any) => {\n  _push(`<div${\n    _ssrRenderAttrs(_mergeProps({ class: \"h-full w-full flex items-start justify-start bg-sky-50\" }, _attrs))\n  }><div class=\"flex items-start justify-start h-full\"><div class=\"flex flex-col justify-center items-center px-20 w-full h-full text-center\"><p class=\"text-[120px] mx-auto text-center font-bold mb-0\">${\n    _ssrInterpolate(_ctx.emoji)\n  }</p><h1 class=\"text-[60px] font-bold\">${\n    _ssrInterpolate(_ctx.title)\n  }</h1></div></div></div>`)\n}\n}\n\n})"
+        ],
+        "mappings": "AAAA,SAAS,mBAAmB,wBAAwB;AACpD,SAAS,cAAc,mBAAmB;AAC1C,SAAS,kBAAkB,iBAAiB,kBAAkB,uBAAuB;AAGrF,eAA4B,iCAAiB;AAAA,EAC3C,QAAQ;AAAA,EACR,mBAAmB;AAAA,EACnB,OAAO;AAAA,IACL,OAAO,EAAE,SAAS,KAAK;AAAA,IACvB,OAAO,EAAE,SAAS,QAAQ;AAAA,EAC5B;AAAA,EACA,MAAM,SAAc;AAQtB,WAAO,CAAC,MAAU,OAAW,SAAa,WAAgB;AACxD,YAAM,OACJ,gBAAgB,YAAY,EAAE,OAAO,yDAAyD,GAAG,MAAM,CAAC,CAC1G,yMACE,gBAAgB,KAAK,KAAK,CAC5B,yCACE,gBAAgB,KAAK,KAAK,CAC5B,yBAAyB;AAAA,IAC3B;AAAA,EACA;AAEA,CAAC;",
+        "names": []
+      }
+    },
+    {
+      "name": "vite:json",
+      "start": 1713208779881,
+      "end": 1713208779881,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1713208779881,
+      "end": 1713208779881,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1713208779881,
+      "end": 1713208779882,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1713208779882,
+      "end": 1713208779882,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1713208779882,
+      "end": 1713208779882,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1713208779882,
+      "end": 1713208779882,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1713208779882,
+      "end": 1713208779882,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1713208779882,
+      "end": 1713208779882,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1713208779883,
+      "end": 1713208779883,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1713208779883,
+      "end": 1713208779883,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1713208779884,
+      "end": 1713208779885,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1713208779885,
+      "end": 1713208779885,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1713208779886,
+      "end": 1713208779886,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1713208779886,
+      "end": 1713208779886,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1713208779886,
+      "end": 1713208779886,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1713208779888,
+      "end": 1713208779888,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1713208779890,
+      "end": 1713208779890,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1713208779890,
+      "end": 1713208779890,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1713208779890,
+      "end": 1713208779890,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1713208779890,
+      "end": 1713208779890,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1713208779890,
+      "end": 1713208779891,
+      "order": "post"
+    },
+    {
+      "name": "unhead:remove-server-composables",
+      "start": 1713208779891,
+      "end": 1713208779891,
+      "order": "post"
+    },
+    {
+      "name": "unhead:use-seo-meta-transform",
+      "start": 1713208779891,
+      "end": 1713208779891,
+      "order": "post"
+    },
+    {
+      "name": "unhead:use-seo-meta-transform",
+      "start": 1713208779891,
+      "end": 1713208779891,
+      "order": "post"
+    },
+    {
+      "name": "nuxtjs:i18n-resource",
+      "start": 1713208779892,
+      "end": 1713208779892,
+      "order": "post"
+    },
+    {
+      "name": "nuxtjs:i18n-resource",
+      "start": 1713208779892,
+      "end": 1713208779893,
+      "order": "post"
+    },
+    {
+      "name": "nuxtjs:i18n-meta-deprecation",
+      "start": 1713208779893,
+      "end": 1713208779893,
+      "order": "post"
+    },
+    {
+      "name": "nuxtjs:i18n-meta-deprecation",
+      "start": 1713208779893,
+      "end": 1713208779893,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1713208779896,
+      "end": 1713208779897,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1713208779896,
+      "end": 1713208779898,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1713208779901,
+      "end": 1713208779901,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1713208779901,
+      "end": 1713208779901,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1713208779906,
+      "end": 1713208779906,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1713208779906,
+      "end": 1713208779906,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-template",
+      "start": 1713208779906,
+      "end": 1713208779906,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1713208779907,
+      "end": 1713208779907,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1713208779907,
+      "end": 1713208779907,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1713208779907,
+      "end": 1713208779907,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1713208779908,
+      "end": 1713208779908,
+      "order": "normal"
+    }
+  ]
+}

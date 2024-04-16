@@ -1,0 +1,254 @@
+{
+  "resolvedId": "/home/yalnguembu/Perso/quonte/utils/type.ts",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import type { VueElement } from \"vue\";\n\nexport enum ButtonType {\n  button = \"button\",\n  submit = \"submit\",\n  reset = \"reset\",\n}\n\nexport type MenuItem = {\n  title?: string;\n  label?: string;\n  path: string;\n  icon?: VueElement;\n  theme?: {\n    icon: \"string\";\n    label: \"string\";\n    item: \"block text-md font-bold text-green-900 px-4 py-2 rounded-md border border-transparent hover:border-gray-200\";\n  };\n};\n\nexport type Tag = {\n  id: string;\n  title: string;\n  description?: string;\n};\n\nexport type Note = {\n  id: string;\n  title: string;\n  creationDate: string;\n  content: string;\n  tags: Tag[];\n};\n\nexport interface FilterCriteria {\n  text: string;\n  tags?: string[];\n  startDate: string;\n  endDate: string;\n}\n",
+      "start": 1713208771760,
+      "end": 1713208771857,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1713208771857,
+      "end": 1713208771857,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1713208771857,
+      "end": 1713208771857,
+      "order": "pre"
+    },
+    {
+      "name": "unplugin-vue-i18n",
+      "start": 1713208771858,
+      "end": 1713208771858,
+      "order": "pre"
+    },
+    {
+      "name": "nuxtjs:i18n-macros-transform",
+      "start": 1713208771858,
+      "end": 1713208771858,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1713208771858,
+      "end": 1713208771858,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1713208771858,
+      "end": 1713208771858,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "export var ButtonType = /* @__PURE__ */ ((ButtonType2) => {\n  ButtonType2[\"button\"] = \"button\";\n  ButtonType2[\"submit\"] = \"submit\";\n  ButtonType2[\"reset\"] = \"reset\";\n  return ButtonType2;\n})(ButtonType || {});\n",
+      "start": 1713208771858,
+      "end": 1713208771897,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "/home/yalnguembu/Perso/quonte/utils/type.ts"
+        ],
+        "sourcesContent": [
+          "import type { VueElement } from \"vue\";\n\nexport enum ButtonType {\n  button = \"button\",\n  submit = \"submit\",\n  reset = \"reset\",\n}\n\nexport type MenuItem = {\n  title?: string;\n  label?: string;\n  path: string;\n  icon?: VueElement;\n  theme?: {\n    icon: \"string\";\n    label: \"string\";\n    item: \"block text-md font-bold text-green-900 px-4 py-2 rounded-md border border-transparent hover:border-gray-200\";\n  };\n};\n\nexport type Tag = {\n  id: string;\n  title: string;\n  description?: string;\n};\n\nexport type Note = {\n  id: string;\n  title: string;\n  creationDate: string;\n  content: string;\n  tags: Tag[];\n};\n\nexport interface FilterCriteria {\n  text: string;\n  tags?: string[];\n  startDate: string;\n  endDate: string;\n}\n"
+        ],
+        "mappings": "AAEO,WAAK,aAAL,kBAAKA,gBAAL;AACL,EAAAA,YAAA,YAAS;AACT,EAAAA,YAAA,YAAS;AACT,EAAAA,YAAA,WAAQ;AAHE,SAAAA;AAAA,GAAA;",
+        "names": [
+          "ButtonType"
+        ]
+      }
+    },
+    {
+      "name": "vite:json",
+      "start": 1713208771898,
+      "end": 1713208771898,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1713208771898,
+      "end": 1713208771898,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1713208771898,
+      "end": 1713208771898,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1713208771898,
+      "end": 1713208771898,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1713208771898,
+      "end": 1713208771898,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1713208771898,
+      "end": 1713208771898,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1713208771898,
+      "end": 1713208771898,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1713208771898,
+      "end": 1713208771898,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1713208771898,
+      "end": 1713208771898,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1713208771898,
+      "end": 1713208771898,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1713208771898,
+      "end": 1713208771898,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1713208771898,
+      "end": 1713208771898,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1713208771898,
+      "end": 1713208771899,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1713208771899,
+      "end": 1713208771899,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1713208771899,
+      "end": 1713208771899,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1713208771899,
+      "end": 1713208771899,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1713208771899,
+      "end": 1713208771899,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1713208771899,
+      "end": 1713208771899,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1713208771899,
+      "end": 1713208771899,
+      "order": "post"
+    },
+    {
+      "name": "unhead:use-seo-meta-transform",
+      "start": 1713208771899,
+      "end": 1713208771899,
+      "order": "post"
+    },
+    {
+      "name": "nuxtjs:i18n-resource",
+      "start": 1713208771899,
+      "end": 1713208771899,
+      "order": "post"
+    },
+    {
+      "name": "nuxtjs:i18n-meta-deprecation",
+      "start": 1713208771899,
+      "end": 1713208771899,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1713208771899,
+      "end": 1713208771902,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1713208771902,
+      "end": 1713208771902,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1713208771902,
+      "end": 1713208771902,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1713208771902,
+      "end": 1713208771902,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1713208771902,
+      "end": 1713208771902,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1713208771902,
+      "end": 1713208771902,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1713208771902,
+      "end": 1713208771902,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1713208771902,
+      "end": 1713208771902,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1713208771902,
+      "end": 1713208771902,
+      "order": "normal"
+    }
+  ]
+}

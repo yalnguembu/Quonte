@@ -1,0 +1,251 @@
+{
+  "resolvedId": "/home/yalnguembu/Perso/quonte/components/form/PasswordInput.vue?vue&type=script&setup=true&lang.ts",
+  "transforms": [
+    {
+      "name": "vite:vue",
+      "result": "import { defineComponent as _defineComponent } from 'vue'\nimport { toDisplayString as _toDisplayString, createElementVNode as _createElementVNode, vShow as _vShow, createVNode as _createVNode, withDirectives as _withDirectives, normalizeClass as _normalizeClass, renderList as _renderList, Fragment as _Fragment, openBlock as _openBlock, createElementBlock as _createElementBlock } from \"vue\"\n\nconst _hoisted_1 = { class: \"w-full\" }\nconst _hoisted_2 = { class: \"font-500 dark:text-gray-100\" }\nconst _hoisted_3 = [\"type\", \"placeholder\", \"value\"]\nconst _hoisted_4 = [\"data-test\"]\n\nimport type { ErrorObject } from \"@vuelidate/core\";\nimport { shallowRef } from \"vue\";\nimport EyeIcon from \"../icons/EyeIcon.vue\";\nimport EyeSlashIcon from \"../icons/EyeSlashIcon.vue\";\n\n\nexport default /*#__PURE__*/_defineComponent({\n  __name: 'PasswordInput',\n  props: {\n    modelValue: {},\n    label: {},\n    placeholder: {},\n    errors: { default: () => [] },\n    isValid: { type: Boolean, default: false }\n  },\n  emits: [\"update:modelValue\"],\n  setup(__props: any, { emit: __emit }) {\n\nconst emit = __emit;\nconst props = __props;\n\nconst isTextVisible = shallowRef<boolean>(false);\nconst toggleIstextVisible = () => (isTextVisible.value = !isTextVisible.value);\n\nconst isFocus = shallowRef<boolean>(false);\nconst toggleIsFocus = () => (isFocus.value = !isFocus.value);\n\nreturn (_ctx: any,_cache: any) => {\n  return (_openBlock(), _createElementBlock(\"div\", _hoisted_1, [\n    _createElementVNode(\"label\", _hoisted_2, _toDisplayString(_ctx.label), 1),\n    _createElementVNode(\"div\", {\n      class: _normalizeClass([\n        'rounded border px-3 py-1 w-full flex mt-2 bg-transparent outline-none dark:text-gray-100 dark:border-gray-700',\n        _ctx.isValid\n          ? 'outline-green-500 dark:outline-green-600'\n          : _ctx.errors.length\n          ? 'outline-red-500'\n          : isFocus.value\n          ? 'focus:outline-blue-500 dark:focus:outline-blue-600'\n          : '',\n      ])\n    }, [\n      _createElementVNode(\"input\", {\n        class: \"bg-transparent px-3 outline-none dark:text-gray-100 w-full\",\n        type: isTextVisible.value ? 'text' : 'password',\n        placeholder: props.placeholder,\n        value: props.modelValue,\n        onFocus: toggleIsFocus,\n        onBlur: toggleIsFocus,\n        onInput: _cache[0] || (_cache[0] = (event)=>emit('update:modelValue', (event.target as HTMLInputElement).value))\n      }, null, 40, _hoisted_3),\n      _createElementVNode(\"button\", {\n        onClick: toggleIstextVisible,\n        class: \"outline-none\",\n        type: \"button\"\n      }, [\n        _withDirectives(_createVNode(EyeIcon, { class: \"w-[1.2rem]\" }, null, 512), [\n          [_vShow, isTextVisible.value]\n        ]),\n        _withDirectives(_createVNode(EyeSlashIcon, { class: \"w-[1.2rem]\" }, null, 512), [\n          [_vShow, !isTextVisible.value]\n        ])\n      ])\n    ], 2),\n    (_openBlock(true), _createElementBlock(_Fragment, null, _renderList(props.errors, (error) => {\n      return (_openBlock(), _createElementBlock(\"p\", {\n        \"data-test\": `error-${error.$uid}`,\n        key: error.$uid,\n        class: \"pt-1 text-red-500 transition delay-500 text-sm\"\n      }, _toDisplayString(error.$message), 9, _hoisted_4))\n    }), 128))\n  ]))\n}\n}\n\n})",
+      "start": 1713208772140,
+      "end": 1713208772141
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1713208772141,
+      "end": 1713208772141,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1713208772141,
+      "end": 1713208772141,
+      "order": "pre"
+    },
+    {
+      "name": "unplugin-vue-i18n",
+      "start": 1713208772141,
+      "end": 1713208772141,
+      "order": "pre"
+    },
+    {
+      "name": "nuxtjs:i18n-macros-transform",
+      "start": 1713208772141,
+      "end": 1713208772142,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1713208772142,
+      "end": 1713208772142,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1713208772142,
+      "end": 1713208772142,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { defineComponent as _defineComponent } from \"vue\";\nimport { toDisplayString as _toDisplayString, createElementVNode as _createElementVNode, vShow as _vShow, createVNode as _createVNode, withDirectives as _withDirectives, normalizeClass as _normalizeClass, renderList as _renderList, Fragment as _Fragment, openBlock as _openBlock, createElementBlock as _createElementBlock } from \"vue\";\nconst _hoisted_1 = { class: \"w-full\" };\nconst _hoisted_2 = { class: \"font-500 dark:text-gray-100\" };\nconst _hoisted_3 = [\"type\", \"placeholder\", \"value\"];\nconst _hoisted_4 = [\"data-test\"];\nimport { shallowRef } from \"vue\";\nimport EyeIcon from \"../icons/EyeIcon.vue\";\nimport EyeSlashIcon from \"../icons/EyeSlashIcon.vue\";\nexport default /* @__PURE__ */ _defineComponent({\n  __name: \"PasswordInput\",\n  props: {\n    modelValue: {},\n    label: {},\n    placeholder: {},\n    errors: { default: () => [] },\n    isValid: { type: Boolean, default: false }\n  },\n  emits: [\"update:modelValue\"],\n  setup(__props, { emit: __emit }) {\n    const emit = __emit;\n    const props = __props;\n    const isTextVisible = shallowRef(false);\n    const toggleIstextVisible = () => isTextVisible.value = !isTextVisible.value;\n    const isFocus = shallowRef(false);\n    const toggleIsFocus = () => isFocus.value = !isFocus.value;\n    return (_ctx, _cache) => {\n      return _openBlock(), _createElementBlock(\"div\", _hoisted_1, [\n        _createElementVNode(\"label\", _hoisted_2, _toDisplayString(_ctx.label), 1),\n        _createElementVNode(\"div\", {\n          class: _normalizeClass([\n            \"rounded border px-3 py-1 w-full flex mt-2 bg-transparent outline-none dark:text-gray-100 dark:border-gray-700\",\n            _ctx.isValid ? \"outline-green-500 dark:outline-green-600\" : _ctx.errors.length ? \"outline-red-500\" : isFocus.value ? \"focus:outline-blue-500 dark:focus:outline-blue-600\" : \"\"\n          ])\n        }, [\n          _createElementVNode(\"input\", {\n            class: \"bg-transparent px-3 outline-none dark:text-gray-100 w-full\",\n            type: isTextVisible.value ? \"text\" : \"password\",\n            placeholder: props.placeholder,\n            value: props.modelValue,\n            onFocus: toggleIsFocus,\n            onBlur: toggleIsFocus,\n            onInput: _cache[0] || (_cache[0] = (event) => emit(\"update:modelValue\", event.target.value))\n          }, null, 40, _hoisted_3),\n          _createElementVNode(\"button\", {\n            onClick: toggleIstextVisible,\n            class: \"outline-none\",\n            type: \"button\"\n          }, [\n            _withDirectives(_createVNode(EyeIcon, { class: \"w-[1.2rem]\" }, null, 512), [\n              [_vShow, isTextVisible.value]\n            ]),\n            _withDirectives(_createVNode(EyeSlashIcon, { class: \"w-[1.2rem]\" }, null, 512), [\n              [_vShow, !isTextVisible.value]\n            ])\n          ])\n        ], 2),\n        (_openBlock(true), _createElementBlock(_Fragment, null, _renderList(props.errors, (error) => {\n          return _openBlock(), _createElementBlock(\"p\", {\n            \"data-test\": `error-${error.$uid}`,\n            key: error.$uid,\n            class: \"pt-1 text-red-500 transition delay-500 text-sm\"\n          }, _toDisplayString(error.$message), 9, _hoisted_4);\n        }), 128))\n      ]);\n    };\n  }\n});\n",
+      "start": 1713208772142,
+      "end": 1713208772241,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "/home/yalnguembu/Perso/quonte/components/form/PasswordInput.vue?vue&type=script&setup=true&lang.ts"
+        ],
+        "sourcesContent": [
+          "import { defineComponent as _defineComponent } from 'vue'\nimport { toDisplayString as _toDisplayString, createElementVNode as _createElementVNode, vShow as _vShow, createVNode as _createVNode, withDirectives as _withDirectives, normalizeClass as _normalizeClass, renderList as _renderList, Fragment as _Fragment, openBlock as _openBlock, createElementBlock as _createElementBlock } from \"vue\"\n\nconst _hoisted_1 = { class: \"w-full\" }\nconst _hoisted_2 = { class: \"font-500 dark:text-gray-100\" }\nconst _hoisted_3 = [\"type\", \"placeholder\", \"value\"]\nconst _hoisted_4 = [\"data-test\"]\n\nimport type { ErrorObject } from \"@vuelidate/core\";\nimport { shallowRef } from \"vue\";\nimport EyeIcon from \"../icons/EyeIcon.vue\";\nimport EyeSlashIcon from \"../icons/EyeSlashIcon.vue\";\n\n\nexport default /*#__PURE__*/_defineComponent({\n  __name: 'PasswordInput',\n  props: {\n    modelValue: {},\n    label: {},\n    placeholder: {},\n    errors: { default: () => [] },\n    isValid: { type: Boolean, default: false }\n  },\n  emits: [\"update:modelValue\"],\n  setup(__props: any, { emit: __emit }) {\n\nconst emit = __emit;\nconst props = __props;\n\nconst isTextVisible = shallowRef<boolean>(false);\nconst toggleIstextVisible = () => (isTextVisible.value = !isTextVisible.value);\n\nconst isFocus = shallowRef<boolean>(false);\nconst toggleIsFocus = () => (isFocus.value = !isFocus.value);\n\nreturn (_ctx: any,_cache: any) => {\n  return (_openBlock(), _createElementBlock(\"div\", _hoisted_1, [\n    _createElementVNode(\"label\", _hoisted_2, _toDisplayString(_ctx.label), 1),\n    _createElementVNode(\"div\", {\n      class: _normalizeClass([\n        'rounded border px-3 py-1 w-full flex mt-2 bg-transparent outline-none dark:text-gray-100 dark:border-gray-700',\n        _ctx.isValid\n          ? 'outline-green-500 dark:outline-green-600'\n          : _ctx.errors.length\n          ? 'outline-red-500'\n          : isFocus.value\n          ? 'focus:outline-blue-500 dark:focus:outline-blue-600'\n          : '',\n      ])\n    }, [\n      _createElementVNode(\"input\", {\n        class: \"bg-transparent px-3 outline-none dark:text-gray-100 w-full\",\n        type: isTextVisible.value ? 'text' : 'password',\n        placeholder: props.placeholder,\n        value: props.modelValue,\n        onFocus: toggleIsFocus,\n        onBlur: toggleIsFocus,\n        onInput: _cache[0] || (_cache[0] = (event)=>emit('update:modelValue', (event.target as HTMLInputElement).value))\n      }, null, 40, _hoisted_3),\n      _createElementVNode(\"button\", {\n        onClick: toggleIstextVisible,\n        class: \"outline-none\",\n        type: \"button\"\n      }, [\n        _withDirectives(_createVNode(EyeIcon, { class: \"w-[1.2rem]\" }, null, 512), [\n          [_vShow, isTextVisible.value]\n        ]),\n        _withDirectives(_createVNode(EyeSlashIcon, { class: \"w-[1.2rem]\" }, null, 512), [\n          [_vShow, !isTextVisible.value]\n        ])\n      ])\n    ], 2),\n    (_openBlock(true), _createElementBlock(_Fragment, null, _renderList(props.errors, (error) => {\n      return (_openBlock(), _createElementBlock(\"p\", {\n        \"data-test\": `error-${error.$uid}`,\n        key: error.$uid,\n        class: \"pt-1 text-red-500 transition delay-500 text-sm\"\n      }, _toDisplayString(error.$message), 9, _hoisted_4))\n    }), 128))\n  ]))\n}\n}\n\n})"
+        ],
+        "mappings": "AAAA,SAAS,mBAAmB,wBAAwB;AACpD,SAAS,mBAAmB,kBAAkB,sBAAsB,qBAAqB,SAAS,QAAQ,eAAe,cAAc,kBAAkB,iBAAiB,kBAAkB,iBAAiB,cAAc,aAAa,YAAY,WAAW,aAAa,YAAY,sBAAsB,2BAA2B;AAEzU,MAAM,aAAa,EAAE,OAAO,SAAS;AACrC,MAAM,aAAa,EAAE,OAAO,8BAA8B;AAC1D,MAAM,aAAa,CAAC,QAAQ,eAAe,OAAO;AAClD,MAAM,aAAa,CAAC,WAAW;AAG/B,SAAS,kBAAkB;AAC3B,OAAO,aAAa;AACpB,OAAO,kBAAkB;AAGzB,eAA4B,iCAAiB;AAAA,EAC3C,QAAQ;AAAA,EACR,OAAO;AAAA,IACL,YAAY,CAAC;AAAA,IACb,OAAO,CAAC;AAAA,IACR,aAAa,CAAC;AAAA,IACd,QAAQ,EAAE,SAAS,MAAM,CAAC,EAAE;AAAA,IAC5B,SAAS,EAAE,MAAM,SAAS,SAAS,MAAM;AAAA,EAC3C;AAAA,EACA,OAAO,CAAC,mBAAmB;AAAA,EAC3B,MAAM,SAAc,EAAE,MAAM,OAAO,GAAG;AAExC,UAAM,OAAO;AACb,UAAM,QAAQ;AAEd,UAAM,gBAAgB,WAAoB,KAAK;AAC/C,UAAM,sBAAsB,MAAO,cAAc,QAAQ,CAAC,cAAc;AAExE,UAAM,UAAU,WAAoB,KAAK;AACzC,UAAM,gBAAgB,MAAO,QAAQ,QAAQ,CAAC,QAAQ;AAEtD,WAAO,CAAC,MAAU,WAAgB;AAChC,aAAQ,WAAW,GAAG,oBAAoB,OAAO,YAAY;AAAA,QAC3D,oBAAoB,SAAS,YAAY,iBAAiB,KAAK,KAAK,GAAG,CAAC;AAAA,QACxE,oBAAoB,OAAO;AAAA,UACzB,OAAO,gBAAgB;AAAA,YACrB;AAAA,YACA,KAAK,UACD,6CACA,KAAK,OAAO,SACZ,oBACA,QAAQ,QACR,uDACA;AAAA,UACN,CAAC;AAAA,QACH,GAAG;AAAA,UACD,oBAAoB,SAAS;AAAA,YAC3B,OAAO;AAAA,YACP,MAAM,cAAc,QAAQ,SAAS;AAAA,YACrC,aAAa,MAAM;AAAA,YACnB,OAAO,MAAM;AAAA,YACb,SAAS;AAAA,YACT,QAAQ;AAAA,YACR,SAAS,OAAO,CAAC,MAAM,OAAO,CAAC,IAAI,CAAC,UAAQ,KAAK,qBAAsB,MAAM,OAA4B,KAAK;AAAA,UAChH,GAAG,MAAM,IAAI,UAAU;AAAA,UACvB,oBAAoB,UAAU;AAAA,YAC5B,SAAS;AAAA,YACT,OAAO;AAAA,YACP,MAAM;AAAA,UACR,GAAG;AAAA,YACD,gBAAgB,aAAa,SAAS,EAAE,OAAO,aAAa,GAAG,MAAM,GAAG,GAAG;AAAA,cACzE,CAAC,QAAQ,cAAc,KAAK;AAAA,YAC9B,CAAC;AAAA,YACD,gBAAgB,aAAa,cAAc,EAAE,OAAO,aAAa,GAAG,MAAM,GAAG,GAAG;AAAA,cAC9E,CAAC,QAAQ,CAAC,cAAc,KAAK;AAAA,YAC/B,CAAC;AAAA,UACH,CAAC;AAAA,QACH,GAAG,CAAC;AAAA,SACH,WAAW,IAAI,GAAG,oBAAoB,WAAW,MAAM,YAAY,MAAM,QAAQ,CAAC,UAAU;AAC3F,iBAAQ,WAAW,GAAG,oBAAoB,KAAK;AAAA,YAC7C,aAAa,SAAS,MAAM,IAAI;AAAA,YAChC,KAAK,MAAM;AAAA,YACX,OAAO;AAAA,UACT,GAAG,iBAAiB,MAAM,QAAQ,GAAG,GAAG,UAAU;AAAA,QACpD,CAAC,GAAG,GAAG;AAAA,MACT,CAAC;AAAA,IACH;AAAA,EACA;AAEA,CAAC;",
+        "names": []
+      }
+    },
+    {
+      "name": "vite:json",
+      "start": 1713208772241,
+      "end": 1713208772241,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1713208772241,
+      "end": 1713208772241,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1713208772241,
+      "end": 1713208772241,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1713208772241,
+      "end": 1713208772241,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1713208772241,
+      "end": 1713208772241,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1713208772242,
+      "end": 1713208772242,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1713208772242,
+      "end": 1713208772242,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1713208772242,
+      "end": 1713208772242,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1713208772242,
+      "end": 1713208772242,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1713208772244,
+      "end": 1713208772244,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1713208772244,
+      "end": 1713208772244,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1713208772244,
+      "end": 1713208772244,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1713208772244,
+      "end": 1713208772245,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1713208772245,
+      "end": 1713208772245,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1713208772245,
+      "end": 1713208772245,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1713208772245,
+      "end": 1713208772245,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1713208772245,
+      "end": 1713208772245,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1713208772245,
+      "end": 1713208772245,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1713208772245,
+      "end": 1713208772245,
+      "order": "post"
+    },
+    {
+      "name": "unhead:use-seo-meta-transform",
+      "start": 1713208772246,
+      "end": 1713208772246,
+      "order": "post"
+    },
+    {
+      "name": "nuxtjs:i18n-resource",
+      "start": 1713208772246,
+      "end": 1713208772246,
+      "order": "post"
+    },
+    {
+      "name": "nuxtjs:i18n-meta-deprecation",
+      "start": 1713208772246,
+      "end": 1713208772246,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1713208772247,
+      "end": 1713208772256,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1713208772257,
+      "end": 1713208772257,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1713208772257,
+      "end": 1713208772257,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1713208772257,
+      "end": 1713208772257,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1713208772257,
+      "end": 1713208772257,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1713208772258,
+      "end": 1713208772258,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1713208772258,
+      "end": 1713208772259,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1713208772259,
+      "end": 1713208772259,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1713208772259,
+      "end": 1713208772259,
+      "order": "normal"
+    }
+  ]
+}

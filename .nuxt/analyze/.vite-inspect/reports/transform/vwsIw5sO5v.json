@@ -1,0 +1,251 @@
+{
+  "resolvedId": "/home/yalnguembu/Perso/quonte/components/landing/ContactSection.vue?vue&type=script&setup=true&lang.ts",
+  "transforms": [
+    {
+      "name": "vite:vue",
+      "result": "import { defineComponent as _defineComponent } from 'vue'\nimport { createElementVNode as _createElementVNode, createTextVNode as _createTextVNode, createVNode as _createVNode, withCtx as _withCtx, resolveDirective as _resolveDirective, openBlock as _openBlock, createElementBlock as _createElementBlock, withDirectives as _withDirectives } from \"vue\"\nimport _imports_0 from '@/assets/images/Group 5601.svg'\n\n\nconst _hoisted_1 = {\n  class: \"flex flex-col items-center w-full py-12 lg:py-20 lg:px-4\",\n  id: \"contact\"\n}\nconst _hoisted_2 = /*#__PURE__*/_createElementVNode(\"h3\", { class: \"font-bold text-3xl text-green-800 dark:text-green-100 text-center p-8 pb-4\" }, [\n  /*#__PURE__*/_createElementVNode(\"span\", { class: \"relative block\" }, [\n    /*#__PURE__*/_createTextVNode(\" What's your Quonte idea? \"),\n    /*#__PURE__*/_createElementVNode(\"img\", {\n      src: _imports_0,\n      alt: \"\",\n      class: \"absolute w-12 -top-10 -right-3 lg:rotate-90 lg:-right-20\"\n    })\n  ])\n], -1)\nconst _hoisted_3 = /*#__PURE__*/_createElementVNode(\"h4\", { class: \"text-gray-500 text-xl\" }, \"Let's chat and see how we can help\", -1)\nconst _hoisted_4 = { class: \"w-full px-4 py-8 flex flex-col space-y-8 md:space-y-0 md:space-x-8 md:flex-row md:justify-center\" }\nconst _hoisted_5 = /*#__PURE__*/_createElementVNode(\"span\", { class: \"p-4 py-2 text-left\" }, [\n  /*#__PURE__*/_createElementVNode(\"span\", { class: \"font-bold text-lg\" }, \" Telegram \"),\n  /*#__PURE__*/_createTextVNode(),\n  /*#__PURE__*/_createElementVNode(\"br\"),\n  /*#__PURE__*/_createElementVNode(\"span\", { class: \"text-gray-600\" }, \"@quonte_io \")\n], -1)\nconst _hoisted_6 = /*#__PURE__*/_createElementVNode(\"span\", { class: \"text-5xl text-white dark:text-green-800\" }, \"@\", -1)\nconst _hoisted_7 = /*#__PURE__*/_createElementVNode(\"span\", { class: \"p-4 py-2 text-left\" }, [\n  /*#__PURE__*/_createElementVNode(\"span\", { class: \"font-bold text-lg text-white dark:text-green-800\" }, \" Email \"),\n  /*#__PURE__*/_createElementVNode(\"br\"),\n  /*#__PURE__*/_createElementVNode(\"span\", { class: \"text-gray-400 dark:text-gray-600\" }, \"@quonte_io \")\n], -1)\n\nimport TelegramIcon from \"@/components/icons/TelegramIcon.vue\";\nimport LinkWrapper from \"@/components/LinkWrapper.vue\";\n\nexport default /*#__PURE__*/_defineComponent({\n  __name: 'ContactSection',\n  setup(__props) {\n\n\nreturn (_ctx: any,_cache: any) => {\n  const _directive_motion_slide_visible_bottom = _resolveDirective(\"motion-slide-visible-bottom\")!\n\n  return _withDirectives((_openBlock(), _createElementBlock(\"div\", null, [\n    _createElementVNode(\"div\", _hoisted_1, [\n      _hoisted_2,\n      _hoisted_3,\n      _createElementVNode(\"div\", _hoisted_4, [\n        _createVNode(LinkWrapper, {\n          isExternal: \"\",\n          path: \"https://t.me/yalnguembu\",\n          class: \"w-full px-6 py-1 hover:shadow-md hover:shadow-yellow-300 dark:hover:shadow-yellow-900 bg-yellow-500 hover:bg-yellow-400 dark:hover:bg-yellow-400 flex items-center rounded-xl md:justify-evenly md:w-auto\"\n        }, {\n          default: _withCtx(() => [\n            _createVNode(TelegramIcon, { class: \"fill-gray-500 h-10 w-10\" }),\n            _hoisted_5\n          ]),\n          _: 1\n        }),\n        _createVNode(LinkWrapper, {\n          path: \"mailto:yalnguembu@gmail.com\",\n          isExternal: \"\",\n          class: \"w-full px-6 py-1 hover:shadow-md hover:shadow-green-700 bg-green-800 dark:bg-green-100 hover:bg-green-700 dark:hover:bg-green-300 flex items-center rounded-xl md:justify-evenly md:w-auto\"\n        }, {\n          default: _withCtx(() => [\n            _hoisted_6,\n            _hoisted_7\n          ]),\n          _: 1\n        })\n      ])\n    ])\n  ])), [\n    [_directive_motion_slide_visible_bottom]\n  ])\n}\n}\n\n})",
+      "start": 1713208772214,
+      "end": 1713208772214
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1713208772214,
+      "end": 1713208772214,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1713208772215,
+      "end": 1713208772215,
+      "order": "pre"
+    },
+    {
+      "name": "unplugin-vue-i18n",
+      "start": 1713208772215,
+      "end": 1713208772215,
+      "order": "pre"
+    },
+    {
+      "name": "nuxtjs:i18n-macros-transform",
+      "start": 1713208772215,
+      "end": 1713208772215,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1713208772216,
+      "end": 1713208772216,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1713208772216,
+      "end": 1713208772216,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { defineComponent as _defineComponent } from \"vue\";\nimport { createElementVNode as _createElementVNode, createTextVNode as _createTextVNode, createVNode as _createVNode, withCtx as _withCtx, resolveDirective as _resolveDirective, openBlock as _openBlock, createElementBlock as _createElementBlock, withDirectives as _withDirectives } from \"vue\";\nimport _imports_0 from \"@/assets/images/Group 5601.svg\";\nconst _hoisted_1 = {\n  class: \"flex flex-col items-center w-full py-12 lg:py-20 lg:px-4\",\n  id: \"contact\"\n};\nconst _hoisted_2 = /* @__PURE__ */ _createElementVNode(\"h3\", { class: \"font-bold text-3xl text-green-800 dark:text-green-100 text-center p-8 pb-4\" }, [\n  /* @__PURE__ */ _createElementVNode(\"span\", { class: \"relative block\" }, [\n    /* @__PURE__ */ _createTextVNode(\" What's your Quonte idea? \"),\n    /* @__PURE__ */ _createElementVNode(\"img\", {\n      src: _imports_0,\n      alt: \"\",\n      class: \"absolute w-12 -top-10 -right-3 lg:rotate-90 lg:-right-20\"\n    })\n  ])\n], -1);\nconst _hoisted_3 = /* @__PURE__ */ _createElementVNode(\"h4\", { class: \"text-gray-500 text-xl\" }, \"Let's chat and see how we can help\", -1);\nconst _hoisted_4 = { class: \"w-full px-4 py-8 flex flex-col space-y-8 md:space-y-0 md:space-x-8 md:flex-row md:justify-center\" };\nconst _hoisted_5 = /* @__PURE__ */ _createElementVNode(\"span\", { class: \"p-4 py-2 text-left\" }, [\n  /* @__PURE__ */ _createElementVNode(\"span\", { class: \"font-bold text-lg\" }, \" Telegram \"),\n  /* @__PURE__ */ _createTextVNode(),\n  /* @__PURE__ */ _createElementVNode(\"br\"),\n  /* @__PURE__ */ _createElementVNode(\"span\", { class: \"text-gray-600\" }, \"@quonte_io \")\n], -1);\nconst _hoisted_6 = /* @__PURE__ */ _createElementVNode(\"span\", { class: \"text-5xl text-white dark:text-green-800\" }, \"@\", -1);\nconst _hoisted_7 = /* @__PURE__ */ _createElementVNode(\"span\", { class: \"p-4 py-2 text-left\" }, [\n  /* @__PURE__ */ _createElementVNode(\"span\", { class: \"font-bold text-lg text-white dark:text-green-800\" }, \" Email \"),\n  /* @__PURE__ */ _createElementVNode(\"br\"),\n  /* @__PURE__ */ _createElementVNode(\"span\", { class: \"text-gray-400 dark:text-gray-600\" }, \"@quonte_io \")\n], -1);\nimport TelegramIcon from \"@/components/icons/TelegramIcon.vue\";\nimport LinkWrapper from \"@/components/LinkWrapper.vue\";\nexport default /* @__PURE__ */ _defineComponent({\n  __name: \"ContactSection\",\n  setup(__props) {\n    return (_ctx, _cache) => {\n      const _directive_motion_slide_visible_bottom = _resolveDirective(\"motion-slide-visible-bottom\");\n      return _withDirectives((_openBlock(), _createElementBlock(\"div\", null, [\n        _createElementVNode(\"div\", _hoisted_1, [\n          _hoisted_2,\n          _hoisted_3,\n          _createElementVNode(\"div\", _hoisted_4, [\n            _createVNode(LinkWrapper, {\n              isExternal: \"\",\n              path: \"https://t.me/yalnguembu\",\n              class: \"w-full px-6 py-1 hover:shadow-md hover:shadow-yellow-300 dark:hover:shadow-yellow-900 bg-yellow-500 hover:bg-yellow-400 dark:hover:bg-yellow-400 flex items-center rounded-xl md:justify-evenly md:w-auto\"\n            }, {\n              default: _withCtx(() => [\n                _createVNode(TelegramIcon, { class: \"fill-gray-500 h-10 w-10\" }),\n                _hoisted_5\n              ]),\n              _: 1\n            }),\n            _createVNode(LinkWrapper, {\n              path: \"mailto:yalnguembu@gmail.com\",\n              isExternal: \"\",\n              class: \"w-full px-6 py-1 hover:shadow-md hover:shadow-green-700 bg-green-800 dark:bg-green-100 hover:bg-green-700 dark:hover:bg-green-300 flex items-center rounded-xl md:justify-evenly md:w-auto\"\n            }, {\n              default: _withCtx(() => [\n                _hoisted_6,\n                _hoisted_7\n              ]),\n              _: 1\n            })\n          ])\n        ])\n      ])), [\n        [_directive_motion_slide_visible_bottom]\n      ]);\n    };\n  }\n});\n",
+      "start": 1713208772216,
+      "end": 1713208772262,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "/home/yalnguembu/Perso/quonte/components/landing/ContactSection.vue?vue&type=script&setup=true&lang.ts"
+        ],
+        "sourcesContent": [
+          "import { defineComponent as _defineComponent } from 'vue'\nimport { createElementVNode as _createElementVNode, createTextVNode as _createTextVNode, createVNode as _createVNode, withCtx as _withCtx, resolveDirective as _resolveDirective, openBlock as _openBlock, createElementBlock as _createElementBlock, withDirectives as _withDirectives } from \"vue\"\nimport _imports_0 from '@/assets/images/Group 5601.svg'\n\n\nconst _hoisted_1 = {\n  class: \"flex flex-col items-center w-full py-12 lg:py-20 lg:px-4\",\n  id: \"contact\"\n}\nconst _hoisted_2 = /*#__PURE__*/_createElementVNode(\"h3\", { class: \"font-bold text-3xl text-green-800 dark:text-green-100 text-center p-8 pb-4\" }, [\n  /*#__PURE__*/_createElementVNode(\"span\", { class: \"relative block\" }, [\n    /*#__PURE__*/_createTextVNode(\" What's your Quonte idea? \"),\n    /*#__PURE__*/_createElementVNode(\"img\", {\n      src: _imports_0,\n      alt: \"\",\n      class: \"absolute w-12 -top-10 -right-3 lg:rotate-90 lg:-right-20\"\n    })\n  ])\n], -1)\nconst _hoisted_3 = /*#__PURE__*/_createElementVNode(\"h4\", { class: \"text-gray-500 text-xl\" }, \"Let's chat and see how we can help\", -1)\nconst _hoisted_4 = { class: \"w-full px-4 py-8 flex flex-col space-y-8 md:space-y-0 md:space-x-8 md:flex-row md:justify-center\" }\nconst _hoisted_5 = /*#__PURE__*/_createElementVNode(\"span\", { class: \"p-4 py-2 text-left\" }, [\n  /*#__PURE__*/_createElementVNode(\"span\", { class: \"font-bold text-lg\" }, \" Telegram \"),\n  /*#__PURE__*/_createTextVNode(),\n  /*#__PURE__*/_createElementVNode(\"br\"),\n  /*#__PURE__*/_createElementVNode(\"span\", { class: \"text-gray-600\" }, \"@quonte_io \")\n], -1)\nconst _hoisted_6 = /*#__PURE__*/_createElementVNode(\"span\", { class: \"text-5xl text-white dark:text-green-800\" }, \"@\", -1)\nconst _hoisted_7 = /*#__PURE__*/_createElementVNode(\"span\", { class: \"p-4 py-2 text-left\" }, [\n  /*#__PURE__*/_createElementVNode(\"span\", { class: \"font-bold text-lg text-white dark:text-green-800\" }, \" Email \"),\n  /*#__PURE__*/_createElementVNode(\"br\"),\n  /*#__PURE__*/_createElementVNode(\"span\", { class: \"text-gray-400 dark:text-gray-600\" }, \"@quonte_io \")\n], -1)\n\nimport TelegramIcon from \"@/components/icons/TelegramIcon.vue\";\nimport LinkWrapper from \"@/components/LinkWrapper.vue\";\n\nexport default /*#__PURE__*/_defineComponent({\n  __name: 'ContactSection',\n  setup(__props) {\n\n\nreturn (_ctx: any,_cache: any) => {\n  const _directive_motion_slide_visible_bottom = _resolveDirective(\"motion-slide-visible-bottom\")!\n\n  return _withDirectives((_openBlock(), _createElementBlock(\"div\", null, [\n    _createElementVNode(\"div\", _hoisted_1, [\n      _hoisted_2,\n      _hoisted_3,\n      _createElementVNode(\"div\", _hoisted_4, [\n        _createVNode(LinkWrapper, {\n          isExternal: \"\",\n          path: \"https://t.me/yalnguembu\",\n          class: \"w-full px-6 py-1 hover:shadow-md hover:shadow-yellow-300 dark:hover:shadow-yellow-900 bg-yellow-500 hover:bg-yellow-400 dark:hover:bg-yellow-400 flex items-center rounded-xl md:justify-evenly md:w-auto\"\n        }, {\n          default: _withCtx(() => [\n            _createVNode(TelegramIcon, { class: \"fill-gray-500 h-10 w-10\" }),\n            _hoisted_5\n          ]),\n          _: 1\n        }),\n        _createVNode(LinkWrapper, {\n          path: \"mailto:yalnguembu@gmail.com\",\n          isExternal: \"\",\n          class: \"w-full px-6 py-1 hover:shadow-md hover:shadow-green-700 bg-green-800 dark:bg-green-100 hover:bg-green-700 dark:hover:bg-green-300 flex items-center rounded-xl md:justify-evenly md:w-auto\"\n        }, {\n          default: _withCtx(() => [\n            _hoisted_6,\n            _hoisted_7\n          ]),\n          _: 1\n        })\n      ])\n    ])\n  ])), [\n    [_directive_motion_slide_visible_bottom]\n  ])\n}\n}\n\n})"
+        ],
+        "mappings": "AAAA,SAAS,mBAAmB,wBAAwB;AACpD,SAAS,sBAAsB,qBAAqB,mBAAmB,kBAAkB,eAAe,cAAc,WAAW,UAAU,oBAAoB,mBAAmB,aAAa,YAAY,sBAAsB,qBAAqB,kBAAkB,uBAAuB;AAC/R,OAAO,gBAAgB;AAGvB,MAAM,aAAa;AAAA,EACjB,OAAO;AAAA,EACP,IAAI;AACN;AACA,MAAM,aAA0B,oCAAoB,MAAM,EAAE,OAAO,6EAA6E,GAAG;AAAA,EACpI,oCAAoB,QAAQ,EAAE,OAAO,iBAAiB,GAAG;AAAA,IACvD,iCAAiB,4BAA4B;AAAA,IAC7C,oCAAoB,OAAO;AAAA,MACtC,KAAK;AAAA,MACL,KAAK;AAAA,MACL,OAAO;AAAA,IACT,CAAC;AAAA,EACH,CAAC;AACH,GAAG,EAAE;AACL,MAAM,aAA0B,oCAAoB,MAAM,EAAE,OAAO,wBAAwB,GAAG,sCAAsC,EAAE;AACtI,MAAM,aAAa,EAAE,OAAO,mGAAmG;AAC/H,MAAM,aAA0B,oCAAoB,QAAQ,EAAE,OAAO,qBAAqB,GAAG;AAAA,EAC9E,oCAAoB,QAAQ,EAAE,OAAO,oBAAoB,GAAG,YAAY;AAAA,EACxE,iCAAiB;AAAA,EACjB,oCAAoB,IAAI;AAAA,EACxB,oCAAoB,QAAQ,EAAE,OAAO,gBAAgB,GAAG,aAAa;AACpF,GAAG,EAAE;AACL,MAAM,aAA0B,oCAAoB,QAAQ,EAAE,OAAO,0CAA0C,GAAG,KAAK,EAAE;AACzH,MAAM,aAA0B,oCAAoB,QAAQ,EAAE,OAAO,qBAAqB,GAAG;AAAA,EAC9E,oCAAoB,QAAQ,EAAE,OAAO,mDAAmD,GAAG,SAAS;AAAA,EACpG,oCAAoB,IAAI;AAAA,EACxB,oCAAoB,QAAQ,EAAE,OAAO,mCAAmC,GAAG,aAAa;AACvG,GAAG,EAAE;AAEL,OAAO,kBAAkB;AACzB,OAAO,iBAAiB;AAExB,eAA4B,iCAAiB;AAAA,EAC3C,QAAQ;AAAA,EACR,MAAM,SAAS;AAGjB,WAAO,CAAC,MAAU,WAAgB;AAChC,YAAM,yCAAyC,kBAAkB,6BAA6B;AAE9F,aAAO,iBAAiB,WAAW,GAAG,oBAAoB,OAAO,MAAM;AAAA,QACrE,oBAAoB,OAAO,YAAY;AAAA,UACrC;AAAA,UACA;AAAA,UACA,oBAAoB,OAAO,YAAY;AAAA,YACrC,aAAa,aAAa;AAAA,cACxB,YAAY;AAAA,cACZ,MAAM;AAAA,cACN,OAAO;AAAA,YACT,GAAG;AAAA,cACD,SAAS,SAAS,MAAM;AAAA,gBACtB,aAAa,cAAc,EAAE,OAAO,0BAA0B,CAAC;AAAA,gBAC/D;AAAA,cACF,CAAC;AAAA,cACD,GAAG;AAAA,YACL,CAAC;AAAA,YACD,aAAa,aAAa;AAAA,cACxB,MAAM;AAAA,cACN,YAAY;AAAA,cACZ,OAAO;AAAA,YACT,GAAG;AAAA,cACD,SAAS,SAAS,MAAM;AAAA,gBACtB;AAAA,gBACA;AAAA,cACF,CAAC;AAAA,cACD,GAAG;AAAA,YACL,CAAC;AAAA,UACH,CAAC;AAAA,QACH,CAAC;AAAA,MACH,CAAC,IAAI;AAAA,QACH,CAAC,sCAAsC;AAAA,MACzC,CAAC;AAAA,IACH;AAAA,EACA;AAEA,CAAC;",
+        "names": []
+      }
+    },
+    {
+      "name": "vite:json",
+      "start": 1713208772262,
+      "end": 1713208772262,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1713208772262,
+      "end": 1713208772262,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1713208772262,
+      "end": 1713208772262,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1713208772262,
+      "end": 1713208772262,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1713208772263,
+      "end": 1713208772263,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1713208772263,
+      "end": 1713208772263,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1713208772263,
+      "end": 1713208772263,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1713208772263,
+      "end": 1713208772263,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1713208772263,
+      "end": 1713208772263,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1713208772263,
+      "end": 1713208772263,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1713208772263,
+      "end": 1713208772263,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1713208772263,
+      "end": 1713208772263,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1713208772263,
+      "end": 1713208772263,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1713208772263,
+      "end": 1713208772263,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1713208772263,
+      "end": 1713208772263,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1713208772263,
+      "end": 1713208772263,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1713208772263,
+      "end": 1713208772263,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1713208772263,
+      "end": 1713208772263,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1713208772264,
+      "end": 1713208772264,
+      "order": "post"
+    },
+    {
+      "name": "unhead:use-seo-meta-transform",
+      "start": 1713208772264,
+      "end": 1713208772264,
+      "order": "post"
+    },
+    {
+      "name": "nuxtjs:i18n-resource",
+      "start": 1713208772264,
+      "end": 1713208772264,
+      "order": "post"
+    },
+    {
+      "name": "nuxtjs:i18n-meta-deprecation",
+      "start": 1713208772264,
+      "end": 1713208772264,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1713208772264,
+      "end": 1713208772271,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1713208772273,
+      "end": 1713208772273,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1713208772273,
+      "end": 1713208772273,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1713208772273,
+      "end": 1713208772273,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1713208772273,
+      "end": 1713208772274,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1713208772274,
+      "end": 1713208772274,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1713208772274,
+      "end": 1713208772274,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1713208772275,
+      "end": 1713208772275,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1713208772275,
+      "end": 1713208772275,
+      "order": "normal"
+    }
+  ]
+}
