@@ -11,13 +11,13 @@
         >
           <img
               :alt="t('logoAlt')"
-              src="@/assets/images/logo.svg"
+              src="~/assets/images/logo.svg"
               class="w-full -rotate-45 opacity-60 blur-xl dark:blur-2xl border"
           />
           <div class="w-full flex justify-center items-center absolute">
             <img
                 :alt="t('logoAlt')"
-                src="@/assets/images/logo.svg"
+                src="~/assets/images/logo.svg"
                 class="drop-shadow-3xl w-4/5 rotate-45"
             />
           </div>

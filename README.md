@@ -1,8 +1,9 @@
-# Nuxt 3 Minimal Starter
+# Infinite Notes
 
 Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
-## Setup
+
+Not sure to remind it? Note it with Infinite Notes the noting app you wouldn't be anoyed by stuck thing who can be usefull
 
 Make sure to install the dependencies:
 
@@ -72,4 +73,40 @@ yarn preview
 bun run preview
 ```
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+## License
+
+The last section of a high-quality README file is the license. This lets other developers know what they can and cannot do with your project. If you need help choosing a license, refer to [https://choosealicense.com/](https://github.com/settings/keys).
+
+## Badges
+
+`vuejs` | `typescript` | `html` | `css` | `pinia` | `openapi` | `TDD` | `Mobile First approche` | ` Frontend Development`
+
+---
+
+## How to Contribute
+
+- fork the project
+- create an issue
+- create branche commit with a very explicit name
+- create a pull request to develop
+- a maintener will make a review
+- everybody can review
+- only maintener are allow to merge
+
+---
+
+## Tests
+
+### unit tests
+
+run `$ npm run test:unit`
+
+### e2e tests
+
+- `$ npm run openapi-generate`
+
+- `$ npm run build`
+
+- `$ npm run preview`
+
+- `$ npm run test:unit`

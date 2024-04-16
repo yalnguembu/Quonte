@@ -15,7 +15,7 @@
 
           <img
             v-motion-roll-visible-bottom
-            src="@/assets/images/Group 5597.svg"
+            src="~/assets/images/hero-section-image.svg"
             :alt="t('createButtonTitle')"
             class="absolute w-20 h-20 -top-20 -right-5 lg:-right-12 lg:-top-10"
           />
