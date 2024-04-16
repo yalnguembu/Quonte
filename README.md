@@ -1,75 +1,110 @@
-# Nuxt 3 Minimal Starter
+# Infinite Notes
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+## Description
 
-## Setup
+Not sure to remind it? Note it with Infinite Notes the noting app you wouldn't be anoyed by stuck thing who can be usefull
 
-Make sure to install the dependencies:
+## Table of Contents
 
-```bash
-# npm
-npm install
+- [Installation](#installation)
+- [Usage](#usage)
+- [Credits](#credits)
+- [License](#license)
 
-# pnpm
-pnpm install
+---
 
-# yarn
-yarn install
+## Installation
 
-# bun
-bun install
-```
+- fetch the project
 
-## Development Server
+- run `$ npm ci`
 
-Start the development server on `http://localhost:3000`:
+## Usage
 
-```bash
-# npm
-npm run dev
+first you have to start the project by typing the following command
 
-# pnpm
-pnpm run dev
+### in developpement environment
 
-# yarn
-yarn dev
+- `$ npm run openapi-generate`
 
-# bun
-bun run dev
-```
+- `$ npm run dev`
 
-## Production
+### in test environment
 
-Build the application for production:
+- `$ npm run openapi-generate`
 
-```bash
-# npm
-npm run build
+- `$ npm run build`
 
-# pnpm
-pnpm run build
+- `$ npm run preview`
 
-# yarn
-yarn build
+### in production environment
 
-# bun
-bun run build
-```
+- `$ npm run openapi-generate`
 
-Locally preview production build:
+- `$ npm run build`
 
-```bash
-# npm
-npm run preview
+- `$ npm run start`
 
-# pnpm
-pnpm run preview
+---
 
-# yarn
-yarn preview
+## Credits
 
-# bun
-bun run preview
-```
+[WIBRC-IT](https://github.com/WIBRC-45920)
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+## License
+
+The last section of a high-quality README file is the license. This lets other developers know what they can and cannot do with your project. If you need help choosing a license, refer to [https://choosealicense.com/](https://github.com/settings/keys).
+
+## Badges
+
+`vuejs` | `typescript` | `html` | `css` | `pinia` | `openapi` | `TDD` | `Mobile First approche` | ` Frontend Development`
+
+Badges aren't necessary, per se, but they demonstrate street cred. Badges let other developers know that you know what you're doing. Check out the badges hosted by [shields.io](https://shields.io/). You may not understand what they all represent now, but you will in time.
+
+---
+
+## Features
+
+- roles and permitions management (list, create, edit and assign action to role)
+
+- users management (list, create, edit the asign them roles)
+
+- services mangement (list, create, activate, edit, deactivate service wich are needed to create the employee post)
+
+- posts mangement (create, activate, edit, deactivate post related to a service wich are needed to create the employee),
+
+- employee mangement (list display employees informatios)
+
+- holidays requests management (list holidays and details, aprove or reject holiday of employee)
+
+- user profiole management (update personal informations and set settings and preferences)
+
+---
+
+## How to Contribute
+
+- fork the project
+- create an issue
+- create branche commit with a very explicit name
+- create a pull request to develop
+- a maintener will make a review
+- everybody can review
+- only maintener are allow to merge
+
+---
+
+## Tests
+
+### unit tests
+
+run `$ npm run test:unit`
+
+### e2e tests
+
+- `$ npm run openapi-generate`
+
+- `$ npm run build`
+
+- `$ npm run preview`
+
+- `$ npm run test:unit`
