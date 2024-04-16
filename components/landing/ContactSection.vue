@@ -10,7 +10,7 @@
         <span class="relative block">
           What's your Quonte idea?
           <img
-            src="@/assets/images/Group 5601.svg"
+            src="~/assets/images/stars-illustration.svg"
             alt=""
             class="absolute w-12 -top-10 -right-3 lg:rotate-90 lg:-right-20"
           />

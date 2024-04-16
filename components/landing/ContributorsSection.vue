@@ -7,7 +7,7 @@
         <span class="relative">
           Those who give us power
           <img
-            src="@/assets/images/Group 5601.svg"
+            src="~/assets/images/stars-illustration.svg"
             alt=""
             class="absolute w-12 -top-14 -left-5 -rotate-90 lg:-left-12 lg:-rotate-90"
           />
