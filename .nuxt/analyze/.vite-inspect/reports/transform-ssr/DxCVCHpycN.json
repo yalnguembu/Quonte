@@ -1,0 +1,340 @@
+{
+  "resolvedId": "/home/yalnguembu/Perso/quonte/components/OgImage/LandingPage.vue?vue&type=script&setup=true&lang.ts",
+  "transforms": [
+    {
+      "name": "vite:vue",
+      "result": "import { defineComponent as _defineComponent } from 'vue'\nimport { mergeProps as _mergeProps } from \"vue\"\nimport { ssrRenderAttr as _ssrRenderAttr, ssrRenderAttrs as _ssrRenderAttrs, ssrInterpolate as _ssrInterpolate } from \"vue/server-renderer\"\nimport _imports_0 from '/logo.svg'\n\n\n\nexport default /*#__PURE__*/_defineComponent({\n  __name: 'LandingPage',\n  __ssrInlineRender: true,\n  props: {\n    headline: {},\n    title: {},\n    description: {},\n    alt: {}\n  },\n  setup(__props: any) {\n\n\n\nreturn (_ctx: any,_push: any,_parent: any,_attrs: any) => {\n  _push(`<div${\n    _ssrRenderAttrs(_mergeProps({ class: \"w-full flex px-2 py-4 justify-between\" }, _attrs))\n  }><section class=\"flex justify-center items-center\"><div class=\"w-4/5 mx-auto flex justify-center items-center relative lg:w-full\"><img${\n    _ssrRenderAttr(\"src\", _imports_0)\n  } class=\"w-full -rotate-45 opacity-60 blur-xl dark:blur-2xl border\"${\n    _ssrRenderAttr(\"alt\", _ctx.alt)\n  }><div class=\"w-full flex justify-center items-center absolute\"><img${\n    _ssrRenderAttr(\"src\", _imports_0)\n  } class=\"drop-shadow-3xl w-4/5 rotate-45\"${\n    _ssrRenderAttr(\"alt\", _ctx.alt)\n  }></div></div></section><section class=\"w-3/4\"><div class=\"border\"><h3 class=\"text-lg font-bold text-green-800 dark:text-green-200 mt-4\">${\n    _ssrInterpolate(_ctx.headline)\n  }</h3><h2 class=\"text-5xl font-bold text-gray-900 dark:text-green-200 bord lg:text-7xl xl:mb-8 text-pretty\">${\n    _ssrInterpolate(_ctx.title)\n  }</h2><div><p class=\"text-lg text-gray-800 dark:text-gray-300 mt-4 lg:text-xl xl:mb-12\">${\n    _ssrInterpolate(_ctx.description)\n  }</p></div></div></section></div>`)\n}\n}\n\n})",
+      "start": 1713208779391,
+      "end": 1713208779391,
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "/home/yalnguembu/Perso/quonte/components/OgImage/LandingPage.vue"
+        ],
+        "sourcesContent": [
+          "<template>\n  <div\n      class=\"w-full flex px-2 py-4 justify-between\"\n  >\n    <section\n        class=\"flex justify-center items-center\"\n    >\n      <div\n          class=\"w-4/5 mx-auto flex justify-center items-center relative lg:w-full\"\n      >\n        <img\n          src=\"/logo.svg\"\n          class=\"w-full -rotate-45 opacity-60 blur-xl dark:blur-2xl border\"\n           :alt=\"alt\"\n        />\n          <div class=\"w-full flex justify-center items-center absolute\">\n            <img\n              src=\"/logo.svg\"\n              class=\"drop-shadow-3xl w-4/5 rotate-45\"\n              :alt=\"alt\"\n            />\n            </div>\n      </div>\n    </section>\n    <section\n        class=\"w-3/4\"\n    >\n      <div class=\"border\">\n        <h3 class=\"text-lg font-bold text-green-800 dark:text-green-200 mt-4\"> {{ headline }} </h3>\n        <h2\n            class=\"text-5xl font-bold text-gray-900 dark:text-green-200 bord lg:text-7xl xl:mb-8 text-pretty\"\n        >\n          {{ title }}\n        </h2>\n        <div>\n          <p\n              class=\"text-lg text-gray-800 dark:text-gray-300 mt-4 lg:text-xl xl:mb-12\"\n          >\n            {{ description }}\n          </p>\n        </div>\n      </div>\n    </section>\n  </div>\n</template>\n<script lang=\"ts\" setup>\ndefineProps<{\n  headline: string,\n  title: string,\n  description: string,\n  alt: string,\n}>()\n</script>\n"
+        ],
+        "names": [],
+        "mappings": ";;;;;;;;;;;;;;;;;AA6CwB;AAMpB;;;;;;;;;;;;;;;;;;;;;;;"
+      }
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1713208779392,
+      "end": 1713208779392,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1713208779392,
+      "end": 1713208779392,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1713208779392,
+      "end": 1713208779392,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1713208779392,
+      "end": 1713208779392,
+      "order": "pre"
+    },
+    {
+      "name": "unplugin-vue-i18n",
+      "start": 1713208779392,
+      "end": 1713208779392,
+      "order": "pre"
+    },
+    {
+      "name": "unplugin-vue-i18n",
+      "start": 1713208779392,
+      "end": 1713208779392,
+      "order": "pre"
+    },
+    {
+      "name": "nuxtjs:i18n-macros-transform",
+      "start": 1713208779392,
+      "end": 1713208779393,
+      "order": "pre"
+    },
+    {
+      "name": "nuxtjs:i18n-macros-transform",
+      "start": 1713208779392,
+      "end": 1713208779393,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1713208779393,
+      "end": 1713208779393,
+      "order": "pre"
+    },
+    {
+      "name": "server-only-component-transform",
+      "start": 1713208779393,
+      "end": 1713208779393,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1713208779393,
+      "end": 1713208779393,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { defineComponent as _defineComponent } from \"vue\";\nimport { mergeProps as _mergeProps } from \"vue\";\nimport { ssrRenderAttr as _ssrRenderAttr, ssrRenderAttrs as _ssrRenderAttrs, ssrInterpolate as _ssrInterpolate } from \"vue/server-renderer\";\nimport _imports_0 from \"/logo.svg\";\nexport default /* @__PURE__ */ _defineComponent({\n  __name: \"LandingPage\",\n  __ssrInlineRender: true,\n  props: {\n    headline: {},\n    title: {},\n    description: {},\n    alt: {}\n  },\n  setup(__props) {\n    return (_ctx, _push, _parent, _attrs) => {\n      _push(`<div${_ssrRenderAttrs(_mergeProps({ class: \"w-full flex px-2 py-4 justify-between\" }, _attrs))}><section class=\"flex justify-center items-center\"><div class=\"w-4/5 mx-auto flex justify-center items-center relative lg:w-full\"><img${_ssrRenderAttr(\"src\", _imports_0)} class=\"w-full -rotate-45 opacity-60 blur-xl dark:blur-2xl border\"${_ssrRenderAttr(\"alt\", _ctx.alt)}><div class=\"w-full flex justify-center items-center absolute\"><img${_ssrRenderAttr(\"src\", _imports_0)} class=\"drop-shadow-3xl w-4/5 rotate-45\"${_ssrRenderAttr(\"alt\", _ctx.alt)}></div></div></section><section class=\"w-3/4\"><div class=\"border\"><h3 class=\"text-lg font-bold text-green-800 dark:text-green-200 mt-4\">${_ssrInterpolate(_ctx.headline)}</h3><h2 class=\"text-5xl font-bold text-gray-900 dark:text-green-200 bord lg:text-7xl xl:mb-8 text-pretty\">${_ssrInterpolate(_ctx.title)}</h2><div><p class=\"text-lg text-gray-800 dark:text-gray-300 mt-4 lg:text-xl xl:mb-12\">${_ssrInterpolate(_ctx.description)}</p></div></div></section></div>`);\n    };\n  }\n});\n",
+      "start": 1713208779393,
+      "end": 1713208779555,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "/home/yalnguembu/Perso/quonte/components/OgImage/LandingPage.vue?vue&type=script&setup=true&lang.ts"
+        ],
+        "sourcesContent": [
+          "import { defineComponent as _defineComponent } from 'vue'\nimport { mergeProps as _mergeProps } from \"vue\"\nimport { ssrRenderAttr as _ssrRenderAttr, ssrRenderAttrs as _ssrRenderAttrs, ssrInterpolate as _ssrInterpolate } from \"vue/server-renderer\"\nimport _imports_0 from '/logo.svg'\n\n\n\nexport default /*#__PURE__*/_defineComponent({\n  __name: 'LandingPage',\n  __ssrInlineRender: true,\n  props: {\n    headline: {},\n    title: {},\n    description: {},\n    alt: {}\n  },\n  setup(__props: any) {\n\n\n\nreturn (_ctx: any,_push: any,_parent: any,_attrs: any) => {\n  _push(`<div${\n    _ssrRenderAttrs(_mergeProps({ class: \"w-full flex px-2 py-4 justify-between\" }, _attrs))\n  }><section class=\"flex justify-center items-center\"><div class=\"w-4/5 mx-auto flex justify-center items-center relative lg:w-full\"><img${\n    _ssrRenderAttr(\"src\", _imports_0)\n  } class=\"w-full -rotate-45 opacity-60 blur-xl dark:blur-2xl border\"${\n    _ssrRenderAttr(\"alt\", _ctx.alt)\n  }><div class=\"w-full flex justify-center items-center absolute\"><img${\n    _ssrRenderAttr(\"src\", _imports_0)\n  } class=\"drop-shadow-3xl w-4/5 rotate-45\"${\n    _ssrRenderAttr(\"alt\", _ctx.alt)\n  }></div></div></section><section class=\"w-3/4\"><div class=\"border\"><h3 class=\"text-lg font-bold text-green-800 dark:text-green-200 mt-4\">${\n    _ssrInterpolate(_ctx.headline)\n  }</h3><h2 class=\"text-5xl font-bold text-gray-900 dark:text-green-200 bord lg:text-7xl xl:mb-8 text-pretty\">${\n    _ssrInterpolate(_ctx.title)\n  }</h2><div><p class=\"text-lg text-gray-800 dark:text-gray-300 mt-4 lg:text-xl xl:mb-12\">${\n    _ssrInterpolate(_ctx.description)\n  }</p></div></div></section></div>`)\n}\n}\n\n})"
+        ],
+        "mappings": "AAAA,SAAS,mBAAmB,wBAAwB;AACpD,SAAS,cAAc,mBAAmB;AAC1C,SAAS,iBAAiB,gBAAgB,kBAAkB,iBAAiB,kBAAkB,uBAAuB;AACtH,OAAO,gBAAgB;AAIvB,eAA4B,iCAAiB;AAAA,EAC3C,QAAQ;AAAA,EACR,mBAAmB;AAAA,EACnB,OAAO;AAAA,IACL,UAAU,CAAC;AAAA,IACX,OAAO,CAAC;AAAA,IACR,aAAa,CAAC;AAAA,IACd,KAAK,CAAC;AAAA,EACR;AAAA,EACA,MAAM,SAAc;AAItB,WAAO,CAAC,MAAU,OAAW,SAAa,WAAgB;AACxD,YAAM,OACJ,gBAAgB,YAAY,EAAE,OAAO,wCAAwC,GAAG,MAAM,CAAC,CACzF,yIACE,eAAe,OAAO,UAAU,CAClC,qEACE,eAAe,OAAO,KAAK,GAAG,CAChC,sEACE,eAAe,OAAO,UAAU,CAClC,2CACE,eAAe,OAAO,KAAK,GAAG,CAChC,2IACE,gBAAgB,KAAK,QAAQ,CAC/B,8GACE,gBAAgB,KAAK,KAAK,CAC5B,0FACE,gBAAgB,KAAK,WAAW,CAClC,kCAAkC;AAAA,IACpC;AAAA,EACA;AAEA,CAAC;",
+        "names": []
+      }
+    },
+    {
+      "name": "vite:json",
+      "start": 1713208779555,
+      "end": 1713208779555,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1713208779556,
+      "end": 1713208779556,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1713208779556,
+      "end": 1713208779556,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1713208779556,
+      "end": 1713208779556,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1713208779556,
+      "end": 1713208779556,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1713208779556,
+      "end": 1713208779556,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1713208779557,
+      "end": 1713208779557,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1713208779557,
+      "end": 1713208779557,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1713208779557,
+      "end": 1713208779557,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1713208779557,
+      "end": 1713208779557,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1713208779558,
+      "end": 1713208779559,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1713208779559,
+      "end": 1713208779559,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1713208779559,
+      "end": 1713208779560,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1713208779560,
+      "end": 1713208779560,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1713208779560,
+      "end": 1713208779560,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1713208779560,
+      "end": 1713208779560,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1713208779560,
+      "end": 1713208779560,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1713208779560,
+      "end": 1713208779560,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1713208779560,
+      "end": 1713208779560,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1713208779560,
+      "end": 1713208779560,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1713208779560,
+      "end": 1713208779560,
+      "order": "post"
+    },
+    {
+      "name": "unhead:remove-server-composables",
+      "start": 1713208779560,
+      "end": 1713208779561,
+      "order": "post"
+    },
+    {
+      "name": "unhead:use-seo-meta-transform",
+      "start": 1713208779561,
+      "end": 1713208779561,
+      "order": "post"
+    },
+    {
+      "name": "unhead:use-seo-meta-transform",
+      "start": 1713208779561,
+      "end": 1713208779561,
+      "order": "post"
+    },
+    {
+      "name": "nuxtjs:i18n-resource",
+      "start": 1713208779561,
+      "end": 1713208779561,
+      "order": "post"
+    },
+    {
+      "name": "nuxtjs:i18n-resource",
+      "start": 1713208779561,
+      "end": 1713208779561,
+      "order": "post"
+    },
+    {
+      "name": "nuxtjs:i18n-meta-deprecation",
+      "start": 1713208779561,
+      "end": 1713208779561,
+      "order": "post"
+    },
+    {
+      "name": "nuxtjs:i18n-meta-deprecation",
+      "start": 1713208779561,
+      "end": 1713208779561,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1713208779562,
+      "end": 1713208779564,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1713208779562,
+      "end": 1713208779564,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1713208779565,
+      "end": 1713208779565,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1713208779565,
+      "end": 1713208779565,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1713208779565,
+      "end": 1713208779565,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1713208779565,
+      "end": 1713208779565,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-template",
+      "start": 1713208779565,
+      "end": 1713208779565,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1713208779566,
+      "end": 1713208779566,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1713208779566,
+      "end": 1713208779566,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1713208779566,
+      "end": 1713208779567,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1713208779568,
+      "end": 1713208779568,
+      "order": "normal"
+    }
+  ]
+}

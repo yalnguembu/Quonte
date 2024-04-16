@@ -1,0 +1,343 @@
+{
+  "resolvedId": "/home/yalnguembu/Perso/quonte/components/ContactItem.vue?vue&type=script&setup=true&lang.ts",
+  "transforms": [
+    {
+      "name": "vite:vue",
+      "result": "import { defineComponent as _defineComponent } from 'vue'\nimport { withCtx as _withCtx, createTextVNode as _createTextVNode } from \"vue\"\nimport { ssrRenderClass as _ssrRenderClass, ssrRenderComponent as _ssrRenderComponent, ssrRenderAttrs as _ssrRenderAttrs, ssrInterpolate as _ssrInterpolate } from \"vue/server-renderer\"\n\nimport { THEME } from \"@/utils/enum\";\nimport LinkWrapper from \"./LinkWrapper.vue\";\nimport type { PropType } from \"vue\";\n\n\nexport default /*#__PURE__*/_defineComponent({\n  __name: 'ContactItem',\n  __ssrInlineRender: true,\n  props: {\n  title: {\n    type: String,\n    required: true,\n  },\n  description: {\n    type: String,\n    required: true,\n  },\n  link: {\n    type: String,\n    required: true,\n  },\n  theme: {\n    type: String as PropType<THEME>,\n    required: true,\n  },\n},\n  setup(__props) {\n\nconst props = __props;\nconst getColor = () => {\n  switch (props.theme) {\n    case THEME.GREEN:\n      return \"bg-green-200 dark:bg-green-800/50 text-green-800 dark:text-green-100\";\n    case THEME.BLUE:\n      return \"bg-blue-200 dark:bg-blue-500/25 text-blue-800 dark:text-blue-100\";\n    case THEME.YELLOW:\n      return \"bg-yellow-200 dark:bg-yellow-400/25 text-yellow-800 dark:text-yellow-100\";\n    default:\n      return \"\";\n  }\n};\n\nreturn (_ctx: any,_push: any,_parent: any,_attrs: any) => {\n  _push(`<div${\n    _ssrRenderAttrs(_attrs)\n  }><div class=\"rounded-lg p-4 border dark:border-gray-800 hover:bg-gray-100 dark:hover:bg-gray-800/50\"><div class=\"${\n    _ssrRenderClass([\n          'h-28 w-full rounded-md flex items-center justify-center',\n          getColor(),\n        ])\n  }\"><span class=\"text-4xl\">@</span></div><h5 class=\"text-bold text-xl text-green-800 dark:text-green-100 border-b-2 border-b-gray-200 dark:border-b-gray-800 py-4\">${\n    _ssrInterpolate(__props.title)\n  }</h5><p class=\"text-gray-500 py-3\">${\n    _ssrInterpolate(__props.description)\n  }</p>`)\n  _push(_ssrRenderComponent(LinkWrapper, {\n    path: __props.link,\n    title: `Write us on ${__props.title}`,\n    \"is-external\": \"\",\n    class: \"px-3 py-2 block text-sm text-center rounded-lg border w-full mt-2 border-gray-800 dark:border-gray-100 text-green-800 dark:text-green-100 hover:border-transparent hover:bg-green-800 hover:text-white dark:hover:bg-green-200 dark:hover:text-black hover:shadow-md\"\n  }, {\n    default: _withCtx((_, _push, _parent, _scopeId) => {\n      if (_push) {\n        _push(` Send message `)\n      } else {\n        return [\n          _createTextVNode(\" Send message \")\n        ]\n      }\n    }),\n    _: 1\n  }, _parent))\n  _push(`</div></div>`)\n}\n}\n\n})",
+      "start": 1713208779946,
+      "end": 1713208779946,
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "/home/yalnguembu/Perso/quonte/components/ContactItem.vue"
+        ],
+        "sourcesContent": [
+          "<template>\n  <div>\n    <div\n      class=\"rounded-lg p-4 border dark:border-gray-800 hover:bg-gray-100 dark:hover:bg-gray-800/50\"\n    >\n      <div\n        :class=\"[\n          'h-28 w-full rounded-md flex items-center justify-center',\n          getColor(),\n        ]\"\n      >\n        <span class=\"text-4xl\">@</span>\n      </div>\n      <h5\n        class=\"text-bold text-xl text-green-800 dark:text-green-100 border-b-2 border-b-gray-200 dark:border-b-gray-800 py-4\"\n      >\n        {{ title }}\n      </h5>\n      <p class=\"text-gray-500 py-3\">{{ description }}</p>\n      <LinkWrapper\n        :path=\"link\"\n        :title=\"`Write us on ${title}`\"\n        is-external\n        class=\"px-3 py-2 block text-sm text-center rounded-lg border w-full mt-2 border-gray-800 dark:border-gray-100 text-green-800 dark:text-green-100 hover:border-transparent hover:bg-green-800 hover:text-white dark:hover:bg-green-200 dark:hover:text-black hover:shadow-md\"\n      >\n        Send message\n      </LinkWrapper>\n    </div>\n  </div>\n</template>\n<script setup lang=\"ts\">\nimport { THEME } from \"@/utils/enum\";\nimport LinkWrapper from \"./LinkWrapper.vue\";\nimport type { PropType } from \"vue\";\n\nconst props = defineProps({\n  title: {\n    type: String,\n    required: true,\n  },\n  description: {\n    type: String,\n    required: true,\n  },\n  link: {\n    type: String,\n    required: true,\n  },\n  theme: {\n    type: String as PropType<THEME>,\n    required: true,\n  },\n});\nconst getColor = () => {\n  switch (props.theme) {\n    case THEME.GREEN:\n      return \"bg-green-200 dark:bg-green-800/50 text-green-800 dark:text-green-100\";\n    case THEME.BLUE:\n      return \"bg-blue-200 dark:bg-blue-500/25 text-blue-800 dark:text-blue-100\";\n    case THEME.YELLOW:\n      return \"bg-yellow-200 dark:bg-yellow-400/25 text-yellow-800 dark:text-yellow-100\";\n    default:\n      return \"\";\n  }\n};\n</script>\n"
+        ],
+        "names": [],
+        "mappings": ";;;;AA+BA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpC;;;;;;;;;;;;;;;;;;;;;;;;AAJwB;AAKxB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,OAiBZ,CAAC;AACH,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACrB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACpB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACtB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACxF,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AACZ,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAChB,CAAC,CAAC,CAAC;AACH,CAAC,CAAC;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;"
+      }
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1713208779946,
+      "end": 1713208779946,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1713208779946,
+      "end": 1713208779946,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1713208779946,
+      "end": 1713208779947,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1713208779946,
+      "end": 1713208779947,
+      "order": "pre"
+    },
+    {
+      "name": "unplugin-vue-i18n",
+      "start": 1713208779947,
+      "end": 1713208779947,
+      "order": "pre"
+    },
+    {
+      "name": "unplugin-vue-i18n",
+      "start": 1713208779947,
+      "end": 1713208779947,
+      "order": "pre"
+    },
+    {
+      "name": "nuxtjs:i18n-macros-transform",
+      "start": 1713208779947,
+      "end": 1713208779947,
+      "order": "pre"
+    },
+    {
+      "name": "nuxtjs:i18n-macros-transform",
+      "start": 1713208779947,
+      "end": 1713208779947,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1713208779947,
+      "end": 1713208779947,
+      "order": "pre"
+    },
+    {
+      "name": "server-only-component-transform",
+      "start": 1713208779947,
+      "end": 1713208779947,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1713208779947,
+      "end": 1713208779947,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { defineComponent as _defineComponent } from \"vue\";\nimport { withCtx as _withCtx, createTextVNode as _createTextVNode } from \"vue\";\nimport { ssrRenderClass as _ssrRenderClass, ssrRenderComponent as _ssrRenderComponent, ssrRenderAttrs as _ssrRenderAttrs, ssrInterpolate as _ssrInterpolate } from \"vue/server-renderer\";\nimport { THEME } from \"@/utils/enum\";\nimport LinkWrapper from \"./LinkWrapper.vue\";\nexport default /* @__PURE__ */ _defineComponent({\n  __name: \"ContactItem\",\n  __ssrInlineRender: true,\n  props: {\n    title: {\n      type: String,\n      required: true\n    },\n    description: {\n      type: String,\n      required: true\n    },\n    link: {\n      type: String,\n      required: true\n    },\n    theme: {\n      type: String,\n      required: true\n    }\n  },\n  setup(__props) {\n    const props = __props;\n    const getColor = () => {\n      switch (props.theme) {\n        case THEME.GREEN:\n          return \"bg-green-200 dark:bg-green-800/50 text-green-800 dark:text-green-100\";\n        case THEME.BLUE:\n          return \"bg-blue-200 dark:bg-blue-500/25 text-blue-800 dark:text-blue-100\";\n        case THEME.YELLOW:\n          return \"bg-yellow-200 dark:bg-yellow-400/25 text-yellow-800 dark:text-yellow-100\";\n        default:\n          return \"\";\n      }\n    };\n    return (_ctx, _push, _parent, _attrs) => {\n      _push(`<div${_ssrRenderAttrs(_attrs)}><div class=\"rounded-lg p-4 border dark:border-gray-800 hover:bg-gray-100 dark:hover:bg-gray-800/50\"><div class=\"${_ssrRenderClass([\n        \"h-28 w-full rounded-md flex items-center justify-center\",\n        getColor()\n      ])}\"><span class=\"text-4xl\">@</span></div><h5 class=\"text-bold text-xl text-green-800 dark:text-green-100 border-b-2 border-b-gray-200 dark:border-b-gray-800 py-4\">${_ssrInterpolate(__props.title)}</h5><p class=\"text-gray-500 py-3\">${_ssrInterpolate(__props.description)}</p>`);\n      _push(_ssrRenderComponent(LinkWrapper, {\n        path: __props.link,\n        title: `Write us on ${__props.title}`,\n        \"is-external\": \"\",\n        class: \"px-3 py-2 block text-sm text-center rounded-lg border w-full mt-2 border-gray-800 dark:border-gray-100 text-green-800 dark:text-green-100 hover:border-transparent hover:bg-green-800 hover:text-white dark:hover:bg-green-200 dark:hover:text-black hover:shadow-md\"\n      }, {\n        default: _withCtx((_, _push2, _parent2, _scopeId) => {\n          if (_push2) {\n            _push2(` Send message `);\n          } else {\n            return [\n              _createTextVNode(\" Send message \")\n            ];\n          }\n        }),\n        _: 1\n      }, _parent));\n      _push(`</div></div>`);\n    };\n  }\n});\n",
+      "start": 1713208779947,
+      "end": 1713208779982,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "/home/yalnguembu/Perso/quonte/components/ContactItem.vue?vue&type=script&setup=true&lang.ts"
+        ],
+        "sourcesContent": [
+          "import { defineComponent as _defineComponent } from 'vue'\nimport { withCtx as _withCtx, createTextVNode as _createTextVNode } from \"vue\"\nimport { ssrRenderClass as _ssrRenderClass, ssrRenderComponent as _ssrRenderComponent, ssrRenderAttrs as _ssrRenderAttrs, ssrInterpolate as _ssrInterpolate } from \"vue/server-renderer\"\n\nimport { THEME } from \"@/utils/enum\";\nimport LinkWrapper from \"./LinkWrapper.vue\";\nimport type { PropType } from \"vue\";\n\n\nexport default /*#__PURE__*/_defineComponent({\n  __name: 'ContactItem',\n  __ssrInlineRender: true,\n  props: {\n  title: {\n    type: String,\n    required: true,\n  },\n  description: {\n    type: String,\n    required: true,\n  },\n  link: {\n    type: String,\n    required: true,\n  },\n  theme: {\n    type: String as PropType<THEME>,\n    required: true,\n  },\n},\n  setup(__props) {\n\nconst props = __props;\nconst getColor = () => {\n  switch (props.theme) {\n    case THEME.GREEN:\n      return \"bg-green-200 dark:bg-green-800/50 text-green-800 dark:text-green-100\";\n    case THEME.BLUE:\n      return \"bg-blue-200 dark:bg-blue-500/25 text-blue-800 dark:text-blue-100\";\n    case THEME.YELLOW:\n      return \"bg-yellow-200 dark:bg-yellow-400/25 text-yellow-800 dark:text-yellow-100\";\n    default:\n      return \"\";\n  }\n};\n\nreturn (_ctx: any,_push: any,_parent: any,_attrs: any) => {\n  _push(`<div${\n    _ssrRenderAttrs(_attrs)\n  }><div class=\"rounded-lg p-4 border dark:border-gray-800 hover:bg-gray-100 dark:hover:bg-gray-800/50\"><div class=\"${\n    _ssrRenderClass([\n          'h-28 w-full rounded-md flex items-center justify-center',\n          getColor(),\n        ])\n  }\"><span class=\"text-4xl\">@</span></div><h5 class=\"text-bold text-xl text-green-800 dark:text-green-100 border-b-2 border-b-gray-200 dark:border-b-gray-800 py-4\">${\n    _ssrInterpolate(__props.title)\n  }</h5><p class=\"text-gray-500 py-3\">${\n    _ssrInterpolate(__props.description)\n  }</p>`)\n  _push(_ssrRenderComponent(LinkWrapper, {\n    path: __props.link,\n    title: `Write us on ${__props.title}`,\n    \"is-external\": \"\",\n    class: \"px-3 py-2 block text-sm text-center rounded-lg border w-full mt-2 border-gray-800 dark:border-gray-100 text-green-800 dark:text-green-100 hover:border-transparent hover:bg-green-800 hover:text-white dark:hover:bg-green-200 dark:hover:text-black hover:shadow-md\"\n  }, {\n    default: _withCtx((_, _push, _parent, _scopeId) => {\n      if (_push) {\n        _push(` Send message `)\n      } else {\n        return [\n          _createTextVNode(\" Send message \")\n        ]\n      }\n    }),\n    _: 1\n  }, _parent))\n  _push(`</div></div>`)\n}\n}\n\n})"
+        ],
+        "mappings": "AAAA,SAAS,mBAAmB,wBAAwB;AACpD,SAAS,WAAW,UAAU,mBAAmB,wBAAwB;AACzE,SAAS,kBAAkB,iBAAiB,sBAAsB,qBAAqB,kBAAkB,iBAAiB,kBAAkB,uBAAuB;AAEnK,SAAS,aAAa;AACtB,OAAO,iBAAiB;AAIxB,eAA4B,iCAAiB;AAAA,EAC3C,QAAQ;AAAA,EACR,mBAAmB;AAAA,EACnB,OAAO;AAAA,IACP,OAAO;AAAA,MACL,MAAM;AAAA,MACN,UAAU;AAAA,IACZ;AAAA,IACA,aAAa;AAAA,MACX,MAAM;AAAA,MACN,UAAU;AAAA,IACZ;AAAA,IACA,MAAM;AAAA,MACJ,MAAM;AAAA,MACN,UAAU;AAAA,IACZ;AAAA,IACA,OAAO;AAAA,MACL,MAAM;AAAA,MACN,UAAU;AAAA,IACZ;AAAA,EACF;AAAA,EACE,MAAM,SAAS;AAEjB,UAAM,QAAQ;AACd,UAAM,WAAW,MAAM;AACrB,cAAQ,MAAM,OAAO;AAAA,QACnB,KAAK,MAAM;AACT,iBAAO;AAAA,QACT,KAAK,MAAM;AACT,iBAAO;AAAA,QACT,KAAK,MAAM;AACT,iBAAO;AAAA,QACT;AACE,iBAAO;AAAA,MACX;AAAA,IACF;AAEA,WAAO,CAAC,MAAU,OAAW,SAAa,WAAgB;AACxD,YAAM,OACJ,gBAAgB,MAAM,CACxB,oHACE,gBAAgB;AAAA,QACV;AAAA,QACA,SAAS;AAAA,MACX,CAAC,CACP,oKACE,gBAAgB,QAAQ,KAAK,CAC/B,sCACE,gBAAgB,QAAQ,WAAW,CACrC,MAAM;AACN,YAAM,oBAAoB,aAAa;AAAA,QACrC,MAAM,QAAQ;AAAA,QACd,OAAO,eAAe,QAAQ,KAAK;AAAA,QACnC,eAAe;AAAA,QACf,OAAO;AAAA,MACT,GAAG;AAAA,QACD,SAAS,SAAS,CAAC,GAAGA,QAAOC,UAAS,aAAa;AACjD,cAAID,QAAO;AACT,YAAAA,OAAM,gBAAgB;AAAA,UACxB,OAAO;AACL,mBAAO;AAAA,cACL,iBAAiB,gBAAgB;AAAA,YACnC;AAAA,UACF;AAAA,QACF,CAAC;AAAA,QACD,GAAG;AAAA,MACL,GAAG,OAAO,CAAC;AACX,YAAM,cAAc;AAAA,IACtB;AAAA,EACA;AAEA,CAAC;",
+        "names": [
+          "_push",
+          "_parent"
+        ]
+      }
+    },
+    {
+      "name": "vite:json",
+      "start": 1713208779982,
+      "end": 1713208779982,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1713208779982,
+      "end": 1713208779982,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1713208779983,
+      "end": 1713208779983,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1713208779983,
+      "end": 1713208779983,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1713208779983,
+      "end": 1713208779983,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1713208779983,
+      "end": 1713208779983,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1713208779983,
+      "end": 1713208779983,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1713208779983,
+      "end": 1713208779983,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1713208779984,
+      "end": 1713208779984,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1713208779984,
+      "end": 1713208779984,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1713208779985,
+      "end": 1713208779985,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1713208779985,
+      "end": 1713208779985,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1713208779985,
+      "end": 1713208779985,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1713208779985,
+      "end": 1713208779985,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1713208779985,
+      "end": 1713208779985,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1713208779985,
+      "end": 1713208779985,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1713208779985,
+      "end": 1713208779985,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1713208779985,
+      "end": 1713208779985,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1713208779986,
+      "end": 1713208779986,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1713208779986,
+      "end": 1713208779986,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1713208779986,
+      "end": 1713208779986,
+      "order": "post"
+    },
+    {
+      "name": "unhead:remove-server-composables",
+      "start": 1713208779986,
+      "end": 1713208779986,
+      "order": "post"
+    },
+    {
+      "name": "unhead:use-seo-meta-transform",
+      "start": 1713208779986,
+      "end": 1713208779986,
+      "order": "post"
+    },
+    {
+      "name": "unhead:use-seo-meta-transform",
+      "start": 1713208779986,
+      "end": 1713208779986,
+      "order": "post"
+    },
+    {
+      "name": "nuxtjs:i18n-resource",
+      "start": 1713208779988,
+      "end": 1713208779988,
+      "order": "post"
+    },
+    {
+      "name": "nuxtjs:i18n-resource",
+      "start": 1713208779988,
+      "end": 1713208779988,
+      "order": "post"
+    },
+    {
+      "name": "nuxtjs:i18n-meta-deprecation",
+      "start": 1713208779988,
+      "end": 1713208779988,
+      "order": "post"
+    },
+    {
+      "name": "nuxtjs:i18n-meta-deprecation",
+      "start": 1713208779988,
+      "end": 1713208779988,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1713208779988,
+      "end": 1713208779991,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1713208779988,
+      "end": 1713208779991,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1713208779992,
+      "end": 1713208779992,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1713208779992,
+      "end": 1713208779992,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1713208779992,
+      "end": 1713208779992,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1713208779992,
+      "end": 1713208779992,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-template",
+      "start": 1713208779992,
+      "end": 1713208779992,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1713208779993,
+      "end": 1713208779993,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1713208779993,
+      "end": 1713208779993,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1713208779993,
+      "end": 1713208779994,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1713208779994,
+      "end": 1713208779994,
+      "order": "normal"
+    }
+  ]
+}

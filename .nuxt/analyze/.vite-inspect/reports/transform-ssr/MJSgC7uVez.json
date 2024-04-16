@@ -1,0 +1,322 @@
+{
+  "resolvedId": "/home/yalnguembu/Perso/quonte/components/landing/ContactSection.vue",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "<template>\n  <div v-motion-slide-visible-bottom>\n    <div\n      class=\"flex flex-col items-center w-full py-12 lg:py-20 lg:px-4\"\n      id=\"contact\"\n    >\n      <h3\n        class=\"font-bold text-3xl text-green-800 dark:text-green-100 text-center p-8 pb-4\"\n      >\n        <span class=\"relative block\">\n          What's your Quonte idea?\n          <img\n            src=\"@/assets/images/Group 5601.svg\"\n            alt=\"\"\n            class=\"absolute w-12 -top-10 -right-3 lg:rotate-90 lg:-right-20\"\n          />\n        </span>\n      </h3>\n      <h4 class=\"text-gray-500 text-xl\">Let's chat and see how we can help</h4>\n      <div\n        class=\"w-full px-4 py-8 flex flex-col space-y-8 md:space-y-0 md:space-x-8 md:flex-row md:justify-center\"\n      >\n        <LinkWrapper\n          isExternal\n          path=\"https://t.me/yalnguembu\"\n          class=\"w-full px-6 py-1 hover:shadow-md hover:shadow-yellow-300 dark:hover:shadow-yellow-900 bg-yellow-500 hover:bg-yellow-400 dark:hover:bg-yellow-400 flex items-center rounded-xl md:justify-evenly md:w-auto\"\n        >\n          <TelegramIcon class=\"fill-gray-500 h-10 w-10\" />\n          <span class=\"p-4 py-2 text-left\">\n            <span class=\"font-bold text-lg\"> Telegram </span> <br />\n            <span class=\"text-gray-600\">@quonte_io </span>\n          </span>\n        </LinkWrapper>\n        <LinkWrapper\n          path=\"mailto:yalnguembu@gmail.com\"\n          isExternal\n          class=\"w-full px-6 py-1 hover:shadow-md hover:shadow-green-700 bg-green-800 dark:bg-green-100 hover:bg-green-700 dark:hover:bg-green-300 flex items-center rounded-xl md:justify-evenly md:w-auto\"\n        >\n          <span class=\"text-5xl text-white dark:text-green-800\">@</span>\n          <span class=\"p-4 py-2 text-left\">\n            <span class=\"font-bold text-lg text-white dark:text-green-800\">\n              Email\n            </span>\n            <br />\n            <span class=\"text-gray-400 dark:text-gray-600\">@quonte_io </span>\n          </span>\n        </LinkWrapper>\n      </div>\n    </div>\n  </div>\n</template>\n<script lang=\"ts\" setup>\nimport TelegramIcon from \"@/components/icons/TelegramIcon.vue\";\nimport LinkWrapper from \"@/components/LinkWrapper.vue\";\n</script>\n",
+      "start": 1713208779198,
+      "end": 1713208779789,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1713208779789,
+      "end": 1713208779789,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1713208779789,
+      "end": 1713208779789,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1713208779789,
+      "end": 1713208779789,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1713208779789,
+      "end": 1713208779789,
+      "order": "pre"
+    },
+    {
+      "name": "unplugin-vue-i18n",
+      "start": 1713208779789,
+      "end": 1713208779789,
+      "order": "pre"
+    },
+    {
+      "name": "unplugin-vue-i18n",
+      "start": 1713208779789,
+      "end": 1713208779789,
+      "order": "pre"
+    },
+    {
+      "name": "nuxtjs:i18n-macros-transform",
+      "start": 1713208779790,
+      "end": 1713208779790,
+      "order": "pre"
+    },
+    {
+      "name": "nuxtjs:i18n-macros-transform",
+      "start": 1713208779790,
+      "end": 1713208779790,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1713208779790,
+      "end": 1713208779790,
+      "order": "pre"
+    },
+    {
+      "name": "server-only-component-transform",
+      "start": 1713208779790,
+      "end": 1713208779790,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1713208779790,
+      "end": 1713208779790,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1713208779790,
+      "end": 1713208779790,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1713208779790,
+      "end": 1713208779790,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1713208779790,
+      "end": 1713208779790,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "result": "import _sfc_main from \"/home/yalnguembu/Perso/quonte/components/landing/ContactSection.vue?vue&type=script&setup=true&lang.ts\";\nexport * from \"/home/yalnguembu/Perso/quonte/components/landing/ContactSection.vue?vue&type=script&setup=true&lang.ts\";\nimport { useSSRContext as __vite_useSSRContext } from \"vue\";\nconst _sfc_setup = _sfc_main.setup;\n_sfc_main.setup = (props, ctx) => {\n  const ssrContext = __vite_useSSRContext();\n  (ssrContext.modules || (ssrContext.modules = /* @__PURE__ */ new Set())).add(\"components/landing/ContactSection.vue\");\n  return _sfc_setup ? _sfc_setup(props, ctx) : void 0;\n};\nexport default _sfc_main;\n",
+      "start": 1713208779790,
+      "end": 1713208779881,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1713208779881,
+      "end": 1713208779881,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1713208779881,
+      "end": 1713208779881,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1713208779881,
+      "end": 1713208779881,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1713208779881,
+      "end": 1713208779882,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1713208779881,
+      "end": 1713208779882,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1713208779882,
+      "end": 1713208779882,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1713208779882,
+      "end": 1713208779882,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1713208779882,
+      "end": 1713208779882,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1713208779882,
+      "end": 1713208779882,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1713208779883,
+      "end": 1713208779883,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1713208779883,
+      "end": 1713208779883,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1713208779885,
+      "end": 1713208779885,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1713208779885,
+      "end": 1713208779886,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1713208779886,
+      "end": 1713208779886,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1713208779886,
+      "end": 1713208779886,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1713208779888,
+      "end": 1713208779888,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1713208779889,
+      "end": 1713208779890,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1713208779889,
+      "end": 1713208779890,
+      "order": "post"
+    },
+    {
+      "name": "unhead:remove-server-composables",
+      "start": 1713208779890,
+      "end": 1713208779890,
+      "order": "post"
+    },
+    {
+      "name": "unhead:use-seo-meta-transform",
+      "start": 1713208779890,
+      "end": 1713208779890,
+      "order": "post"
+    },
+    {
+      "name": "unhead:use-seo-meta-transform",
+      "start": 1713208779890,
+      "end": 1713208779890,
+      "order": "post"
+    },
+    {
+      "name": "nuxtjs:i18n-resource",
+      "start": 1713208779890,
+      "end": 1713208779891,
+      "order": "post"
+    },
+    {
+      "name": "nuxtjs:i18n-resource",
+      "start": 1713208779890,
+      "end": 1713208779891,
+      "order": "post"
+    },
+    {
+      "name": "nuxtjs:i18n-meta-deprecation",
+      "start": 1713208779891,
+      "end": 1713208779891,
+      "order": "post"
+    },
+    {
+      "name": "nuxtjs:i18n-meta-deprecation",
+      "start": 1713208779891,
+      "end": 1713208779891,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1713208779891,
+      "end": 1713208779893,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1713208779891,
+      "end": 1713208779893,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1713208779893,
+      "end": 1713208779893,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1713208779893,
+      "end": 1713208779893,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1713208779898,
+      "end": 1713208779899,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1713208779898,
+      "end": 1713208779900,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-template",
+      "start": 1713208779901,
+      "end": 1713208779906,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1713208779906,
+      "end": 1713208779906,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1713208779906,
+      "end": 1713208779907,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1713208779907,
+      "end": 1713208779907,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1713208779907,
+      "end": 1713208779907,
+      "order": "normal"
+    }
+  ]
+}

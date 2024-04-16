@@ -1,0 +1,345 @@
+{
+  "resolvedId": "/home/yalnguembu/Perso/quonte/components/TheFooter.vue?vue&type=script&setup=true&lang.ts",
+  "transforms": [
+    {
+      "name": "vite:vue",
+      "result": "import { defineComponent as _defineComponent } from 'vue'\nimport { resolveComponent as _resolveComponent, withCtx as _withCtx, createVNode as _createVNode, unref as _unref, createTextVNode as _createTextVNode, toDisplayString as _toDisplayString, renderList as _renderList, Fragment as _Fragment, openBlock as _openBlock, createBlock as _createBlock, resolveDynamicComponent as _resolveDynamicComponent, mergeProps as _mergeProps } from \"vue\"\nimport { ssrRenderAttr as _ssrRenderAttr, ssrRenderComponent as _ssrRenderComponent, ssrRenderVNode as _ssrRenderVNode, ssrRenderAttrs as _ssrRenderAttrs, ssrInterpolate as _ssrInterpolate, ssrRenderList as _ssrRenderList } from \"vue/server-renderer\"\nimport _imports_0 from '@/assets/images/logo.svg'\n\n\nimport MenuItem from \"./menu/MenuItem.vue\";\nimport { footerItems } from \"@/utils/data\";\nimport AnimeOnScroll from \"@/components/AnimeOnScroll.vue\";\nimport LinkWrapper from \"./LinkWrapper.vue\";\n\n\nexport default /*#__PURE__*/_defineComponent({\n  __name: 'TheFooter',\n  __ssrInlineRender: true,\n  setup(__props) {\n\nconst thisYear = new Date().getFullYear();\n\nreturn (_ctx: any,_push: any,_parent: any,_attrs: any) => {\n  const _component_RouterLink = _resolveComponent(\"RouterLink\")!\n\n  _push(`<footer${_ssrRenderAttrs(_mergeProps({ class: \"block min-h-4 w-full bg-gray-100 dark:bg-gray-800 dark:text-gray-100\" }, _attrs))}><div class=\"grid grid-cols-1 gap-4 lg:grid-cols-4 lg:p-12\">`)\n  _push(_ssrRenderComponent(AnimeOnScroll, null, {\n    default: _withCtx((_, _push, _parent, _scopeId) => {\n      if (_push) {\n        _push(`<div class=\"max-w-screen-xl items-center flex flex-col justify-between p-4 lg:items-start\"${_scopeId}>`)\n        _push(_ssrRenderComponent(_component_RouterLink, {\n          to: \"/\",\n          class: \"text-xl font-bold text-transparent flex flex-col items-center px-4\"\n        }, {\n          default: _withCtx((_, _push, _parent, _scopeId) => {\n            if (_push) {\n              _push(`<img${\n                _ssrRenderAttr(\"src\", _imports_0)\n              } alt=\"\" class=\"w-16 rotate-45\"${\n                _scopeId\n              }><span class=\"bg-clip-text text-4xl bg-gradient-to-r from-green-500 dark:from-green-300 to-yellow-500 dark:to-yellow-500\"${\n                _scopeId\n              }>Quonte</span>`)\n            } else {\n              return [\n                _createVNode(\"img\", {\n                  src: _imports_0,\n                  alt: \"\",\n                  class: \"w-16 rotate-45\"\n                }),\n                _createVNode(\"span\", { class: \"bg-clip-text text-4xl bg-gradient-to-r from-green-500 dark:from-green-300 to-yellow-500 dark:to-yellow-500\" }, \"Quonte\")\n              ]\n            }\n          }),\n          _: 1\n        }, _parent, _scopeId))\n        _push(`<p class=\"px-4 py-4 text-gray-500 text-xl lg:text-base\"${\n          _scopeId\n        }> © ${\n          _ssrInterpolate(_unref(thisYear))\n        } Quonte inc<br${\n          _scopeId\n        }> By `)\n        _push(_ssrRenderComponent(LinkWrapper, {\n          path: \"https://yalnguembu.netlify.app/\",\n          title: \"visit Young-Tech website\",\n          \"is-external\": \"\",\n          class: \"hover:text-blue-400 hover:underline italic font-sans font-bold\"\n        }, {\n          default: _withCtx((_, _push, _parent, _scopeId) => {\n            if (_push) {\n              _push(` Young-Tech `)\n            } else {\n              return [\n                _createTextVNode(\" Young-Tech \")\n              ]\n            }\n          }),\n          _: 1\n        }, _parent, _scopeId))\n        _push(`</p></div>`)\n      } else {\n        return [\n          _createVNode(\"div\", { class: \"max-w-screen-xl items-center flex flex-col justify-between p-4 lg:items-start\" }, [\n            _createVNode(_component_RouterLink, {\n              to: \"/\",\n              class: \"text-xl font-bold text-transparent flex flex-col items-center px-4\"\n            }, {\n              default: _withCtx(() => [\n                _createVNode(\"img\", {\n                  src: _imports_0,\n                  alt: \"\",\n                  class: \"w-16 rotate-45\"\n                }),\n                _createVNode(\"span\", { class: \"bg-clip-text text-4xl bg-gradient-to-r from-green-500 dark:from-green-300 to-yellow-500 dark:to-yellow-500\" }, \"Quonte\")\n              ]),\n              _: 1\n            }),\n            _createVNode(\"p\", { class: \"px-4 py-4 text-gray-500 text-xl lg:text-base\" }, [\n              _createTextVNode(\" © \" + _toDisplayString(_unref(thisYear)) + \" Quonte inc\", 1),\n              _createVNode(\"br\"),\n              _createTextVNode(\" By \"),\n              _createVNode(LinkWrapper, {\n                path: \"https://yalnguembu.netlify.app/\",\n                title: \"visit Young-Tech website\",\n                \"is-external\": \"\",\n                class: \"hover:text-blue-400 hover:underline italic font-sans font-bold\"\n              }, {\n                default: _withCtx(() => [\n                  _createTextVNode(\" Young-Tech \")\n                ]),\n                _: 1\n              })\n            ])\n          ])\n        ]\n      }\n    }),\n    _: 1\n  }, _parent))\n  _push(_ssrRenderComponent(AnimeOnScroll, null, {\n    default: _withCtx((_, _push, _parent, _scopeId) => {\n      if (_push) {\n        _push(`<div class=\"p-4 text-center lg:text-left\"${\n          _scopeId\n        }><h5 class=\"dark:text-gray-100 text-3xl lg:text-xl px-2 mb-2\"${\n          _scopeId\n        }> Products </h5><ul${\n          _scopeId\n        }><!--[-->`)\n        _ssrRenderList(_unref(footerItems)[0], (item, index) => {\n          _push(_ssrRenderComponent(MenuItem, {\n            key: index,\n            path: item.path,\n            label: item.label,\n            theme: {\n                label: 'text-xl lg:text-base',\n                item: 'block py-3 rounded px-2 text-gray-500 hover:text-green-800 hover:font-bold dark:hover:text-gray-100',\n              }\n          }, null, _parent, _scopeId))\n        })\n        _push(`<!--]--></ul></div>`)\n      } else {\n        return [\n          _createVNode(\"div\", { class: \"p-4 text-center lg:text-left\" }, [\n            _createVNode(\"h5\", { class: \"dark:text-gray-100 text-3xl lg:text-xl px-2 mb-2\" }, \" Products \"),\n            _createVNode(\"ul\", null, [\n              (_openBlock(true), _createBlock(_Fragment, null, _renderList(_unref(footerItems)[0], (item, index) => {\n                return (_openBlock(), _createBlock(MenuItem, {\n                  key: index,\n                  path: item.path,\n                  label: item.label,\n                  theme: {\n                label: 'text-xl lg:text-base',\n                item: 'block py-3 rounded px-2 text-gray-500 hover:text-green-800 hover:font-bold dark:hover:text-gray-100',\n              }\n                }, null, 8, [\"path\", \"label\"]))\n              }), 128))\n            ])\n          ])\n        ]\n      }\n    }),\n    _: 1\n  }, _parent))\n  _push(_ssrRenderComponent(AnimeOnScroll, null, {\n    default: _withCtx((_, _push, _parent, _scopeId) => {\n      if (_push) {\n        _push(`<div class=\"p-4 text-center lg:text-left\"${\n          _scopeId\n        }><h5 class=\"dark:text-gray-100 text-3xl lg:text-xl px-2 mb-2\"${\n          _scopeId\n        }> About us </h5><ul${\n          _scopeId\n        }><!--[-->`)\n        _ssrRenderList(_unref(footerItems)[1], (item, index) => {\n          _push(_ssrRenderComponent(MenuItem, {\n            key: index,\n            path: item.path,\n            label: item.label,\n            theme: {\n                label: 'text-xl lg:text-base',\n                item: 'block py-3 rounded px-2 text-gray-500 hover:text-green-800 hover:font-bold  dark:hover:text-gray-100',\n              }\n          }, null, _parent, _scopeId))\n        })\n        _push(`<!--]--></ul></div>`)\n      } else {\n        return [\n          _createVNode(\"div\", { class: \"p-4 text-center lg:text-left\" }, [\n            _createVNode(\"h5\", { class: \"dark:text-gray-100 text-3xl lg:text-xl px-2 mb-2\" }, \" About us \"),\n            _createVNode(\"ul\", null, [\n              (_openBlock(true), _createBlock(_Fragment, null, _renderList(_unref(footerItems)[1], (item, index) => {\n                return (_openBlock(), _createBlock(MenuItem, {\n                  key: index,\n                  path: item.path,\n                  label: item.label,\n                  theme: {\n                label: 'text-xl lg:text-base',\n                item: 'block py-3 rounded px-2 text-gray-500 hover:text-green-800 hover:font-bold  dark:hover:text-gray-100',\n              }\n                }, null, 8, [\"path\", \"label\"]))\n              }), 128))\n            ])\n          ])\n        ]\n      }\n    }),\n    _: 1\n  }, _parent))\n  _push(_ssrRenderComponent(AnimeOnScroll, null, {\n    default: _withCtx((_, _push, _parent, _scopeId) => {\n      if (_push) {\n        _push(`<div class=\"p-4 flex flex-col items-center justify-between lg:items-start\"${\n          _scopeId\n        }><h5 class=\"dark:text-gray-100 text-3xl lg:text-xl px-2 mb-2\"${\n          _scopeId\n        }> Get in touch </h5><p class=\"px-2 py-4 text-gray-500 text-xl lg:text-base\"${\n          _scopeId\n        }> Question or feedback? <br${\n          _scopeId\n        }> We&#39;d love to hear from you </p><ul class=\"flex\"${\n          _scopeId\n        }><!--[-->`)\n        _ssrRenderList(_unref(footerItems)[2], (item, index) => {\n          _push(_ssrRenderComponent(LinkWrapper, {\n            key: index,\n            path: item.path,\n            isExternal: \"\",\n            class: \"block p-2 px-3 mr-2 rounded-md hover:bg-gray-300 dark:hover:bg-gray-700\"\n          }, {\n            default: _withCtx((_, _push, _parent, _scopeId) => {\n              if (_push) {\n                _ssrRenderVNode(_push, _createVNode(_resolveDynamicComponent(item.icon), { class: \"w-5 h-5 dark:fill-gray-100\" }, null), _parent, _scopeId)\n              } else {\n                return [\n                  (_openBlock(), _createBlock(_resolveDynamicComponent(item.icon), { class: \"w-5 h-5 dark:fill-gray-100\" }))\n                ]\n              }\n            }),\n            _: 2\n          }, _parent, _scopeId))\n        })\n        _push(`<!--]--></ul></div>`)\n      } else {\n        return [\n          _createVNode(\"div\", { class: \"p-4 flex flex-col items-center justify-between lg:items-start\" }, [\n            _createVNode(\"h5\", { class: \"dark:text-gray-100 text-3xl lg:text-xl px-2 mb-2\" }, \" Get in touch \"),\n            _createVNode(\"p\", { class: \"px-2 py-4 text-gray-500 text-xl lg:text-base\" }, [\n              _createTextVNode(\" Question or feedback? \"),\n              _createVNode(\"br\"),\n              _createTextVNode(\" We'd love to hear from you \")\n            ]),\n            _createVNode(\"ul\", { class: \"flex\" }, [\n              (_openBlock(true), _createBlock(_Fragment, null, _renderList(_unref(footerItems)[2], (item, index) => {\n                return (_openBlock(), _createBlock(LinkWrapper, {\n                  key: index,\n                  path: item.path,\n                  isExternal: \"\",\n                  class: \"block p-2 px-3 mr-2 rounded-md hover:bg-gray-300 dark:hover:bg-gray-700\"\n                }, {\n                  default: _withCtx(() => [\n                    (_openBlock(), _createBlock(_resolveDynamicComponent(item.icon), { class: \"w-5 h-5 dark:fill-gray-100\" }))\n                  ]),\n                  _: 2\n                }, 1032, [\"path\"]))\n              }), 128))\n            ])\n          ])\n        ]\n      }\n    }),\n    _: 1\n  }, _parent))\n  _push(`</div></footer>`)\n}\n}\n\n})",
+      "start": 1713208780286,
+      "end": 1713208780286,
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "/home/yalnguembu/Perso/quonte/components/TheFooter.vue"
+        ],
+        "sourcesContent": [
+          "<template>\n  <footer\n    class=\"block min-h-4 w-full bg-gray-100 dark:bg-gray-800 dark:text-gray-100\"\n  >\n    <div\n      class=\"grid grid-cols-1 gap-4 lg:grid-cols-4 lg:p-12\"\n    >\n      <AnimeOnScroll>\n        <div\n          class=\"max-w-screen-xl items-center flex flex-col justify-between p-4 lg:items-start\"\n        >\n          <RouterLink\n            to=\"/\"\n            class=\"text-xl font-bold text-transparent flex flex-col items-center px-4\"\n          >\n            <img src=\"@/assets/images/logo.svg\" alt=\"\" class=\"w-16 rotate-45\" />\n            <span\n              class=\"bg-clip-text text-4xl bg-gradient-to-r from-green-500 dark:from-green-300 to-yellow-500 dark:to-yellow-500\"\n              >Quonte</span\n            >\n          </RouterLink>\n          <p class=\"px-4 py-4 text-gray-500 text-xl lg:text-base\">\n            &copy; {{ thisYear }} Quonte inc<br />\n            By\n            <LinkWrapper\n              path=\"https://yalnguembu.netlify.app/\"\n              title=\"visit Young-Tech website\"\n              is-external\n              class=\"hover:text-blue-400 hover:underline italic font-sans font-bold\"\n            >\n              Young-Tech\n            </LinkWrapper>\n          </p>\n        </div>\n      </AnimeOnScroll>\n      <AnimeOnScroll>\n        <div class=\"p-4 text-center lg:text-left\">\n          <h5 class=\"dark:text-gray-100 text-3xl lg:text-xl px-2 mb-2\">\n            Products\n          </h5>\n          <ul>\n            <MenuItem\n              v-for=\"(item, index) in footerItems[0]\"\n              :key=\"index\"\n              :path=\"item.path\"\n              :label=\"item.label\"\n              :theme=\"{\n                label: 'text-xl lg:text-base',\n                item: 'block py-3 rounded px-2 text-gray-500 hover:text-green-800 hover:font-bold dark:hover:text-gray-100',\n              }\"\n            />\n          </ul>\n        </div>\n      </AnimeOnScroll>\n      <AnimeOnScroll>\n        <div class=\"p-4 text-center lg:text-left\">\n          <h5 class=\"dark:text-gray-100 text-3xl lg:text-xl px-2 mb-2\">\n            About us\n          </h5>\n          <ul>\n            <MenuItem\n              v-for=\"(item, index) in footerItems[1]\"\n              :key=\"index\"\n              :path=\"item.path\"\n              :label=\"item.label\"\n              :theme=\"{\n                label: 'text-xl lg:text-base',\n                item: 'block py-3 rounded px-2 text-gray-500 hover:text-green-800 hover:font-bold  dark:hover:text-gray-100',\n              }\"\n            />\n          </ul>\n        </div>\n      </AnimeOnScroll>\n      <AnimeOnScroll>\n        <div\n          class=\"p-4 flex flex-col items-center justify-between lg:items-start\"\n        >\n          <h5 class=\"dark:text-gray-100 text-3xl lg:text-xl px-2 mb-2\">\n            Get in touch\n          </h5>\n          <p class=\"px-2 py-4 text-gray-500 text-xl lg:text-base\">\n            Question or feedback? <br />\n            We'd love to hear from you\n          </p>\n          <ul class=\"flex\">\n            <LinkWrapper\n              v-for=\"(item, index) in footerItems[2]\"\n              :key=\"index\"\n              :path=\"item.path\"\n              isExternal\n              class=\"block p-2 px-3 mr-2 rounded-md hover:bg-gray-300 dark:hover:bg-gray-700\"\n            >\n              <component :is=\"item.icon\" class=\"w-5 h-5 dark:fill-gray-100\" />\n            </LinkWrapper>\n          </ul>\n        </div>\n      </AnimeOnScroll>\n    </div>\n  </footer>\n</template>\n\n<script lang=\"ts\" setup>\nimport MenuItem from \"./menu/MenuItem.vue\";\nimport { footerItems } from \"@/utils/data\";\nimport AnimeOnScroll from \"@/components/AnimeOnScroll.vue\";\nimport LinkWrapper from \"./LinkWrapper.vue\";\n\nconst thisYear = new Date().getFullYear();\n</script>\n"
+        ],
+        "names": [],
+        "mappings": ";;;;;;AAsGA,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3C,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC3D,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5C;;;;;;AALwB;AAMxB,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;"
+      }
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1713208780286,
+      "end": 1713208780286,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1713208780286,
+      "end": 1713208780286,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1713208780286,
+      "end": 1713208780286,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1713208780286,
+      "end": 1713208780286,
+      "order": "pre"
+    },
+    {
+      "name": "unplugin-vue-i18n",
+      "start": 1713208780286,
+      "end": 1713208780286,
+      "order": "pre"
+    },
+    {
+      "name": "unplugin-vue-i18n",
+      "start": 1713208780286,
+      "end": 1713208780286,
+      "order": "pre"
+    },
+    {
+      "name": "nuxtjs:i18n-macros-transform",
+      "start": 1713208780286,
+      "end": 1713208780286,
+      "order": "pre"
+    },
+    {
+      "name": "nuxtjs:i18n-macros-transform",
+      "start": 1713208780286,
+      "end": 1713208780286,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1713208780286,
+      "end": 1713208780286,
+      "order": "pre"
+    },
+    {
+      "name": "server-only-component-transform",
+      "start": 1713208780286,
+      "end": 1713208780286,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1713208780286,
+      "end": 1713208780286,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { defineComponent as _defineComponent } from \"vue\";\nimport { resolveComponent as _resolveComponent, withCtx as _withCtx, createVNode as _createVNode, unref as _unref, createTextVNode as _createTextVNode, toDisplayString as _toDisplayString, renderList as _renderList, Fragment as _Fragment, openBlock as _openBlock, createBlock as _createBlock, resolveDynamicComponent as _resolveDynamicComponent, mergeProps as _mergeProps } from \"vue\";\nimport { ssrRenderAttr as _ssrRenderAttr, ssrRenderComponent as _ssrRenderComponent, ssrRenderVNode as _ssrRenderVNode, ssrRenderAttrs as _ssrRenderAttrs, ssrInterpolate as _ssrInterpolate, ssrRenderList as _ssrRenderList } from \"vue/server-renderer\";\nimport _imports_0 from \"@/assets/images/logo.svg\";\nimport MenuItem from \"./menu/MenuItem.vue\";\nimport { footerItems } from \"@/utils/data\";\nimport AnimeOnScroll from \"@/components/AnimeOnScroll.vue\";\nimport LinkWrapper from \"./LinkWrapper.vue\";\nexport default /* @__PURE__ */ _defineComponent({\n  __name: \"TheFooter\",\n  __ssrInlineRender: true,\n  setup(__props) {\n    const thisYear = (/* @__PURE__ */ new Date()).getFullYear();\n    return (_ctx, _push, _parent, _attrs) => {\n      const _component_RouterLink = _resolveComponent(\"RouterLink\");\n      _push(`<footer${_ssrRenderAttrs(_mergeProps({ class: \"block min-h-4 w-full bg-gray-100 dark:bg-gray-800 dark:text-gray-100\" }, _attrs))}><div class=\"grid grid-cols-1 gap-4 lg:grid-cols-4 lg:p-12\">`);\n      _push(_ssrRenderComponent(AnimeOnScroll, null, {\n        default: _withCtx((_, _push2, _parent2, _scopeId) => {\n          if (_push2) {\n            _push2(`<div class=\"max-w-screen-xl items-center flex flex-col justify-between p-4 lg:items-start\"${_scopeId}>`);\n            _push2(_ssrRenderComponent(_component_RouterLink, {\n              to: \"/\",\n              class: \"text-xl font-bold text-transparent flex flex-col items-center px-4\"\n            }, {\n              default: _withCtx((_2, _push3, _parent3, _scopeId2) => {\n                if (_push3) {\n                  _push3(`<img${_ssrRenderAttr(\"src\", _imports_0)} alt=\"\" class=\"w-16 rotate-45\"${_scopeId2}><span class=\"bg-clip-text text-4xl bg-gradient-to-r from-green-500 dark:from-green-300 to-yellow-500 dark:to-yellow-500\"${_scopeId2}>Quonte</span>`);\n                } else {\n                  return [\n                    _createVNode(\"img\", {\n                      src: _imports_0,\n                      alt: \"\",\n                      class: \"w-16 rotate-45\"\n                    }),\n                    _createVNode(\"span\", { class: \"bg-clip-text text-4xl bg-gradient-to-r from-green-500 dark:from-green-300 to-yellow-500 dark:to-yellow-500\" }, \"Quonte\")\n                  ];\n                }\n              }),\n              _: 1\n            }, _parent2, _scopeId));\n            _push2(`<p class=\"px-4 py-4 text-gray-500 text-xl lg:text-base\"${_scopeId}> © ${_ssrInterpolate(_unref(thisYear))} Quonte inc<br${_scopeId}> By `);\n            _push2(_ssrRenderComponent(LinkWrapper, {\n              path: \"https://yalnguembu.netlify.app/\",\n              title: \"visit Young-Tech website\",\n              \"is-external\": \"\",\n              class: \"hover:text-blue-400 hover:underline italic font-sans font-bold\"\n            }, {\n              default: _withCtx((_2, _push3, _parent3, _scopeId2) => {\n                if (_push3) {\n                  _push3(` Young-Tech `);\n                } else {\n                  return [\n                    _createTextVNode(\" Young-Tech \")\n                  ];\n                }\n              }),\n              _: 1\n            }, _parent2, _scopeId));\n            _push2(`</p></div>`);\n          } else {\n            return [\n              _createVNode(\"div\", { class: \"max-w-screen-xl items-center flex flex-col justify-between p-4 lg:items-start\" }, [\n                _createVNode(_component_RouterLink, {\n                  to: \"/\",\n                  class: \"text-xl font-bold text-transparent flex flex-col items-center px-4\"\n                }, {\n                  default: _withCtx(() => [\n                    _createVNode(\"img\", {\n                      src: _imports_0,\n                      alt: \"\",\n                      class: \"w-16 rotate-45\"\n                    }),\n                    _createVNode(\"span\", { class: \"bg-clip-text text-4xl bg-gradient-to-r from-green-500 dark:from-green-300 to-yellow-500 dark:to-yellow-500\" }, \"Quonte\")\n                  ]),\n                  _: 1\n                }),\n                _createVNode(\"p\", { class: \"px-4 py-4 text-gray-500 text-xl lg:text-base\" }, [\n                  _createTextVNode(\" © \" + _toDisplayString(_unref(thisYear)) + \" Quonte inc\", 1),\n                  _createVNode(\"br\"),\n                  _createTextVNode(\" By \"),\n                  _createVNode(LinkWrapper, {\n                    path: \"https://yalnguembu.netlify.app/\",\n                    title: \"visit Young-Tech website\",\n                    \"is-external\": \"\",\n                    class: \"hover:text-blue-400 hover:underline italic font-sans font-bold\"\n                  }, {\n                    default: _withCtx(() => [\n                      _createTextVNode(\" Young-Tech \")\n                    ]),\n                    _: 1\n                  })\n                ])\n              ])\n            ];\n          }\n        }),\n        _: 1\n      }, _parent));\n      _push(_ssrRenderComponent(AnimeOnScroll, null, {\n        default: _withCtx((_, _push2, _parent2, _scopeId) => {\n          if (_push2) {\n            _push2(`<div class=\"p-4 text-center lg:text-left\"${_scopeId}><h5 class=\"dark:text-gray-100 text-3xl lg:text-xl px-2 mb-2\"${_scopeId}> Products </h5><ul${_scopeId}><!--[-->`);\n            _ssrRenderList(_unref(footerItems)[0], (item, index) => {\n              _push2(_ssrRenderComponent(MenuItem, {\n                key: index,\n                path: item.path,\n                label: item.label,\n                theme: {\n                  label: \"text-xl lg:text-base\",\n                  item: \"block py-3 rounded px-2 text-gray-500 hover:text-green-800 hover:font-bold dark:hover:text-gray-100\"\n                }\n              }, null, _parent2, _scopeId));\n            });\n            _push2(`<!--]--></ul></div>`);\n          } else {\n            return [\n              _createVNode(\"div\", { class: \"p-4 text-center lg:text-left\" }, [\n                _createVNode(\"h5\", { class: \"dark:text-gray-100 text-3xl lg:text-xl px-2 mb-2\" }, \" Products \"),\n                _createVNode(\"ul\", null, [\n                  (_openBlock(true), _createBlock(_Fragment, null, _renderList(_unref(footerItems)[0], (item, index) => {\n                    return _openBlock(), _createBlock(MenuItem, {\n                      key: index,\n                      path: item.path,\n                      label: item.label,\n                      theme: {\n                        label: \"text-xl lg:text-base\",\n                        item: \"block py-3 rounded px-2 text-gray-500 hover:text-green-800 hover:font-bold dark:hover:text-gray-100\"\n                      }\n                    }, null, 8, [\"path\", \"label\"]);\n                  }), 128))\n                ])\n              ])\n            ];\n          }\n        }),\n        _: 1\n      }, _parent));\n      _push(_ssrRenderComponent(AnimeOnScroll, null, {\n        default: _withCtx((_, _push2, _parent2, _scopeId) => {\n          if (_push2) {\n            _push2(`<div class=\"p-4 text-center lg:text-left\"${_scopeId}><h5 class=\"dark:text-gray-100 text-3xl lg:text-xl px-2 mb-2\"${_scopeId}> About us </h5><ul${_scopeId}><!--[-->`);\n            _ssrRenderList(_unref(footerItems)[1], (item, index) => {\n              _push2(_ssrRenderComponent(MenuItem, {\n                key: index,\n                path: item.path,\n                label: item.label,\n                theme: {\n                  label: \"text-xl lg:text-base\",\n                  item: \"block py-3 rounded px-2 text-gray-500 hover:text-green-800 hover:font-bold  dark:hover:text-gray-100\"\n                }\n              }, null, _parent2, _scopeId));\n            });\n            _push2(`<!--]--></ul></div>`);\n          } else {\n            return [\n              _createVNode(\"div\", { class: \"p-4 text-center lg:text-left\" }, [\n                _createVNode(\"h5\", { class: \"dark:text-gray-100 text-3xl lg:text-xl px-2 mb-2\" }, \" About us \"),\n                _createVNode(\"ul\", null, [\n                  (_openBlock(true), _createBlock(_Fragment, null, _renderList(_unref(footerItems)[1], (item, index) => {\n                    return _openBlock(), _createBlock(MenuItem, {\n                      key: index,\n                      path: item.path,\n                      label: item.label,\n                      theme: {\n                        label: \"text-xl lg:text-base\",\n                        item: \"block py-3 rounded px-2 text-gray-500 hover:text-green-800 hover:font-bold  dark:hover:text-gray-100\"\n                      }\n                    }, null, 8, [\"path\", \"label\"]);\n                  }), 128))\n                ])\n              ])\n            ];\n          }\n        }),\n        _: 1\n      }, _parent));\n      _push(_ssrRenderComponent(AnimeOnScroll, null, {\n        default: _withCtx((_, _push2, _parent2, _scopeId) => {\n          if (_push2) {\n            _push2(`<div class=\"p-4 flex flex-col items-center justify-between lg:items-start\"${_scopeId}><h5 class=\"dark:text-gray-100 text-3xl lg:text-xl px-2 mb-2\"${_scopeId}> Get in touch </h5><p class=\"px-2 py-4 text-gray-500 text-xl lg:text-base\"${_scopeId}> Question or feedback? <br${_scopeId}> We&#39;d love to hear from you </p><ul class=\"flex\"${_scopeId}><!--[-->`);\n            _ssrRenderList(_unref(footerItems)[2], (item, index) => {\n              _push2(_ssrRenderComponent(LinkWrapper, {\n                key: index,\n                path: item.path,\n                isExternal: \"\",\n                class: \"block p-2 px-3 mr-2 rounded-md hover:bg-gray-300 dark:hover:bg-gray-700\"\n              }, {\n                default: _withCtx((_2, _push3, _parent3, _scopeId2) => {\n                  if (_push3) {\n                    _ssrRenderVNode(_push3, _createVNode(_resolveDynamicComponent(item.icon), { class: \"w-5 h-5 dark:fill-gray-100\" }, null), _parent3, _scopeId2);\n                  } else {\n                    return [\n                      (_openBlock(), _createBlock(_resolveDynamicComponent(item.icon), { class: \"w-5 h-5 dark:fill-gray-100\" }))\n                    ];\n                  }\n                }),\n                _: 2\n              }, _parent2, _scopeId));\n            });\n            _push2(`<!--]--></ul></div>`);\n          } else {\n            return [\n              _createVNode(\"div\", { class: \"p-4 flex flex-col items-center justify-between lg:items-start\" }, [\n                _createVNode(\"h5\", { class: \"dark:text-gray-100 text-3xl lg:text-xl px-2 mb-2\" }, \" Get in touch \"),\n                _createVNode(\"p\", { class: \"px-2 py-4 text-gray-500 text-xl lg:text-base\" }, [\n                  _createTextVNode(\" Question or feedback? \"),\n                  _createVNode(\"br\"),\n                  _createTextVNode(\" We'd love to hear from you \")\n                ]),\n                _createVNode(\"ul\", { class: \"flex\" }, [\n                  (_openBlock(true), _createBlock(_Fragment, null, _renderList(_unref(footerItems)[2], (item, index) => {\n                    return _openBlock(), _createBlock(LinkWrapper, {\n                      key: index,\n                      path: item.path,\n                      isExternal: \"\",\n                      class: \"block p-2 px-3 mr-2 rounded-md hover:bg-gray-300 dark:hover:bg-gray-700\"\n                    }, {\n                      default: _withCtx(() => [\n                        (_openBlock(), _createBlock(_resolveDynamicComponent(item.icon), { class: \"w-5 h-5 dark:fill-gray-100\" }))\n                      ]),\n                      _: 2\n                    }, 1032, [\"path\"]);\n                  }), 128))\n                ])\n              ])\n            ];\n          }\n        }),\n        _: 1\n      }, _parent));\n      _push(`</div></footer>`);\n    };\n  }\n});\n",
+      "start": 1713208780286,
+      "end": 1713208780317,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "/home/yalnguembu/Perso/quonte/components/TheFooter.vue?vue&type=script&setup=true&lang.ts"
+        ],
+        "sourcesContent": [
+          "import { defineComponent as _defineComponent } from 'vue'\nimport { resolveComponent as _resolveComponent, withCtx as _withCtx, createVNode as _createVNode, unref as _unref, createTextVNode as _createTextVNode, toDisplayString as _toDisplayString, renderList as _renderList, Fragment as _Fragment, openBlock as _openBlock, createBlock as _createBlock, resolveDynamicComponent as _resolveDynamicComponent, mergeProps as _mergeProps } from \"vue\"\nimport { ssrRenderAttr as _ssrRenderAttr, ssrRenderComponent as _ssrRenderComponent, ssrRenderVNode as _ssrRenderVNode, ssrRenderAttrs as _ssrRenderAttrs, ssrInterpolate as _ssrInterpolate, ssrRenderList as _ssrRenderList } from \"vue/server-renderer\"\nimport _imports_0 from '@/assets/images/logo.svg'\n\n\nimport MenuItem from \"./menu/MenuItem.vue\";\nimport { footerItems } from \"@/utils/data\";\nimport AnimeOnScroll from \"@/components/AnimeOnScroll.vue\";\nimport LinkWrapper from \"./LinkWrapper.vue\";\n\n\nexport default /*#__PURE__*/_defineComponent({\n  __name: 'TheFooter',\n  __ssrInlineRender: true,\n  setup(__props) {\n\nconst thisYear = new Date().getFullYear();\n\nreturn (_ctx: any,_push: any,_parent: any,_attrs: any) => {\n  const _component_RouterLink = _resolveComponent(\"RouterLink\")!\n\n  _push(`<footer${_ssrRenderAttrs(_mergeProps({ class: \"block min-h-4 w-full bg-gray-100 dark:bg-gray-800 dark:text-gray-100\" }, _attrs))}><div class=\"grid grid-cols-1 gap-4 lg:grid-cols-4 lg:p-12\">`)\n  _push(_ssrRenderComponent(AnimeOnScroll, null, {\n    default: _withCtx((_, _push, _parent, _scopeId) => {\n      if (_push) {\n        _push(`<div class=\"max-w-screen-xl items-center flex flex-col justify-between p-4 lg:items-start\"${_scopeId}>`)\n        _push(_ssrRenderComponent(_component_RouterLink, {\n          to: \"/\",\n          class: \"text-xl font-bold text-transparent flex flex-col items-center px-4\"\n        }, {\n          default: _withCtx((_, _push, _parent, _scopeId) => {\n            if (_push) {\n              _push(`<img${\n                _ssrRenderAttr(\"src\", _imports_0)\n              } alt=\"\" class=\"w-16 rotate-45\"${\n                _scopeId\n              }><span class=\"bg-clip-text text-4xl bg-gradient-to-r from-green-500 dark:from-green-300 to-yellow-500 dark:to-yellow-500\"${\n                _scopeId\n              }>Quonte</span>`)\n            } else {\n              return [\n                _createVNode(\"img\", {\n                  src: _imports_0,\n                  alt: \"\",\n                  class: \"w-16 rotate-45\"\n                }),\n                _createVNode(\"span\", { class: \"bg-clip-text text-4xl bg-gradient-to-r from-green-500 dark:from-green-300 to-yellow-500 dark:to-yellow-500\" }, \"Quonte\")\n              ]\n            }\n          }),\n          _: 1\n        }, _parent, _scopeId))\n        _push(`<p class=\"px-4 py-4 text-gray-500 text-xl lg:text-base\"${\n          _scopeId\n        }> © ${\n          _ssrInterpolate(_unref(thisYear))\n        } Quonte inc<br${\n          _scopeId\n        }> By `)\n        _push(_ssrRenderComponent(LinkWrapper, {\n          path: \"https://yalnguembu.netlify.app/\",\n          title: \"visit Young-Tech website\",\n          \"is-external\": \"\",\n          class: \"hover:text-blue-400 hover:underline italic font-sans font-bold\"\n        }, {\n          default: _withCtx((_, _push, _parent, _scopeId) => {\n            if (_push) {\n              _push(` Young-Tech `)\n            } else {\n              return [\n                _createTextVNode(\" Young-Tech \")\n              ]\n            }\n          }),\n          _: 1\n        }, _parent, _scopeId))\n        _push(`</p></div>`)\n      } else {\n        return [\n          _createVNode(\"div\", { class: \"max-w-screen-xl items-center flex flex-col justify-between p-4 lg:items-start\" }, [\n            _createVNode(_component_RouterLink, {\n              to: \"/\",\n              class: \"text-xl font-bold text-transparent flex flex-col items-center px-4\"\n            }, {\n              default: _withCtx(() => [\n                _createVNode(\"img\", {\n                  src: _imports_0,\n                  alt: \"\",\n                  class: \"w-16 rotate-45\"\n                }),\n                _createVNode(\"span\", { class: \"bg-clip-text text-4xl bg-gradient-to-r from-green-500 dark:from-green-300 to-yellow-500 dark:to-yellow-500\" }, \"Quonte\")\n              ]),\n              _: 1\n            }),\n            _createVNode(\"p\", { class: \"px-4 py-4 text-gray-500 text-xl lg:text-base\" }, [\n              _createTextVNode(\" © \" + _toDisplayString(_unref(thisYear)) + \" Quonte inc\", 1),\n              _createVNode(\"br\"),\n              _createTextVNode(\" By \"),\n              _createVNode(LinkWrapper, {\n                path: \"https://yalnguembu.netlify.app/\",\n                title: \"visit Young-Tech website\",\n                \"is-external\": \"\",\n                class: \"hover:text-blue-400 hover:underline italic font-sans font-bold\"\n              }, {\n                default: _withCtx(() => [\n                  _createTextVNode(\" Young-Tech \")\n                ]),\n                _: 1\n              })\n            ])\n          ])\n        ]\n      }\n    }),\n    _: 1\n  }, _parent))\n  _push(_ssrRenderComponent(AnimeOnScroll, null, {\n    default: _withCtx((_, _push, _parent, _scopeId) => {\n      if (_push) {\n        _push(`<div class=\"p-4 text-center lg:text-left\"${\n          _scopeId\n        }><h5 class=\"dark:text-gray-100 text-3xl lg:text-xl px-2 mb-2\"${\n          _scopeId\n        }> Products </h5><ul${\n          _scopeId\n        }><!--[-->`)\n        _ssrRenderList(_unref(footerItems)[0], (item, index) => {\n          _push(_ssrRenderComponent(MenuItem, {\n            key: index,\n            path: item.path,\n            label: item.label,\n            theme: {\n                label: 'text-xl lg:text-base',\n                item: 'block py-3 rounded px-2 text-gray-500 hover:text-green-800 hover:font-bold dark:hover:text-gray-100',\n              }\n          }, null, _parent, _scopeId))\n        })\n        _push(`<!--]--></ul></div>`)\n      } else {\n        return [\n          _createVNode(\"div\", { class: \"p-4 text-center lg:text-left\" }, [\n            _createVNode(\"h5\", { class: \"dark:text-gray-100 text-3xl lg:text-xl px-2 mb-2\" }, \" Products \"),\n            _createVNode(\"ul\", null, [\n              (_openBlock(true), _createBlock(_Fragment, null, _renderList(_unref(footerItems)[0], (item, index) => {\n                return (_openBlock(), _createBlock(MenuItem, {\n                  key: index,\n                  path: item.path,\n                  label: item.label,\n                  theme: {\n                label: 'text-xl lg:text-base',\n                item: 'block py-3 rounded px-2 text-gray-500 hover:text-green-800 hover:font-bold dark:hover:text-gray-100',\n              }\n                }, null, 8, [\"path\", \"label\"]))\n              }), 128))\n            ])\n          ])\n        ]\n      }\n    }),\n    _: 1\n  }, _parent))\n  _push(_ssrRenderComponent(AnimeOnScroll, null, {\n    default: _withCtx((_, _push, _parent, _scopeId) => {\n      if (_push) {\n        _push(`<div class=\"p-4 text-center lg:text-left\"${\n          _scopeId\n        }><h5 class=\"dark:text-gray-100 text-3xl lg:text-xl px-2 mb-2\"${\n          _scopeId\n        }> About us </h5><ul${\n          _scopeId\n        }><!--[-->`)\n        _ssrRenderList(_unref(footerItems)[1], (item, index) => {\n          _push(_ssrRenderComponent(MenuItem, {\n            key: index,\n            path: item.path,\n            label: item.label,\n            theme: {\n                label: 'text-xl lg:text-base',\n                item: 'block py-3 rounded px-2 text-gray-500 hover:text-green-800 hover:font-bold  dark:hover:text-gray-100',\n              }\n          }, null, _parent, _scopeId))\n        })\n        _push(`<!--]--></ul></div>`)\n      } else {\n        return [\n          _createVNode(\"div\", { class: \"p-4 text-center lg:text-left\" }, [\n            _createVNode(\"h5\", { class: \"dark:text-gray-100 text-3xl lg:text-xl px-2 mb-2\" }, \" About us \"),\n            _createVNode(\"ul\", null, [\n              (_openBlock(true), _createBlock(_Fragment, null, _renderList(_unref(footerItems)[1], (item, index) => {\n                return (_openBlock(), _createBlock(MenuItem, {\n                  key: index,\n                  path: item.path,\n                  label: item.label,\n                  theme: {\n                label: 'text-xl lg:text-base',\n                item: 'block py-3 rounded px-2 text-gray-500 hover:text-green-800 hover:font-bold  dark:hover:text-gray-100',\n              }\n                }, null, 8, [\"path\", \"label\"]))\n              }), 128))\n            ])\n          ])\n        ]\n      }\n    }),\n    _: 1\n  }, _parent))\n  _push(_ssrRenderComponent(AnimeOnScroll, null, {\n    default: _withCtx((_, _push, _parent, _scopeId) => {\n      if (_push) {\n        _push(`<div class=\"p-4 flex flex-col items-center justify-between lg:items-start\"${\n          _scopeId\n        }><h5 class=\"dark:text-gray-100 text-3xl lg:text-xl px-2 mb-2\"${\n          _scopeId\n        }> Get in touch </h5><p class=\"px-2 py-4 text-gray-500 text-xl lg:text-base\"${\n          _scopeId\n        }> Question or feedback? <br${\n          _scopeId\n        }> We&#39;d love to hear from you </p><ul class=\"flex\"${\n          _scopeId\n        }><!--[-->`)\n        _ssrRenderList(_unref(footerItems)[2], (item, index) => {\n          _push(_ssrRenderComponent(LinkWrapper, {\n            key: index,\n            path: item.path,\n            isExternal: \"\",\n            class: \"block p-2 px-3 mr-2 rounded-md hover:bg-gray-300 dark:hover:bg-gray-700\"\n          }, {\n            default: _withCtx((_, _push, _parent, _scopeId) => {\n              if (_push) {\n                _ssrRenderVNode(_push, _createVNode(_resolveDynamicComponent(item.icon), { class: \"w-5 h-5 dark:fill-gray-100\" }, null), _parent, _scopeId)\n              } else {\n                return [\n                  (_openBlock(), _createBlock(_resolveDynamicComponent(item.icon), { class: \"w-5 h-5 dark:fill-gray-100\" }))\n                ]\n              }\n            }),\n            _: 2\n          }, _parent, _scopeId))\n        })\n        _push(`<!--]--></ul></div>`)\n      } else {\n        return [\n          _createVNode(\"div\", { class: \"p-4 flex flex-col items-center justify-between lg:items-start\" }, [\n            _createVNode(\"h5\", { class: \"dark:text-gray-100 text-3xl lg:text-xl px-2 mb-2\" }, \" Get in touch \"),\n            _createVNode(\"p\", { class: \"px-2 py-4 text-gray-500 text-xl lg:text-base\" }, [\n              _createTextVNode(\" Question or feedback? \"),\n              _createVNode(\"br\"),\n              _createTextVNode(\" We'd love to hear from you \")\n            ]),\n            _createVNode(\"ul\", { class: \"flex\" }, [\n              (_openBlock(true), _createBlock(_Fragment, null, _renderList(_unref(footerItems)[2], (item, index) => {\n                return (_openBlock(), _createBlock(LinkWrapper, {\n                  key: index,\n                  path: item.path,\n                  isExternal: \"\",\n                  class: \"block p-2 px-3 mr-2 rounded-md hover:bg-gray-300 dark:hover:bg-gray-700\"\n                }, {\n                  default: _withCtx(() => [\n                    (_openBlock(), _createBlock(_resolveDynamicComponent(item.icon), { class: \"w-5 h-5 dark:fill-gray-100\" }))\n                  ]),\n                  _: 2\n                }, 1032, [\"path\"]))\n              }), 128))\n            ])\n          ])\n        ]\n      }\n    }),\n    _: 1\n  }, _parent))\n  _push(`</div></footer>`)\n}\n}\n\n})"
+        ],
+        "mappings": "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",
+        "names": [
+          "_push",
+          "_parent",
+          "_",
+          "_scopeId"
+        ]
+      }
+    },
+    {
+      "name": "vite:json",
+      "start": 1713208780317,
+      "end": 1713208780317,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1713208780317,
+      "end": 1713208780317,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1713208780317,
+      "end": 1713208780317,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1713208780317,
+      "end": 1713208780317,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1713208780317,
+      "end": 1713208780317,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1713208780317,
+      "end": 1713208780317,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1713208780317,
+      "end": 1713208780317,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1713208780317,
+      "end": 1713208780317,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1713208780318,
+      "end": 1713208780318,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1713208780318,
+      "end": 1713208780318,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1713208780318,
+      "end": 1713208780319,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1713208780319,
+      "end": 1713208780319,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1713208780319,
+      "end": 1713208780319,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1713208780319,
+      "end": 1713208780319,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1713208780319,
+      "end": 1713208780319,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1713208780319,
+      "end": 1713208780319,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1713208780319,
+      "end": 1713208780319,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1713208780319,
+      "end": 1713208780319,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1713208780319,
+      "end": 1713208780319,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1713208780319,
+      "end": 1713208780319,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1713208780319,
+      "end": 1713208780319,
+      "order": "post"
+    },
+    {
+      "name": "unhead:remove-server-composables",
+      "start": 1713208780319,
+      "end": 1713208780319,
+      "order": "post"
+    },
+    {
+      "name": "unhead:use-seo-meta-transform",
+      "start": 1713208780319,
+      "end": 1713208780319,
+      "order": "post"
+    },
+    {
+      "name": "unhead:use-seo-meta-transform",
+      "start": 1713208780319,
+      "end": 1713208780319,
+      "order": "post"
+    },
+    {
+      "name": "nuxtjs:i18n-resource",
+      "start": 1713208780319,
+      "end": 1713208780319,
+      "order": "post"
+    },
+    {
+      "name": "nuxtjs:i18n-resource",
+      "start": 1713208780319,
+      "end": 1713208780319,
+      "order": "post"
+    },
+    {
+      "name": "nuxtjs:i18n-meta-deprecation",
+      "start": 1713208780319,
+      "end": 1713208780319,
+      "order": "post"
+    },
+    {
+      "name": "nuxtjs:i18n-meta-deprecation",
+      "start": 1713208780319,
+      "end": 1713208780319,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1713208780319,
+      "end": 1713208780322,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1713208780319,
+      "end": 1713208780322,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1713208780322,
+      "end": 1713208780322,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1713208780322,
+      "end": 1713208780322,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1713208780322,
+      "end": 1713208780322,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1713208780322,
+      "end": 1713208780322,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-template",
+      "start": 1713208780322,
+      "end": 1713208780322,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1713208780322,
+      "end": 1713208780322,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1713208780322,
+      "end": 1713208780322,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1713208780322,
+      "end": 1713208780323,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1713208780323,
+      "end": 1713208780323,
+      "order": "normal"
+    }
+  ]
+}

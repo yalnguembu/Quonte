@@ -1,0 +1,330 @@
+{
+  "resolvedId": "/home/yalnguembu/Perso/quonte/stores/session.ts",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import { defineStore } from \"pinia\";\n// eslint-disable-next-line @typescript-eslint/no-unused-vars\nimport type { AxiosError } from \"axios\";\nimport {\n  saveAccessToken,\n  saveRefreshToken,\n  setRequestHeaderToken,\n  getAccessToken,\n} from \"@/utils/api-config\";\nimport { computed, ref } from \"vue\";\nimport type { AuthResponseDTO } from \"@/services\";\nimport { AuthService } from \"@/services\";\nimport { Session, newNullSession } from \"@/domain/Session\";\nimport { AuthenticationError } from \"@/utils/error\";\n\nexport const useSessionStore = defineStore(\"session\", () => {\n  const session = ref<Session>(newNullSession());\n\n  const isSigned = computed(() => {\n    return !session.value.isNull;\n  });\n\n  const signIn = async (user: { email: string; password: string }) => {\n    try {\n      const infos: AuthResponseDTO = await AuthService.signin({\n        requestBody: user,\n      });\n      session.value = new Session(infos);\n      saveAccessToken(session.value.accessToken);\n      saveRefreshToken(session.value.accessToken);\n      setRequestHeaderToken(session.value.accessToken);\n      return { success: true, message: \"connected successfully\" };\n    } catch (error: AxiosError | any) {\n      throw new AuthenticationError(error);\n    }\n  };\n\n  const signUp = async (user: {\n    username: string;\n    email: string;\n    password: string;\n  }) => {\n    try {\n      const infos: AuthResponseDTO = await AuthService.signup({\n        requestBody: user,\n      });\n      session.value = new Session(infos);\n      saveAccessToken(session.value.accessToken);\n      saveRefreshToken(session.value.accessToken);\n      setRequestHeaderToken(session.value.accessToken);\n      return { succes: true };\n    } catch (error: AxiosError | any) {\n      throw new AuthenticationError(error);\n    }\n  };\n\n  const refreshToken = async (token: string) => {\n    try {\n      const response = await AuthService.refreshToken({\n        requestBody: { refresh_token: token },\n      });\n      session.value = new Session({ ...response, refresh_token: token });\n      saveAccessToken(session.value.accessToken);\n    } catch (error: AxiosError | any) {\n      throw new AuthenticationError(error);\n    }\n  };\n\n  const verifyAccessToken = async (accessToken: string) => {\n    try {\n      const user = await AuthService.verifyToken({\n        requestBody: {\n          accessToken,\n        },\n      });\n      session.value = new Session(user);\n    } catch (error: AxiosError | any) {\n      throw new AuthenticationError(error);\n    }\n  };\n\n  const signOut = () => {\n    session.value = newNullSession();\n    localStorage.clear();\n  };\n\n  return {\n    session,\n    isSigned,\n    signIn,\n    signUp,\n    signOut,\n    getAccessToken,\n    refreshToken,\n    verifyAccessToken,\n  };\n});\n",
+      "start": 1713208779235,
+      "end": 1713208779798,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1713208779798,
+      "end": 1713208779798,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1713208779798,
+      "end": 1713208779798,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1713208779798,
+      "end": 1713208779798,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1713208779798,
+      "end": 1713208779798,
+      "order": "pre"
+    },
+    {
+      "name": "unplugin-vue-i18n",
+      "start": 1713208779798,
+      "end": 1713208779799,
+      "order": "pre"
+    },
+    {
+      "name": "unplugin-vue-i18n",
+      "start": 1713208779798,
+      "end": 1713208779799,
+      "order": "pre"
+    },
+    {
+      "name": "nuxtjs:i18n-macros-transform",
+      "start": 1713208779799,
+      "end": 1713208779799,
+      "order": "pre"
+    },
+    {
+      "name": "nuxtjs:i18n-macros-transform",
+      "start": 1713208779799,
+      "end": 1713208779799,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1713208779799,
+      "end": 1713208779799,
+      "order": "pre"
+    },
+    {
+      "name": "server-only-component-transform",
+      "start": 1713208779799,
+      "end": 1713208779799,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1713208779799,
+      "end": 1713208779799,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { defineStore } from \"pinia\";\nimport {\n  saveAccessToken,\n  saveRefreshToken,\n  setRequestHeaderToken,\n  getAccessToken\n} from \"@/utils/api-config\";\nimport { computed, ref } from \"vue\";\nimport { AuthService } from \"@/services\";\nimport { Session, newNullSession } from \"@/domain/Session\";\nimport { AuthenticationError } from \"@/utils/error\";\nexport const useSessionStore = defineStore(\"session\", () => {\n  const session = ref(newNullSession());\n  const isSigned = computed(() => {\n    return !session.value.isNull;\n  });\n  const signIn = async (user) => {\n    try {\n      const infos = await AuthService.signin({\n        requestBody: user\n      });\n      session.value = new Session(infos);\n      saveAccessToken(session.value.accessToken);\n      saveRefreshToken(session.value.accessToken);\n      setRequestHeaderToken(session.value.accessToken);\n      return { success: true, message: \"connected successfully\" };\n    } catch (error) {\n      throw new AuthenticationError(error);\n    }\n  };\n  const signUp = async (user) => {\n    try {\n      const infos = await AuthService.signup({\n        requestBody: user\n      });\n      session.value = new Session(infos);\n      saveAccessToken(session.value.accessToken);\n      saveRefreshToken(session.value.accessToken);\n      setRequestHeaderToken(session.value.accessToken);\n      return { succes: true };\n    } catch (error) {\n      throw new AuthenticationError(error);\n    }\n  };\n  const refreshToken = async (token) => {\n    try {\n      const response = await AuthService.refreshToken({\n        requestBody: { refresh_token: token }\n      });\n      session.value = new Session({ ...response, refresh_token: token });\n      saveAccessToken(session.value.accessToken);\n    } catch (error) {\n      throw new AuthenticationError(error);\n    }\n  };\n  const verifyAccessToken = async (accessToken) => {\n    try {\n      const user = await AuthService.verifyToken({\n        requestBody: {\n          accessToken\n        }\n      });\n      session.value = new Session(user);\n    } catch (error) {\n      throw new AuthenticationError(error);\n    }\n  };\n  const signOut = () => {\n    session.value = newNullSession();\n    localStorage.clear();\n  };\n  return {\n    session,\n    isSigned,\n    signIn,\n    signUp,\n    signOut,\n    getAccessToken,\n    refreshToken,\n    verifyAccessToken\n  };\n});\n",
+      "start": 1713208779799,
+      "end": 1713208779881,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "/home/yalnguembu/Perso/quonte/stores/session.ts"
+        ],
+        "sourcesContent": [
+          "import { defineStore } from \"pinia\";\n// eslint-disable-next-line @typescript-eslint/no-unused-vars\nimport type { AxiosError } from \"axios\";\nimport {\n  saveAccessToken,\n  saveRefreshToken,\n  setRequestHeaderToken,\n  getAccessToken,\n} from \"@/utils/api-config\";\nimport { computed, ref } from \"vue\";\nimport type { AuthResponseDTO } from \"@/services\";\nimport { AuthService } from \"@/services\";\nimport { Session, newNullSession } from \"@/domain/Session\";\nimport { AuthenticationError } from \"@/utils/error\";\n\nexport const useSessionStore = defineStore(\"session\", () => {\n  const session = ref<Session>(newNullSession());\n\n  const isSigned = computed(() => {\n    return !session.value.isNull;\n  });\n\n  const signIn = async (user: { email: string; password: string }) => {\n    try {\n      const infos: AuthResponseDTO = await AuthService.signin({\n        requestBody: user,\n      });\n      session.value = new Session(infos);\n      saveAccessToken(session.value.accessToken);\n      saveRefreshToken(session.value.accessToken);\n      setRequestHeaderToken(session.value.accessToken);\n      return { success: true, message: \"connected successfully\" };\n    } catch (error: AxiosError | any) {\n      throw new AuthenticationError(error);\n    }\n  };\n\n  const signUp = async (user: {\n    username: string;\n    email: string;\n    password: string;\n  }) => {\n    try {\n      const infos: AuthResponseDTO = await AuthService.signup({\n        requestBody: user,\n      });\n      session.value = new Session(infos);\n      saveAccessToken(session.value.accessToken);\n      saveRefreshToken(session.value.accessToken);\n      setRequestHeaderToken(session.value.accessToken);\n      return { succes: true };\n    } catch (error: AxiosError | any) {\n      throw new AuthenticationError(error);\n    }\n  };\n\n  const refreshToken = async (token: string) => {\n    try {\n      const response = await AuthService.refreshToken({\n        requestBody: { refresh_token: token },\n      });\n      session.value = new Session({ ...response, refresh_token: token });\n      saveAccessToken(session.value.accessToken);\n    } catch (error: AxiosError | any) {\n      throw new AuthenticationError(error);\n    }\n  };\n\n  const verifyAccessToken = async (accessToken: string) => {\n    try {\n      const user = await AuthService.verifyToken({\n        requestBody: {\n          accessToken,\n        },\n      });\n      session.value = new Session(user);\n    } catch (error: AxiosError | any) {\n      throw new AuthenticationError(error);\n    }\n  };\n\n  const signOut = () => {\n    session.value = newNullSession();\n    localStorage.clear();\n  };\n\n  return {\n    session,\n    isSigned,\n    signIn,\n    signUp,\n    signOut,\n    getAccessToken,\n    refreshToken,\n    verifyAccessToken,\n  };\n});\n"
+        ],
+        "mappings": "AAAA,SAAS,mBAAmB;AAG5B;AAAA,EACE;AAAA,EACA;AAAA,EACA;AAAA,EACA;AAAA,OACK;AACP,SAAS,UAAU,WAAW;AAE9B,SAAS,mBAAmB;AAC5B,SAAS,SAAS,sBAAsB;AACxC,SAAS,2BAA2B;AAE7B,aAAM,kBAAkB,YAAY,WAAW,MAAM;AAC1D,QAAM,UAAU,IAAa,eAAe,CAAC;AAE7C,QAAM,WAAW,SAAS,MAAM;AAC9B,WAAO,CAAC,QAAQ,MAAM;AAAA,EACxB,CAAC;AAED,QAAM,SAAS,OAAO,SAA8C;AAClE,QAAI;AACF,YAAM,QAAyB,MAAM,YAAY,OAAO;AAAA,QACtD,aAAa;AAAA,MACf,CAAC;AACD,cAAQ,QAAQ,IAAI,QAAQ,KAAK;AACjC,sBAAgB,QAAQ,MAAM,WAAW;AACzC,uBAAiB,QAAQ,MAAM,WAAW;AAC1C,4BAAsB,QAAQ,MAAM,WAAW;AAC/C,aAAO,EAAE,SAAS,MAAM,SAAS,yBAAyB;AAAA,IAC5D,SAAS,OAAyB;AAChC,YAAM,IAAI,oBAAoB,KAAK;AAAA,IACrC;AAAA,EACF;AAEA,QAAM,SAAS,OAAO,SAIhB;AACJ,QAAI;AACF,YAAM,QAAyB,MAAM,YAAY,OAAO;AAAA,QACtD,aAAa;AAAA,MACf,CAAC;AACD,cAAQ,QAAQ,IAAI,QAAQ,KAAK;AACjC,sBAAgB,QAAQ,MAAM,WAAW;AACzC,uBAAiB,QAAQ,MAAM,WAAW;AAC1C,4BAAsB,QAAQ,MAAM,WAAW;AAC/C,aAAO,EAAE,QAAQ,KAAK;AAAA,IACxB,SAAS,OAAyB;AAChC,YAAM,IAAI,oBAAoB,KAAK;AAAA,IACrC;AAAA,EACF;AAEA,QAAM,eAAe,OAAO,UAAkB;AAC5C,QAAI;AACF,YAAM,WAAW,MAAM,YAAY,aAAa;AAAA,QAC9C,aAAa,EAAE,eAAe,MAAM;AAAA,MACtC,CAAC;AACD,cAAQ,QAAQ,IAAI,QAAQ,EAAE,GAAG,UAAU,eAAe,MAAM,CAAC;AACjE,sBAAgB,QAAQ,MAAM,WAAW;AAAA,IAC3C,SAAS,OAAyB;AAChC,YAAM,IAAI,oBAAoB,KAAK;AAAA,IACrC;AAAA,EACF;AAEA,QAAM,oBAAoB,OAAO,gBAAwB;AACvD,QAAI;AACF,YAAM,OAAO,MAAM,YAAY,YAAY;AAAA,QACzC,aAAa;AAAA,UACX;AAAA,QACF;AAAA,MACF,CAAC;AACD,cAAQ,QAAQ,IAAI,QAAQ,IAAI;AAAA,IAClC,SAAS,OAAyB;AAChC,YAAM,IAAI,oBAAoB,KAAK;AAAA,IACrC;AAAA,EACF;AAEA,QAAM,UAAU,MAAM;AACpB,YAAQ,QAAQ,eAAe;AAC/B,iBAAa,MAAM;AAAA,EACrB;AAEA,SAAO;AAAA,IACL;AAAA,IACA;AAAA,IACA;AAAA,IACA;AAAA,IACA;AAAA,IACA;AAAA,IACA;AAAA,IACA;AAAA,EACF;AACF,CAAC;",
+        "names": []
+      }
+    },
+    {
+      "name": "vite:json",
+      "start": 1713208779881,
+      "end": 1713208779881,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1713208779881,
+      "end": 1713208779881,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1713208779881,
+      "end": 1713208779882,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1713208779882,
+      "end": 1713208779882,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1713208779882,
+      "end": 1713208779882,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1713208779882,
+      "end": 1713208779882,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1713208779882,
+      "end": 1713208779882,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1713208779882,
+      "end": 1713208779882,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1713208779883,
+      "end": 1713208779883,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1713208779883,
+      "end": 1713208779883,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1713208779884,
+      "end": 1713208779885,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1713208779885,
+      "end": 1713208779885,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1713208779886,
+      "end": 1713208779886,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1713208779886,
+      "end": 1713208779886,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1713208779886,
+      "end": 1713208779886,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1713208779888,
+      "end": 1713208779888,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1713208779890,
+      "end": 1713208779890,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1713208779890,
+      "end": 1713208779890,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1713208779890,
+      "end": 1713208779890,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1713208779890,
+      "end": 1713208779890,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1713208779890,
+      "end": 1713208779891,
+      "order": "post"
+    },
+    {
+      "name": "unhead:remove-server-composables",
+      "start": 1713208779891,
+      "end": 1713208779891,
+      "order": "post"
+    },
+    {
+      "name": "unhead:use-seo-meta-transform",
+      "start": 1713208779891,
+      "end": 1713208779891,
+      "order": "post"
+    },
+    {
+      "name": "unhead:use-seo-meta-transform",
+      "start": 1713208779891,
+      "end": 1713208779891,
+      "order": "post"
+    },
+    {
+      "name": "nuxtjs:i18n-resource",
+      "start": 1713208779892,
+      "end": 1713208779892,
+      "order": "post"
+    },
+    {
+      "name": "nuxtjs:i18n-resource",
+      "start": 1713208779892,
+      "end": 1713208779893,
+      "order": "post"
+    },
+    {
+      "name": "nuxtjs:i18n-meta-deprecation",
+      "start": 1713208779893,
+      "end": 1713208779893,
+      "order": "post"
+    },
+    {
+      "name": "nuxtjs:i18n-meta-deprecation",
+      "start": 1713208779893,
+      "end": 1713208779893,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1713208779896,
+      "end": 1713208779901,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1713208779896,
+      "end": 1713208779901,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1713208779906,
+      "end": 1713208779906,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1713208779906,
+      "end": 1713208779906,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1713208779907,
+      "end": 1713208779907,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1713208779907,
+      "end": 1713208779907,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-template",
+      "start": 1713208779907,
+      "end": 1713208779907,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1713208779907,
+      "end": 1713208779907,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1713208779908,
+      "end": 1713208779908,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1713208779908,
+      "end": 1713208779908,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1713208779908,
+      "end": 1713208779908,
+      "order": "normal"
+    }
+  ]
+}

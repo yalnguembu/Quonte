@@ -1,0 +1,337 @@
+{
+  "resolvedId": "/home/yalnguembu/Perso/quonte/utils/enum.ts",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "export enum NOTE_ITEM {\n  CARD = \"CARD\",\n  LIST = \"LIST\",\n  SUMMARY = \"SUMMARY\",\n}\n\nexport enum SORT_TYPE {\n  ASC = \"ASC\",\n  DESC = \"DESC\",\n}\n\nexport enum API_ERROR_MESSAGE {\n  NOT_FOUND = \"NOT_FOUND\",\n  FORBIDDEN = \"FORBIDDEN\",\n  BAD_REQUEST = \"BAD_REQUEST\",\n  ALREADY_EXIST = \"ALREADY_EXIST\",\n}\n\nexport enum ALERT_BOX_TYPE {\n  SUCCESS = \"SUCCESS\",\n  INFO = \"INFO\",\n  WARNING = \"WARNING\",\n  ERROR = \"ERROR\",\n}\n\nexport enum THEME {\n  BLUE = \"BLUE\",\n  GREEN = \"GREEN\",\n  YELLOW = \"YELLOW\",\n}\n\nexport enum REGEX {\n  EMAIL = \"\",\n  PASSWORD = /^(?=.*d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/gm,\n}\n",
+      "start": 1713208779206,
+      "end": 1713208779793,
+      "sourcemaps": null
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1713208779793,
+      "end": 1713208779793,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1713208779793,
+      "end": 1713208779793,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1713208779793,
+      "end": 1713208779793,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1713208779793,
+      "end": 1713208779793,
+      "order": "pre"
+    },
+    {
+      "name": "unplugin-vue-i18n",
+      "start": 1713208779793,
+      "end": 1713208779793,
+      "order": "pre"
+    },
+    {
+      "name": "unplugin-vue-i18n",
+      "start": 1713208779793,
+      "end": 1713208779793,
+      "order": "pre"
+    },
+    {
+      "name": "nuxtjs:i18n-macros-transform",
+      "start": 1713208779793,
+      "end": 1713208779793,
+      "order": "pre"
+    },
+    {
+      "name": "nuxtjs:i18n-macros-transform",
+      "start": 1713208779793,
+      "end": 1713208779793,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1713208779793,
+      "end": 1713208779793,
+      "order": "pre"
+    },
+    {
+      "name": "server-only-component-transform",
+      "start": 1713208779793,
+      "end": 1713208779793,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1713208779793,
+      "end": 1713208779793,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "export var NOTE_ITEM = /* @__PURE__ */ ((NOTE_ITEM2) => {\n  NOTE_ITEM2[\"CARD\"] = \"CARD\";\n  NOTE_ITEM2[\"LIST\"] = \"LIST\";\n  NOTE_ITEM2[\"SUMMARY\"] = \"SUMMARY\";\n  return NOTE_ITEM2;\n})(NOTE_ITEM || {});\nexport var SORT_TYPE = /* @__PURE__ */ ((SORT_TYPE2) => {\n  SORT_TYPE2[\"ASC\"] = \"ASC\";\n  SORT_TYPE2[\"DESC\"] = \"DESC\";\n  return SORT_TYPE2;\n})(SORT_TYPE || {});\nexport var API_ERROR_MESSAGE = /* @__PURE__ */ ((API_ERROR_MESSAGE2) => {\n  API_ERROR_MESSAGE2[\"NOT_FOUND\"] = \"NOT_FOUND\";\n  API_ERROR_MESSAGE2[\"FORBIDDEN\"] = \"FORBIDDEN\";\n  API_ERROR_MESSAGE2[\"BAD_REQUEST\"] = \"BAD_REQUEST\";\n  API_ERROR_MESSAGE2[\"ALREADY_EXIST\"] = \"ALREADY_EXIST\";\n  return API_ERROR_MESSAGE2;\n})(API_ERROR_MESSAGE || {});\nexport var ALERT_BOX_TYPE = /* @__PURE__ */ ((ALERT_BOX_TYPE2) => {\n  ALERT_BOX_TYPE2[\"SUCCESS\"] = \"SUCCESS\";\n  ALERT_BOX_TYPE2[\"INFO\"] = \"INFO\";\n  ALERT_BOX_TYPE2[\"WARNING\"] = \"WARNING\";\n  ALERT_BOX_TYPE2[\"ERROR\"] = \"ERROR\";\n  return ALERT_BOX_TYPE2;\n})(ALERT_BOX_TYPE || {});\nexport var THEME = /* @__PURE__ */ ((THEME2) => {\n  THEME2[\"BLUE\"] = \"BLUE\";\n  THEME2[\"GREEN\"] = \"GREEN\";\n  THEME2[\"YELLOW\"] = \"YELLOW\";\n  return THEME2;\n})(THEME || {});\nexport var REGEX = /* @__PURE__ */ ((REGEX2) => {\n  REGEX2[\"EMAIL\"] = \"\";\n  REGEX2[REGEX2[\"PASSWORD\"] = /^(?=.*d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/gm] = \"PASSWORD\";\n  return REGEX2;\n})(REGEX || {});\n",
+      "start": 1713208779793,
+      "end": 1713208779881,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "/home/yalnguembu/Perso/quonte/utils/enum.ts"
+        ],
+        "sourcesContent": [
+          "export enum NOTE_ITEM {\n  CARD = \"CARD\",\n  LIST = \"LIST\",\n  SUMMARY = \"SUMMARY\",\n}\n\nexport enum SORT_TYPE {\n  ASC = \"ASC\",\n  DESC = \"DESC\",\n}\n\nexport enum API_ERROR_MESSAGE {\n  NOT_FOUND = \"NOT_FOUND\",\n  FORBIDDEN = \"FORBIDDEN\",\n  BAD_REQUEST = \"BAD_REQUEST\",\n  ALREADY_EXIST = \"ALREADY_EXIST\",\n}\n\nexport enum ALERT_BOX_TYPE {\n  SUCCESS = \"SUCCESS\",\n  INFO = \"INFO\",\n  WARNING = \"WARNING\",\n  ERROR = \"ERROR\",\n}\n\nexport enum THEME {\n  BLUE = \"BLUE\",\n  GREEN = \"GREEN\",\n  YELLOW = \"YELLOW\",\n}\n\nexport enum REGEX {\n  EMAIL = \"\",\n  PASSWORD = /^(?=.*d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/gm,\n}\n"
+        ],
+        "mappings": "AAAO,WAAK,YAAL,kBAAKA,eAAL;AACL,EAAAA,WAAA,UAAO;AACP,EAAAA,WAAA,UAAO;AACP,EAAAA,WAAA,aAAU;AAHA,SAAAA;AAAA,GAAA;AAML,WAAK,YAAL,kBAAKC,eAAL;AACL,EAAAA,WAAA,SAAM;AACN,EAAAA,WAAA,UAAO;AAFG,SAAAA;AAAA,GAAA;AAKL,WAAK,oBAAL,kBAAKC,uBAAL;AACL,EAAAA,mBAAA,eAAY;AACZ,EAAAA,mBAAA,eAAY;AACZ,EAAAA,mBAAA,iBAAc;AACd,EAAAA,mBAAA,mBAAgB;AAJN,SAAAA;AAAA,GAAA;AAOL,WAAK,iBAAL,kBAAKC,oBAAL;AACL,EAAAA,gBAAA,aAAU;AACV,EAAAA,gBAAA,UAAO;AACP,EAAAA,gBAAA,aAAU;AACV,EAAAA,gBAAA,WAAQ;AAJE,SAAAA;AAAA,GAAA;AAOL,WAAK,QAAL,kBAAKC,WAAL;AACL,EAAAA,OAAA,UAAO;AACP,EAAAA,OAAA,WAAQ;AACR,EAAAA,OAAA,YAAS;AAHC,SAAAA;AAAA,GAAA;AAML,WAAK,QAAL,kBAAKC,WAAL;AACL,EAAAA,OAAA,WAAQ;AACR,EAAAA,cAAA,cAAW,0DAAX;AAFU,SAAAA;AAAA,GAAA;",
+        "names": [
+          "NOTE_ITEM",
+          "SORT_TYPE",
+          "API_ERROR_MESSAGE",
+          "ALERT_BOX_TYPE",
+          "THEME",
+          "REGEX"
+        ]
+      }
+    },
+    {
+      "name": "vite:json",
+      "start": 1713208779881,
+      "end": 1713208779881,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1713208779881,
+      "end": 1713208779881,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1713208779881,
+      "end": 1713208779882,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1713208779882,
+      "end": 1713208779882,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1713208779882,
+      "end": 1713208779882,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1713208779882,
+      "end": 1713208779882,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1713208779882,
+      "end": 1713208779882,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1713208779882,
+      "end": 1713208779882,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1713208779882,
+      "end": 1713208779883,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1713208779883,
+      "end": 1713208779883,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1713208779883,
+      "end": 1713208779885,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1713208779885,
+      "end": 1713208779885,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1713208779886,
+      "end": 1713208779886,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1713208779886,
+      "end": 1713208779886,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1713208779886,
+      "end": 1713208779886,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1713208779888,
+      "end": 1713208779888,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1713208779890,
+      "end": 1713208779890,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1713208779890,
+      "end": 1713208779890,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1713208779890,
+      "end": 1713208779890,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1713208779890,
+      "end": 1713208779890,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1713208779890,
+      "end": 1713208779891,
+      "order": "post"
+    },
+    {
+      "name": "unhead:remove-server-composables",
+      "start": 1713208779891,
+      "end": 1713208779891,
+      "order": "post"
+    },
+    {
+      "name": "unhead:use-seo-meta-transform",
+      "start": 1713208779891,
+      "end": 1713208779891,
+      "order": "post"
+    },
+    {
+      "name": "unhead:use-seo-meta-transform",
+      "start": 1713208779891,
+      "end": 1713208779891,
+      "order": "post"
+    },
+    {
+      "name": "nuxtjs:i18n-resource",
+      "start": 1713208779892,
+      "end": 1713208779892,
+      "order": "post"
+    },
+    {
+      "name": "nuxtjs:i18n-resource",
+      "start": 1713208779892,
+      "end": 1713208779892,
+      "order": "post"
+    },
+    {
+      "name": "nuxtjs:i18n-meta-deprecation",
+      "start": 1713208779893,
+      "end": 1713208779893,
+      "order": "post"
+    },
+    {
+      "name": "nuxtjs:i18n-meta-deprecation",
+      "start": 1713208779893,
+      "end": 1713208779893,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1713208779896,
+      "end": 1713208779901,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1713208779896,
+      "end": 1713208779901,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1713208779906,
+      "end": 1713208779906,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1713208779906,
+      "end": 1713208779906,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1713208779907,
+      "end": 1713208779907,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1713208779907,
+      "end": 1713208779907,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-template",
+      "start": 1713208779907,
+      "end": 1713208779907,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1713208779907,
+      "end": 1713208779907,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1713208779907,
+      "end": 1713208779908,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1713208779908,
+      "end": 1713208779908,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1713208779908,
+      "end": 1713208779908,
+      "order": "normal"
+    }
+  ]
+}

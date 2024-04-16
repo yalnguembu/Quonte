@@ -1,0 +1,251 @@
+{
+  "resolvedId": "/home/yalnguembu/Perso/quonte/components/form/TextInput.vue?vue&type=script&setup=true&lang.ts",
+  "transforms": [
+    {
+      "name": "vite:vue",
+      "result": "import { defineComponent as _defineComponent } from 'vue'\nimport { toDisplayString as _toDisplayString, createElementVNode as _createElementVNode, normalizeClass as _normalizeClass, renderList as _renderList, Fragment as _Fragment, openBlock as _openBlock, createElementBlock as _createElementBlock, vShow as _vShow, withDirectives as _withDirectives } from \"vue\"\n\nconst _hoisted_1 = { class: \"w-full\" }\nconst _hoisted_2 = { class: \"font-500 dark:text-gray-100\" }\nconst _hoisted_3 = [\"placeholder\", \"value\"]\nconst _hoisted_4 = [\"data-test\"]\n\nimport type { ErrorObject } from \"@vuelidate/core\";\n\n\nexport default /*#__PURE__*/_defineComponent({\n  __name: 'TextInput',\n  props: {\n    modelValue: {},\n    label: {},\n    placeholder: {},\n    errors: { default: () => [] },\n    isValid: { type: Boolean, default: false }\n  },\n  emits: [\"update:modelValue\"],\n  setup(__props: any, { emit: __emit }) {\n\nconst emit = __emit;\nconst props = __props;\n\nreturn (_ctx: any,_cache: any) => {\n  return (_openBlock(), _createElementBlock(\"div\", _hoisted_1, [\n    _createElementVNode(\"label\", _hoisted_2, _toDisplayString(props.label), 1),\n    _createElementVNode(\"input\", {\n      class: _normalizeClass([\n        'rounded border px-3 py-1 w-full mt-2 bg-transparent outline-none dark:text-gray-100 dark:border-gray-700',\n        _ctx.errors.length\n          ? 'outline-red-500'\n          : _ctx.isValid\n          ? 'outline-green-500 dark:outline-green-600'\n          : 'focus:outline-blue-500 dark:focus:outline-blue-600',\n      ]),\n      type: \"text\",\n      placeholder: props.placeholder,\n      value: props.modelValue,\n      onInput: _cache[0] || (_cache[0] = (event)=>emit('update:modelValue', (event.target as HTMLInputElement).value))\n    }, null, 42, _hoisted_3),\n    (_openBlock(true), _createElementBlock(_Fragment, null, _renderList(props.errors, (error) => {\n      return _withDirectives((_openBlock(), _createElementBlock(\"p\", {\n        \"data-test\": error.$property,\n        key: error.$uid,\n        class: \"pt-1 text-red-500 transition delay-500 text-sm\"\n      }, _toDisplayString(error.$message), 9, _hoisted_4)), [\n        [_vShow, props.errors?.length]\n      ])\n    }), 128))\n  ]))\n}\n}\n\n})",
+      "start": 1713208772219,
+      "end": 1713208772219
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1713208772219,
+      "end": 1713208772219,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1713208772219,
+      "end": 1713208772219,
+      "order": "pre"
+    },
+    {
+      "name": "unplugin-vue-i18n",
+      "start": 1713208772219,
+      "end": 1713208772220,
+      "order": "pre"
+    },
+    {
+      "name": "nuxtjs:i18n-macros-transform",
+      "start": 1713208772220,
+      "end": 1713208772220,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1713208772220,
+      "end": 1713208772220,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1713208772220,
+      "end": 1713208772220,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { defineComponent as _defineComponent } from \"vue\";\nimport { toDisplayString as _toDisplayString, createElementVNode as _createElementVNode, normalizeClass as _normalizeClass, renderList as _renderList, Fragment as _Fragment, openBlock as _openBlock, createElementBlock as _createElementBlock, vShow as _vShow, withDirectives as _withDirectives } from \"vue\";\nconst _hoisted_1 = { class: \"w-full\" };\nconst _hoisted_2 = { class: \"font-500 dark:text-gray-100\" };\nconst _hoisted_3 = [\"placeholder\", \"value\"];\nconst _hoisted_4 = [\"data-test\"];\nexport default /* @__PURE__ */ _defineComponent({\n  __name: \"TextInput\",\n  props: {\n    modelValue: {},\n    label: {},\n    placeholder: {},\n    errors: { default: () => [] },\n    isValid: { type: Boolean, default: false }\n  },\n  emits: [\"update:modelValue\"],\n  setup(__props, { emit: __emit }) {\n    const emit = __emit;\n    const props = __props;\n    return (_ctx, _cache) => {\n      return _openBlock(), _createElementBlock(\"div\", _hoisted_1, [\n        _createElementVNode(\"label\", _hoisted_2, _toDisplayString(props.label), 1),\n        _createElementVNode(\"input\", {\n          class: _normalizeClass([\n            \"rounded border px-3 py-1 w-full mt-2 bg-transparent outline-none dark:text-gray-100 dark:border-gray-700\",\n            _ctx.errors.length ? \"outline-red-500\" : _ctx.isValid ? \"outline-green-500 dark:outline-green-600\" : \"focus:outline-blue-500 dark:focus:outline-blue-600\"\n          ]),\n          type: \"text\",\n          placeholder: props.placeholder,\n          value: props.modelValue,\n          onInput: _cache[0] || (_cache[0] = (event) => emit(\"update:modelValue\", event.target.value))\n        }, null, 42, _hoisted_3),\n        (_openBlock(true), _createElementBlock(_Fragment, null, _renderList(props.errors, (error) => {\n          return _withDirectives((_openBlock(), _createElementBlock(\"p\", {\n            \"data-test\": error.$property,\n            key: error.$uid,\n            class: \"pt-1 text-red-500 transition delay-500 text-sm\"\n          }, _toDisplayString(error.$message), 9, _hoisted_4)), [\n            [_vShow, props.errors?.length]\n          ]);\n        }), 128))\n      ]);\n    };\n  }\n});\n",
+      "start": 1713208772220,
+      "end": 1713208772262,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "/home/yalnguembu/Perso/quonte/components/form/TextInput.vue?vue&type=script&setup=true&lang.ts"
+        ],
+        "sourcesContent": [
+          "import { defineComponent as _defineComponent } from 'vue'\nimport { toDisplayString as _toDisplayString, createElementVNode as _createElementVNode, normalizeClass as _normalizeClass, renderList as _renderList, Fragment as _Fragment, openBlock as _openBlock, createElementBlock as _createElementBlock, vShow as _vShow, withDirectives as _withDirectives } from \"vue\"\n\nconst _hoisted_1 = { class: \"w-full\" }\nconst _hoisted_2 = { class: \"font-500 dark:text-gray-100\" }\nconst _hoisted_3 = [\"placeholder\", \"value\"]\nconst _hoisted_4 = [\"data-test\"]\n\nimport type { ErrorObject } from \"@vuelidate/core\";\n\n\nexport default /*#__PURE__*/_defineComponent({\n  __name: 'TextInput',\n  props: {\n    modelValue: {},\n    label: {},\n    placeholder: {},\n    errors: { default: () => [] },\n    isValid: { type: Boolean, default: false }\n  },\n  emits: [\"update:modelValue\"],\n  setup(__props: any, { emit: __emit }) {\n\nconst emit = __emit;\nconst props = __props;\n\nreturn (_ctx: any,_cache: any) => {\n  return (_openBlock(), _createElementBlock(\"div\", _hoisted_1, [\n    _createElementVNode(\"label\", _hoisted_2, _toDisplayString(props.label), 1),\n    _createElementVNode(\"input\", {\n      class: _normalizeClass([\n        'rounded border px-3 py-1 w-full mt-2 bg-transparent outline-none dark:text-gray-100 dark:border-gray-700',\n        _ctx.errors.length\n          ? 'outline-red-500'\n          : _ctx.isValid\n          ? 'outline-green-500 dark:outline-green-600'\n          : 'focus:outline-blue-500 dark:focus:outline-blue-600',\n      ]),\n      type: \"text\",\n      placeholder: props.placeholder,\n      value: props.modelValue,\n      onInput: _cache[0] || (_cache[0] = (event)=>emit('update:modelValue', (event.target as HTMLInputElement).value))\n    }, null, 42, _hoisted_3),\n    (_openBlock(true), _createElementBlock(_Fragment, null, _renderList(props.errors, (error) => {\n      return _withDirectives((_openBlock(), _createElementBlock(\"p\", {\n        \"data-test\": error.$property,\n        key: error.$uid,\n        class: \"pt-1 text-red-500 transition delay-500 text-sm\"\n      }, _toDisplayString(error.$message), 9, _hoisted_4)), [\n        [_vShow, props.errors?.length]\n      ])\n    }), 128))\n  ]))\n}\n}\n\n})"
+        ],
+        "mappings": "AAAA,SAAS,mBAAmB,wBAAwB;AACpD,SAAS,mBAAmB,kBAAkB,sBAAsB,qBAAqB,kBAAkB,iBAAiB,cAAc,aAAa,YAAY,WAAW,aAAa,YAAY,sBAAsB,qBAAqB,SAAS,QAAQ,kBAAkB,uBAAuB;AAE5S,MAAM,aAAa,EAAE,OAAO,SAAS;AACrC,MAAM,aAAa,EAAE,OAAO,8BAA8B;AAC1D,MAAM,aAAa,CAAC,eAAe,OAAO;AAC1C,MAAM,aAAa,CAAC,WAAW;AAK/B,eAA4B,iCAAiB;AAAA,EAC3C,QAAQ;AAAA,EACR,OAAO;AAAA,IACL,YAAY,CAAC;AAAA,IACb,OAAO,CAAC;AAAA,IACR,aAAa,CAAC;AAAA,IACd,QAAQ,EAAE,SAAS,MAAM,CAAC,EAAE;AAAA,IAC5B,SAAS,EAAE,MAAM,SAAS,SAAS,MAAM;AAAA,EAC3C;AAAA,EACA,OAAO,CAAC,mBAAmB;AAAA,EAC3B,MAAM,SAAc,EAAE,MAAM,OAAO,GAAG;AAExC,UAAM,OAAO;AACb,UAAM,QAAQ;AAEd,WAAO,CAAC,MAAU,WAAgB;AAChC,aAAQ,WAAW,GAAG,oBAAoB,OAAO,YAAY;AAAA,QAC3D,oBAAoB,SAAS,YAAY,iBAAiB,MAAM,KAAK,GAAG,CAAC;AAAA,QACzE,oBAAoB,SAAS;AAAA,UAC3B,OAAO,gBAAgB;AAAA,YACrB;AAAA,YACA,KAAK,OAAO,SACR,oBACA,KAAK,UACL,6CACA;AAAA,UACN,CAAC;AAAA,UACD,MAAM;AAAA,UACN,aAAa,MAAM;AAAA,UACnB,OAAO,MAAM;AAAA,UACb,SAAS,OAAO,CAAC,MAAM,OAAO,CAAC,IAAI,CAAC,UAAQ,KAAK,qBAAsB,MAAM,OAA4B,KAAK;AAAA,QAChH,GAAG,MAAM,IAAI,UAAU;AAAA,SACtB,WAAW,IAAI,GAAG,oBAAoB,WAAW,MAAM,YAAY,MAAM,QAAQ,CAAC,UAAU;AAC3F,iBAAO,iBAAiB,WAAW,GAAG,oBAAoB,KAAK;AAAA,YAC7D,aAAa,MAAM;AAAA,YACnB,KAAK,MAAM;AAAA,YACX,OAAO;AAAA,UACT,GAAG,iBAAiB,MAAM,QAAQ,GAAG,GAAG,UAAU,IAAI;AAAA,YACpD,CAAC,QAAQ,MAAM,QAAQ,MAAM;AAAA,UAC/B,CAAC;AAAA,QACH,CAAC,GAAG,GAAG;AAAA,MACT,CAAC;AAAA,IACH;AAAA,EACA;AAEA,CAAC;",
+        "names": []
+      }
+    },
+    {
+      "name": "vite:json",
+      "start": 1713208772262,
+      "end": 1713208772262,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1713208772262,
+      "end": 1713208772262,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1713208772262,
+      "end": 1713208772262,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1713208772262,
+      "end": 1713208772262,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1713208772263,
+      "end": 1713208772263,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1713208772263,
+      "end": 1713208772263,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1713208772263,
+      "end": 1713208772263,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1713208772263,
+      "end": 1713208772263,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1713208772263,
+      "end": 1713208772263,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1713208772263,
+      "end": 1713208772263,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1713208772263,
+      "end": 1713208772263,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1713208772263,
+      "end": 1713208772263,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1713208772263,
+      "end": 1713208772263,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1713208772263,
+      "end": 1713208772263,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1713208772263,
+      "end": 1713208772263,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1713208772263,
+      "end": 1713208772263,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1713208772263,
+      "end": 1713208772263,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1713208772263,
+      "end": 1713208772263,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1713208772264,
+      "end": 1713208772264,
+      "order": "post"
+    },
+    {
+      "name": "unhead:use-seo-meta-transform",
+      "start": 1713208772264,
+      "end": 1713208772264,
+      "order": "post"
+    },
+    {
+      "name": "nuxtjs:i18n-resource",
+      "start": 1713208772264,
+      "end": 1713208772264,
+      "order": "post"
+    },
+    {
+      "name": "nuxtjs:i18n-meta-deprecation",
+      "start": 1713208772264,
+      "end": 1713208772264,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1713208772264,
+      "end": 1713208772273,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1713208772273,
+      "end": 1713208772273,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1713208772273,
+      "end": 1713208772273,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1713208772273,
+      "end": 1713208772273,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1713208772274,
+      "end": 1713208772274,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1713208772274,
+      "end": 1713208772274,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1713208772275,
+      "end": 1713208772275,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1713208772275,
+      "end": 1713208772275,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1713208772275,
+      "end": 1713208772275,
+      "order": "normal"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "resolvedId": "/home/yalnguembu/Perso/quonte/node_modules/nuxt/dist/app/types.js",
+  "transforms": [
+    {
+      "name": "__load__",
+      "result": "",
+      "start": 1713208770207,
+      "end": 1713208770207
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1713208770207,
+      "end": 1713208770207,
+      "order": "normal"
+    }
+  ]
+}

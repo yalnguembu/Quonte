@@ -1,0 +1,340 @@
+{
+  "resolvedId": "/home/yalnguembu/Perso/quonte/node_modules/nuxt-og-image/dist/runtime/nuxt/components/Templates/Community/BrandedLogo.vue?vue&type=script&setup=true&lang.ts",
+  "transforms": [
+    {
+      "name": "vite:vue",
+      "result": "import { defineComponent as _defineComponent } from 'vue'\nimport { mergeProps as _mergeProps } from \"vue\"\nimport { ssrRenderAttr as _ssrRenderAttr, ssrRenderAttrs as _ssrRenderAttrs, ssrInterpolate as _ssrInterpolate } from \"vue/server-renderer\"\n\n\nexport default /*#__PURE__*/_defineComponent({\n  __name: 'BrandedLogo',\n  __ssrInlineRender: true,\n  props: {\n    title: { default: 'title' },\n    logo: { default: 'https://nuxt.com/assets/design-kit/logo-white.png' }\n  },\n  setup(__props: any) {\n\n/**\n * @credits Full Stack Heroes <https://fullstackheroes.com/>\n */\n\n\n\nreturn (_ctx: any,_push: any,_parent: any,_attrs: any) => {\n  _push(`<div${\n    _ssrRenderAttrs(_mergeProps({\n      style: { backgroundImage: 'linear-gradient(to right, #24243e, #302b63, #0f0c29)' },\n      class: \"h-full w-full flex items-start justify-start\"\n    }, _attrs))\n  }><div class=\"flex items-start justify-start h-full\"><div class=\"flex flex-col justify-between w-full h-full p-20\"><img${\n    _ssrRenderAttr(\"src\", _ctx.logo)\n  } height=\"50\"><h1 class=\"text-[60px] text-white font-bold text-left\">${\n    _ssrInterpolate(_ctx.title)\n  }</h1></div></div></div>`)\n}\n}\n\n})",
+      "start": 1713208779386,
+      "end": 1713208779386,
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "/home/yalnguembu/Perso/quonte/node_modules/nuxt-og-image/dist/runtime/nuxt/components/Templates/Community/BrandedLogo.vue"
+        ],
+        "sourcesContent": [
+          "<script setup lang=\"ts\">\n/**\n * @credits Full Stack Heroes <https://fullstackheroes.com/>\n */\n\nwithDefaults(defineProps<{\n  title?: string\n  logo?: string\n}>(), {\n  title: 'title',\n  logo: 'https://nuxt.com/assets/design-kit/logo-white.png',\n})\n</script>\n\n<template>\n  <div\n    :style=\"{ backgroundImage: 'linear-gradient(to right, #24243e, #302b63, #0f0c29)' }\"\n    class=\"h-full w-full flex items-start justify-start\"\n  >\n    <div class=\"flex items-start justify-start h-full\">\n      <div class=\"flex flex-col justify-between w-full h-full p-20\">\n        <img :src=\"logo\" height=\"50\">\n        <h1 class=\"text-[60px] text-white font-bold text-left\">\n          {{ title }}\n        </h1>\n      </div>\n    </div>\n  </div>\n</template>\n"
+        ],
+        "names": [],
+        "mappings": ";;;;;;;;;;;;;AAAwB;AACxB,CAAC,CAAC,CAAC;AACH,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC;AAC5D,CAAC,CAAC,CAAC;AACH;AAOE;;;;;;;;;;;;;;;;"
+      }
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1713208779386,
+      "end": 1713208779386,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1713208779386,
+      "end": 1713208779386,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1713208779387,
+      "end": 1713208779387,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1713208779387,
+      "end": 1713208779387,
+      "order": "pre"
+    },
+    {
+      "name": "unplugin-vue-i18n",
+      "start": 1713208779387,
+      "end": 1713208779387,
+      "order": "pre"
+    },
+    {
+      "name": "unplugin-vue-i18n",
+      "start": 1713208779387,
+      "end": 1713208779390,
+      "order": "pre"
+    },
+    {
+      "name": "nuxtjs:i18n-macros-transform",
+      "start": 1713208779390,
+      "end": 1713208779391,
+      "order": "pre"
+    },
+    {
+      "name": "nuxtjs:i18n-macros-transform",
+      "start": 1713208779390,
+      "end": 1713208779391,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1713208779391,
+      "end": 1713208779391,
+      "order": "pre"
+    },
+    {
+      "name": "server-only-component-transform",
+      "start": 1713208779391,
+      "end": 1713208779391,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1713208779391,
+      "end": 1713208779391,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { defineComponent as _defineComponent } from \"vue\";\nimport { mergeProps as _mergeProps } from \"vue\";\nimport { ssrRenderAttr as _ssrRenderAttr, ssrRenderAttrs as _ssrRenderAttrs, ssrInterpolate as _ssrInterpolate } from \"vue/server-renderer\";\nexport default /* @__PURE__ */ _defineComponent({\n  __name: \"BrandedLogo\",\n  __ssrInlineRender: true,\n  props: {\n    title: { default: \"title\" },\n    logo: { default: \"https://nuxt.com/assets/design-kit/logo-white.png\" }\n  },\n  setup(__props) {\n    return (_ctx, _push, _parent, _attrs) => {\n      _push(`<div${_ssrRenderAttrs(_mergeProps({\n        style: { backgroundImage: \"linear-gradient(to right, #24243e, #302b63, #0f0c29)\" },\n        class: \"h-full w-full flex items-start justify-start\"\n      }, _attrs))}><div class=\"flex items-start justify-start h-full\"><div class=\"flex flex-col justify-between w-full h-full p-20\"><img${_ssrRenderAttr(\"src\", _ctx.logo)} height=\"50\"><h1 class=\"text-[60px] text-white font-bold text-left\">${_ssrInterpolate(_ctx.title)}</h1></div></div></div>`);\n    };\n  }\n});\n",
+      "start": 1713208779391,
+      "end": 1713208779555,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "/home/yalnguembu/Perso/quonte/node_modules/nuxt-og-image/dist/runtime/nuxt/components/Templates/Community/BrandedLogo.vue?vue&type=script&setup=true&lang.ts"
+        ],
+        "sourcesContent": [
+          "import { defineComponent as _defineComponent } from 'vue'\nimport { mergeProps as _mergeProps } from \"vue\"\nimport { ssrRenderAttr as _ssrRenderAttr, ssrRenderAttrs as _ssrRenderAttrs, ssrInterpolate as _ssrInterpolate } from \"vue/server-renderer\"\n\n\nexport default /*#__PURE__*/_defineComponent({\n  __name: 'BrandedLogo',\n  __ssrInlineRender: true,\n  props: {\n    title: { default: 'title' },\n    logo: { default: 'https://nuxt.com/assets/design-kit/logo-white.png' }\n  },\n  setup(__props: any) {\n\n/**\n * @credits Full Stack Heroes <https://fullstackheroes.com/>\n */\n\n\n\nreturn (_ctx: any,_push: any,_parent: any,_attrs: any) => {\n  _push(`<div${\n    _ssrRenderAttrs(_mergeProps({\n      style: { backgroundImage: 'linear-gradient(to right, #24243e, #302b63, #0f0c29)' },\n      class: \"h-full w-full flex items-start justify-start\"\n    }, _attrs))\n  }><div class=\"flex items-start justify-start h-full\"><div class=\"flex flex-col justify-between w-full h-full p-20\"><img${\n    _ssrRenderAttr(\"src\", _ctx.logo)\n  } height=\"50\"><h1 class=\"text-[60px] text-white font-bold text-left\">${\n    _ssrInterpolate(_ctx.title)\n  }</h1></div></div></div>`)\n}\n}\n\n})"
+        ],
+        "mappings": "AAAA,SAAS,mBAAmB,wBAAwB;AACpD,SAAS,cAAc,mBAAmB;AAC1C,SAAS,iBAAiB,gBAAgB,kBAAkB,iBAAiB,kBAAkB,uBAAuB;AAGtH,eAA4B,iCAAiB;AAAA,EAC3C,QAAQ;AAAA,EACR,mBAAmB;AAAA,EACnB,OAAO;AAAA,IACL,OAAO,EAAE,SAAS,QAAQ;AAAA,IAC1B,MAAM,EAAE,SAAS,oDAAoD;AAAA,EACvE;AAAA,EACA,MAAM,SAAc;AAQtB,WAAO,CAAC,MAAU,OAAW,SAAa,WAAgB;AACxD,YAAM,OACJ,gBAAgB,YAAY;AAAA,QAC1B,OAAO,EAAE,iBAAiB,uDAAuD;AAAA,QACjF,OAAO;AAAA,MACT,GAAG,MAAM,CAAC,CACZ,yHACE,eAAe,OAAO,KAAK,IAAI,CACjC,uEACE,gBAAgB,KAAK,KAAK,CAC5B,yBAAyB;AAAA,IAC3B;AAAA,EACA;AAEA,CAAC;",
+        "names": []
+      }
+    },
+    {
+      "name": "vite:json",
+      "start": 1713208779555,
+      "end": 1713208779555,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1713208779556,
+      "end": 1713208779556,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1713208779556,
+      "end": 1713208779556,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1713208779556,
+      "end": 1713208779556,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1713208779556,
+      "end": 1713208779556,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1713208779556,
+      "end": 1713208779556,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1713208779557,
+      "end": 1713208779557,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1713208779557,
+      "end": 1713208779557,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1713208779557,
+      "end": 1713208779557,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1713208779557,
+      "end": 1713208779557,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1713208779558,
+      "end": 1713208779559,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1713208779559,
+      "end": 1713208779559,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1713208779559,
+      "end": 1713208779560,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1713208779560,
+      "end": 1713208779560,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1713208779560,
+      "end": 1713208779560,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1713208779560,
+      "end": 1713208779560,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1713208779560,
+      "end": 1713208779560,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1713208779560,
+      "end": 1713208779560,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1713208779560,
+      "end": 1713208779560,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1713208779560,
+      "end": 1713208779560,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1713208779560,
+      "end": 1713208779560,
+      "order": "post"
+    },
+    {
+      "name": "unhead:remove-server-composables",
+      "start": 1713208779560,
+      "end": 1713208779561,
+      "order": "post"
+    },
+    {
+      "name": "unhead:use-seo-meta-transform",
+      "start": 1713208779561,
+      "end": 1713208779561,
+      "order": "post"
+    },
+    {
+      "name": "unhead:use-seo-meta-transform",
+      "start": 1713208779561,
+      "end": 1713208779561,
+      "order": "post"
+    },
+    {
+      "name": "nuxtjs:i18n-resource",
+      "start": 1713208779561,
+      "end": 1713208779561,
+      "order": "post"
+    },
+    {
+      "name": "nuxtjs:i18n-resource",
+      "start": 1713208779561,
+      "end": 1713208779561,
+      "order": "post"
+    },
+    {
+      "name": "nuxtjs:i18n-meta-deprecation",
+      "start": 1713208779561,
+      "end": 1713208779561,
+      "order": "post"
+    },
+    {
+      "name": "nuxtjs:i18n-meta-deprecation",
+      "start": 1713208779561,
+      "end": 1713208779561,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1713208779562,
+      "end": 1713208779562,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1713208779562,
+      "end": 1713208779562,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1713208779563,
+      "end": 1713208779564,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1713208779563,
+      "end": 1713208779564,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1713208779565,
+      "end": 1713208779565,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1713208779565,
+      "end": 1713208779565,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-template",
+      "start": 1713208779565,
+      "end": 1713208779565,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1713208779565,
+      "end": 1713208779565,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1713208779566,
+      "end": 1713208779566,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1713208779566,
+      "end": 1713208779566,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1713208779566,
+      "end": 1713208779566,
+      "order": "normal"
+    }
+  ]
+}

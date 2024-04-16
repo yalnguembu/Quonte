@@ -1,0 +1,251 @@
+{
+  "resolvedId": "/home/yalnguembu/Perso/quonte/node_modules/nuxt-og-image/dist/runtime/nuxt/components/Templates/Community/Frame.vue?vue&type=script&setup=true&lang.ts",
+  "transforms": [
+    {
+      "name": "vite:vue",
+      "result": "import { defineComponent as _defineComponent } from 'vue'\nimport { normalizeStyle as _normalizeStyle, openBlock as _openBlock, createElementBlock as _createElementBlock, createCommentVNode as _createCommentVNode, resolveComponent as _resolveComponent, createBlock as _createBlock, toDisplayString as _toDisplayString, createTextVNode as _createTextVNode, createElementVNode as _createElementVNode, renderList as _renderList, Fragment as _Fragment } from \"vue\"\n\nconst _hoisted_1 = { class: \"flex flex-col items-center text-center\" }\nconst _hoisted_2 = { class: \"flex gap-4 text-7xl font-bold\" }\nconst _hoisted_3 = { class: \"text-2xl max-w-3xl\" }\nconst _hoisted_4 = [\"src\"]\nconst _hoisted_5 = { class: \"absolute bottom-5 right-5 flex gap-4\" }\nconst _hoisted_6 = {\n  key: 0,\n  class: \"absolute bottom-12 right-8 font-bold\"\n}\n\n\nexport default /*#__PURE__*/_defineComponent({\n  __name: 'Frame',\n  props: {\n    title: {},\n    description: {},\n    bg: { default: 'linear-gradient(to bottom right, #171717, #131313)' },\n    icon: {},\n    logo: {},\n    image: {},\n    username: {},\n    socials: {}\n  },\n  setup(__props: any) {\n\n/**\n * @credits @arashsheyda <https://github.com/arashsheyda>\n */\n\n\n\nreturn (_ctx: any,_cache: any) => {\n  const _component_Icon = _resolveComponent(\"Icon\")!\n\n  return (_openBlock(), _createElementBlock(\"div\", {\n    class: \"relative h-full w-full flex items-center justify-center bg-neutral-900 text-white border-2 border-white\",\n    style: _normalizeStyle({ backgroundImage: _ctx.bg })\n  }, [\n    (_ctx.image)\n      ? (_openBlock(), _createElementBlock(\"div\", {\n          key: 0,\n          class: \"absolute inset-0 w-full h-full bg-center opacity-10\",\n          style: _normalizeStyle({ backgroundImage: `url(${_ctx.image})` })\n        }, null, 4))\n      : _createCommentVNode(\"\", true),\n    _createElementVNode(\"div\", _hoisted_1, [\n      _createElementVNode(\"h1\", _hoisted_2, [\n        (_ctx.icon)\n          ? (_openBlock(), _createBlock(_component_Icon, {\n              key: 0,\n              name: _ctx.icon\n            }, null, 8, [\"name\"]))\n          : _createCommentVNode(\"\", true),\n        _createTextVNode(\" \" + _toDisplayString(_ctx.title), 1)\n      ]),\n      _createElementVNode(\"p\", _hoisted_3, _toDisplayString(_ctx.description), 1)\n    ]),\n    (_ctx.logo)\n      ? (_openBlock(), _createElementBlock(\"img\", {\n          key: 1,\n          src: _ctx.logo,\n          class: \"absolute bottom-0 left-0 p-5\",\n          style: {\"height\":\"125px\",\"width\":\"153px\"}\n        }, null, 8, _hoisted_4))\n      : _createCommentVNode(\"\", true),\n    _createElementVNode(\"div\", _hoisted_5, [\n      (_ctx.username)\n        ? (_openBlock(), _createElementBlock(\"div\", _hoisted_6, _toDisplayString(_ctx.username), 1))\n        : _createCommentVNode(\"\", true),\n      (_openBlock(true), _createElementBlock(_Fragment, null, _renderList(_ctx.socials, (social) => {\n        return (_openBlock(), _createBlock(_component_Icon, {\n          key: social.name,\n          name: social.icon!,\n          class: \"w-7 h-7\"\n        }, null, 8, [\"name\"]))\n      }), 128))\n    ])\n  ], 4))\n}\n}\n\n})",
+      "start": 1713208771454,
+      "end": 1713208771454
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1713208771454,
+      "end": 1713208771454,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1713208771454,
+      "end": 1713208771454,
+      "order": "pre"
+    },
+    {
+      "name": "unplugin-vue-i18n",
+      "start": 1713208771454,
+      "end": 1713208771454,
+      "order": "pre"
+    },
+    {
+      "name": "nuxtjs:i18n-macros-transform",
+      "start": 1713208771454,
+      "end": 1713208771455,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1713208771455,
+      "end": 1713208771455,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1713208771455,
+      "end": 1713208771455,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { defineComponent as _defineComponent } from \"vue\";\nimport { normalizeStyle as _normalizeStyle, openBlock as _openBlock, createElementBlock as _createElementBlock, createCommentVNode as _createCommentVNode, resolveComponent as _resolveComponent, createBlock as _createBlock, toDisplayString as _toDisplayString, createTextVNode as _createTextVNode, createElementVNode as _createElementVNode, renderList as _renderList, Fragment as _Fragment } from \"vue\";\nconst _hoisted_1 = { class: \"flex flex-col items-center text-center\" };\nconst _hoisted_2 = { class: \"flex gap-4 text-7xl font-bold\" };\nconst _hoisted_3 = { class: \"text-2xl max-w-3xl\" };\nconst _hoisted_4 = [\"src\"];\nconst _hoisted_5 = { class: \"absolute bottom-5 right-5 flex gap-4\" };\nconst _hoisted_6 = {\n  key: 0,\n  class: \"absolute bottom-12 right-8 font-bold\"\n};\nexport default /* @__PURE__ */ _defineComponent({\n  __name: \"Frame\",\n  props: {\n    title: {},\n    description: {},\n    bg: { default: \"linear-gradient(to bottom right, #171717, #131313)\" },\n    icon: {},\n    logo: {},\n    image: {},\n    username: {},\n    socials: {}\n  },\n  setup(__props) {\n    return (_ctx, _cache) => {\n      const _component_Icon = _resolveComponent(\"Icon\");\n      return _openBlock(), _createElementBlock(\"div\", {\n        class: \"relative h-full w-full flex items-center justify-center bg-neutral-900 text-white border-2 border-white\",\n        style: _normalizeStyle({ backgroundImage: _ctx.bg })\n      }, [\n        _ctx.image ? (_openBlock(), _createElementBlock(\"div\", {\n          key: 0,\n          class: \"absolute inset-0 w-full h-full bg-center opacity-10\",\n          style: _normalizeStyle({ backgroundImage: `url(${_ctx.image})` })\n        }, null, 4)) : _createCommentVNode(\"\", true),\n        _createElementVNode(\"div\", _hoisted_1, [\n          _createElementVNode(\"h1\", _hoisted_2, [\n            _ctx.icon ? (_openBlock(), _createBlock(_component_Icon, {\n              key: 0,\n              name: _ctx.icon\n            }, null, 8, [\"name\"])) : _createCommentVNode(\"\", true),\n            _createTextVNode(\" \" + _toDisplayString(_ctx.title), 1)\n          ]),\n          _createElementVNode(\"p\", _hoisted_3, _toDisplayString(_ctx.description), 1)\n        ]),\n        _ctx.logo ? (_openBlock(), _createElementBlock(\"img\", {\n          key: 1,\n          src: _ctx.logo,\n          class: \"absolute bottom-0 left-0 p-5\",\n          style: { \"height\": \"125px\", \"width\": \"153px\" }\n        }, null, 8, _hoisted_4)) : _createCommentVNode(\"\", true),\n        _createElementVNode(\"div\", _hoisted_5, [\n          _ctx.username ? (_openBlock(), _createElementBlock(\"div\", _hoisted_6, _toDisplayString(_ctx.username), 1)) : _createCommentVNode(\"\", true),\n          (_openBlock(true), _createElementBlock(_Fragment, null, _renderList(_ctx.socials, (social) => {\n            return _openBlock(), _createBlock(_component_Icon, {\n              key: social.name,\n              name: social.icon,\n              class: \"w-7 h-7\"\n            }, null, 8, [\"name\"]);\n          }), 128))\n        ])\n      ], 4);\n    };\n  }\n});\n",
+      "start": 1713208771455,
+      "end": 1713208771561,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "/home/yalnguembu/Perso/quonte/node_modules/nuxt-og-image/dist/runtime/nuxt/components/Templates/Community/Frame.vue?vue&type=script&setup=true&lang.ts"
+        ],
+        "sourcesContent": [
+          "import { defineComponent as _defineComponent } from 'vue'\nimport { normalizeStyle as _normalizeStyle, openBlock as _openBlock, createElementBlock as _createElementBlock, createCommentVNode as _createCommentVNode, resolveComponent as _resolveComponent, createBlock as _createBlock, toDisplayString as _toDisplayString, createTextVNode as _createTextVNode, createElementVNode as _createElementVNode, renderList as _renderList, Fragment as _Fragment } from \"vue\"\n\nconst _hoisted_1 = { class: \"flex flex-col items-center text-center\" }\nconst _hoisted_2 = { class: \"flex gap-4 text-7xl font-bold\" }\nconst _hoisted_3 = { class: \"text-2xl max-w-3xl\" }\nconst _hoisted_4 = [\"src\"]\nconst _hoisted_5 = { class: \"absolute bottom-5 right-5 flex gap-4\" }\nconst _hoisted_6 = {\n  key: 0,\n  class: \"absolute bottom-12 right-8 font-bold\"\n}\n\n\nexport default /*#__PURE__*/_defineComponent({\n  __name: 'Frame',\n  props: {\n    title: {},\n    description: {},\n    bg: { default: 'linear-gradient(to bottom right, #171717, #131313)' },\n    icon: {},\n    logo: {},\n    image: {},\n    username: {},\n    socials: {}\n  },\n  setup(__props: any) {\n\n/**\n * @credits @arashsheyda <https://github.com/arashsheyda>\n */\n\n\n\nreturn (_ctx: any,_cache: any) => {\n  const _component_Icon = _resolveComponent(\"Icon\")!\n\n  return (_openBlock(), _createElementBlock(\"div\", {\n    class: \"relative h-full w-full flex items-center justify-center bg-neutral-900 text-white border-2 border-white\",\n    style: _normalizeStyle({ backgroundImage: _ctx.bg })\n  }, [\n    (_ctx.image)\n      ? (_openBlock(), _createElementBlock(\"div\", {\n          key: 0,\n          class: \"absolute inset-0 w-full h-full bg-center opacity-10\",\n          style: _normalizeStyle({ backgroundImage: `url(${_ctx.image})` })\n        }, null, 4))\n      : _createCommentVNode(\"\", true),\n    _createElementVNode(\"div\", _hoisted_1, [\n      _createElementVNode(\"h1\", _hoisted_2, [\n        (_ctx.icon)\n          ? (_openBlock(), _createBlock(_component_Icon, {\n              key: 0,\n              name: _ctx.icon\n            }, null, 8, [\"name\"]))\n          : _createCommentVNode(\"\", true),\n        _createTextVNode(\" \" + _toDisplayString(_ctx.title), 1)\n      ]),\n      _createElementVNode(\"p\", _hoisted_3, _toDisplayString(_ctx.description), 1)\n    ]),\n    (_ctx.logo)\n      ? (_openBlock(), _createElementBlock(\"img\", {\n          key: 1,\n          src: _ctx.logo,\n          class: \"absolute bottom-0 left-0 p-5\",\n          style: {\"height\":\"125px\",\"width\":\"153px\"}\n        }, null, 8, _hoisted_4))\n      : _createCommentVNode(\"\", true),\n    _createElementVNode(\"div\", _hoisted_5, [\n      (_ctx.username)\n        ? (_openBlock(), _createElementBlock(\"div\", _hoisted_6, _toDisplayString(_ctx.username), 1))\n        : _createCommentVNode(\"\", true),\n      (_openBlock(true), _createElementBlock(_Fragment, null, _renderList(_ctx.socials, (social) => {\n        return (_openBlock(), _createBlock(_component_Icon, {\n          key: social.name,\n          name: social.icon!,\n          class: \"w-7 h-7\"\n        }, null, 8, [\"name\"]))\n      }), 128))\n    ])\n  ], 4))\n}\n}\n\n})"
+        ],
+        "mappings": "AAAA,SAAS,mBAAmB,wBAAwB;AACpD,SAAS,kBAAkB,iBAAiB,aAAa,YAAY,sBAAsB,qBAAqB,sBAAsB,qBAAqB,oBAAoB,mBAAmB,eAAe,cAAc,mBAAmB,kBAAkB,mBAAmB,kBAAkB,sBAAsB,qBAAqB,cAAc,aAAa,YAAY,iBAAiB;AAE5Y,MAAM,aAAa,EAAE,OAAO,yCAAyC;AACrE,MAAM,aAAa,EAAE,OAAO,gCAAgC;AAC5D,MAAM,aAAa,EAAE,OAAO,qBAAqB;AACjD,MAAM,aAAa,CAAC,KAAK;AACzB,MAAM,aAAa,EAAE,OAAO,uCAAuC;AACnE,MAAM,aAAa;AAAA,EACjB,KAAK;AAAA,EACL,OAAO;AACT;AAGA,eAA4B,iCAAiB;AAAA,EAC3C,QAAQ;AAAA,EACR,OAAO;AAAA,IACL,OAAO,CAAC;AAAA,IACR,aAAa,CAAC;AAAA,IACd,IAAI,EAAE,SAAS,qDAAqD;AAAA,IACpE,MAAM,CAAC;AAAA,IACP,MAAM,CAAC;AAAA,IACP,OAAO,CAAC;AAAA,IACR,UAAU,CAAC;AAAA,IACX,SAAS,CAAC;AAAA,EACZ;AAAA,EACA,MAAM,SAAc;AAQtB,WAAO,CAAC,MAAU,WAAgB;AAChC,YAAM,kBAAkB,kBAAkB,MAAM;AAEhD,aAAQ,WAAW,GAAG,oBAAoB,OAAO;AAAA,QAC/C,OAAO;AAAA,QACP,OAAO,gBAAgB,EAAE,iBAAiB,KAAK,GAAG,CAAC;AAAA,MACrD,GAAG;AAAA,QACA,KAAK,SACD,WAAW,GAAG,oBAAoB,OAAO;AAAA,UACxC,KAAK;AAAA,UACL,OAAO;AAAA,UACP,OAAO,gBAAgB,EAAE,iBAAiB,OAAO,KAAK,KAAK,IAAI,CAAC;AAAA,QAClE,GAAG,MAAM,CAAC,KACV,oBAAoB,IAAI,IAAI;AAAA,QAChC,oBAAoB,OAAO,YAAY;AAAA,UACrC,oBAAoB,MAAM,YAAY;AAAA,YACnC,KAAK,QACD,WAAW,GAAG,aAAa,iBAAiB;AAAA,cAC3C,KAAK;AAAA,cACL,MAAM,KAAK;AAAA,YACb,GAAG,MAAM,GAAG,CAAC,MAAM,CAAC,KACpB,oBAAoB,IAAI,IAAI;AAAA,YAChC,iBAAiB,MAAM,iBAAiB,KAAK,KAAK,GAAG,CAAC;AAAA,UACxD,CAAC;AAAA,UACD,oBAAoB,KAAK,YAAY,iBAAiB,KAAK,WAAW,GAAG,CAAC;AAAA,QAC5E,CAAC;AAAA,QACA,KAAK,QACD,WAAW,GAAG,oBAAoB,OAAO;AAAA,UACxC,KAAK;AAAA,UACL,KAAK,KAAK;AAAA,UACV,OAAO;AAAA,UACP,OAAO,EAAC,UAAS,SAAQ,SAAQ,QAAO;AAAA,QAC1C,GAAG,MAAM,GAAG,UAAU,KACtB,oBAAoB,IAAI,IAAI;AAAA,QAChC,oBAAoB,OAAO,YAAY;AAAA,UACpC,KAAK,YACD,WAAW,GAAG,oBAAoB,OAAO,YAAY,iBAAiB,KAAK,QAAQ,GAAG,CAAC,KACxF,oBAAoB,IAAI,IAAI;AAAA,WAC/B,WAAW,IAAI,GAAG,oBAAoB,WAAW,MAAM,YAAY,KAAK,SAAS,CAAC,WAAW;AAC5F,mBAAQ,WAAW,GAAG,aAAa,iBAAiB;AAAA,cAClD,KAAK,OAAO;AAAA,cACZ,MAAM,OAAO;AAAA,cACb,OAAO;AAAA,YACT,GAAG,MAAM,GAAG,CAAC,MAAM,CAAC;AAAA,UACtB,CAAC,GAAG,GAAG;AAAA,QACT,CAAC;AAAA,MACH,GAAG,CAAC;AAAA,IACN;AAAA,EACA;AAEA,CAAC;",
+        "names": []
+      }
+    },
+    {
+      "name": "vite:json",
+      "start": 1713208771561,
+      "end": 1713208771561,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1713208771561,
+      "end": 1713208771561,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "start": 1713208771561,
+      "end": 1713208771561,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1713208771561,
+      "end": 1713208771561,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1713208771562,
+      "end": 1713208771562,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1713208771562,
+      "end": 1713208771562,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:chunk-error",
+      "start": 1713208771562,
+      "end": 1713208771562,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1713208771562,
+      "end": 1713208771563,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1713208771563,
+      "end": 1713208771563,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1713208771563,
+      "end": 1713208771563,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1713208771563,
+      "end": 1713208771563,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1713208771563,
+      "end": 1713208771563,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1713208771563,
+      "end": 1713208771563,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1713208771563,
+      "end": 1713208771563,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1713208771563,
+      "end": 1713208771563,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1713208771563,
+      "end": 1713208771563,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1713208771564,
+      "end": 1713208771564,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1713208771564,
+      "end": 1713208771564,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1713208771564,
+      "end": 1713208771564,
+      "order": "post"
+    },
+    {
+      "name": "unhead:use-seo-meta-transform",
+      "start": 1713208771566,
+      "end": 1713208771566,
+      "order": "post"
+    },
+    {
+      "name": "nuxtjs:i18n-resource",
+      "start": 1713208771566,
+      "end": 1713208771566,
+      "order": "post"
+    },
+    {
+      "name": "nuxtjs:i18n-meta-deprecation",
+      "start": 1713208771566,
+      "end": 1713208771567,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1713208771567,
+      "end": 1713208771569,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1713208771573,
+      "end": 1713208771574,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1713208771577,
+      "end": 1713208771577,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:runtime-paths-dep",
+      "start": 1713208771577,
+      "end": 1713208771577,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:route-injection-plugin",
+      "start": 1713208771579,
+      "end": 1713208771579,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1713208771579,
+      "end": 1713208771580,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1713208771580,
+      "end": 1713208771580,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1713208771581,
+      "end": 1713208771581,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1713208771581,
+      "end": 1713208771581,
+      "order": "normal"
+    }
+  ]
+}
